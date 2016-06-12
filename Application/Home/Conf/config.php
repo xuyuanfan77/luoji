@@ -5,4 +5,5 @@ return array(
 	'URL_MODEL'       => '1', //PATHINFO模式
 	'URL_ROUTE_RULES'=>array(
 	),
+	'__ROOT__' => '/luoji/',
 );

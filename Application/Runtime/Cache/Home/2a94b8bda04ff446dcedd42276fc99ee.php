@@ -4,18 +4,18 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title>逻辑</title>
 
-	<link href="/Public/css/frame.css" rel="stylesheet" type="text/css" />
-	<link href="/Public/css/header.css" rel="stylesheet" type="text/css" />
-	<link href="/Public/css/body-index.css" rel="stylesheet" type="text/css" />
-	<script type="text/javascript" src="/Public/javascript/jquery-1.12.4.js"></script>
-	<script type="text/javascript" src="/Public/javascript/index.js"></script>
+	<link href="/luoji/Public/css/frame.css" rel="stylesheet" type="text/css" />
+	<link href="/luoji/Public/css/header.css" rel="stylesheet" type="text/css" />
+	<link href="/luoji/Public/css/body-index.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" src="/luoji/Public/javascript/jquery-1.12.4.js"></script>
+	<script type="text/javascript" src="/luoji/Public/javascript/index.js"></script>
 </head>
 
 <body>
 	<div class="page-header">
 		<div class="header">
 			<div class="logo">
-				<img src="/Public/picture/logo.png"/>
+				<img src="/luoji/Public/picture/logo.png"/>
 			</div>
 			<div class="menu">
 				<ul>
@@ -27,7 +27,7 @@
 				</ul>
 			</div>
 			<div class="login" onmouseover="showLoginMenu();" onmouseout="hideLoginMenu();">
-				<img src="/Public/picture/login.jpg"/>
+				<img src="/luoji/Public/picture/login.jpg"/>
 				<div class="login-menu">
 					<ul>
 						<li><a href="#">我要发表</a></li>
@@ -43,10 +43,10 @@
 		<div class="notification">
 			<div id="banner">
 				<div id="banner_list">
-					<a href="#"><img src="/Public/picture/p1.jpg" title="橡树小屋的blog" alt="橡树小屋的blog1" /></a>
-					<a href="#"><img src="/Public/picture/p2.jpg" title="橡树小屋的blog" alt="橡树小屋的blog2" /></a>
-					<a href="#"><img src="/Public/picture/p3.jpg" title="橡树小屋的blog" alt="橡树小屋的blog3" /></a>
-					<a href="#"><img src="/Public/picture/p4.jpg" title="橡树小屋的blog" alt="橡树小屋的blog4" /></a>
+					<a href="#"><img src="/luoji/Public/picture/p1.jpg" title="橡树小屋的blog" alt="橡树小屋的blog1" /></a>
+					<a href="#"><img src="/luoji/Public/picture/p2.jpg" title="橡树小屋的blog" alt="橡树小屋的blog2" /></a>
+					<a href="#"><img src="/luoji/Public/picture/p3.jpg" title="橡树小屋的blog" alt="橡树小屋的blog3" /></a>
+					<a href="#"><img src="/luoji/Public/picture/p4.jpg" title="橡树小屋的blog" alt="橡树小屋的blog4" /></a>
 				</div>
 				<div id="banner_info"></div>
 				<div id="banner_button">
@@ -111,7 +111,7 @@
 		<div class="content">
 			<div class="items">
 				<ul>
-					<?php $__FOR_START_10644__=0;$__FOR_END_10644__=10;for($articleNum=$__FOR_START_10644__;$articleNum < $__FOR_END_10644__;$articleNum+=1){ if($article[$articleNum]['imagesrc'] == null ): ?><li></li>
+					<?php $__FOR_START_22863__=0;$__FOR_END_22863__=10;for($articleNum=$__FOR_START_22863__;$articleNum < $__FOR_END_22863__;$articleNum+=1){ if($article[$articleNum]['imagesrc'] == null ): ?><li></li>
 						<?php else: ?>
 							<li>
 								<img src="<?php echo ($article[$articleNum]['imagesrc']); ?>"/>

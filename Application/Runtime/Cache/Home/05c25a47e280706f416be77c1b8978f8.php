@@ -4,18 +4,18 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title>逻辑</title>
 
-	<link href="/Public/css/frame.css" rel="stylesheet" type="text/css" />
-	<link href="/Public/css/header.css" rel="stylesheet" type="text/css" />
-	<link href="/Public/css/body-content.css" rel="stylesheet" type="text/css" />
-	<script type="text/javascript" src="/Public/javascript/jquery-1.12.4.js"></script>
-	<script type="text/javascript" src="/Public/javascript/content.js"></script>
+	<link href="/luoji/Public/css/frame.css" rel="stylesheet" type="text/css" />
+	<link href="/luoji/Public/css/header.css" rel="stylesheet" type="text/css" />
+	<link href="/luoji/Public/css/body-content.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" src="/luoji/Public/javascript/jquery-1.12.4.js"></script>
+	<script type="text/javascript" src="/luoji/Public/javascript/content.js"></script>
 </head>
 
 <body>
 	<div class="page-header">
 		<div class="header">
 			<div class="logo">
-				<img src="/Public/picture/logo.png"/>
+				<img src="/luoji/Public/picture/logo.png"/>
 			</div>
 			<div class="menu">
 				<ul>
@@ -27,7 +27,7 @@
 				</ul>
 			</div>
 			<div class="login" onmouseover="showLoginMenu();" onmouseout="hideLoginMenu();">
-				<img src="/Public/picture/login.jpg"/>
+				<img src="/luoji/Public/picture/login.jpg"/>
 				<div class="login-menu">
 					<ul>
 						<li><a href="#">我要发表</a></li>
@@ -53,9 +53,9 @@
 					<img src="<?php echo ($article['imagesrc']); ?>"/>
 				</div>
 				<div class="content-share clearfix">
-					<a class="weixin" href="#"><img src="/Public/picture/weixin.png"/>分享到微信</a>
-					<a class="weibo" href="#"><img src="/Public/picture/weibo.png"/>分享到微博</a>
-					<a class="qq" href="#"><img src="/Public/picture/qq.png"/>分享到QQ</a>
+					<a class="weixin" href="#"><img src="/luoji/Public/picture/weixin.png"/>分享到微信</a>
+					<a class="weibo" href="#"><img src="/luoji/Public/picture/weibo.png"/>分享到微博</a>
+					<a class="qq" href="#"><img src="/luoji/Public/picture/qq.png"/>分享到QQ</a>
 				</div>
 				<div id="content-catalog" class="<?php echo ($style); ?>">
 					<a id="catalog-text" onmouseover="display()" onmouseout="disappear()">目<br>录</a>
@@ -77,7 +77,7 @@
 			</div>
 			<div class="right-frame">
 				<div class="content-author clearfix">
-					<img src="/Public/picture/login.jpg"/>
+					<img src="/luoji/Public/picture/login.jpg"/>
 					<a class="author-name"><?php echo ($userData['nickname']); ?></a>
 					<a class="author-jobs"><?php echo ($userData['jobs']); ?></a>
 					<a class="author-company"><?php echo ($userData['company']); ?></a>

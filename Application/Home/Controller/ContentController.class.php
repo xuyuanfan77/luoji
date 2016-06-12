@@ -17,7 +17,7 @@ class ContentController extends Controller {
 			$style = 'hide';
 			$this->assign('style',$style);
 			$data = $Image->where('mainimage="' . $id . '"')->find();
-			$data['imagesrc'] = '/Public/resource/largerimage/' . $data['mainimage'] . '.jpg';
+			$data['imagesrc'] = C('__ROOT__') . 'Public/resource/largerimage/' . $data['mainimage'] . '.jpg';
 			$this->assign('article',$data);
 
 			$userData = $User->where('username="' . $data['author'] . '"')->find();
@@ -28,7 +28,7 @@ class ContentController extends Controller {
 			$style = 'show';
 			$this->assign('style',$style);
 			$data = $Image->where('mainimage="' . $id . '"')->find();
-			$data['imagesrc'] = '/Public/resource/largerimage/' . $data['mainimage'] . '.jpg';
+			$data['imagesrc'] = C('__ROOT__') . 'Public/resource/largerimage/' . $data['mainimage'] . '.jpg';
 			$this->assign('article',$data);
 
 			$userData = $User->where('username="' . $data['author'] . '"')->find();

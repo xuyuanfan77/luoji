@@ -54,7 +54,7 @@ class IndexController extends Controller {
 		$data = $Image->where($map)->page($pageNum .',10')->select();
 		$x = 0;
 		foreach ($data as $value) {
-			$data[$x]['imagesrc'] = '/Public/resource/minimalimage/' . $data[$x]['minorimage'] . '.jpg';
+			$data[$x]['imagesrc'] = C('__ROOT__') . 'Public/resource/minimalimage/' . $data[$x]['minorimage'] . '.jpg';
 			switch ($data[$x]['type1'])
 			{
 			case 1:
@@ -92,14 +92,14 @@ class IndexController extends Controller {
 		//准备专辑数据
 		$data = $Album->limit(5)->select();
 		for ($x=0; $x<=4; $x++) {
-			$data[$x]['coverimage'] = '/Public/' . $data[$x]['coverimage'];			
+			$data[$x]['coverimage'] = C('__ROOT__') . 'Public/' . $data[$x]['coverimage'];			
 		}
 		$this->assign('album',$data);
 		
 		//准备专家数据
 		$data = $User->limit(5)->select();
 		for ($x=0; $x<=4; $x++) {
-			$data[$x]['icon'] = '/Public/resource/headportrait/' . $data[$x]['icon'];			
+			$data[$x]['icon'] = C('__ROOT__') . 'Public/resource/headportrait/' . $data[$x]['icon'];			
 		}
 		$this->assign('user',$data);
 		
