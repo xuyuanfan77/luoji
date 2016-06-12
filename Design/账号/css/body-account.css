@@ -1,0 +1,85 @@
+#tab-group {
+	position:relative;
+	height:60px;
+	width:1100px;
+	left:50%;
+	top:95px;
+	margin-left:-550px;
+}
+
+.tab-default {
+	float:left;
+	height:60px;
+	width:150px;
+	line-height:60px;
+	text-align:center;
+	font-size:16px;
+	color:#000000;
+	background-color:#FFFFFF;
+	margin-right:5px;
+}
+
+.tab-select {
+	float:left;
+	height:60px;
+	width:150px;
+	line-height:60px;
+	text-align:center;
+	font-size:16px;
+	color:#FFFFFF;
+	background-color:#3F7BED;
+	margin-right:5px;
+}
+
+#tab-group > a:hover {
+	color:#FFFFFF;
+	background-color:#3F7BED;
+}
+
+#panel-group {
+	position:relative;
+	height:550px;
+	width:1100px;
+	background-color:#FFFFFF;
+	left:50%;
+	top:95px;
+    border-top-width:2px;
+    border-top-style:solid;
+    border-top-color:#3F7BED;
+	margin-left:-550px;
+}
+
+.login-table > tbody > tr > td{
+	position:relative;
+	height:60px;
+}
+
+.text-input {
+	border:1px solid #CCCCCC;
+	width:350px;
+	height:40px;
+	font-size:18px;
+	padding-left:10px;
+	color:#CCCCCC;
+}
+
+.text-input:focus{
+    border:1px solid #3F7BED;
+}
+
+.login-button {
+	position:relative;
+	width:100%;
+	height:50px;
+	line-height:50px;
+	color:#FFFFFF;
+	border:0px;
+	background-color:#3F7BED;
+	text-align:center;
+}
+
+.login-panel{
+	position:absolute;
+	top:130px;
+	left:170px;
+}
