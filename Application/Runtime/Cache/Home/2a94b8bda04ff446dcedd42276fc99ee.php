@@ -43,16 +43,19 @@
 		<!--div class="test">
 		</div-->
 		<link type="text/css" href="/luoji/Public/css/index.css" rel="stylesheet"/>
-<div class="notification">
+<script type="text/javascript" src="/luoji/Public/javascript/index.js"></script>
+
+<!-- 通知栏 -->
+<div class="notification clearfix">
 	<div id="banner">
-		<div id="banner_list">
-			<a href="#"><img src="/luoji/Public/picture/p1.jpg" title="橡树小屋的blog" alt="橡树小屋的blog1" /></a>
-			<a href="#"><img src="/luoji/Public/picture/p2.jpg" title="橡树小屋的blog" alt="橡树小屋的blog2" /></a>
-			<a href="#"><img src="/luoji/Public/picture/p3.jpg" title="橡树小屋的blog" alt="橡树小屋的blog3" /></a>
-			<a href="#"><img src="/luoji/Public/picture/p4.jpg" title="橡树小屋的blog" alt="橡树小屋的blog4" /></a>
+		<div id="banner-list">
+			<a href="www.baidu.com"><img src="/luoji/Public/picture/p1.jpg" title="橡树小屋的blog" alt="橡树小屋的blog1" /></a>
+			<a href="www.baidu.com"><img src="/luoji/Public/picture/p2.jpg" title="橡树小屋的blog" alt="橡树小屋的blog2" /></a>
+			<a href="www.baidu.com"><img src="/luoji/Public/picture/p3.jpg" title="橡树小屋的blog" alt="橡树小屋的blog3" /></a>
+			<a href="www.baidu.com"><img src="/luoji/Public/picture/p4.jpg" title="橡树小屋的blog" alt="橡树小屋的blog4" /></a>
 		</div>
-		<div id="banner_info"></div>
-		<div id="banner_button">
+		<a id="banner-info"></a>
+		<div id="banner-button">
 			<ul>
 				<li alt="1" class="on"></li>
 				<li alt="2"></li>
@@ -72,49 +75,54 @@
 		</ul>
 	</div>
 </div>
-<div class="collection">
+
+<!-- 专辑栏 -->
+<div class="special">
 	<ul>
 		<li>
 			<img src="<?php echo ($album[0]['coverimage']); ?>"/>
-			<div class="collection-title">
+			<div class="special-title">
 				<p><?php echo ($album[0]['maintitle']); ?></p>
 				<a><?php echo ($album[0]['minortitle']); ?></a>
 			</div>
 		</li>
 		<li>
 			<img src="<?php echo ($album[1]['coverimage']); ?>"/>
-			<div class="collection-title">
+			<div class="special-title">
 				<p><?php echo ($album[1]['maintitle']); ?></p>
 				<a><?php echo ($album[1]['minortitle']); ?></a>
 			</div>
 		</li>
 		<li>
 			<img src="<?php echo ($album[2]['coverimage']); ?>"/>
-			<div class="collection-title">
+			<div class="special-title">
 				<p><?php echo ($album[2]['maintitle']); ?></p>
 				<a><?php echo ($album[2]['minortitle']); ?></a>
 			</div>
 		</li>
 		<li>
 			<img src="<?php echo ($album[3]['coverimage']); ?>"/>
-			<div class="collection-title">
+			<div class="special-title">
 				<p><?php echo ($album[3]['maintitle']); ?></p>
 				<a><?php echo ($album[3]['minortitle']); ?></a>
 			</div>
 		</li>
 		<li>
 			<img src="<?php echo ($album[4]['coverimage']); ?>"/>
-			<div class="collection-title">
+			<div class="special-title">
 				<p><?php echo ($album[4]['maintitle']); ?></p>
 				<a><?php echo ($album[4]['minortitle']); ?></a>
 			</div>
 		</li>
 	</ul>
 </div>
+
+
+
 <div class="content">
 	<div class="items">
 		<ul>
-			<?php $__FOR_START_19984__=0;$__FOR_END_19984__=10;for($articleNum=$__FOR_START_19984__;$articleNum < $__FOR_END_19984__;$articleNum+=1){ if($article[$articleNum]['imagesrc'] == null ): ?><li></li>
+			<?php $__FOR_START_24092__=0;$__FOR_END_24092__=10;for($articleNum=$__FOR_START_24092__;$articleNum < $__FOR_END_24092__;$articleNum+=1){ if($article[$articleNum]['imagesrc'] == null ): ?><li></li>
 				<?php else: ?>
 					<li>
 						<img src="<?php echo ($article[$articleNum]['imagesrc']); ?>"/>
