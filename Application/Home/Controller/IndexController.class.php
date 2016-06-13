@@ -103,6 +103,12 @@ class IndexController extends Controller {
 		}
 		$this->assign('user',$data);
 		
+		$parameter = array(
+			'menu' => array(
+				'class' => array('menu-default','menu-default','menu-default','menu-default','menu-default'),
+			)
+		);
+
         $this->display();
 	}
 }
