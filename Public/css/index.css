@@ -112,17 +112,17 @@
 
 .special {
 	position:relative;
-	width:1115px;
-	height:208px;
+	width:1100px;
+	height:204px;
 	left:50%;
 	margin-left:-550px;
 	margin-top:15px;
 }
 
 .special > ul {
-	position:relative;
-	width:1115px;
-	height:208px;
+	float:left;
+	width:1070px;
+	height:204px;
 	margin:0px;
 	padding:0px;
 }
@@ -130,74 +130,82 @@
 .special > ul > li {
 	position:relative;
 	float:left;
-	width:208px;
-	height:208px;
-	margin-right:15px;
+	width:204px;
+	height:204px;
+	margin-right:10px;
 	list-style:none;
 	background-color:#FFFFFF;
 }
 
-.special > ul > li:hover {
-	box-shadow:0px 2px 5px #888888;
-}
-
 .special > ul > li > img {
 	position:absolute;
-	width:208px;
-	height:208px;
+	width:204px;
+	height:204px;
 }
 
 .special-title {
 	position:absolute;
-	width:208px;
+	width:204px;
 	height:80px;
 	top:50%;
-	margin-top:-45px;
+	margin-top:-40px;
 	background-color:#000000;
 	opacity:0.5;
 }
 
-.special-title > p {
+.special-title > a {
+	text-decoration:none;
+}
+
+.main-title {
 	position:absolute;
 	top:15px;
 	margin:0px;
-	width:208px;
+	width:204px;
 	text-align:center;
 	font-weight:800;
 	font-size:20px;
 	color:#FFFFFF;
 }
 
-.special-title > a {
+.minor-title {
 	position:absolute;
 	top:45px;
-	width:208px;
+	width:204px;
 	text-align:center;
 	font-weight:400;
 	color:#FFFFFF;
 }
 
+.special-more {
+	float:right;
+	width:30px;
+	height:204px;
+	background-color:#3F7BED;
+	text-align:center;
+	font-weight:800;
+	color:#FFFFFF;
+	text-decoration:none;
+}
+
 .content {
 	position:relative;
 	width:1100px;
-	height:2095px;
 	left:50%;
-	top:45px;
-	margin-left:-550px;
+	margin:15px 0px 0px -550px;
 }
 
-.items {
-	position:absolute;
+.articles {
+	float:left;
 	width:840px;
-	height:2110px;
 }
 
-.items > ul{
+.articles > ul{
 	margin:0px;
 	padding:0px;
 }
 
-.items > ul > li {
+.articles > ul > li {
 	width:840px;
 	height:200px;
 	background-color:#FFFFFF;
@@ -205,12 +213,12 @@
 	list-style:none;
 }
 
-.items > ul > li  > img{
+.articles > ul > li  > img{
 	height:180px;
 	margin:10px 10px 10px 10px;
 }
 
-.items > ul > li  > ul {
+.articles > ul > li  > ul {
 	float:right;
 	width:522px;
 	height:180px;
@@ -218,26 +226,26 @@
 	padding:0px;
 }
 
-.items > ul > li  > ul > li {
+.articles > ul > li  > ul > li {
 	list-style:none;
 }
 
-.item-firstline {
+.article-firstline {
 	width:512px;
 	height:24px;
 }
 
-.item-secondline {
+.article-secondline {
 	width:512px;
 	height:132px;
 }
 
-.item-thirdline {
+.article-thirdline {
 	width:512px;
 	height:24px;
 }
 
-.item-classify1 {
+.article-classify1 {
 	float:left;
 	width:80px;
 	height:24px;
@@ -249,7 +257,7 @@
 	background-color:#3F7BED;
 }
 
-.item-classify2 {
+.article-classify2 {
 	float:left;
 	width:0px;
 	height:0px;
@@ -258,7 +266,7 @@
     border-bottom: 12px solid #FFFFFF;
 }
 
-.item-collection-select {
+.article-collection-select {
 	float:right;
 	width:0px;
 	height:0px;
@@ -268,7 +276,7 @@
 	border-bottom: 8px solid #FFFFFF;
 }
 
-.item-collection-default {
+.article-collection-default {
 	float:right;
 	width:0px;
 	height:0px;
@@ -278,14 +286,14 @@
 	border-bottom: 8px solid #FFFFFF;
 }
 
-.item-collection-default:hover {
+.article-collection-default:hover {
 	border-top: 16px solid #3F7BED;
     border-left: 12px solid #3F7BED;
     border-right: 12px solid #3F7BED;
 	border-bottom: 8px solid #FFFFFF;
 }
 
-.item-title {
+.article-title {
 	position:relative;
 	display:block;
 	width:512px;
@@ -299,7 +307,7 @@
 	text-decoration:none;
 }
 
-.item-overview {
+.article-overview {
 	position:relative;
 	display:block;
 	width:512px;
@@ -310,7 +318,7 @@
 	color:#999999;
 }
 
-.item-thirdline > a {
+.article-thirdline > a {
 	float:right;
 	line-height:24px;
 	font-size:12px;
@@ -397,9 +405,13 @@
 	text-decoration:none;
 }
 
+.others {
+	float:right;
+	width:245px;
+}
+
 .experts {
 	position:relative;
-	float:right;
 	width:245px;
 }
 
@@ -411,7 +423,7 @@
 }
 
 .experts-title > div {
-	position:relative;
+	/*position:relative;*/
 	float:left;
 	width:15px;
 	height:45px;
@@ -419,7 +431,7 @@
 }
 
 .experts-title > a {
-	position:relative;
+	/*position:relative;*/
 	float:left;
 	height:45px;
 	line-height:45px;

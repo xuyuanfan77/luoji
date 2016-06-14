@@ -19,11 +19,11 @@
 			</div>
 			<div class="menu">
 				<ul>
-					<li><a href="<?php echo U('Index/index','sort=1');?>" class="menu-default">首页</a></li>
-					<li><a href="<?php echo U('Index/index','sort=2');?>" class="menu-default">技术</a></li>
-					<li><a href="<?php echo U('Index/index','sort=3');?>" class="menu-select">产品</a></li>
-					<li><a href="<?php echo U('Index/index','sort=4');?>" class="menu-default">经济</a></li>
-					<li><a href="<?php echo U('Index/index','sort=5');?>" class="menu-default">其他</a></li>
+					<li><a href="<?php echo U('Index/index','sort=0');?>" class="<?php echo ($navigation[0]); ?>">首页</a></li>
+					<li><a href="<?php echo U('Index/index','sort=1');?>" class="<?php echo ($navigation[1]); ?>">技术</a></li>
+					<li><a href="<?php echo U('Index/index','sort=2');?>" class="<?php echo ($navigation[2]); ?>">产品</a></li>
+					<li><a href="<?php echo U('Index/index','sort=3');?>" class="<?php echo ($navigation[3]); ?>">经济</a></li>
+					<li><a href="<?php echo U('Index/index','sort=4');?>" class="<?php echo ($navigation[4]); ?>">其他</a></li>
 				</ul>
 			</div>
 			<!--div class="login" onmouseover="showLoginMenu();" onmouseout="hideLoginMenu();">
@@ -77,68 +77,82 @@
 </div>
 
 <!-- 专辑栏 -->
-<div class="special">
+<div class="special clearfix">
 	<ul>
-		<li>
-			<img src="<?php echo ($album[0]['coverimage']); ?>"/>
+		<?php $__FOR_START_26537__=0;$__FOR_END_26537__=5;for($specialNum=$__FOR_START_26537__;$specialNum < $__FOR_END_26537__;$specialNum+=1){ if($special[$specialNum]['coverimage'] != null): ?><li>
+					<img src="<?php echo ($special[$specialNum]['coverimage']); ?>"/>
+					<div class="special-title">
+						<a class="main-title" href="<?php echo U('Content/index', array('type'=>'articles','id'=>$special[$specialNum]['albumid']));?>" target="_blank"><?php echo ($special[$specialNum]['maintitle']); ?></a>
+						<a class="minor-title" href="<?php echo U('Content/index', array('type'=>'articles','id'=>$special[$specialNum]['albumid']));?>" target="_blank"><?php echo ($special[$specialNum]['minortitle']); ?></a>
+					</div>
+				</li><?php endif; } ?>
+		
+		
+		
+		
+		
+		<!--li>
+			<img src="<?php echo ($special[0]['coverimage']); ?>"/>
 			<div class="special-title">
-				<p><?php echo ($album[0]['maintitle']); ?></p>
-				<a><?php echo ($album[0]['minortitle']); ?></a>
+				<a class="main-title" href="#"><?php echo ($special[0]['maintitle']); ?></a>
+				<a class="minor-title" href="#"><?php echo ($special[0]['minortitle']); ?></a>
 			</div>
 		</li>
 		<li>
-			<img src="<?php echo ($album[1]['coverimage']); ?>"/>
+			<img src="<?php echo ($special[1]['coverimage']); ?>"/>
 			<div class="special-title">
-				<p><?php echo ($album[1]['maintitle']); ?></p>
-				<a><?php echo ($album[1]['minortitle']); ?></a>
+				<a class="main-title" href="#"><?php echo ($special[1]['maintitle']); ?></a>
+				<a class="minor-title" href="#"><?php echo ($special[1]['minortitle']); ?></a>
 			</div>
 		</li>
 		<li>
-			<img src="<?php echo ($album[2]['coverimage']); ?>"/>
+			<img src="<?php echo ($special[2]['coverimage']); ?>"/>
 			<div class="special-title">
-				<p><?php echo ($album[2]['maintitle']); ?></p>
-				<a><?php echo ($album[2]['minortitle']); ?></a>
+				<a class="main-title" href="#"><?php echo ($special[2]['maintitle']); ?></a>
+				<a class="minor-title" href="#"><?php echo ($special[2]['minortitle']); ?></a>
 			</div>
 		</li>
 		<li>
-			<img src="<?php echo ($album[3]['coverimage']); ?>"/>
+			<img src="<?php echo ($special[3]['coverimage']); ?>"/>
 			<div class="special-title">
-				<p><?php echo ($album[3]['maintitle']); ?></p>
-				<a><?php echo ($album[3]['minortitle']); ?></a>
+				<a class="main-title" href="#"><?php echo ($special[3]['maintitle']); ?></a>
+				<a class="minor-title" href="#"><?php echo ($special[3]['minortitle']); ?></a>
 			</div>
 		</li>
 		<li>
-			<img src="<?php echo ($album[4]['coverimage']); ?>"/>
+			<img src="<?php echo ($special[4]['coverimage']); ?>"/>
 			<div class="special-title">
-				<p><?php echo ($album[4]['maintitle']); ?></p>
-				<a><?php echo ($album[4]['minortitle']); ?></a>
+				<a class="main-title" href="#"><?php echo ($special[4]['maintitle']); ?></a>
+				<a class="minor-title" href="#"><?php echo ($special[4]['minortitle']); ?></a>
 			</div>
-		</li>
+		</li-->
 	</ul>
+	<a class="special-more" href="#">
+		<br/><br/><br/>换<br/>一<br/>批<br/><br/><br/>
+	</a>
 </div>
 
+<!-- 内容栏 -->
+<div class="content clearfix">
 
-
-<div class="content">
-	<div class="items">
+	<!-- 文章栏 -->
+	<div class="articles">
 		<ul>
-			<?php $__FOR_START_24092__=0;$__FOR_END_24092__=10;for($articleNum=$__FOR_START_24092__;$articleNum < $__FOR_END_24092__;$articleNum+=1){ if($article[$articleNum]['imagesrc'] == null ): ?><li></li>
-				<?php else: ?>
-					<li>
-						<img src="<?php echo ($article[$articleNum]['imagesrc']); ?>"/>
+			<?php $__FOR_START_20782__=0;$__FOR_END_20782__=10;for($articleNum=$__FOR_START_20782__;$articleNum < $__FOR_END_20782__;$articleNum+=1){ if($articles[$articleNum]['imagesrc'] != null): ?><li>
+						<img src="<?php echo ($articles[$articleNum]['imagesrc']); ?>"/>
 						<ul>
-							<li class="item-firstline">
-								<a class="item-classify1"><?php echo ($article[$articleNum]['type1']); ?></a>
-								<div class="item-classify2"></div>
-								<div class="item-collection-default"></div>
+							<li class="article-firstline">
+								<a class="article-classify1"><?php echo ($articles[$articleNum]['type1']); ?></a>
+								<div class="article-classify2"></div>
+								<div class="article-collection-default"></div>
 							</li>
-							<li class="item-secondline">
-								<a href="<?php echo U('Content/index', array('type'=>'article','id'=>$article[$articleNum]['minorimage']));?>" target="_blank" class="item-title"><?php echo ($article[$articleNum]['maintitle']); ?></a>
-								<a class="item-overview"><?php echo ($article[$articleNum]['introduct']); ?></a>
+							<li class="article-secondline">
+								<a href="<?php echo U('Content/index', array('type'=>'article','id'=>$articles[$articleNum]['minorimage']));?>" target="_blank" class="article-title"><?php echo ($articles[$articleNum]['maintitle']); ?></a>
+								<a class="article-overview"><?php echo ($articles[$articleNum]['introduct']); ?></a>
 							</li>
-							<li class="item-thirdline">
-								<a>阅读：<?php echo ($article[$articleNum]['read']); ?></a>
-								<a>作者：<?php echo ($article[$articleNum]['nickname']); ?></a>
+							<li class="article-thirdline">
+								<a>阅读：<?php echo ($articles[$articleNum]['read']); ?></a>
+								<a>作者：<?php echo ($articles[$articleNum]['nickname']); ?></a>
 							</li>
 						</ul>
 					</li><?php endif; } ?>
@@ -150,6 +164,8 @@
 			
 		</div>
 	</div>
+	
+	<!-- 其他栏 -->
 	<div class="others">
 		<div class="experts">
 			<div class="experts-title">

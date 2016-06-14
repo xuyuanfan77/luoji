@@ -19,11 +19,11 @@
 			</div>
 			<div class="menu">
 				<ul>
-					<li><a href="<?php echo U('Index/index','sort=1');?>" class="menu-default">首页</a></li>
-					<li><a href="<?php echo U('Index/index','sort=2');?>" class="menu-default">技术</a></li>
-					<li><a href="<?php echo U('Index/index','sort=3');?>" class="menu-select">产品</a></li>
-					<li><a href="<?php echo U('Index/index','sort=4');?>" class="menu-default">经济</a></li>
-					<li><a href="<?php echo U('Index/index','sort=5');?>" class="menu-default">其他</a></li>
+					<li><a href="<?php echo U('Index/index','sort=0');?>" class="<?php echo ($navigation[0]); ?>">首页</a></li>
+					<li><a href="<?php echo U('Index/index','sort=1');?>" class="<?php echo ($navigation[1]); ?>">技术</a></li>
+					<li><a href="<?php echo U('Index/index','sort=2');?>" class="<?php echo ($navigation[2]); ?>">产品</a></li>
+					<li><a href="<?php echo U('Index/index','sort=3');?>" class="<?php echo ($navigation[3]); ?>">经济</a></li>
+					<li><a href="<?php echo U('Index/index','sort=4');?>" class="<?php echo ($navigation[4]); ?>">其他</a></li>
 				</ul>
 			</div>
 			<!--div class="login" onmouseover="showLoginMenu();" onmouseout="hideLoginMenu();">
@@ -43,50 +43,61 @@
 		<!--div class="test">
 		</div-->
 		<link type="text/css" href="/luoji/Public/css/article.css" rel="stylesheet"/>
-<div class="content-body clearfix">
+<script type="text/javascript" src="/luoji/Public/javascript/article.js"></script>
+
+<div class="article clearfix">
+
+	<!-- 左边栏 -->
 	<div class="left-frame">
-		<div class="content-title">
+	
+		<!-- 标题栏 -->
+		<div class="article-title">
 			<p><?php echo ($article['maintitle']); ?></p>
 			<a><?php echo ($article['minortitle']); ?></a>
 		</div>
-		<div class="content-text clearfix">
+		
+		<!-- 概述栏 -->
+		<div class="article-text">
 			<a><?php echo ($article['introduct']); ?></a>
 		</div>
-		<div class="content-image">
+		
+		<!-- 图片栏 -->
+		<div class="article-image">
 			<img src="<?php echo ($article['imagesrc']); ?>"/>
 		</div>
-		<div class="content-share clearfix">
+		
+		<!-- 分享栏 -->
+		<div class="article-share">
 			<a class="weixin" href="#"><img src="/luoji/Public/picture/weixin.png"/>分享到微信</a>
 			<a class="weibo" href="#"><img src="/luoji/Public/picture/weibo.png"/>分享到微博</a>
 			<a class="qq" href="#"><img src="/luoji/Public/picture/qq.png"/>分享到QQ</a>
 		</div>
-		<div id="content-catalog" class="<?php echo ($style); ?>">
+		
+		<!-- 目录栏 -->
+		<div id="article-catalog" class="<?php echo ($style); ?>">
 			<a id="catalog-text" onmouseover="display()" onmouseout="disappear()">目<br>录</a>
 			<div id="catalog-list" onmouseover="display()" onmouseout="disappear()">
 				<ul>
-					<li><a class="list-default" href="https://www.baidu.com">华医网结构图（一）</a></li>
-					<li><a class="list-select" href="https://www.baidu.com">华医网结构图（二）</a></li>
-					<li><a class="list-default" href="https://www.baidu.com">华医网结构图（三）</a></li>
-					<li><a class="list-default" href="https://www.baidu.com">华医网结构图（四）</a></li>
-					<li><a class="list-default" href="https://www.baidu.com">华医网结构图（五）</a></li>
-					<li><a class="list-default" href="https://www.baidu.com">华医网结构图（六）</a></li>
-					<li><a class="list-default" href="https://www.baidu.com">华医网结构图（七）</a></li>
-					<li><a class="list-default" href="https://www.baidu.com">华医网结构图（八）</a></li>
-					<li><a class="list-default" href="https://www.baidu.com">华医网结构图（九）</a></li>
-					<li><a class="list-default" href="https://www.baidu.com">华医网结构图（十）</a></li>
+					<?php $__FOR_START_17615__=0;$__FOR_END_17615__=$catalog['count'];for($articleNum=$__FOR_START_17615__;$articleNum < $__FOR_END_17615__;$articleNum+=1){ if($articleNum == $catalog['current']): ?><li><a class="list-select" href="https://www.baidu.com"><?php echo ($catalog[$articleNum]); ?></a></li>
+						<?php else: ?>
+							<li><a class="list-default" href="https://www.baidu.com"><?php echo ($catalog[$articleNum]); ?></a></li><?php endif; } ?>
 				</ul>
 			</div>
 		</div>
 	</div>
+	
+	<!-- 右边栏 -->
 	<div class="right-frame">
-		<div class="content-author clearfix">
+	
+		<!-- 作者栏 -->
+		<div class="article-author">
 			<img src="/luoji/Public/picture/login.jpg"/>
-			<a class="author-name"><?php echo ($userData['nickname']); ?></a>
-			<a class="author-jobs"><?php echo ($userData['jobs']); ?></a>
-			<a class="author-company"><?php echo ($userData['company']); ?></a>
-			<a class="author-introduct"><?php echo ($userData['introduct']); ?></a>
+			<a class="author-name"><?php echo ($user['nickname']); ?></a>
+			<a class="author-jobs"><?php echo ($user['jobs']); ?></a>
+			<a class="author-company"><?php echo ($user['company']); ?></a>
+			<a class="author-introduct"><?php echo ($user['introduct']); ?></a>
 		</div>
-		<div class="content-recommend">
+		<div class="article-recommend">
 		</div>
 	</div>
 </div>

@@ -1,32 +1,28 @@
-.content-body {
+.article {
 	position:relative;
 	width:1100px;
-	height:auto;
 	left:50%;
-	margin-left:-550px;
-	top:15px;
+	margin:15px 0px 0px -550px;
 }
 
 .left-frame {
 	float:left;
 	width:840px;
-	height:auto;
 }
 
 .right-frame {
 	float:right;
 	width:245px;
-	height:auto;
 }
 
-.content-title {
+.article-title {
 	position:relative;
 	width:840px;
 	height:100px;
 	background-color:#FFFFFF;
 }
 
-.content-title > p{
+.article-title > p{
 	position:relative;
 	display:block;
 	text-align:center;
@@ -36,7 +32,7 @@
 	top:20px;
 }
 
-.content-title > a{
+.article-title > a{
 	position:relative;
 	display:block;
 	text-align:center;
@@ -44,7 +40,7 @@
 	top:25px;
 }
 
-.content-text {
+.article-text {
 	position:relative;
 	width:840px;
 	height:170px;
@@ -52,7 +48,7 @@
 	margin-top:2px;
 }
 
-.content-text > a {
+.article-text > a {
 	position:absolute;
 	width:810px;
 	height:140px;
@@ -61,14 +57,13 @@
 	color:#999999;
 }
 
-.content-image {
+.article-image {
 	position:relative;
 	width:840px;
-	height:auto;
-	top:15px;
+	margin-top:15px;
 }
 
-.content-image > img {
+.article-image > img {
 	width:840px;
 	height:auto;
 }
@@ -81,7 +76,7 @@
 	display:block;
 }
 
-#content-catalog {
+#article-catalog {
 	position:fixed;
 	top:95px;
 	left:50%;
@@ -115,6 +110,10 @@
 	background-color:#FFFFFF;
 	text-align:center;
 	list-style:none;
+	width:298px;
+	height:40px;
+	text-overflow:ellipsis;
+	
 }
 
 .list-default {
@@ -126,7 +125,7 @@
 	font-size:15px;
 	color:#000000;
 	background-color:#FFFFFF;
-	text-decoration:none;
+	text-decoration:none; 
 }
 
 .list-default:hover{
@@ -146,17 +145,16 @@
 	text-decoration:none;
 }
 
-.content-share {
+.article-share {
 	position:relative;
 	width:840px;
 	height:70px;
 	background-color:#FFFFFF;
-	top:30px;
-	margin-bottom:15px;
+	margin-top:15px;
 	
 }
 
-.content-share > a > img {
+.article-share > a > img {
 	float:left;
 	margin:10px 10px 10px 10px;
 }
@@ -197,14 +195,14 @@
 	text-decoration:none;
 }
 
-.content-author {
+.article-author {
 	position:relative;
 	width:245px;
 	height:200px;
 	background-color:#FFFFFF;
 }
 
-.content-author > img{
+.article-author > img{
 	position:absolute;
 	width:60px;
 	margin:10px 10px 10px 10px;
