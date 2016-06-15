@@ -36,9 +36,9 @@
 				<ul>
 					<for start="0" end="$catalog['count']" name="articleNum">
 						<if condition="$articleNum == $catalog['current']">
-							<li><a class="list-select" href="https://www.baidu.com">{$catalog[$articleNum]}</a></li>
+							<li><a class="list-select" href="{:U('Content/index', array('type'=>'articles','albumid'=>$catalog['albumid'],'id'=>$articleNum))}" target="_blank">{$catalog[$articleNum]}</a></li>
 						<else />
-							<li><a class="list-default" href="https://www.baidu.com">{$catalog[$articleNum]}</a></li>
+							<li><a class="list-default" href="{:U('Content/index', array('type'=>'articles','albumid'=>$catalog['albumid'],'id'=>$articleNum))}" target="_blank">{$catalog[$articleNum]}</a></li>
 						</if>
 					</for>
 				</ul>

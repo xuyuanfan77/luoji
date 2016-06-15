@@ -40,52 +40,12 @@
 				<li>
 					<img src="{$special[$specialNum]['coverimage']}"/>
 					<div class="special-title">
-						<a class="main-title" href="{:U('Content/index', array('type'=>'articles','id'=>$special[$specialNum]['albumid']))}" target="_blank">{$special[$specialNum]['maintitle']}</a>
-						<a class="minor-title" href="{:U('Content/index', array('type'=>'articles','id'=>$special[$specialNum]['albumid']))}" target="_blank">{$special[$specialNum]['minortitle']}</a>
+						<a class="main-title" href="{:U('Content/index', array('type'=>'articles','albumid'=>$special[$specialNum]['albumid'],'id'=>0))}" target="_blank">{$special[$specialNum]['maintitle']}</a>
+						<a class="minor-title" href="{:U('Content/index', array('type'=>'articles','albumid'=>$special[$specialNum]['albumid'],'id'=>0))}" target="_blank">{$special[$specialNum]['minortitle']}</a>
 					</div>
 				</li>
 			</if>
 		</for>
-		
-		
-		
-		
-		
-		<!--li>
-			<img src="{$special[0]['coverimage']}"/>
-			<div class="special-title">
-				<a class="main-title" href="#">{$special[0]['maintitle']}</a>
-				<a class="minor-title" href="#">{$special[0]['minortitle']}</a>
-			</div>
-		</li>
-		<li>
-			<img src="{$special[1]['coverimage']}"/>
-			<div class="special-title">
-				<a class="main-title" href="#">{$special[1]['maintitle']}</a>
-				<a class="minor-title" href="#">{$special[1]['minortitle']}</a>
-			</div>
-		</li>
-		<li>
-			<img src="{$special[2]['coverimage']}"/>
-			<div class="special-title">
-				<a class="main-title" href="#">{$special[2]['maintitle']}</a>
-				<a class="minor-title" href="#">{$special[2]['minortitle']}</a>
-			</div>
-		</li>
-		<li>
-			<img src="{$special[3]['coverimage']}"/>
-			<div class="special-title">
-				<a class="main-title" href="#">{$special[3]['maintitle']}</a>
-				<a class="minor-title" href="#">{$special[3]['minortitle']}</a>
-			</div>
-		</li>
-		<li>
-			<img src="{$special[4]['coverimage']}"/>
-			<div class="special-title">
-				<a class="main-title" href="#">{$special[4]['maintitle']}</a>
-				<a class="minor-title" href="#">{$special[4]['minortitle']}</a>
-			</div>
-		</li-->
 	</ul>
 	<a class="special-more" href="#">
 		<br/><br/><br/>换<br/>一<br/>批<br/><br/><br/>

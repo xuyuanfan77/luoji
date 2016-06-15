@@ -79,53 +79,13 @@
 <!-- 专辑栏 -->
 <div class="special clearfix">
 	<ul>
-		<?php $__FOR_START_26537__=0;$__FOR_END_26537__=5;for($specialNum=$__FOR_START_26537__;$specialNum < $__FOR_END_26537__;$specialNum+=1){ if($special[$specialNum]['coverimage'] != null): ?><li>
+		<?php $__FOR_START_23358__=0;$__FOR_END_23358__=5;for($specialNum=$__FOR_START_23358__;$specialNum < $__FOR_END_23358__;$specialNum+=1){ if($special[$specialNum]['coverimage'] != null): ?><li>
 					<img src="<?php echo ($special[$specialNum]['coverimage']); ?>"/>
 					<div class="special-title">
-						<a class="main-title" href="<?php echo U('Content/index', array('type'=>'articles','id'=>$special[$specialNum]['albumid']));?>" target="_blank"><?php echo ($special[$specialNum]['maintitle']); ?></a>
-						<a class="minor-title" href="<?php echo U('Content/index', array('type'=>'articles','id'=>$special[$specialNum]['albumid']));?>" target="_blank"><?php echo ($special[$specialNum]['minortitle']); ?></a>
+						<a class="main-title" href="<?php echo U('Content/index', array('type'=>'articles','albumid'=>$special[$specialNum]['albumid'],'id'=>0));?>" target="_blank"><?php echo ($special[$specialNum]['maintitle']); ?></a>
+						<a class="minor-title" href="<?php echo U('Content/index', array('type'=>'articles','albumid'=>$special[$specialNum]['albumid'],'id'=>0));?>" target="_blank"><?php echo ($special[$specialNum]['minortitle']); ?></a>
 					</div>
 				</li><?php endif; } ?>
-		
-		
-		
-		
-		
-		<!--li>
-			<img src="<?php echo ($special[0]['coverimage']); ?>"/>
-			<div class="special-title">
-				<a class="main-title" href="#"><?php echo ($special[0]['maintitle']); ?></a>
-				<a class="minor-title" href="#"><?php echo ($special[0]['minortitle']); ?></a>
-			</div>
-		</li>
-		<li>
-			<img src="<?php echo ($special[1]['coverimage']); ?>"/>
-			<div class="special-title">
-				<a class="main-title" href="#"><?php echo ($special[1]['maintitle']); ?></a>
-				<a class="minor-title" href="#"><?php echo ($special[1]['minortitle']); ?></a>
-			</div>
-		</li>
-		<li>
-			<img src="<?php echo ($special[2]['coverimage']); ?>"/>
-			<div class="special-title">
-				<a class="main-title" href="#"><?php echo ($special[2]['maintitle']); ?></a>
-				<a class="minor-title" href="#"><?php echo ($special[2]['minortitle']); ?></a>
-			</div>
-		</li>
-		<li>
-			<img src="<?php echo ($special[3]['coverimage']); ?>"/>
-			<div class="special-title">
-				<a class="main-title" href="#"><?php echo ($special[3]['maintitle']); ?></a>
-				<a class="minor-title" href="#"><?php echo ($special[3]['minortitle']); ?></a>
-			</div>
-		</li>
-		<li>
-			<img src="<?php echo ($special[4]['coverimage']); ?>"/>
-			<div class="special-title">
-				<a class="main-title" href="#"><?php echo ($special[4]['maintitle']); ?></a>
-				<a class="minor-title" href="#"><?php echo ($special[4]['minortitle']); ?></a>
-			</div>
-		</li-->
 	</ul>
 	<a class="special-more" href="#">
 		<br/><br/><br/>换<br/>一<br/>批<br/><br/><br/>
@@ -138,7 +98,7 @@
 	<!-- 文章栏 -->
 	<div class="articles">
 		<ul>
-			<?php $__FOR_START_20782__=0;$__FOR_END_20782__=10;for($articleNum=$__FOR_START_20782__;$articleNum < $__FOR_END_20782__;$articleNum+=1){ if($articles[$articleNum]['imagesrc'] != null): ?><li>
+			<?php $__FOR_START_28063__=0;$__FOR_END_28063__=10;for($articleNum=$__FOR_START_28063__;$articleNum < $__FOR_END_28063__;$articleNum+=1){ if($articles[$articleNum]['imagesrc'] != null): ?><li>
 						<img src="<?php echo ($articles[$articleNum]['imagesrc']); ?>"/>
 						<ul>
 							<li class="article-firstline">

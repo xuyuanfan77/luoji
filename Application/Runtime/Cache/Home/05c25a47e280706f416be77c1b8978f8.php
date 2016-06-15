@@ -78,9 +78,9 @@
 			<a id="catalog-text" onmouseover="display()" onmouseout="disappear()">目<br>录</a>
 			<div id="catalog-list" onmouseover="display()" onmouseout="disappear()">
 				<ul>
-					<?php $__FOR_START_17615__=0;$__FOR_END_17615__=$catalog['count'];for($articleNum=$__FOR_START_17615__;$articleNum < $__FOR_END_17615__;$articleNum+=1){ if($articleNum == $catalog['current']): ?><li><a class="list-select" href="https://www.baidu.com"><?php echo ($catalog[$articleNum]); ?></a></li>
+					<?php $__FOR_START_27978__=0;$__FOR_END_27978__=$catalog['count'];for($articleNum=$__FOR_START_27978__;$articleNum < $__FOR_END_27978__;$articleNum+=1){ if($articleNum == $catalog['current']): ?><li><a class="list-select" href="<?php echo U('Content/index', array('type'=>'articles','albumid'=>$catalog['albumid'],'id'=>$articleNum));?>" target="_blank"><?php echo ($catalog[$articleNum]); ?></a></li>
 						<?php else: ?>
-							<li><a class="list-default" href="https://www.baidu.com"><?php echo ($catalog[$articleNum]); ?></a></li><?php endif; } ?>
+							<li><a class="list-default" href="<?php echo U('Content/index', array('type'=>'articles','albumid'=>$catalog['albumid'],'id'=>$articleNum));?>" target="_blank"><?php echo ($catalog[$articleNum]); ?></a></li><?php endif; } ?>
 				</ul>
 			</div>
 		</div>
