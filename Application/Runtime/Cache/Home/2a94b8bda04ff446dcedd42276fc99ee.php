@@ -19,11 +19,11 @@
 			</div>
 			<div class="menu">
 				<ul>
-					<li><a href="<?php echo U('Index/index','sort=0');?>" class="<?php echo ($navigation[0]); ?>">首页</a></li>
-					<li><a href="<?php echo U('Index/index','sort=1');?>" class="<?php echo ($navigation[1]); ?>">技术</a></li>
-					<li><a href="<?php echo U('Index/index','sort=2');?>" class="<?php echo ($navigation[2]); ?>">产品</a></li>
-					<li><a href="<?php echo U('Index/index','sort=3');?>" class="<?php echo ($navigation[3]); ?>">经济</a></li>
-					<li><a href="<?php echo U('Index/index','sort=4');?>" class="<?php echo ($navigation[4]); ?>">其他</a></li>
+					<li><a href="<?php echo U('Index/index','category=0');?>" class="<?php echo ($navigation[0]); ?>">首页</a></li>
+					<li><a href="<?php echo U('Index/index','category=1');?>" class="<?php echo ($navigation[1]); ?>">技术</a></li>
+					<li><a href="<?php echo U('Index/index','category=2');?>" class="<?php echo ($navigation[2]); ?>">产品</a></li>
+					<li><a href="<?php echo U('Index/index','category=3');?>" class="<?php echo ($navigation[3]); ?>">经济</a></li>
+					<li><a href="<?php echo U('Index/index','category=4');?>" class="<?php echo ($navigation[4]); ?>">其他</a></li>
 				</ul>
 			</div>
 			<!--div class="login" onmouseover="showLoginMenu();" onmouseout="hideLoginMenu();">
@@ -79,7 +79,7 @@
 <!-- 专辑栏 -->
 <div class="special clearfix">
 	<ul>
-		<?php $__FOR_START_23358__=0;$__FOR_END_23358__=5;for($specialNum=$__FOR_START_23358__;$specialNum < $__FOR_END_23358__;$specialNum+=1){ if($special[$specialNum]['coverimage'] != null): ?><li>
+		<?php $__FOR_START_11681__=0;$__FOR_END_11681__=5;for($specialNum=$__FOR_START_11681__;$specialNum < $__FOR_END_11681__;$specialNum+=1){ if($special[$specialNum]['coverimage'] != null): ?><li>
 					<img src="<?php echo ($special[$specialNum]['coverimage']); ?>"/>
 					<div class="special-title">
 						<a class="main-title" href="<?php echo U('Content/index', array('type'=>'articles','albumid'=>$special[$specialNum]['albumid'],'id'=>0));?>" target="_blank"><?php echo ($special[$specialNum]['maintitle']); ?></a>
@@ -98,7 +98,7 @@
 	<!-- 文章栏 -->
 	<div class="articles">
 		<ul>
-			<?php $__FOR_START_28063__=0;$__FOR_END_28063__=10;for($articleNum=$__FOR_START_28063__;$articleNum < $__FOR_END_28063__;$articleNum+=1){ if($articles[$articleNum]['imagesrc'] != null): ?><li>
+			<?php $__FOR_START_11206__=0;$__FOR_END_11206__=10;for($articleNum=$__FOR_START_11206__;$articleNum < $__FOR_END_11206__;$articleNum+=1){ if($articles[$articleNum]['imagesrc'] != null): ?><li>
 						<img src="<?php echo ($articles[$articleNum]['imagesrc']); ?>"/>
 						<ul>
 							<li class="article-firstline">

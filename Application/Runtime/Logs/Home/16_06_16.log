@@ -1,0 +1,1266 @@
+[ 2016-06-16T13:57:41+08:00 ] 127.0.0.1 /luoji/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.041002s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005001s ]
+ERR: 1146:La table 'luoji.image' n'existe pas
+ [ SQL语句 ] : SHOW COLUMNS FROM `image`
+ERR: 1146:La table 'luoji.image' n'existe pas
+ [ SQL语句 ] : SHOW COLUMNS FROM `image`
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\wamp\www\luoji\ThinkPHP\Common\functions.php:850) D:\wamp\www\luoji\ThinkPHP\Library\Think\Think.class.php 第 229 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\wamp\www\luoji\ThinkPHP\Common\functions.php:850) D:\wamp\www\luoji\ThinkPHP\Library\Think\Think.class.php 第 230 行.
+
+[ 2016-06-16T13:59:02+08:00 ] 127.0.0.1 /luoji/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `special` [ RunTime:0.0040s ]
+ERR: 1146:La table 'luoji.include' n'existe pas
+ [ SQL语句 ] : SHOW COLUMNS FROM `include`
+ERR: 1146:La table 'luoji.include' n'existe pas
+ [ SQL语句 ] : SHOW COLUMNS FROM `include`
+
+[ 2016-06-16T14:01:57+08:00 ] 127.0.0.1 /luoji/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `special` [ RunTime:0.0040s ]
+ERR: 1146:La table 'luoji.include' n'existe pas
+ [ SQL语句 ] : SHOW COLUMNS FROM `include`
+ERR: 1146:La table 'luoji.include' n'existe pas
+ [ SQL语句 ] : SHOW COLUMNS FROM `include`
+
+[ 2016-06-16T14:01:58+08:00 ] 127.0.0.1 /luoji/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `special` [ RunTime:0.0040s ]
+ERR: 1146:La table 'luoji.include' n'existe pas
+ [ SQL语句 ] : SHOW COLUMNS FROM `include`
+ERR: 1146:La table 'luoji.include' n'existe pas
+ [ SQL语句 ] : SHOW COLUMNS FROM `include`
+
+[ 2016-06-16T14:01:59+08:00 ] 127.0.0.1 /luoji/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `special` [ RunTime:0.0040s ]
+ERR: 1146:La table 'luoji.include' n'existe pas
+ [ SQL语句 ] : SHOW COLUMNS FROM `include`
+ERR: 1146:La table 'luoji.include' n'existe pas
+ [ SQL语句 ] : SHOW COLUMNS FROM `include`
+
+[ 2016-06-16T14:03:53+08:00 ] 127.0.0.1 /luoji/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `special` [ RunTime:0.0030s ]
+ERR: 1146:La table 'luoji.include' n'existe pas
+ [ SQL语句 ] : SHOW COLUMNS FROM `include`
+ERR: 1146:La table 'luoji.include' n'existe pas
+ [ SQL语句 ] : SHOW COLUMNS FROM `include`
+
+[ 2016-06-16T14:03:54+08:00 ] 127.0.0.1 /luoji/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `special` [ RunTime:0.0040s ]
+ERR: 1146:La table 'luoji.include' n'existe pas
+ [ SQL语句 ] : SHOW COLUMNS FROM `include`
+ERR: 1146:La table 'luoji.include' n'existe pas
+ [ SQL语句 ] : SHOW COLUMNS FROM `include`
+
+[ 2016-06-16T14:03:54+08:00 ] 127.0.0.1 /luoji/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `special` [ RunTime:0.0030s ]
+ERR: 1146:La table 'luoji.include' n'existe pas
+ [ SQL语句 ] : SHOW COLUMNS FROM `include`
+ERR: 1146:La table 'luoji.include' n'existe pas
+ [ SQL语句 ] : SHOW COLUMNS FROM `include`
+
+[ 2016-06-16T14:10:06+08:00 ] 127.0.0.1 /luoji/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+SQL: SHOW COLUMNS FROM `special` [ RunTime:0.0030s ]
+ERR: 1146:La table 'luoji.include' n'existe pas
+ [ SQL语句 ] : SHOW COLUMNS FROM `include`
+ERR: 1146:La table 'luoji.include' n'existe pas
+ [ SQL语句 ] : SHOW COLUMNS FROM `include`
+
+[ 2016-06-16T14:10:07+08:00 ] 127.0.0.1 /luoji/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `special` [ RunTime:0.0040s ]
+ERR: 1146:La table 'luoji.include' n'existe pas
+ [ SQL语句 ] : SHOW COLUMNS FROM `include`
+ERR: 1146:La table 'luoji.include' n'existe pas
+ [ SQL语句 ] : SHOW COLUMNS FROM `include`
+
+[ 2016-06-16T14:10:08+08:00 ] 127.0.0.1 /luoji/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+SQL: SHOW COLUMNS FROM `special` [ RunTime:0.0040s ]
+ERR: 1146:La table 'luoji.include' n'existe pas
+ [ SQL语句 ] : SHOW COLUMNS FROM `include`
+ERR: 1146:La table 'luoji.include' n'existe pas
+ [ SQL语句 ] : SHOW COLUMNS FROM `include`
+
+[ 2016-06-16T14:10:09+08:00 ] 127.0.0.1 /luoji/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `special` [ RunTime:0.0040s ]
+ERR: 1146:La table 'luoji.include' n'existe pas
+ [ SQL语句 ] : SHOW COLUMNS FROM `include`
+ERR: 1146:La table 'luoji.include' n'existe pas
+ [ SQL语句 ] : SHOW COLUMNS FROM `include`
+
+[ 2016-06-16T14:10:10+08:00 ] 127.0.0.1 /luoji/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+SQL: SHOW COLUMNS FROM `special` [ RunTime:0.0040s ]
+ERR: 1146:La table 'luoji.include' n'existe pas
+ [ SQL语句 ] : SHOW COLUMNS FROM `include`
+ERR: 1146:La table 'luoji.include' n'existe pas
+ [ SQL语句 ] : SHOW COLUMNS FROM `include`
+
+[ 2016-06-16T14:10:11+08:00 ] 127.0.0.1 /luoji/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+SQL: SHOW COLUMNS FROM `special` [ RunTime:0.0060s ]
+ERR: 1146:La table 'luoji.include' n'existe pas
+ [ SQL语句 ] : SHOW COLUMNS FROM `include`
+ERR: 1146:La table 'luoji.include' n'existe pas
+ [ SQL语句 ] : SHOW COLUMNS FROM `include`
+
+[ 2016-06-16T14:10:12+08:00 ] 127.0.0.1 /luoji/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `special` [ RunTime:0.0040s ]
+ERR: 1146:La table 'luoji.include' n'existe pas
+ [ SQL语句 ] : SHOW COLUMNS FROM `include`
+ERR: 1146:La table 'luoji.include' n'existe pas
+ [ SQL语句 ] : SHOW COLUMNS FROM `include`
+
+[ 2016-06-16T14:11:06+08:00 ] 127.0.0.1 /luoji/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+SQL: SHOW COLUMNS FROM `special` [ RunTime:0.0040s ]
+ERR: 1146:La table 'luoji.include' n'existe pas
+ [ SQL语句 ] : SHOW COLUMNS FROM `include`
+ERR: 1146:La table 'luoji.include' n'existe pas
+ [ SQL语句 ] : SHOW COLUMNS FROM `include`
+
+[ 2016-06-16T14:11:07+08:00 ] 127.0.0.1 /luoji/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `special` [ RunTime:0.0040s ]
+ERR: 1146:La table 'luoji.include' n'existe pas
+ [ SQL语句 ] : SHOW COLUMNS FROM `include`
+ERR: 1146:La table 'luoji.include' n'existe pas
+ [ SQL语句 ] : SHOW COLUMNS FROM `include`
+
+[ 2016-06-16T14:11:34+08:00 ] 127.0.0.1 /luoji/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `special` [ RunTime:0.0040s ]
+ERR: 1146:La table 'luoji.include' n'existe pas
+ [ SQL语句 ] : SHOW COLUMNS FROM `include`
+ERR: 1146:La table 'luoji.include' n'existe pas
+ [ SQL语句 ] : SHOW COLUMNS FROM `include`
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\wamp\www\luoji\ThinkPHP\Common\functions.php:850) D:\wamp\www\luoji\ThinkPHP\Library\Think\Think.class.php 第 229 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\wamp\www\luoji\ThinkPHP\Common\functions.php:850) D:\wamp\www\luoji\ThinkPHP\Library\Think\Think.class.php 第 230 行.
+
+[ 2016-06-16T14:12:48+08:00 ] 127.0.0.1 /luoji/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `special` [ RunTime:0.0040s ]
+ERR: 1146:La table 'luoji.include' n'existe pas
+ [ SQL语句 ] : SHOW COLUMNS FROM `include`
+ERR: 1146:La table 'luoji.include' n'existe pas
+ [ SQL语句 ] : SHOW COLUMNS FROM `include`
+
+[ 2016-06-16T14:14:08+08:00 ] 127.0.0.1 /luoji/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `special` [ RunTime:0.0040s ]
+ERR: 1146:La table 'luoji.include' n'existe pas
+ [ SQL语句 ] : SHOW COLUMNS FROM `include`
+ERR: 1146:La table 'luoji.include' n'existe pas
+ [ SQL语句 ] : SHOW COLUMNS FROM `include`
+
+[ 2016-06-16T14:14:11+08:00 ] 127.0.0.1 /luoji/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `special` [ RunTime:0.0040s ]
+ERR: 1146:La table 'luoji.include' n'existe pas
+ [ SQL语句 ] : SHOW COLUMNS FROM `include`
+ERR: 1146:La table 'luoji.include' n'existe pas
+ [ SQL语句 ] : SHOW COLUMNS FROM `include`
+
+[ 2016-06-16T14:14:35+08:00 ] 127.0.0.1 /luoji/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `special` [ RunTime:0.0040s ]
+SQL: SELECT Special.id AS specical_id,Special.maintitle AS specical_maintitle,Special.subhead AS specical_subhead,Special.introduction AS specical_introduction,Special.coverimage AS specical_coverimage,Special.type1 AS specical_type1,Special.type2 AS specical_type2,Special.type3 AS specical_type3,Special.createtime AS specical_createtime FROM special Special LIMIT 5   [ RunTime:0.0010s ]
+ERR: 1146:La table 'luoji.image' n'existe pas
+ [ SQL语句 ] : SHOW COLUMNS FROM `image`
+ERR: 1146:La table 'luoji.image' n'existe pas
+ [ SQL语句 ] : SHOW COLUMNS FROM `image`
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\wamp\www\luoji\ThinkPHP\Common\functions.php:850) D:\wamp\www\luoji\ThinkPHP\Library\Think\Think.class.php 第 229 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\wamp\www\luoji\ThinkPHP\Common\functions.php:850) D:\wamp\www\luoji\ThinkPHP\Library\Think\Think.class.php 第 230 行.
+
+[ 2016-06-16T14:16:38+08:00 ] 127.0.0.1 /luoji/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+SQL: SHOW COLUMNS FROM `special` [ RunTime:0.0040s ]
+ERR: 1146:La table 'luoji.include' n'existe pas
+ [ SQL语句 ] : SHOW COLUMNS FROM `include`
+ERR: 1146:La table 'luoji.include' n'existe pas
+ [ SQL语句 ] : SHOW COLUMNS FROM `include`
+
+[ 2016-06-16T14:18:04+08:00 ] 127.0.0.1 /luoji/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `special` [ RunTime:0.0040s ]
+ERR: 1146:La table 'luoji.include' n'existe pas
+ [ SQL语句 ] : SHOW COLUMNS FROM `include`
+ERR: 1146:La table 'luoji.include' n'existe pas
+ [ SQL语句 ] : SHOW COLUMNS FROM `include`
+
+[ 2016-06-16T14:18:05+08:00 ] 127.0.0.1 /luoji/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `special` [ RunTime:0.0040s ]
+ERR: 1146:La table 'luoji.include' n'existe pas
+ [ SQL语句 ] : SHOW COLUMNS FROM `include`
+ERR: 1146:La table 'luoji.include' n'existe pas
+ [ SQL语句 ] : SHOW COLUMNS FROM `include`
+
+[ 2016-06-16T14:20:50+08:00 ] 127.0.0.1 /luoji/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `special` [ RunTime:0.0040s ]
+ERR: 1146:La table 'luoji.include' n'existe pas
+ [ SQL语句 ] : SHOW COLUMNS FROM `include`
+ERR: 1146:La table 'luoji.include' n'existe pas
+ [ SQL语句 ] : SHOW COLUMNS FROM `include`
+
+[ 2016-06-16T14:20:51+08:00 ] 127.0.0.1 /luoji/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `special` [ RunTime:0.0040s ]
+ERR: 1146:La table 'luoji.include' n'existe pas
+ [ SQL语句 ] : SHOW COLUMNS FROM `include`
+ERR: 1146:La table 'luoji.include' n'existe pas
+ [ SQL语句 ] : SHOW COLUMNS FROM `include`
+
+[ 2016-06-16T14:20:51+08:00 ] 127.0.0.1 /luoji/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `special` [ RunTime:0.0050s ]
+ERR: 1146:La table 'luoji.include' n'existe pas
+ [ SQL语句 ] : SHOW COLUMNS FROM `include`
+ERR: 1146:La table 'luoji.include' n'existe pas
+ [ SQL语句 ] : SHOW COLUMNS FROM `include`
+
+[ 2016-06-16T14:37:56+08:00 ] 127.0.0.1 /luoji/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `special` [ RunTime:0.0040s ]
+ERR: 1146:La table 'luoji.include' n'existe pas
+ [ SQL语句 ] : SHOW COLUMNS FROM `include`
+ERR: 1146:La table 'luoji.include' n'existe pas
+ [ SQL语句 ] : SHOW COLUMNS FROM `include`
+
+[ 2016-06-16T14:37:57+08:00 ] 127.0.0.1 /luoji/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `special` [ RunTime:0.0040s ]
+ERR: 1146:La table 'luoji.include' n'existe pas
+ [ SQL语句 ] : SHOW COLUMNS FROM `include`
+ERR: 1146:La table 'luoji.include' n'existe pas
+ [ SQL语句 ] : SHOW COLUMNS FROM `include`
+
+[ 2016-06-16T14:37:58+08:00 ] 127.0.0.1 /luoji/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `special` [ RunTime:0.0040s ]
+ERR: 1146:La table 'luoji.include' n'existe pas
+ [ SQL语句 ] : SHOW COLUMNS FROM `include`
+ERR: 1146:La table 'luoji.include' n'existe pas
+ [ SQL语句 ] : SHOW COLUMNS FROM `include`
+
+[ 2016-06-16T14:42:57+08:00 ] 127.0.0.1 /luoji/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+SQL: SHOW COLUMNS FROM `special` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `include` [ RunTime:0.0040s ]
+ERR: 1054:Champ 'Include.id' inconnu dans on clause
+ [ SQL语句 ] : SELECT Special.maintitle AS specical_maintitle,Special.subhead AS specical_subhead FROM special Special  JOIN include Include ON Special.id=Include.id 
+ERR: 1054:Champ 'Include.id' inconnu dans on clause
+ [ SQL语句 ] : SELECT Special.maintitle AS specical_maintitle,Special.subhead AS specical_subhead FROM special Special  JOIN include Include ON Special.id=Include.id 
+
+[ 2016-06-16T14:44:16+08:00 ] 127.0.0.1 /luoji/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `special` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `include` [ RunTime:0.0040s ]
+ERR: 1054:Champ 'Include.id' inconnu dans on clause
+ [ SQL语句 ] : SELECT Special.maintitle AS specical_maintitle,Special.subhead AS specical_subhead,Special.introduction AS specical_introduction,Special.coverimage AS specical_coverimage,Special.type1 AS specical_type1,Special.type2 AS specical_type2,Special.type3 AS specical_type3,Special.createtime AS specical_createtime,Include.createtime AS include_createtime FROM special Special  JOIN include Include ON Special.id=Include.id 
+ERR: 1054:Champ 'Include.id' inconnu dans on clause
+ [ SQL语句 ] : SELECT Special.maintitle AS specical_maintitle,Special.subhead AS specical_subhead,Special.introduction AS specical_introduction,Special.coverimage AS specical_coverimage,Special.type1 AS specical_type1,Special.type2 AS specical_type2,Special.type3 AS specical_type3,Special.createtime AS specical_createtime,Include.createtime AS include_createtime FROM special Special  JOIN include Include ON Special.id=Include.id 
+
+[ 2016-06-16T14:48:32+08:00 ] 127.0.0.1 /luoji/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `special` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `include` [ RunTime:0.0040s ]
+SQL: SELECT Special.maintitle AS specical_maintitle,Special.subhead AS specical_subhead,Special.introduction AS specical_introduction,Special.coverimage AS specical_coverimage,Special.type1 AS specical_type1,Special.type2 AS specical_type2,Special.type3 AS specical_type3,Special.createtime AS specical_createtime,Include.createtime AS include_createtime FROM special Special  JOIN include Include ON Special.id=Include.special_id  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.009000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.010000s ]
+
+[ 2016-06-16T14:49:53+08:00 ] 127.0.0.1 /luoji/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+
+[ 2016-06-16T14:51:21+08:00 ] 127.0.0.1 /luoji/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `special` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `include` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0050s ]
+ERR: 1064:Erreur de syntaxe près de 'read,Article.createtime AS article_createtime FROM special Special ON Special.id' à la ligne 1
+ [ SQL语句 ] : SELECT Special.maintitle AS specical_maintitle,Special.subhead AS specical_subhead,Special.introduction AS specical_introduction,Special.coverimage AS specical_coverimage,Special.type1 AS specical_type1,Special.type2 AS specical_type2,Special.type3 AS specical_type3,Special.createtime AS specical_createtime,Include.createtime AS include_createtime,Article.id AS article_id,Article.mainimage AS mainimage,Article.coverimage AS article_coverimage,Article.maintitle AS article_maintitle,Article.subhead AS article_subhead,Article.introduction AS article_introduction,Article.author AS author,Article.type1 AS article_type1,Article.type2 AS article_type2,Article.type3 AS article_type3,Article.collect AS collect,Article.read AS read,Article.createtime AS article_createtime FROM special Special ON Special.id=Include.special_id RIGHT JOIN include Include  JOIN article Article ON Article.user_id=Include.article_id 
+ERR: 1064:Erreur de syntaxe près de 'read,Article.createtime AS article_createtime FROM special Special ON Special.id' à la ligne 1
+ [ SQL语句 ] : SELECT Special.maintitle AS specical_maintitle,Special.subhead AS specical_subhead,Special.introduction AS specical_introduction,Special.coverimage AS specical_coverimage,Special.type1 AS specical_type1,Special.type2 AS specical_type2,Special.type3 AS specical_type3,Special.createtime AS specical_createtime,Include.createtime AS include_createtime,Article.id AS article_id,Article.mainimage AS mainimage,Article.coverimage AS article_coverimage,Article.maintitle AS article_maintitle,Article.subhead AS article_subhead,Article.introduction AS article_introduction,Article.author AS author,Article.type1 AS article_type1,Article.type2 AS article_type2,Article.type3 AS article_type3,Article.collect AS collect,Article.read AS read,Article.createtime AS article_createtime FROM special Special ON Special.id=Include.special_id RIGHT JOIN include Include  JOIN article Article ON Article.user_id=Include.article_id 
+
+[ 2016-06-16T14:52:03+08:00 ] 127.0.0.1 /luoji/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `special` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `include` [ RunTime:0.0040s ]
+ERR: 1064:Erreur de syntaxe près de 'ON Special.id=Include.special_id RIGHT JOIN include Include' à la ligne 1
+ [ SQL语句 ] : SELECT Special.maintitle AS specical_maintitle,Special.subhead AS specical_subhead,Special.introduction AS specical_introduction,Special.coverimage AS specical_coverimage,Special.type1 AS specical_type1,Special.type2 AS specical_type2,Special.type3 AS specical_type3,Special.createtime AS specical_createtime,Include.createtime AS include_createtime FROM special Special ON Special.id=Include.special_id RIGHT JOIN include Include 
+ERR: 1064:Erreur de syntaxe près de 'ON Special.id=Include.special_id RIGHT JOIN include Include' à la ligne 1
+ [ SQL语句 ] : SELECT Special.maintitle AS specical_maintitle,Special.subhead AS specical_subhead,Special.introduction AS specical_introduction,Special.coverimage AS specical_coverimage,Special.type1 AS specical_type1,Special.type2 AS specical_type2,Special.type3 AS specical_type3,Special.createtime AS specical_createtime,Include.createtime AS include_createtime FROM special Special ON Special.id=Include.special_id RIGHT JOIN include Include 
+
+[ 2016-06-16T14:52:21+08:00 ] 127.0.0.1 /luoji/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `special` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `include` [ RunTime:0.0040s ]
+SQL: SELECT Special.maintitle AS specical_maintitle,Special.subhead AS specical_subhead,Special.introduction AS specical_introduction,Special.coverimage AS specical_coverimage,Special.type1 AS specical_type1,Special.type2 AS specical_type2,Special.type3 AS specical_type3,Special.createtime AS specical_createtime,Include.createtime AS include_createtime FROM special Special  JOIN include Include ON Special.id=Include.special_id  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2016-06-16T14:52:40+08:00 ] 127.0.0.1 /luoji/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `special` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `include` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0040s ]
+ERR: 1064:Erreur de syntaxe près de 'read,Article.createtime AS article_createtime FROM special Special  JOIN include' à la ligne 1
+ [ SQL语句 ] : SELECT Special.maintitle AS specical_maintitle,Special.subhead AS specical_subhead,Special.introduction AS specical_introduction,Special.coverimage AS specical_coverimage,Special.type1 AS specical_type1,Special.type2 AS specical_type2,Special.type3 AS specical_type3,Special.createtime AS specical_createtime,Include.createtime AS include_createtime,Article.id AS article_id,Article.mainimage AS mainimage,Article.coverimage AS article_coverimage,Article.maintitle AS article_maintitle,Article.subhead AS article_subhead,Article.introduction AS article_introduction,Article.author AS author,Article.type1 AS article_type1,Article.type2 AS article_type2,Article.type3 AS article_type3,Article.collect AS collect,Article.read AS read,Article.createtime AS article_createtime FROM special Special  JOIN include Include ON Special.id=Include.special_id RIGHT JOIN article Article ON Article.user_id=Include.article_id 
+ERR: 1064:Erreur de syntaxe près de 'read,Article.createtime AS article_createtime FROM special Special  JOIN include' à la ligne 1
+ [ SQL语句 ] : SELECT Special.maintitle AS specical_maintitle,Special.subhead AS specical_subhead,Special.introduction AS specical_introduction,Special.coverimage AS specical_coverimage,Special.type1 AS specical_type1,Special.type2 AS specical_type2,Special.type3 AS specical_type3,Special.createtime AS specical_createtime,Include.createtime AS include_createtime,Article.id AS article_id,Article.mainimage AS mainimage,Article.coverimage AS article_coverimage,Article.maintitle AS article_maintitle,Article.subhead AS article_subhead,Article.introduction AS article_introduction,Article.author AS author,Article.type1 AS article_type1,Article.type2 AS article_type2,Article.type3 AS article_type3,Article.collect AS collect,Article.read AS read,Article.createtime AS article_createtime FROM special Special  JOIN include Include ON Special.id=Include.special_id RIGHT JOIN article Article ON Article.user_id=Include.article_id 
+
+[ 2016-06-16T14:53:18+08:00 ] 127.0.0.1 /luoji/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `special` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `include` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0040s ]
+ERR: 1064:Erreur de syntaxe près de 'read,Article.createtime AS article_createtime FROM special Special  JOIN include' à la ligne 1
+ [ SQL语句 ] : SELECT Special.maintitle AS specical_maintitle,Special.subhead AS specical_subhead,Special.introduction AS specical_introduction,Special.coverimage AS specical_coverimage,Special.type1 AS specical_type1,Special.type2 AS specical_type2,Special.type3 AS specical_type3,Special.createtime AS specical_createtime,Include.createtime AS include_createtime,Article.mainimage AS mainimage,Article.coverimage AS article_coverimage,Article.maintitle AS article_maintitle,Article.subhead AS article_subhead,Article.introduction AS article_introduction,Article.author AS author,Article.type1 AS article_type1,Article.type2 AS article_type2,Article.type3 AS article_type3,Article.collect AS collect,Article.read AS read,Article.createtime AS article_createtime FROM special Special  JOIN include Include ON Special.id=Include.special_id RIGHT JOIN article Article ON Article.user_id=Include.article_id 
+ERR: 1064:Erreur de syntaxe près de 'read,Article.createtime AS article_createtime FROM special Special  JOIN include' à la ligne 1
+ [ SQL语句 ] : SELECT Special.maintitle AS specical_maintitle,Special.subhead AS specical_subhead,Special.introduction AS specical_introduction,Special.coverimage AS specical_coverimage,Special.type1 AS specical_type1,Special.type2 AS specical_type2,Special.type3 AS specical_type3,Special.createtime AS specical_createtime,Include.createtime AS include_createtime,Article.mainimage AS mainimage,Article.coverimage AS article_coverimage,Article.maintitle AS article_maintitle,Article.subhead AS article_subhead,Article.introduction AS article_introduction,Article.author AS author,Article.type1 AS article_type1,Article.type2 AS article_type2,Article.type3 AS article_type3,Article.collect AS collect,Article.read AS read,Article.createtime AS article_createtime FROM special Special  JOIN include Include ON Special.id=Include.special_id RIGHT JOIN article Article ON Article.user_id=Include.article_id 
+
+[ 2016-06-16T14:53:33+08:00 ] 127.0.0.1 /luoji/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+SQL: SHOW COLUMNS FROM `special` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `include` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0040s ]
+ERR: 1064:Erreur de syntaxe près de 'read,Article.createtime AS article_createtime FROM special Special  JOIN include' à la ligne 1
+ [ SQL语句 ] : SELECT Special.maintitle AS specical_maintitle,Special.subhead AS specical_subhead,Special.introduction AS specical_introduction,Special.coverimage AS specical_coverimage,Special.type1 AS specical_type1,Special.type2 AS specical_type2,Special.type3 AS specical_type3,Special.createtime AS specical_createtime,Include.createtime AS include_createtime,Article.mainimage AS mainimage,Article.coverimage AS article_coverimage,Article.maintitle AS article_maintitle,Article.subhead AS article_subhead,Article.introduction AS article_introduction,Article.author AS author,Article.type1 AS article_type1,Article.type2 AS article_type2,Article.type3 AS article_type3,Article.collect AS collect,Article.read AS read,Article.createtime AS article_createtime FROM special Special  JOIN include Include ON Special.id=Include.special_id RIGHT JOIN article Article ON Article.id=Include.article_id 
+ERR: 1064:Erreur de syntaxe près de 'read,Article.createtime AS article_createtime FROM special Special  JOIN include' à la ligne 1
+ [ SQL语句 ] : SELECT Special.maintitle AS specical_maintitle,Special.subhead AS specical_subhead,Special.introduction AS specical_introduction,Special.coverimage AS specical_coverimage,Special.type1 AS specical_type1,Special.type2 AS specical_type2,Special.type3 AS specical_type3,Special.createtime AS specical_createtime,Include.createtime AS include_createtime,Article.mainimage AS mainimage,Article.coverimage AS article_coverimage,Article.maintitle AS article_maintitle,Article.subhead AS article_subhead,Article.introduction AS article_introduction,Article.author AS author,Article.type1 AS article_type1,Article.type2 AS article_type2,Article.type3 AS article_type3,Article.collect AS collect,Article.read AS read,Article.createtime AS article_createtime FROM special Special  JOIN include Include ON Special.id=Include.special_id RIGHT JOIN article Article ON Article.id=Include.article_id 
+
+[ 2016-06-16T14:54:44+08:00 ] 127.0.0.1 /luoji/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `special` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `include` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0040s ]
+ERR: 1064:Erreur de syntaxe près de 'read FROM special Special  JOIN include Include ON Special.id=Include.special_id' à la ligne 1
+ [ SQL语句 ] : SELECT Special.maintitle AS specical_maintitle,Special.subhead AS specical_subhead,Special.introduction AS specical_introduction,Special.coverimage AS specical_coverimage,Special.type1 AS specical_type1,Special.type2 AS specical_type2,Special.type3 AS specical_type3,Special.createtime AS specical_createtime,Include.createtime AS include_createtime,Article.mainimage AS mainimage,Article.coverimage AS article_coverimage,Article.maintitle AS article_maintitle,Article.subhead AS article_subhead,Article.introduction AS article_introduction,Article.author AS author,Article.type1 AS article_type1,Article.type2 AS article_type2,Article.type3 AS article_type3,Article.collect AS collect,Article.read AS read FROM special Special  JOIN include Include ON Special.id=Include.special_id RIGHT JOIN article Article ON Article.id=Include.article_id 
+ERR: 1064:Erreur de syntaxe près de 'read FROM special Special  JOIN include Include ON Special.id=Include.special_id' à la ligne 1
+ [ SQL语句 ] : SELECT Special.maintitle AS specical_maintitle,Special.subhead AS specical_subhead,Special.introduction AS specical_introduction,Special.coverimage AS specical_coverimage,Special.type1 AS specical_type1,Special.type2 AS specical_type2,Special.type3 AS specical_type3,Special.createtime AS specical_createtime,Include.createtime AS include_createtime,Article.mainimage AS mainimage,Article.coverimage AS article_coverimage,Article.maintitle AS article_maintitle,Article.subhead AS article_subhead,Article.introduction AS article_introduction,Article.author AS author,Article.type1 AS article_type1,Article.type2 AS article_type2,Article.type3 AS article_type3,Article.collect AS collect,Article.read AS read FROM special Special  JOIN include Include ON Special.id=Include.special_id RIGHT JOIN article Article ON Article.id=Include.article_id 
+
+[ 2016-06-16T14:54:45+08:00 ] 127.0.0.1 /luoji/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `special` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `include` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0040s ]
+ERR: 1064:Erreur de syntaxe près de 'read FROM special Special  JOIN include Include ON Special.id=Include.special_id' à la ligne 1
+ [ SQL语句 ] : SELECT Special.maintitle AS specical_maintitle,Special.subhead AS specical_subhead,Special.introduction AS specical_introduction,Special.coverimage AS specical_coverimage,Special.type1 AS specical_type1,Special.type2 AS specical_type2,Special.type3 AS specical_type3,Special.createtime AS specical_createtime,Include.createtime AS include_createtime,Article.mainimage AS mainimage,Article.coverimage AS article_coverimage,Article.maintitle AS article_maintitle,Article.subhead AS article_subhead,Article.introduction AS article_introduction,Article.author AS author,Article.type1 AS article_type1,Article.type2 AS article_type2,Article.type3 AS article_type3,Article.collect AS collect,Article.read AS read FROM special Special  JOIN include Include ON Special.id=Include.special_id RIGHT JOIN article Article ON Article.id=Include.article_id 
+ERR: 1064:Erreur de syntaxe près de 'read FROM special Special  JOIN include Include ON Special.id=Include.special_id' à la ligne 1
+ [ SQL语句 ] : SELECT Special.maintitle AS specical_maintitle,Special.subhead AS specical_subhead,Special.introduction AS specical_introduction,Special.coverimage AS specical_coverimage,Special.type1 AS specical_type1,Special.type2 AS specical_type2,Special.type3 AS specical_type3,Special.createtime AS specical_createtime,Include.createtime AS include_createtime,Article.mainimage AS mainimage,Article.coverimage AS article_coverimage,Article.maintitle AS article_maintitle,Article.subhead AS article_subhead,Article.introduction AS article_introduction,Article.author AS author,Article.type1 AS article_type1,Article.type2 AS article_type2,Article.type3 AS article_type3,Article.collect AS collect,Article.read AS read FROM special Special  JOIN include Include ON Special.id=Include.special_id RIGHT JOIN article Article ON Article.id=Include.article_id 
+
+[ 2016-06-16T14:55:07+08:00 ] 127.0.0.1 /luoji/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `special` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `include` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0040s ]
+ERR: 1064:Erreur de syntaxe près de 'read FROM special Special  JOIN include Include ON Special.id=Include.special_id' à la ligne 1
+ [ SQL语句 ] : SELECT Special.maintitle AS specical_maintitle,Special.subhead AS specical_subhead,Special.introduction AS specical_introduction,Special.coverimage AS specical_coverimage,Special.type1 AS specical_type1,Special.type2 AS specical_type2,Special.type3 AS specical_type3,Article.mainimage AS mainimage,Article.coverimage AS article_coverimage,Article.maintitle AS article_maintitle,Article.subhead AS article_subhead,Article.introduction AS article_introduction,Article.author AS author,Article.type1 AS article_type1,Article.type2 AS article_type2,Article.type3 AS article_type3,Article.collect AS collect,Article.read AS read FROM special Special  JOIN include Include ON Special.id=Include.special_id RIGHT JOIN article Article ON Article.id=Include.article_id 
+ERR: 1064:Erreur de syntaxe près de 'read FROM special Special  JOIN include Include ON Special.id=Include.special_id' à la ligne 1
+ [ SQL语句 ] : SELECT Special.maintitle AS specical_maintitle,Special.subhead AS specical_subhead,Special.introduction AS specical_introduction,Special.coverimage AS specical_coverimage,Special.type1 AS specical_type1,Special.type2 AS specical_type2,Special.type3 AS specical_type3,Article.mainimage AS mainimage,Article.coverimage AS article_coverimage,Article.maintitle AS article_maintitle,Article.subhead AS article_subhead,Article.introduction AS article_introduction,Article.author AS author,Article.type1 AS article_type1,Article.type2 AS article_type2,Article.type3 AS article_type3,Article.collect AS collect,Article.read AS read FROM special Special  JOIN include Include ON Special.id=Include.special_id RIGHT JOIN article Article ON Article.id=Include.article_id 
+
+[ 2016-06-16T14:56:08+08:00 ] 127.0.0.1 /luoji/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `special` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `include` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0040s ]
+ERR: 1064:Erreur de syntaxe près de 'read FROM special Special ON Special.id=Include.special_id RIGHT JOIN include In' à la ligne 1
+ [ SQL语句 ] : SELECT Special.maintitle AS specical_maintitle,Special.subhead AS specical_subhead,Special.introduction AS specical_introduction,Special.coverimage AS specical_coverimage,Special.type1 AS specical_type1,Special.type2 AS specical_type2,Special.type3 AS specical_type3,Special.createtime AS specical_createtime,Include.createtime AS include_createtime,Article.mainimage AS mainimage,Article.coverimage AS article_coverimage,Article.maintitle AS article_maintitle,Article.subhead AS article_subhead,Article.introduction AS article_introduction,Article.author AS author,Article.type1 AS article_type1,Article.type2 AS article_type2,Article.type3 AS article_type3,Article.collect AS collect,Article.read AS read FROM special Special ON Special.id=Include.special_id RIGHT JOIN include Include  JOIN article Article ON Article.id=Include.article_id 
+ERR: 1064:Erreur de syntaxe près de 'read FROM special Special ON Special.id=Include.special_id RIGHT JOIN include In' à la ligne 1
+ [ SQL语句 ] : SELECT Special.maintitle AS specical_maintitle,Special.subhead AS specical_subhead,Special.introduction AS specical_introduction,Special.coverimage AS specical_coverimage,Special.type1 AS specical_type1,Special.type2 AS specical_type2,Special.type3 AS specical_type3,Special.createtime AS specical_createtime,Include.createtime AS include_createtime,Article.mainimage AS mainimage,Article.coverimage AS article_coverimage,Article.maintitle AS article_maintitle,Article.subhead AS article_subhead,Article.introduction AS article_introduction,Article.author AS author,Article.type1 AS article_type1,Article.type2 AS article_type2,Article.type3 AS article_type3,Article.collect AS collect,Article.read AS read FROM special Special ON Special.id=Include.special_id RIGHT JOIN include Include  JOIN article Article ON Article.id=Include.article_id 
+
+[ 2016-06-16T14:56:26+08:00 ] 127.0.0.1 /luoji/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+SQL: SHOW COLUMNS FROM `special` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `include` [ RunTime:0.0030s ]
+ERR: 1064:Erreur de syntaxe près de 'ON Special.id=Include.special_id RIGHT JOIN include Include' à la ligne 1
+ [ SQL语句 ] : SELECT Special.maintitle AS specical_maintitle,Special.subhead AS specical_subhead,Special.introduction AS specical_introduction,Special.coverimage AS specical_coverimage,Special.type1 AS specical_type1,Special.type2 AS specical_type2,Special.type3 AS specical_type3,Special.createtime AS specical_createtime,Include.createtime AS include_createtime FROM special Special ON Special.id=Include.special_id RIGHT JOIN include Include 
+ERR: 1064:Erreur de syntaxe près de 'ON Special.id=Include.special_id RIGHT JOIN include Include' à la ligne 1
+ [ SQL语句 ] : SELECT Special.maintitle AS specical_maintitle,Special.subhead AS specical_subhead,Special.introduction AS specical_introduction,Special.coverimage AS specical_coverimage,Special.type1 AS specical_type1,Special.type2 AS specical_type2,Special.type3 AS specical_type3,Special.createtime AS specical_createtime,Include.createtime AS include_createtime FROM special Special ON Special.id=Include.special_id RIGHT JOIN include Include 
+
+[ 2016-06-16T14:56:40+08:00 ] 127.0.0.1 /luoji/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `special` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `include` [ RunTime:0.0040s ]
+SQL: SELECT Special.maintitle AS specical_maintitle,Special.subhead AS specical_subhead,Special.introduction AS specical_introduction,Special.coverimage AS specical_coverimage,Special.type1 AS specical_type1,Special.type2 AS specical_type2,Special.type3 AS specical_type3,Special.createtime AS specical_createtime,Include.createtime AS include_createtime FROM special Special  JOIN include Include ON Special.id=Include.special_id  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2016-06-16T14:58:08+08:00 ] 127.0.0.1 /luoji/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+SQL: SHOW COLUMNS FROM `special` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `include` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0030s ]
+ERR: 1064:Erreur de syntaxe près de 'read FROM special Special  JOIN include Include ON Special.id=Include.special_id' à la ligne 1
+ [ SQL语句 ] : SELECT Special.maintitle AS specical_maintitle,Special.subhead AS specical_subhead,Special.introduction AS specical_introduction,Special.coverimage AS specical_coverimage,Special.type1 AS specical_type1,Special.type2 AS specical_type2,Special.type3 AS specical_type3,Special.createtime AS specical_createtime,Include.createtime AS include_createtime,Article.mainimage AS mainimage,Article.coverimage AS article_coverimage,Article.maintitle AS article_maintitle,Article.subhead AS article_subhead,Article.introduction AS article_introduction,Article.author AS author,Article.type1 AS article_type1,Article.type2 AS article_type2,Article.type3 AS article_type3,Article.collect AS collect,Article.read AS read FROM special Special  JOIN include Include ON Special.id=Include.special_id RIGHT JOIN article Article 
+ERR: 1064:Erreur de syntaxe près de 'read FROM special Special  JOIN include Include ON Special.id=Include.special_id' à la ligne 1
+ [ SQL语句 ] : SELECT Special.maintitle AS specical_maintitle,Special.subhead AS specical_subhead,Special.introduction AS specical_introduction,Special.coverimage AS specical_coverimage,Special.type1 AS specical_type1,Special.type2 AS specical_type2,Special.type3 AS specical_type3,Special.createtime AS specical_createtime,Include.createtime AS include_createtime,Article.mainimage AS mainimage,Article.coverimage AS article_coverimage,Article.maintitle AS article_maintitle,Article.subhead AS article_subhead,Article.introduction AS article_introduction,Article.author AS author,Article.type1 AS article_type1,Article.type2 AS article_type2,Article.type3 AS article_type3,Article.collect AS collect,Article.read AS read FROM special Special  JOIN include Include ON Special.id=Include.special_id RIGHT JOIN article Article 
+
+[ 2016-06-16T14:58:20+08:00 ] 127.0.0.1 /luoji/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `special` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `include` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0040s ]
+ERR: 1064:Erreur de syntaxe près de '' à la ligne 1
+ [ SQL语句 ] : SELECT Special.maintitle AS specical_maintitle,Special.subhead AS specical_subhead,Special.introduction AS specical_introduction,Special.coverimage AS specical_coverimage,Special.type1 AS specical_type1,Special.type2 AS specical_type2,Special.type3 AS specical_type3,Special.createtime AS specical_createtime,Include.createtime AS include_createtime FROM special Special  JOIN include Include ON Special.id=Include.special_id RIGHT JOIN article Article 
+ERR: 1064:Erreur de syntaxe près de '' à la ligne 1
+ [ SQL语句 ] : SELECT Special.maintitle AS specical_maintitle,Special.subhead AS specical_subhead,Special.introduction AS specical_introduction,Special.coverimage AS specical_coverimage,Special.type1 AS specical_type1,Special.type2 AS specical_type2,Special.type3 AS specical_type3,Special.createtime AS specical_createtime,Include.createtime AS include_createtime FROM special Special  JOIN include Include ON Special.id=Include.special_id RIGHT JOIN article Article 
+
+[ 2016-06-16T15:06:40+08:00 ] 127.0.0.1 /luoji/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004001s ]
+SQL: SHOW COLUMNS FROM `special` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `include` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0040s ]
+SQL: SELECT Special.maintitle AS specical_maintitle,Special.subhead AS specical_subhead,Special.introduction AS specical_introduction,Special.coverimage AS specical_coverimage,Special.type1 AS specical_type1,Special.type2 AS specical_type2,Special.type3 AS specical_type3,Special.createtime AS specical_createtime,Include.createtime AS include_createtime FROM special Special RIGHT JOIN include Include ON Special.id=Include.special_id LEFT JOIN article Article ON Article.id=Include.article_id  [ RunTime:0.0090s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2016-06-16T15:06:49+08:00 ] 127.0.0.1 /luoji/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `special` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `include` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0040s ]
+ERR: 1064:Erreur de syntaxe près de 'read,Article.createtime AS article_createtime FROM special Special RIGHT JOIN in' à la ligne 1
+ [ SQL语句 ] : SELECT Special.maintitle AS specical_maintitle,Special.subhead AS specical_subhead,Special.introduction AS specical_introduction,Special.coverimage AS specical_coverimage,Special.type1 AS specical_type1,Special.type2 AS specical_type2,Special.type3 AS specical_type3,Special.createtime AS specical_createtime,Include.createtime AS include_createtime,Article.mainimage AS mainimage,Article.coverimage AS article_coverimage,Article.maintitle AS article_maintitle,Article.subhead AS article_subhead,Article.introduction AS article_introduction,Article.author AS author,Article.type1 AS article_type1,Article.type2 AS article_type2,Article.type3 AS article_type3,Article.collect AS collect,Article.read AS read,Article.createtime AS article_createtime FROM special Special RIGHT JOIN include Include ON Special.id=Include.special_id LEFT JOIN article Article ON Article.id=Include.article_id 
+ERR: 1064:Erreur de syntaxe près de 'read,Article.createtime AS article_createtime FROM special Special RIGHT JOIN in' à la ligne 1
+ [ SQL语句 ] : SELECT Special.maintitle AS specical_maintitle,Special.subhead AS specical_subhead,Special.introduction AS specical_introduction,Special.coverimage AS specical_coverimage,Special.type1 AS specical_type1,Special.type2 AS specical_type2,Special.type3 AS specical_type3,Special.createtime AS specical_createtime,Include.createtime AS include_createtime,Article.mainimage AS mainimage,Article.coverimage AS article_coverimage,Article.maintitle AS article_maintitle,Article.subhead AS article_subhead,Article.introduction AS article_introduction,Article.author AS author,Article.type1 AS article_type1,Article.type2 AS article_type2,Article.type3 AS article_type3,Article.collect AS collect,Article.read AS read,Article.createtime AS article_createtime FROM special Special RIGHT JOIN include Include ON Special.id=Include.special_id LEFT JOIN article Article ON Article.id=Include.article_id 
+
+[ 2016-06-16T15:07:04+08:00 ] 127.0.0.1 /luoji/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `special` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `include` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0040s ]
+ERR: 1064:Erreur de syntaxe près de 'read FROM special Special RIGHT JOIN include Include ON Special.id=Include.speci' à la ligne 1
+ [ SQL语句 ] : SELECT Special.maintitle AS specical_maintitle,Special.subhead AS specical_subhead,Special.introduction AS specical_introduction,Special.coverimage AS specical_coverimage,Special.type1 AS specical_type1,Special.type2 AS specical_type2,Special.type3 AS specical_type3,Special.createtime AS specical_createtime,Include.createtime AS include_createtime,Article.mainimage AS mainimage,Article.coverimage AS article_coverimage,Article.maintitle AS article_maintitle,Article.subhead AS article_subhead,Article.introduction AS article_introduction,Article.author AS author,Article.type1 AS article_type1,Article.type2 AS article_type2,Article.type3 AS article_type3,Article.collect AS collect,Article.read AS read FROM special Special RIGHT JOIN include Include ON Special.id=Include.special_id LEFT JOIN article Article ON Article.id=Include.article_id 
+ERR: 1064:Erreur de syntaxe près de 'read FROM special Special RIGHT JOIN include Include ON Special.id=Include.speci' à la ligne 1
+ [ SQL语句 ] : SELECT Special.maintitle AS specical_maintitle,Special.subhead AS specical_subhead,Special.introduction AS specical_introduction,Special.coverimage AS specical_coverimage,Special.type1 AS specical_type1,Special.type2 AS specical_type2,Special.type3 AS specical_type3,Special.createtime AS specical_createtime,Include.createtime AS include_createtime,Article.mainimage AS mainimage,Article.coverimage AS article_coverimage,Article.maintitle AS article_maintitle,Article.subhead AS article_subhead,Article.introduction AS article_introduction,Article.author AS author,Article.type1 AS article_type1,Article.type2 AS article_type2,Article.type3 AS article_type3,Article.collect AS collect,Article.read AS read FROM special Special RIGHT JOIN include Include ON Special.id=Include.special_id LEFT JOIN article Article ON Article.id=Include.article_id 
+
+[ 2016-06-16T15:07:18+08:00 ] 127.0.0.1 /luoji/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `special` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `include` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0030s ]
+SQL: SELECT Special.maintitle AS specical_maintitle,Special.subhead AS specical_subhead,Special.introduction AS specical_introduction,Special.coverimage AS specical_coverimage,Special.type1 AS specical_type1,Special.type2 AS specical_type2,Special.type3 AS specical_type3,Special.createtime AS specical_createtime,Include.createtime AS include_createtime,Article.mainimage AS mainimage FROM special Special RIGHT JOIN include Include ON Special.id=Include.special_id LEFT JOIN article Article ON Article.id=Include.article_id  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003001s ]
+
+[ 2016-06-16T15:07:27+08:00 ] 127.0.0.1 /luoji/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `special` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `include` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0040s ]
+SQL: SELECT Special.maintitle AS specical_maintitle,Special.subhead AS specical_subhead,Special.introduction AS specical_introduction,Special.coverimage AS specical_coverimage,Special.type1 AS specical_type1,Special.type2 AS specical_type2,Special.type3 AS specical_type3,Special.createtime AS specical_createtime,Include.createtime AS include_createtime,Article.mainimage AS mainimage,Article.coverimage AS article_coverimage FROM special Special RIGHT JOIN include Include ON Special.id=Include.special_id LEFT JOIN article Article ON Article.id=Include.article_id  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2016-06-16T15:07:34+08:00 ] 127.0.0.1 /luoji/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `special` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `include` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0040s ]
+SQL: SELECT Special.maintitle AS specical_maintitle,Special.subhead AS specical_subhead,Special.introduction AS specical_introduction,Special.coverimage AS specical_coverimage,Special.type1 AS specical_type1,Special.type2 AS specical_type2,Special.type3 AS specical_type3,Special.createtime AS specical_createtime,Include.createtime AS include_createtime,Article.mainimage AS mainimage,Article.coverimage AS article_coverimage,Article.maintitle AS article_maintitle FROM special Special RIGHT JOIN include Include ON Special.id=Include.special_id LEFT JOIN article Article ON Article.id=Include.article_id  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2016-06-16T15:07:42+08:00 ] 127.0.0.1 /luoji/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `special` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `include` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0050s ]
+SQL: SELECT Special.maintitle AS specical_maintitle,Special.subhead AS specical_subhead,Special.introduction AS specical_introduction,Special.coverimage AS specical_coverimage,Special.type1 AS specical_type1,Special.type2 AS specical_type2,Special.type3 AS specical_type3,Special.createtime AS specical_createtime,Include.createtime AS include_createtime,Article.mainimage AS mainimage,Article.coverimage AS article_coverimage,Article.maintitle AS article_maintitle,Article.subhead AS article_subhead FROM special Special RIGHT JOIN include Include ON Special.id=Include.special_id LEFT JOIN article Article ON Article.id=Include.article_id  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2016-06-16T15:07:48+08:00 ] 127.0.0.1 /luoji/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `special` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `include` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0050s ]
+SQL: SELECT Special.maintitle AS specical_maintitle,Special.subhead AS specical_subhead,Special.introduction AS specical_introduction,Special.coverimage AS specical_coverimage,Special.type1 AS specical_type1,Special.type2 AS specical_type2,Special.type3 AS specical_type3,Special.createtime AS specical_createtime,Include.createtime AS include_createtime,Article.mainimage AS mainimage,Article.coverimage AS article_coverimage,Article.maintitle AS article_maintitle,Article.subhead AS article_subhead,Article.introduction AS article_introduction FROM special Special RIGHT JOIN include Include ON Special.id=Include.special_id LEFT JOIN article Article ON Article.id=Include.article_id  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003001s ]
+
+[ 2016-06-16T15:07:58+08:00 ] 127.0.0.1 /luoji/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `special` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `include` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0040s ]
+SQL: SELECT Special.maintitle AS specical_maintitle,Special.subhead AS specical_subhead,Special.introduction AS specical_introduction,Special.coverimage AS specical_coverimage,Special.type1 AS specical_type1,Special.type2 AS specical_type2,Special.type3 AS specical_type3,Special.createtime AS specical_createtime,Include.createtime AS include_createtime,Article.mainimage AS mainimage,Article.coverimage AS article_coverimage,Article.maintitle AS article_maintitle,Article.subhead AS article_subhead,Article.introduction AS article_introduction,Article.author AS author FROM special Special RIGHT JOIN include Include ON Special.id=Include.special_id LEFT JOIN article Article ON Article.id=Include.article_id  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003001s ]
+
+[ 2016-06-16T15:08:06+08:00 ] 127.0.0.1 /luoji/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `special` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `include` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0060s ]
+SQL: SELECT Special.maintitle AS specical_maintitle,Special.subhead AS specical_subhead,Special.introduction AS specical_introduction,Special.coverimage AS specical_coverimage,Special.type1 AS specical_type1,Special.type2 AS specical_type2,Special.type3 AS specical_type3,Special.createtime AS specical_createtime,Include.createtime AS include_createtime,Article.mainimage AS mainimage,Article.coverimage AS article_coverimage,Article.maintitle AS article_maintitle,Article.subhead AS article_subhead,Article.introduction AS article_introduction,Article.author AS author,Article.type1 AS article_type1 FROM special Special RIGHT JOIN include Include ON Special.id=Include.special_id LEFT JOIN article Article ON Article.id=Include.article_id  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2016-06-16T15:08:16+08:00 ] 127.0.0.1 /luoji/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `special` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `include` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0040s ]
+SQL: SELECT Special.maintitle AS specical_maintitle,Special.subhead AS specical_subhead,Special.introduction AS specical_introduction,Special.coverimage AS specical_coverimage,Special.type1 AS specical_type1,Special.type2 AS specical_type2,Special.type3 AS specical_type3,Special.createtime AS specical_createtime,Include.createtime AS include_createtime,Article.mainimage AS mainimage,Article.coverimage AS article_coverimage,Article.maintitle AS article_maintitle,Article.subhead AS article_subhead,Article.introduction AS article_introduction,Article.author AS author,Article.type1 AS article_type1,Article.type2 AS article_type2,Article.type3 AS article_type3 FROM special Special RIGHT JOIN include Include ON Special.id=Include.special_id LEFT JOIN article Article ON Article.id=Include.article_id  [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2016-06-16T15:08:25+08:00 ] 127.0.0.1 /luoji/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `special` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `include` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0040s ]
+SQL: SELECT Special.maintitle AS specical_maintitle,Special.subhead AS specical_subhead,Special.introduction AS specical_introduction,Special.coverimage AS specical_coverimage,Special.type1 AS specical_type1,Special.type2 AS specical_type2,Special.type3 AS specical_type3,Special.createtime AS specical_createtime,Include.createtime AS include_createtime,Article.mainimage AS mainimage,Article.coverimage AS article_coverimage,Article.maintitle AS article_maintitle,Article.subhead AS article_subhead,Article.introduction AS article_introduction,Article.author AS author,Article.type1 AS article_type1,Article.type2 AS article_type2,Article.type3 AS article_type3,Article.collect AS collect FROM special Special RIGHT JOIN include Include ON Special.id=Include.special_id LEFT JOIN article Article ON Article.id=Include.article_id  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2016-06-16T15:08:35+08:00 ] 127.0.0.1 /luoji/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `special` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `include` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0040s ]
+ERR: 1064:Erreur de syntaxe près de 'read FROM special Special RIGHT JOIN include Include ON Special.id=Include.speci' à la ligne 1
+ [ SQL语句 ] : SELECT Special.maintitle AS specical_maintitle,Special.subhead AS specical_subhead,Special.introduction AS specical_introduction,Special.coverimage AS specical_coverimage,Special.type1 AS specical_type1,Special.type2 AS specical_type2,Special.type3 AS specical_type3,Special.createtime AS specical_createtime,Include.createtime AS include_createtime,Article.mainimage AS mainimage,Article.coverimage AS article_coverimage,Article.maintitle AS article_maintitle,Article.subhead AS article_subhead,Article.introduction AS article_introduction,Article.author AS author,Article.type1 AS article_type1,Article.type2 AS article_type2,Article.type3 AS article_type3,Article.collect AS collect,Article.read AS read FROM special Special RIGHT JOIN include Include ON Special.id=Include.special_id LEFT JOIN article Article ON Article.id=Include.article_id 
+ERR: 1064:Erreur de syntaxe près de 'read FROM special Special RIGHT JOIN include Include ON Special.id=Include.speci' à la ligne 1
+ [ SQL语句 ] : SELECT Special.maintitle AS specical_maintitle,Special.subhead AS specical_subhead,Special.introduction AS specical_introduction,Special.coverimage AS specical_coverimage,Special.type1 AS specical_type1,Special.type2 AS specical_type2,Special.type3 AS specical_type3,Special.createtime AS specical_createtime,Include.createtime AS include_createtime,Article.mainimage AS mainimage,Article.coverimage AS article_coverimage,Article.maintitle AS article_maintitle,Article.subhead AS article_subhead,Article.introduction AS article_introduction,Article.author AS author,Article.type1 AS article_type1,Article.type2 AS article_type2,Article.type3 AS article_type3,Article.collect AS collect,Article.read AS read FROM special Special RIGHT JOIN include Include ON Special.id=Include.special_id LEFT JOIN article Article ON Article.id=Include.article_id 
+
+[ 2016-06-16T15:10:38+08:00 ] 127.0.0.1 /luoji/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+SQL: SHOW COLUMNS FROM `special` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `include` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0040s ]
+ERR: 1064:Erreur de syntaxe près de 'read FROM special Special RIGHT JOIN include Include ON Special.id=Include.speci' à la ligne 1
+ [ SQL语句 ] : SELECT Special.maintitle AS specical_maintitle,Special.subhead AS specical_subhead,Special.introduction AS specical_introduction,Special.coverimage AS specical_coverimage,Special.type1 AS specical_type1,Special.type2 AS specical_type2,Special.type3 AS specical_type3,Special.createtime AS specical_createtime,Include.createtime AS include_createtime,Article.mainimage AS mainimage,Article.coverimage AS article_coverimage,Article.maintitle AS article_maintitle,Article.subhead AS article_subhead,Article.introduction AS article_introduction,Article.author AS author,Article.type1 AS article_type1,Article.type2 AS article_type2,Article.type3 AS article_type3,Article.collect AS collect,Article.read AS read FROM special Special RIGHT JOIN include Include ON Special.id=Include.special_id LEFT JOIN article Article ON Article.id=Include.article_id 
+ERR: 1064:Erreur de syntaxe près de 'read FROM special Special RIGHT JOIN include Include ON Special.id=Include.speci' à la ligne 1
+ [ SQL语句 ] : SELECT Special.maintitle AS specical_maintitle,Special.subhead AS specical_subhead,Special.introduction AS specical_introduction,Special.coverimage AS specical_coverimage,Special.type1 AS specical_type1,Special.type2 AS specical_type2,Special.type3 AS specical_type3,Special.createtime AS specical_createtime,Include.createtime AS include_createtime,Article.mainimage AS mainimage,Article.coverimage AS article_coverimage,Article.maintitle AS article_maintitle,Article.subhead AS article_subhead,Article.introduction AS article_introduction,Article.author AS author,Article.type1 AS article_type1,Article.type2 AS article_type2,Article.type3 AS article_type3,Article.collect AS collect,Article.read AS read FROM special Special RIGHT JOIN include Include ON Special.id=Include.special_id LEFT JOIN article Article ON Article.id=Include.article_id 
+
+[ 2016-06-16T15:10:54+08:00 ] 127.0.0.1 /luoji/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `special` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `include` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0040s ]
+ERR: 1064:Erreur de syntaxe près de 'read FROM special Special RIGHT JOIN include Include ON Special.id=Include.speci' à la ligne 1
+ [ SQL语句 ] : SELECT Special.maintitle AS specical_maintitle,Special.subhead AS specical_subhead,Special.introduction AS specical_introduction,Special.coverimage AS specical_coverimage,Special.type1 AS specical_type1,Special.type2 AS specical_type2,Special.type3 AS specical_type3,Special.createtime AS specical_createtime,Include.createtime AS include_createtime,Article.mainimage AS mainimage,Article.coverimage AS article_coverimage,Article.maintitle AS article_maintitle,Article.subhead AS article_subhead,Article.introduction AS article_introduction,Article.author AS author,Article.type1 AS article_type1,Article.type2 AS article_type2,Article.type3 AS article_type3,Article.read AS read FROM special Special RIGHT JOIN include Include ON Special.id=Include.special_id LEFT JOIN article Article ON Article.id=Include.article_id 
+ERR: 1064:Erreur de syntaxe près de 'read FROM special Special RIGHT JOIN include Include ON Special.id=Include.speci' à la ligne 1
+ [ SQL语句 ] : SELECT Special.maintitle AS specical_maintitle,Special.subhead AS specical_subhead,Special.introduction AS specical_introduction,Special.coverimage AS specical_coverimage,Special.type1 AS specical_type1,Special.type2 AS specical_type2,Special.type3 AS specical_type3,Special.createtime AS specical_createtime,Include.createtime AS include_createtime,Article.mainimage AS mainimage,Article.coverimage AS article_coverimage,Article.maintitle AS article_maintitle,Article.subhead AS article_subhead,Article.introduction AS article_introduction,Article.author AS author,Article.type1 AS article_type1,Article.type2 AS article_type2,Article.type3 AS article_type3,Article.read AS read FROM special Special RIGHT JOIN include Include ON Special.id=Include.special_id LEFT JOIN article Article ON Article.id=Include.article_id 
+
+[ 2016-06-16T15:13:24+08:00 ] 127.0.0.1 /luoji/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `special` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `include` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0040s ]
+SQL: SELECT Special.maintitle AS specical_maintitle,Special.subhead AS specical_subhead,Special.introduction AS specical_introduction,Special.coverimage AS specical_coverimage,Special.type1 AS specical_type1,Special.type2 AS specical_type2,Special.type3 AS specical_type3,Special.createtime AS specical_createtime,Include.createtime AS include_createtime,Article.mainimage AS mainimage,Article.coverimage AS article_coverimage,Article.maintitle AS article_maintitle,Article.subhead AS article_subhead,Article.introduction AS article_introduction,Article.author AS author,Article.type1 AS article_type1,Article.type2 AS article_type2,Article.type3 AS article_type3,Article.collectnum AS collectnum,Article.readnum AS readnum FROM special Special RIGHT JOIN include Include ON Special.id=Include.special_id LEFT JOIN article Article ON Article.id=Include.article_id  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2016-06-16T15:13:56+08:00 ] 127.0.0.1 /luoji/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `special` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `include` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0040s ]
+SQL: SELECT Special.maintitle AS specical_maintitle,Special.subhead AS specical_subhead,Special.introduction AS specical_introduction,Special.coverimage AS specical_coverimage,Special.type1 AS specical_type1,Special.type2 AS specical_type2,Special.type3 AS specical_type3,Special.createtime AS specical_createtime,Include.createtime AS include_createtime,Article.mainimage AS mainimage,Article.coverimage AS article_coverimage,Article.maintitle AS article_maintitle,Article.subhead AS article_subhead,Article.introduction AS article_introduction,Article.author AS author,Article.type1 AS article_type1,Article.type2 AS article_type2,Article.type3 AS article_type3,Article.collectnum AS collectnum,Article.readnum AS readnum,Article.createtime AS article_createtime FROM special Special RIGHT JOIN include Include ON Special.id=Include.special_id LEFT JOIN article Article ON Article.id=Include.article_id  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2016-06-16T15:21:25+08:00 ] 127.0.0.1 /luoji/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `special` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `include` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0030s ]
+ERR: 1054:Champ 'Special.special_id' inconnu dans field list
+ [ SQL语句 ] : SELECT Special.special_id AS special_id,Special.maintitle AS specical_maintitle,Special.subhead AS specical_subhead,Special.introduction AS specical_introduction,Special.coverimage AS specical_coverimage,Special.type1 AS specical_type1,Special.type2 AS specical_type2,Special.type3 AS specical_type3,Special.createtime AS specical_createtime,Include.createtime AS include_createtime,Article.article_id AS article_id,Article.mainimage AS mainimage,Article.coverimage AS article_coverimage,Article.maintitle AS article_maintitle,Article.subhead AS article_subhead,Article.introduction AS article_introduction,Article.author AS author,Article.type1 AS article_type1,Article.type2 AS article_type2,Article.type3 AS article_type3,Article.collectnum AS collectnum,Article.readnum AS readnum,Article.createtime AS article_createtime FROM special Special RIGHT JOIN include Include ON Special.id=Include.special_id LEFT JOIN article Article ON Article.id=Include.article_id 
+ERR: 1054:Champ 'Special.special_id' inconnu dans field list
+ [ SQL语句 ] : SELECT Special.special_id AS special_id,Special.maintitle AS specical_maintitle,Special.subhead AS specical_subhead,Special.introduction AS specical_introduction,Special.coverimage AS specical_coverimage,Special.type1 AS specical_type1,Special.type2 AS specical_type2,Special.type3 AS specical_type3,Special.createtime AS specical_createtime,Include.createtime AS include_createtime,Article.article_id AS article_id,Article.mainimage AS mainimage,Article.coverimage AS article_coverimage,Article.maintitle AS article_maintitle,Article.subhead AS article_subhead,Article.introduction AS article_introduction,Article.author AS author,Article.type1 AS article_type1,Article.type2 AS article_type2,Article.type3 AS article_type3,Article.collectnum AS collectnum,Article.readnum AS readnum,Article.createtime AS article_createtime FROM special Special RIGHT JOIN include Include ON Special.id=Include.special_id LEFT JOIN article Article ON Article.id=Include.article_id 
+
+[ 2016-06-16T15:21:57+08:00 ] 127.0.0.1 /luoji/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `special` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `include` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0040s ]
+SQL: SELECT Special.id AS special_id,Special.maintitle AS specical_maintitle,Special.subhead AS specical_subhead,Special.introduction AS specical_introduction,Special.coverimage AS specical_coverimage,Special.type1 AS specical_type1,Special.type2 AS specical_type2,Special.type3 AS specical_type3,Special.createtime AS specical_createtime,Include.createtime AS include_createtime,Article.id AS article_id,Article.mainimage AS mainimage,Article.coverimage AS article_coverimage,Article.maintitle AS article_maintitle,Article.subhead AS article_subhead,Article.introduction AS article_introduction,Article.author AS author,Article.type1 AS article_type1,Article.type2 AS article_type2,Article.type3 AS article_type3,Article.collectnum AS collectnum,Article.readnum AS readnum,Article.createtime AS article_createtime FROM special Special RIGHT JOIN include Include ON Special.id=Include.special_id LEFT JOIN article Article ON Article.id=Include.article_id  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2016-06-16T15:38:55+08:00 ] 127.0.0.1 /luoji/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `collect` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0030s ]
+ERR: 1054:Champ 'Include.article_id' inconnu dans on clause
+ [ SQL语句 ] : SELECT User.id AS user_id,User.username AS username,User.password AS password,User.nickname AS nickname,User.headimage AS headimage,User.rank AS rank,User.jobs AS jobs,User.company AS company,User.introduction AS user_introduction,User.createtime AS user_createtime,Collect.createtime AS collect_createtime,Article.id AS article_id,Article.mainimage AS mainimage,Article.coverimage AS coverimage,Article.maintitle AS maintitle,Article.subhead AS subhead,Article.introduction AS article_introduction,Article.author AS author,Article.type1 AS type1,Article.type2 AS type2,Article.type3 AS type3,Article.collectnum AS collectnum,Article.readnum AS readnum,Article.createtime AS article_createtime FROM user User RIGHT JOIN collect Collect ON User.id=Collect.user_id LEFT JOIN article Article ON Article.id=Include.article_id 
+ERR: 1054:Champ 'Include.article_id' inconnu dans on clause
+ [ SQL语句 ] : SELECT User.id AS user_id,User.username AS username,User.password AS password,User.nickname AS nickname,User.headimage AS headimage,User.rank AS rank,User.jobs AS jobs,User.company AS company,User.introduction AS user_introduction,User.createtime AS user_createtime,Collect.createtime AS collect_createtime,Article.id AS article_id,Article.mainimage AS mainimage,Article.coverimage AS coverimage,Article.maintitle AS maintitle,Article.subhead AS subhead,Article.introduction AS article_introduction,Article.author AS author,Article.type1 AS type1,Article.type2 AS type2,Article.type3 AS type3,Article.collectnum AS collectnum,Article.readnum AS readnum,Article.createtime AS article_createtime FROM user User RIGHT JOIN collect Collect ON User.id=Collect.user_id LEFT JOIN article Article ON Article.id=Include.article_id 
+
+[ 2016-06-16T15:39:33+08:00 ] 127.0.0.1 /luoji/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `collect` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0040s ]
+SQL: SELECT User.id AS user_id,User.username AS username,User.password AS password,User.nickname AS nickname,User.headimage AS headimage,User.rank AS rank,User.jobs AS jobs,User.company AS company,User.introduction AS user_introduction,User.createtime AS user_createtime,Collect.createtime AS collect_createtime,Article.id AS article_id,Article.mainimage AS mainimage,Article.coverimage AS coverimage,Article.maintitle AS maintitle,Article.subhead AS subhead,Article.introduction AS article_introduction,Article.author AS author,Article.type1 AS type1,Article.type2 AS type2,Article.type3 AS type3,Article.collectnum AS collectnum,Article.readnum AS readnum,Article.createtime AS article_createtime FROM user User RIGHT JOIN collect Collect ON User.id=Collect.user_id LEFT JOIN article Article ON Article.id=Collect.article_id  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2016-06-16T16:03:32+08:00 ] 127.0.0.1 /luoji/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0030s ]
+ERR: 1064:Erreur de syntaxe près de 'ON Article.author=User.id  JOIN user User' à la ligne 1
+ [ SQL语句 ] : SELECT Article.id AS article_id,Article.mainimage AS mainimage,Article.coverimage AS coverimage,Article.maintitle AS maintitle,Article.subhead AS subhead,Article.introduction AS article_introduction,Article.author AS author,Article.type1 AS type1,Article.type2 AS type2,Article.type3 AS type3,Article.collectnum AS collectnum,Article.readnum AS readnum,Article.createtime AS article_createtime,User.id AS user_id,User.username AS username,User.password AS password,User.nickname AS nickname,User.headimage AS headimage,User.rank AS rank,User.jobs AS jobs,User.company AS company,User.introduction AS user_introduction,User.createtime AS user_createtime FROM article Article ON Article.author=User.id  JOIN user User 
+ERR: 1064:Erreur de syntaxe près de 'ON Article.author=User.id  JOIN user User' à la ligne 1
+ [ SQL语句 ] : SELECT Article.id AS article_id,Article.mainimage AS mainimage,Article.coverimage AS coverimage,Article.maintitle AS maintitle,Article.subhead AS subhead,Article.introduction AS article_introduction,Article.author AS author,Article.type1 AS type1,Article.type2 AS type2,Article.type3 AS type3,Article.collectnum AS collectnum,Article.readnum AS readnum,Article.createtime AS article_createtime,User.id AS user_id,User.username AS username,User.password AS password,User.nickname AS nickname,User.headimage AS headimage,User.rank AS rank,User.jobs AS jobs,User.company AS company,User.introduction AS user_introduction,User.createtime AS user_createtime FROM article Article ON Article.author=User.id  JOIN user User 
+
+[ 2016-06-16T16:17:21+08:00 ] 127.0.0.1 /luoji/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0050s ]
+ERR: 1064:Erreur de syntaxe près de 'ON Article.author=User.id  JOIN user User' à la ligne 1
+ [ SQL语句 ] : SELECT Article.id AS article_id,Article.mainimage AS mainimage,Article.coverimage AS coverimage,Article.maintitle AS maintitle,Article.subhead AS subhead,Article.introduction AS article_introduction,Article.author AS author,Article.type1 AS type1,Article.type2 AS type2,Article.type3 AS type3,Article.collectnum AS collectnum,Article.readnum AS readnum,Article.createtime AS article_createtime,User.id AS user_id,User.username AS username,User.password AS password,User.nickname AS nickname,User.headimage AS headimage,User.rank AS rank,User.jobs AS jobs,User.company AS company,User.introduction AS user_introduction,User.createtime AS user_createtime FROM article Article ON Article.author=User.id  JOIN user User 
+ERR: 1064:Erreur de syntaxe près de 'ON Article.author=User.id  JOIN user User' à la ligne 1
+ [ SQL语句 ] : SELECT Article.id AS article_id,Article.mainimage AS mainimage,Article.coverimage AS coverimage,Article.maintitle AS maintitle,Article.subhead AS subhead,Article.introduction AS article_introduction,Article.author AS author,Article.type1 AS type1,Article.type2 AS type2,Article.type3 AS type3,Article.collectnum AS collectnum,Article.readnum AS readnum,Article.createtime AS article_createtime,User.id AS user_id,User.username AS username,User.password AS password,User.nickname AS nickname,User.headimage AS headimage,User.rank AS rank,User.jobs AS jobs,User.company AS company,User.introduction AS user_introduction,User.createtime AS user_createtime FROM article Article ON Article.author=User.id  JOIN user User 
+
+[ 2016-06-16T16:21:33+08:00 ] 127.0.0.1 /luoji/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0050s ]
+SQL: SELECT Article.id AS article_id,Article.mainimage AS mainimage,Article.coverimage AS coverimage,Article.maintitle AS maintitle,Article.subhead AS subhead,Article.introduction AS article_introduction,Article.author AS author,Article.type1 AS type1,Article.type2 AS type2,Article.type3 AS type3,Article.collectnum AS collectnum,Article.readnum AS readnum,Article.createtime AS article_createtime,User.id AS user_id,User.username AS username,User.password AS password,User.nickname AS nickname,User.headimage AS headimage,User.rank AS rank,User.jobs AS jobs,User.company AS company,User.introduction AS user_introduction,User.createtime AS user_createtime FROM article Article  JOIN user User ON Article.author=User.id  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004000s ]
+
+[ 2016-06-16T16:23:00+08:00 ] 127.0.0.1 /luoji/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0040s ]
+SQL: SELECT Article.id AS article_id,Article.mainimage AS mainimage,Article.coverimage AS coverimage,Article.maintitle AS maintitle,Article.subhead AS subhead,Article.introduction AS article_introduction,Article.author AS author,Article.type1 AS type1,Article.type2 AS type2,Article.type3 AS type3,Article.collectnum AS collectnum,Article.readnum AS readnum,Article.createtime AS article_createtime,User.id AS user_id,User.username AS username,User.password AS password,User.nickname AS nickname,User.headimage AS headimage,User.rank AS rank,User.jobs AS jobs,User.company AS company,User.introduction AS user_introduction,User.createtime AS user_createtime FROM article Article LEFT JOIN user User ON Article.author=User.id  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2016-06-16T16:29:26+08:00 ] 127.0.0.1 /luoji/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `manuscript` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0030s ]
+ERR: 1054:Champ 'Manuscript.introduction' inconnu dans field list
+ [ SQL语句 ] : SELECT Manuscript.id AS manuscript_id,Manuscript.mainimage AS mainimage,Manuscript.maintitle AS maintitle,Manuscript.subhead AS subhead,Manuscript.introduction AS manuscript_introduction,Manuscript.author AS author,Manuscript.type1 AS type1,Manuscript.type2 AS type2,Manuscript.type3 AS type3,Manuscript.createtime AS manuscript_createtime,User.id AS user_id,User.username AS username,User.password AS password,User.nickname AS nickname,User.headimage AS headimage,User.rank AS rank,User.jobs AS jobs,User.company AS company,User.introduction AS user_introduction,User.createtime AS user_createtime FROM manuscript Manuscript LEFT JOIN user User ON Manuscript.author=User.id 
+ERR: 1054:Champ 'Manuscript.introduction' inconnu dans field list
+ [ SQL语句 ] : SELECT Manuscript.id AS manuscript_id,Manuscript.mainimage AS mainimage,Manuscript.maintitle AS maintitle,Manuscript.subhead AS subhead,Manuscript.introduction AS manuscript_introduction,Manuscript.author AS author,Manuscript.type1 AS type1,Manuscript.type2 AS type2,Manuscript.type3 AS type3,Manuscript.createtime AS manuscript_createtime,User.id AS user_id,User.username AS username,User.password AS password,User.nickname AS nickname,User.headimage AS headimage,User.rank AS rank,User.jobs AS jobs,User.company AS company,User.introduction AS user_introduction,User.createtime AS user_createtime FROM manuscript Manuscript LEFT JOIN user User ON Manuscript.author=User.id 
+
+[ 2016-06-16T16:30:25+08:00 ] 127.0.0.1 /luoji/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `manuscript` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0040s ]
+ERR: 1054:Champ 'Manuscript.introduction' inconnu dans field list
+ [ SQL语句 ] : SELECT Manuscript.id AS manuscript_id,Manuscript.mainimage AS mainimage,Manuscript.maintitle AS maintitle,Manuscript.subhead AS subhead,Manuscript.introduction AS introduction,Manuscript.author AS author,Manuscript.type1 AS type1,Manuscript.type2 AS type2,Manuscript.type3 AS type3,Manuscript.createtime AS manuscript_createtime,User.id AS user_id,User.username AS username,User.password AS password,User.nickname AS nickname,User.headimage AS headimage,User.rank AS rank,User.jobs AS jobs,User.company AS company,User.introduction AS user_introduction,User.createtime AS user_createtime FROM manuscript Manuscript LEFT JOIN user User ON Manuscript.author=User.id 
+ERR: 1054:Champ 'Manuscript.introduction' inconnu dans field list
+ [ SQL语句 ] : SELECT Manuscript.id AS manuscript_id,Manuscript.mainimage AS mainimage,Manuscript.maintitle AS maintitle,Manuscript.subhead AS subhead,Manuscript.introduction AS introduction,Manuscript.author AS author,Manuscript.type1 AS type1,Manuscript.type2 AS type2,Manuscript.type3 AS type3,Manuscript.createtime AS manuscript_createtime,User.id AS user_id,User.username AS username,User.password AS password,User.nickname AS nickname,User.headimage AS headimage,User.rank AS rank,User.jobs AS jobs,User.company AS company,User.introduction AS user_introduction,User.createtime AS user_createtime FROM manuscript Manuscript LEFT JOIN user User ON Manuscript.author=User.id 
+
+[ 2016-06-16T16:31:32+08:00 ] 127.0.0.1 /luoji/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `manuscript` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0040s ]
+SQL: SELECT Manuscript.id AS manuscript_id,Manuscript.mainimage AS mainimage,Manuscript.maintitle AS maintitle,Manuscript.subhead AS subhead,Manuscript.introduction AS manuscript_introduction,Manuscript.author AS author,Manuscript.type1 AS type1,Manuscript.type2 AS type2,Manuscript.type3 AS type3,Manuscript.createtime AS manuscript_createtime,User.id AS user_id,User.username AS username,User.password AS password,User.nickname AS nickname,User.headimage AS headimage,User.rank AS rank,User.jobs AS jobs,User.company AS company,User.introduction AS user_introduction,User.createtime AS user_createtime FROM manuscript Manuscript LEFT JOIN user User ON Manuscript.author=User.id  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2016-06-16T19:33:31+08:00 ] 127.0.0.1 /luoji/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+
+[ 2016-06-16T19:33:42+08:00 ] 127.0.0.1 /luoji/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+
+[ 2016-06-16T19:33:43+08:00 ] 127.0.0.1 /luoji/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+
+[ 2016-06-16T19:53:55+08:00 ] 127.0.0.1 /luoji/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+
+[ 2016-06-16T19:53:56+08:00 ] 127.0.0.1 /luoji/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+
+[ 2016-06-16T19:54:17+08:00 ] 127.0.0.1 /luoji/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `special` [ RunTime:0.0040s ]
+NOTIC: [8] Undefined index: p D:\wamp\www\luoji\Application\Home\Controller\IndexController.class.php 第 24 行.
+NOTIC: [8] Undefined index: category D:\wamp\www\luoji\Application\Home\Controller\IndexController.class.php 第 29 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2016-06-16T19:58:37+08:00 ] 127.0.0.1 /luoji/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004001s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `special` [ RunTime:0.0040s ]
+NOTIC: [8] Undefined index: p D:\wamp\www\luoji\Application\Home\Controller\IndexController.class.php 第 24 行.
+NOTIC: [8] Undefined index: category D:\wamp\www\luoji\Application\Home\Controller\IndexController.class.php 第 29 行.
+NOTIC: [8] Undefined variable: artCategory D:\wamp\www\luoji\Application\Home\Controller\IndexController.class.php 第 40 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.015001s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.016001s ]
+NOTIC: [8] Undefined variable: special D:\wamp\www\luoji\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 82 行.
+NOTIC: [8] Undefined variable: special D:\wamp\www\luoji\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 82 行.
+NOTIC: [8] Undefined variable: special D:\wamp\www\luoji\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 82 行.
+NOTIC: [8] Undefined variable: special D:\wamp\www\luoji\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 82 行.
+NOTIC: [8] Undefined variable: special D:\wamp\www\luoji\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 82 行.
+NOTIC: [8] Undefined variable: articles D:\wamp\www\luoji\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 101 行.
+NOTIC: [8] Undefined variable: articles D:\wamp\www\luoji\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 101 行.
+NOTIC: [8] Undefined variable: articles D:\wamp\www\luoji\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 101 行.
+NOTIC: [8] Undefined variable: articles D:\wamp\www\luoji\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 101 行.
+NOTIC: [8] Undefined variable: articles D:\wamp\www\luoji\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 101 行.
+NOTIC: [8] Undefined variable: articles D:\wamp\www\luoji\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 101 行.
+NOTIC: [8] Undefined variable: articles D:\wamp\www\luoji\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 101 行.
+NOTIC: [8] Undefined variable: articles D:\wamp\www\luoji\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 101 行.
+NOTIC: [8] Undefined variable: articles D:\wamp\www\luoji\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 101 行.
+NOTIC: [8] Undefined variable: articles D:\wamp\www\luoji\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 101 行.
+NOTIC: [8] Undefined variable: page D:\wamp\www\luoji\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 122 行.
+NOTIC: [8] Undefined variable: user D:\wamp\www\luoji\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 138 行.
+NOTIC: [8] Undefined variable: user D:\wamp\www\luoji\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 139 行.
+NOTIC: [8] Undefined variable: user D:\wamp\www\luoji\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 140 行.
+NOTIC: [8] Undefined variable: user D:\wamp\www\luoji\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 141 行.
+NOTIC: [8] Undefined variable: user D:\wamp\www\luoji\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 144 行.
+NOTIC: [8] Undefined variable: user D:\wamp\www\luoji\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 145 行.
+NOTIC: [8] Undefined variable: user D:\wamp\www\luoji\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 146 行.
+NOTIC: [8] Undefined variable: user D:\wamp\www\luoji\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 147 行.
+NOTIC: [8] Undefined variable: user D:\wamp\www\luoji\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 150 行.
+NOTIC: [8] Undefined variable: user D:\wamp\www\luoji\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 151 行.
+NOTIC: [8] Undefined variable: user D:\wamp\www\luoji\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 152 行.
+NOTIC: [8] Undefined variable: user D:\wamp\www\luoji\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 153 行.
+NOTIC: [8] Undefined variable: user D:\wamp\www\luoji\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 156 行.
+NOTIC: [8] Undefined variable: user D:\wamp\www\luoji\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 157 行.
+NOTIC: [8] Undefined variable: user D:\wamp\www\luoji\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined variable: user D:\wamp\www\luoji\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 159 行.
+NOTIC: [8] Undefined variable: user D:\wamp\www\luoji\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 162 行.
+NOTIC: [8] Undefined variable: user D:\wamp\www\luoji\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 163 行.
+NOTIC: [8] Undefined variable: user D:\wamp\www\luoji\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 164 行.
+NOTIC: [8] Undefined variable: user D:\wamp\www\luoji\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 165 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.285016s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.287017s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.020001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.020001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2016-06-16T19:59:58+08:00 ] 127.0.0.1 /luoji/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+
+[ 2016-06-16T20:00:12+08:00 ] 127.0.0.1 /luoji/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `special` [ RunTime:0.0030s ]
+NOTIC: [8] Undefined index: p D:\wamp\www\luoji\Application\Home\Controller\IndexController.class.php 第 24 行.
+NOTIC: [8] Undefined index: category D:\wamp\www\luoji\Application\Home\Controller\IndexController.class.php 第 29 行.
+NOTIC: [8] Undefined variable: artCategory D:\wamp\www\luoji\Application\Home\Controller\IndexController.class.php 第 42 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002001s ]
+NOTIC: [8] Undefined variable: special D:\wamp\www\luoji\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 82 行.
+NOTIC: [8] Undefined variable: special D:\wamp\www\luoji\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 82 行.
+NOTIC: [8] Undefined variable: special D:\wamp\www\luoji\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 82 行.
+NOTIC: [8] Undefined variable: special D:\wamp\www\luoji\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 82 行.
+NOTIC: [8] Undefined variable: special D:\wamp\www\luoji\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 82 行.
+NOTIC: [8] Undefined variable: articles D:\wamp\www\luoji\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 101 行.
+NOTIC: [8] Undefined variable: articles D:\wamp\www\luoji\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 101 行.
+NOTIC: [8] Undefined variable: articles D:\wamp\www\luoji\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 101 行.
+NOTIC: [8] Undefined variable: articles D:\wamp\www\luoji\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 101 行.
+NOTIC: [8] Undefined variable: articles D:\wamp\www\luoji\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 101 行.
+NOTIC: [8] Undefined variable: articles D:\wamp\www\luoji\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 101 行.
+NOTIC: [8] Undefined variable: articles D:\wamp\www\luoji\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 101 行.
+NOTIC: [8] Undefined variable: articles D:\wamp\www\luoji\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 101 行.
+NOTIC: [8] Undefined variable: articles D:\wamp\www\luoji\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 101 行.
+NOTIC: [8] Undefined variable: articles D:\wamp\www\luoji\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 101 行.
+NOTIC: [8] Undefined variable: page D:\wamp\www\luoji\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 122 行.
+NOTIC: [8] Undefined variable: user D:\wamp\www\luoji\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 138 行.
+NOTIC: [8] Undefined variable: user D:\wamp\www\luoji\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 139 行.
+NOTIC: [8] Undefined variable: user D:\wamp\www\luoji\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 140 行.
+NOTIC: [8] Undefined variable: user D:\wamp\www\luoji\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 141 行.
+NOTIC: [8] Undefined variable: user D:\wamp\www\luoji\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 144 行.
+NOTIC: [8] Undefined variable: user D:\wamp\www\luoji\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 145 行.
+NOTIC: [8] Undefined variable: user D:\wamp\www\luoji\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 146 行.
+NOTIC: [8] Undefined variable: user D:\wamp\www\luoji\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 147 行.
+NOTIC: [8] Undefined variable: user D:\wamp\www\luoji\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 150 行.
+NOTIC: [8] Undefined variable: user D:\wamp\www\luoji\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 151 行.
+NOTIC: [8] Undefined variable: user D:\wamp\www\luoji\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 152 行.
+NOTIC: [8] Undefined variable: user D:\wamp\www\luoji\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 153 行.
+NOTIC: [8] Undefined variable: user D:\wamp\www\luoji\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 156 行.
+NOTIC: [8] Undefined variable: user D:\wamp\www\luoji\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 157 行.
+NOTIC: [8] Undefined variable: user D:\wamp\www\luoji\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined variable: user D:\wamp\www\luoji\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 159 行.
+NOTIC: [8] Undefined variable: user D:\wamp\www\luoji\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 162 行.
+NOTIC: [8] Undefined variable: user D:\wamp\www\luoji\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 163 行.
+NOTIC: [8] Undefined variable: user D:\wamp\www\luoji\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 164 行.
+NOTIC: [8] Undefined variable: user D:\wamp\www\luoji\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 165 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.104006s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.105006s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003001s ]
+
