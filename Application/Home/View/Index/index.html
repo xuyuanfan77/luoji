@@ -35,13 +35,13 @@
 <!-- 专辑栏 -->
 <div class="special clearfix">
 	<ul>
-		<for start="0" end="5" name="specialNum">
-			<if condition="$special[$specialNum]['coverimage'] != null">
+		<for start="0" end="5" name="specialIndex">
+			<if condition="$specialImages[$specialIndex] neq NULL">
 				<li>
-					<img src="{$special[$specialNum]['coverimage']}"/>
+					<img src="{$specialImages[$specialIndex]}"/>
 					<div class="special-title">
-						<a class="main-title" href="{:U('Content/index', array('type'=>'articles','albumid'=>$special[$specialNum]['albumid'],'id'=>0))}" target="_blank">{$special[$specialNum]['maintitle']}</a>
-						<a class="minor-title" href="{:U('Content/index', array('type'=>'articles','albumid'=>$special[$specialNum]['albumid'],'id'=>0))}" target="_blank">{$special[$specialNum]['minortitle']}</a>
+						<a class="main-title" href="{$specialHrefs[$specialIndex]}" target="_blank">{$specialMaintitles[$specialIndex]}</a>
+						<a class="minor-title" href="{$specialHrefs[$specialIndex]}" target="_blank">{$specialSubheads[$specialIndex]}</a>
 					</div>
 				</li>
 			</if>
@@ -58,23 +58,23 @@
 	<!-- 文章栏 -->
 	<div class="articles">
 		<ul>
-			<for start="0" end="10" name="articleNum">
-				<if condition="$articles[$articleNum]['imagesrc'] != null">
+			<for start="0" end="10" name="articleIndex">
+				<if condition="$articleImage[$articleIndex] neq NULL">
 					<li>
-						<img src="{$articles[$articleNum]['imagesrc']}"/>
+						<img src="{$articleImage[$articleIndex]}"/>
 						<ul>
 							<li class="article-firstline">
-								<a class="article-classify1">{$articles[$articleNum]['type1']}</a>
+								<a class="article-classify1">{$articleClassification[$articleIndex]}</a>
 								<div class="article-classify2"></div>
 								<div class="article-collection-default"></div>
 							</li>
 							<li class="article-secondline">
-								<a href="{:U('Content/index', array('type'=>'article','id'=>$articles[$articleNum]['minorimage']))}" target="_blank" class="article-title">{$articles[$articleNum]['maintitle']}</a>
-								<a class="article-overview">{$articles[$articleNum]['introduct']}</a>
+								<a href="{$articleHref[$specialIndex]}" target="_blank" class="article-title">{$articleMaintitle[$articleIndex]}</a>
+								<a class="article-overview">{$articleIntroduction[$articleIndex]}</a>
 							</li>
 							<li class="article-thirdline">
-								<a>阅读：{$articles[$articleNum]['read']}</a>
-								<a>作者：{$articles[$articleNum]['nickname']}</a>
+								<a>阅读：{$articleReadnum[$articleIndex]}</a>
+								<a>作者：{$articleNickname[$articleIndex]}</a>
 							</li>
 						</ul>
 					</li>
@@ -83,7 +83,7 @@
 		</ul>
 		<div class="pages">
 			<ul>
-				{$page}
+				{$pageShow}
 			</ul>
 			
 		</div>
@@ -98,36 +98,16 @@
 				<a>专家名榜</a>
 			</div>
 			<ul>
-				<li>
-					<img src="{$user[0]['icon']}"/>
-					<a class="experts-name">{$user[0]['nickname']}</a>
-					<a class="experts-jobs">{$user[0]['jobs']}</a>
-					<a class="experts-specialty">{$user[0]['introduct']}</a>
-				</li>
-				<li>
-					<img src="{$user[1]['icon']}"/>
-					<a class="experts-name">{$user[1]['nickname']}</a>
-					<a class="experts-jobs">{$user[1]['jobs']}</a>
-					<a class="experts-specialty">{$user[1]['introduct']}</a>
-				</li>
-				<li>
-					<img src="{$user[2]['icon']}"/>
-					<a class="experts-name">{$user[2]['nickname']}</a>
-					<a class="experts-jobs">{$user[2]['jobs']}</a>
-					<a class="experts-specialty">{$user[2]['introduct']}</a>
-				</li>
-				<li>
-					<img src="{$user[3]['icon']}"/>
-					<a class="experts-name">{$user[3]['nickname']}</a>
-					<a class="experts-jobs">{$user[3]['jobs']}</a>
-					<a class="experts-specialty">{$user[3]['introduct']}</a>
-				</li>
-				<li>
-					<img src="{$user[4]['icon']}"/>
-					<a class="experts-name">{$user[4]['nickname']}</a>
-					<a class="experts-jobs">{$user[4]['jobs']}</a>
-					<a class="experts-specialty">{$user[4]['introduct']}</a>
-				</li>
+				<for start="0" end="5" name="expertsIndex">
+					<if condition="$expertImage[$expertsIndex] neq NULL">
+						<li>
+							<img src="{$expertImage[$expertsIndex]}"/>
+							<a class="experts-name">{$expertNickname[$expertsIndex]}</a>
+							<a class="experts-jobs">{$expertJobs[$expertsIndex]}</a>
+							<a class="experts-introduction">{$expertIntroduction[$expertsIndex]}</a>
+						</li>
+					</if>
+				</for>
 			</ul>
 		</div>
 	</div>

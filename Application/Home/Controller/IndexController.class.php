@@ -14,87 +14,126 @@ class IndexController extends Controller {
 	private $artCategory;
 	
 	//输出参数
-	public $navigation = array('menu-default','menu-default','menu-default','menu-default','menu-default');
+	public $navigation;
+	
+	public $specialImages;
+	public $specialMaintitles;
+	public $specialSubheads;
+	public $specialHrefs;
+	
+	public $articleImage;
+	public $articleClassification;
+	public $articleHref;
+	public $articleMaintitle;
+	public $articleIntroduction;
+	public $articleReadnum;
+	public $articleNickname;
+	
+	public $pageShow;
+	
+	public $expertImage;
+	public $expertNickname;
+	public $expertJobs;
+	public $expertIntroduction;
 	
 	protected function init(){
-		$Article = M('Article');
-		$User = M('User');
-		$Special = M('Special');
+		$this->Article = D('ArticleView');
+		$this->User = M('User');
+		$this->Special = M('Special');
 		
 		if($_GET['p']) {
-			$pageNum = $_GET['p'];
+			$this->pageNum = $_GET['p'];
 		} else {
-			$pageNum = 1;
+			$this->pageNum = 1;
 		}
 		if($_GET['category']) {
-			$artCategory = $_GET['category'];
+			$this->artCategory = $_GET['category'];
 		} else {
-			$artCategory = 0;
+			$this->artCategory = 0;
 		}
+		$this->navigation = array('menu-default','menu-default','menu-default','menu-default','menu-default');
 	}
 	
     public function index(){
 		$this->init();
 
 		//准备菜单栏数据
-		$navigation[$artCategory] = 'menu-select';
-		$this->assign('navigation',$navigation);
+		$this->navigation[$artCategory] = 'menu-select';
+		$this->assign('navigation',$this->navigation);
 		
-		// //准备专辑数据
-		// $special = $Special->limit(5)->select();
-		// for ($index=0; $index<=4; $index++) {
-			// $data[$index]['coverimage'] = C('__ROOT__') . 'Public/' . $data[$index]['coverimage'];			
-		// }
-		// $this->assign('special',$data);
+		//准备专辑数据
+		$specialData = $this->Special->limit(5)->select();
+		for ($index=0; $index<=4; $index++) {
+			$this->specialImages[$index] = C('__ROOT__') . 'Public/' . $specialData[$index]['coverimage'];
+			$this->specialMaintitles[$index] = $specialData[$index]['maintitle'];
+			$this->specialSubheads[$index] = $specialData[$index]['subhead'];
+			$this->specialHrefs[$index] = U('Content/index', array('type'=>'articles','specialId'=>$specialData[$index]['id'],'articleId'=>0));
+		}
+		$this->assign('specialImages',$this->specialImages);
+		$this->assign('specialMaintitles',$this->specialMaintitles);
+		$this->assign('specialSubheads',$this->specialSubheads);
+		$this->assign('specialHrefs',$this->specialHrefs);
 		
-		// //准备文章列表数据
-		// if ($articleSort != 0) {
-			// $condition['type1'] = array('eq',$articleSort);
-		// }
-		// $condition['state'] = array('eq',1);
-		// $data = $Image->where($condition)->page($pageNum .',10')->select();
-		// $index = 0;
-		// foreach ($data as $value) {
-			// $data[$index]['imagesrc'] = C('__ROOT__') . 'Public/resource/minimalimage/' . $data[$index]['minorimage'] . '.jpg';
-			// switch ($data[$index]['type1'])
-			// {
-			// case 1:
-				// $data[$index]['type1'] = '技术开发';
-				// break;
-			// case 2:
-				// $data[$index]['type1'] = '产品设计';
-				// break;
-			// case 3:
-				// $data[$index]['type1'] = '金融经济';
-				// break;
-			// default:
-				// $data[$index]['type1'] = '其他';
-				// break;
-			// }
-			// $userData = $User->where('username="' . $data[$index]['author'] . '"')->find();
-			// $data[$index]['nickname'] = $userData['nickname'];
-			// $index++;
-		// }
-		// $this->assign('articles',$data);
+		//准备文章列表数据
+		if ($this->artCategory != 0) {
+			$condition['type1'] = array('eq',$this->artCategory);
+		}
+		$articleData = $this->Article->where($condition)->page($this->pageNum .',10')->select();
+		$articleCount = count($articleData);
+		for ($index=0; $index<$articleCount; $index++) {
+			$this->articleImage[$index] = C('__ROOT__') . 'Public/resource/minimalimage/' . $articleData[$index]['coverimage'] . '.jpg';
+			switch ($articleData[$index]['type1'])
+			{
+			case 1:
+				$this->articleClassification[$index] = '技术开发';
+				break;
+			case 2:
+				$this->articleClassification[$index] = '产品设计';
+				break;
+			case 3:
+				$this->articleClassification[$index] = '金融经济';
+				break;
+			default:
+				$this->articleClassification[$index] = '其他';
+				break;
+			}
+			$this->articleHref[$index] = U('Content/index', array('type'=>'article','id'=>$articleData[$index]['id']));
+			$this->articleMaintitle[$index] = $articleData[$index]['maintitle'];
+			$this->articleIntroduction[$index] = $articleData[$index]['article_introduction'];
+			$this->articleReadnum[$index] = $articleData[$index]['readnum'];
+			$this->articleNickname[$index] = $articleData[$index]['nickname'];
+		}
+
+		$this->assign('articleImage',$this->articleImage);
+		$this->assign('articleClassification',$this->articleClassification);
+		$this->assign('articleHref',$this->articleHref);
+		$this->assign('articleMaintitle',$this->articleMaintitle);
+		$this->assign('articleIntroduction',$this->articleIntroduction);
+		$this->assign('articleReadnum',$this->articleReadnum);
+		$this->assign('articleNickname',$this->articleNickname);
 		
-		// //准备分页数据
-		// $count = $Image->where($condition)->count();
-		// $Page = new \Think\Page($count,10);
-		// foreach($condition as $key=>$val) {
-			// $Page->parameter[$key]   =   urlencode($val);
-		// }
-		// $show = $Page->show();
-		// $this->assign('page',$show);
+		//准备分页数据
+		$articleCount = $this->Article->where($condition)->count();
+		$Page = new \Think\Page($articleCount,10);
+		foreach($condition as $key=>$val) {
+			$Page->parameter[$key] = urlencode($val);
+		}
+		$this->pageShow = $Page->show();
+		$this->assign('pageShow',$this->pageShow);
 		// //dump($Page);
-		
-		
-		
-		// //准备专家数据
-		// $data = $User->limit(5)->select();
-		// for ($index=0; $index<=4; $index++) {
-			// $data[$index]['icon'] = C('__ROOT__') . 'Public/resource/headportrait/' . $data[$index]['icon'];			
-		// }
-		// $this->assign('user',$data);
+
+		//准备专家数据
+		$expertData = $this->User->limit(5)->select();
+		for ($index=0; $index<=4; $index++) {
+			$this->expertImage[$index] = C('__ROOT__') . 'Public/resource/headportrait/' . $expertData[$index]['headimage'];	
+			$this->expertNickname[$index] = $expertData[$index]['nickname'];
+			$this->expertJobs[$index] = $expertData[$index]['jods'];
+			$this->expertIntroduction[$index] = $expertData[$index]['introduction'];			
+		}
+		$this->assign('expertImage',$this->expertImage);
+		$this->assign('expertNickname',$this->expertNickname);
+		$this->assign('expertJobs',$this->expertJobs);
+		$this->assign('expertIntroduction',$this->expertIntroduction);
 
         $this->display();
 	}

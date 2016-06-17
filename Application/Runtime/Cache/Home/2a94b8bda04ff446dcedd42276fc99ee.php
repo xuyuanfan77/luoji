@@ -79,11 +79,11 @@
 <!-- 专辑栏 -->
 <div class="special clearfix">
 	<ul>
-		<?php $__FOR_START_11681__=0;$__FOR_END_11681__=5;for($specialNum=$__FOR_START_11681__;$specialNum < $__FOR_END_11681__;$specialNum+=1){ if($special[$specialNum]['coverimage'] != null): ?><li>
-					<img src="<?php echo ($special[$specialNum]['coverimage']); ?>"/>
+		<?php $__FOR_START_16164__=0;$__FOR_END_16164__=5;for($specialIndex=$__FOR_START_16164__;$specialIndex < $__FOR_END_16164__;$specialIndex+=1){ if($specialImages[$specialIndex] != NULL): ?><li>
+					<img src="<?php echo ($specialImages[$specialIndex]); ?>"/>
 					<div class="special-title">
-						<a class="main-title" href="<?php echo U('Content/index', array('type'=>'articles','albumid'=>$special[$specialNum]['albumid'],'id'=>0));?>" target="_blank"><?php echo ($special[$specialNum]['maintitle']); ?></a>
-						<a class="minor-title" href="<?php echo U('Content/index', array('type'=>'articles','albumid'=>$special[$specialNum]['albumid'],'id'=>0));?>" target="_blank"><?php echo ($special[$specialNum]['minortitle']); ?></a>
+						<a class="main-title" href="<?php echo ($specialHrefs[$specialIndex]); ?>" target="_blank"><?php echo ($specialMaintitles[$specialIndex]); ?></a>
+						<a class="minor-title" href="<?php echo ($specialHrefs[$specialIndex]); ?>" target="_blank"><?php echo ($specialSubheads[$specialIndex]); ?></a>
 					</div>
 				</li><?php endif; } ?>
 	</ul>
@@ -98,28 +98,28 @@
 	<!-- 文章栏 -->
 	<div class="articles">
 		<ul>
-			<?php $__FOR_START_11206__=0;$__FOR_END_11206__=10;for($articleNum=$__FOR_START_11206__;$articleNum < $__FOR_END_11206__;$articleNum+=1){ if($articles[$articleNum]['imagesrc'] != null): ?><li>
-						<img src="<?php echo ($articles[$articleNum]['imagesrc']); ?>"/>
+			<?php $__FOR_START_2701__=0;$__FOR_END_2701__=10;for($articleIndex=$__FOR_START_2701__;$articleIndex < $__FOR_END_2701__;$articleIndex+=1){ if($articleImage[$articleIndex] != NULL): ?><li>
+						<img src="<?php echo ($articleImage[$articleIndex]); ?>"/>
 						<ul>
 							<li class="article-firstline">
-								<a class="article-classify1"><?php echo ($articles[$articleNum]['type1']); ?></a>
+								<a class="article-classify1"><?php echo ($articleClassification[$articleIndex]); ?></a>
 								<div class="article-classify2"></div>
 								<div class="article-collection-default"></div>
 							</li>
 							<li class="article-secondline">
-								<a href="<?php echo U('Content/index', array('type'=>'article','id'=>$articles[$articleNum]['minorimage']));?>" target="_blank" class="article-title"><?php echo ($articles[$articleNum]['maintitle']); ?></a>
-								<a class="article-overview"><?php echo ($articles[$articleNum]['introduct']); ?></a>
+								<a href="<?php echo ($articleHref[$specialIndex]); ?>" target="_blank" class="article-title"><?php echo ($articleMaintitle[$articleIndex]); ?></a>
+								<a class="article-overview"><?php echo ($articleIntroduction[$articleIndex]); ?></a>
 							</li>
 							<li class="article-thirdline">
-								<a>阅读：<?php echo ($articles[$articleNum]['read']); ?></a>
-								<a>作者：<?php echo ($articles[$articleNum]['nickname']); ?></a>
+								<a>阅读：<?php echo ($articleReadnum[$articleIndex]); ?></a>
+								<a>作者：<?php echo ($articleNickname[$articleIndex]); ?></a>
 							</li>
 						</ul>
 					</li><?php endif; } ?>
 		</ul>
 		<div class="pages">
 			<ul>
-				<?php echo ($page); ?>
+				<?php echo ($pageShow); ?>
 			</ul>
 			
 		</div>
@@ -134,36 +134,12 @@
 				<a>专家名榜</a>
 			</div>
 			<ul>
-				<li>
-					<img src="<?php echo ($user[0]['icon']); ?>"/>
-					<a class="experts-name"><?php echo ($user[0]['nickname']); ?></a>
-					<a class="experts-jobs"><?php echo ($user[0]['jobs']); ?></a>
-					<a class="experts-specialty"><?php echo ($user[0]['introduct']); ?></a>
-				</li>
-				<li>
-					<img src="<?php echo ($user[1]['icon']); ?>"/>
-					<a class="experts-name"><?php echo ($user[1]['nickname']); ?></a>
-					<a class="experts-jobs"><?php echo ($user[1]['jobs']); ?></a>
-					<a class="experts-specialty"><?php echo ($user[1]['introduct']); ?></a>
-				</li>
-				<li>
-					<img src="<?php echo ($user[2]['icon']); ?>"/>
-					<a class="experts-name"><?php echo ($user[2]['nickname']); ?></a>
-					<a class="experts-jobs"><?php echo ($user[2]['jobs']); ?></a>
-					<a class="experts-specialty"><?php echo ($user[2]['introduct']); ?></a>
-				</li>
-				<li>
-					<img src="<?php echo ($user[3]['icon']); ?>"/>
-					<a class="experts-name"><?php echo ($user[3]['nickname']); ?></a>
-					<a class="experts-jobs"><?php echo ($user[3]['jobs']); ?></a>
-					<a class="experts-specialty"><?php echo ($user[3]['introduct']); ?></a>
-				</li>
-				<li>
-					<img src="<?php echo ($user[4]['icon']); ?>"/>
-					<a class="experts-name"><?php echo ($user[4]['nickname']); ?></a>
-					<a class="experts-jobs"><?php echo ($user[4]['jobs']); ?></a>
-					<a class="experts-specialty"><?php echo ($user[4]['introduct']); ?></a>
-				</li>
+				<?php $__FOR_START_9282__=0;$__FOR_END_9282__=5;for($expertsIndex=$__FOR_START_9282__;$expertsIndex < $__FOR_END_9282__;$expertsIndex+=1){ if($expertImage[$expertsIndex] != NULL): ?><li>
+							<img src="<?php echo ($expertImage[$expertsIndex]); ?>"/>
+							<a class="experts-name"><?php echo ($expertNickname[$expertsIndex]); ?></a>
+							<a class="experts-jobs"><?php echo ($expertJobs[$expertsIndex]); ?></a>
+							<a class="experts-introduction"><?php echo ($expertIntroduction[$expertsIndex]); ?></a>
+						</li><?php endif; } ?>
 			</ul>
 		</div>
 	</div>
