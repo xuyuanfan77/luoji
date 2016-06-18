@@ -8,18 +8,18 @@
 	
 		<!-- 标题栏 -->
 		<div class="article-title">
-			<p>{$article['maintitle']}</p>
-			<a>{$article['minortitle']}</a>
+			<p>{$articleMaintitle}</p>
+			<a>{$articleSubhead}</a>
 		</div>
 		
 		<!-- 概述栏 -->
 		<div class="article-text">
-			<a>{$article['introduct']}</a>
+			<a>{$articleIntroduction}</a>
 		</div>
 		
 		<!-- 图片栏 -->
 		<div class="article-image">
-			<img src="{$article['imagesrc']}"/>
+			<img src="{$articleImage}"/>
 		</div>
 		
 		<!-- 分享栏 -->
@@ -30,17 +30,13 @@
 		</div>
 		
 		<!-- 目录栏 -->
-		<div id="article-catalog" class="{$style}">
+		<div id="article-catalog" class="{$artListDisplay}">
 			<a id="catalog-text" onmouseover="display()" onmouseout="disappear()">目<br>录</a>
 			<div id="catalog-list" onmouseover="display()" onmouseout="disappear()">
 				<ul>
-					<for start="0" end="$catalog['count']" name="articleNum">
-						<if condition="$articleNum == $catalog['current']">
-							<li><a class="list-select" href="{:U('Content/index', array('type'=>'articles','albumid'=>$catalog['albumid'],'id'=>$articleNum))}" target="_blank">{$catalog[$articleNum]}</a></li>
-						<else />
-							<li><a class="list-default" href="{:U('Content/index', array('type'=>'articles','albumid'=>$catalog['albumid'],'id'=>$articleNum))}" target="_blank">{$catalog[$articleNum]}</a></li>
-						</if>
-					</for>
+					<foreach name="artListTitle" item="item" key="index" >
+						<li><a class="{$artListStyle[$index]}" href="{$artListHref[$index]}" target="_blank">{$artListTitle[$index]}</a></li>
+					</foreach>
 				</ul>
 			</div>
 		</div>
@@ -51,11 +47,11 @@
 	
 		<!-- 作者栏 -->
 		<div class="article-author">
-			<img src="__PUBLIC__/picture/login.jpg"/>
-			<a class="author-name">{$user['nickname']}</a>
-			<a class="author-jobs">{$user['jobs']}</a>
-			<a class="author-company">{$user['company']}</a>
-			<a class="author-introduct">{$user['introduct']}</a>
+			<img src="{$expertImage}"/>
+			<a class="author-name">{$expertNickname}</a>
+			<a class="author-jobs">{$expertJobs}</a>
+			<a class="author-company">{$expertCompany}</a>
+			<a class="author-introduct">{$expertIntroduction}</a>
 		</div>
 		<div class="article-recommend">
 		</div>

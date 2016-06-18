@@ -3,62 +3,122 @@ namespace Home\Controller;
 use Think\Controller;
 header("Content-Type: text/html;charset=utf-8");
 class ContentController extends Controller {
-    public function index(){
-		//模型
-		$Image = M('Image');
-		$User = M('User');
-		$Album = M('Album');
-		$Combination = M('Combination');
+	
+	//模型
+	private $ArticleView;
+	private $User;
+	private $IncludeView;
+	
+	//输入参数
+	private $type;
+	private $specialId;
+	private $articleId;
+	private $artListIndex;
+	
+	//输出参数
+	public $navigation;
+	public $artListDisplay;
+	public $artListTitle;
+	public $artListHref;
+	public $artListStyle;
+	
+	public $articleImage;
+	public $articleMaintitle;
+	public $articleSubhead;
+	public $articleIntroduction;
+
+	public $expertImage;
+	public $expertNickname;
+	public $expertJobs;
+	public $expertCompany;
+	public $expertIntroduction;
+	
+	//常用参数
+	private $articleIndex;
+	
+	protected function init(){
+		$this->ArticleView = D('ArticleView');
+		$this->User = M('User');
+		$this->IncludeView = D('IncludeView');
 		
-		//输入参数
-		$num = array('一、', '二、', '三、', '四、', '五、', '六、', '七、', '八、', '九、', '十、');
-		$type = $_GET['type'];
-		$albumid = $_GET['albumid'];
-		$id = $_GET['id'];
-
-		//准备导航栏数据
-		$data = array('menu-default','menu-default','menu-default','menu-default','menu-default');
-		$this->assign('navigation',$data);
-		
-		if($type == 'article') {
-			$style = 'hide';
-			$this->assign('style',$style);
-			
-			$data = $Image->where('mainimage="' . $id . '"')->find();
-			$data['imagesrc'] = C('__ROOT__') . 'Public/resource/largerimage/' . $data['mainimage'] . '.jpg';
-			$this->assign('article',$data);
-
-			$userData = $User->where('username="' . $data['author'] . '"')->find();
-			$this->assign('user',$userData);
-			//dump($userData);
-			$this->display();
-		} elseif($type == 'articles') {
-			$style = 'show';
-			$this->assign('style',$style);
-			
-			$combination = $Combination->where('albumid=' . $albumid)->select();
-			$count = count($combination);
-			$data = array();
-			for ($index=0; $index<$count; $index++) {
-				$article = $Image->where('mainimage="' . $combination[$index]['mainimage'] . '"')->find();
-				$data[$index] = $num[$index] . mb_substr($article['maintitle'],0,13,'utf-8') . '…';
-			}
-			$data['count'] = $count;
-			$data['current'] = $id;
-			$data['albumid'] = $albumid;
-			$this->assign('catalog',$data);
-			
-			$id = $combination[$id]['mainimage'];
-			$data = $Image->where('mainimage="' . $id . '"')->find();
-			$data['imagesrc'] = C('__ROOT__') . 'Public/resource/largerimage/' . $data['mainimage'] . '.jpg';
-			$this->assign('article',$data);
-
-			$data = $User->where('username="' . $data['author'] . '"')->find();
-			$this->assign('user',$data);
-			//dump($userData);
-			
-			$this->display();
+		$this->type = $_GET['type'];
+		$this->specialId = $_GET['specialId'];
+		if($_GET['articleId']) {
+			$this->articleId = $_GET['articleId'];
+		} else {
+			$condition['special_id'] = array('eq',$this->specialId);
+			$specialData = $this->IncludeView->where($condition)->select();
+			$condition = NULL;
+			$this->articleId = $specialData[0]['article_id'];
 		}
+		if($_GET['artListIndex']) {
+			$this->artListIndex = $_GET['artListIndex'];
+		} else {
+			$this->artListIndex = 0;
+		}
+		$this->navigation = array('menu-default','menu-default','menu-default','menu-default','menu-default');
+		$this->articleIndex = array('一、', '二、', '三、', '四、', '五、', '六、', '七、', '八、', '九、', '十、', '十一、', '十二、', '十三、', '十四、', '十五、');
+	}
+	
+    public function index(){
+		$this->init();
 		
+		//准备菜单栏数据
+		$this->assign('navigation',$this->navigation);
+		
+		if($this->type == 'article') {
+			$this->artListDisplay = 'hide';
+			$this->assign('artListDisplay',$this->artListDisplay);
+			//dump($userData);
+			
+		} elseif($this->type == 'articles') {
+			$this->artListDisplay = 'show';
+			$this->assign('artListDisplay',$this->artListDisplay);
+			
+			$condition['special_id'] = array('eq',$this->specialId);
+			$specialData = $this->IncludeView->where($condition)->select();
+			$condition = NULL;
+			$articleCount = count($specialData);
+			
+			for ($index=0; $index<$articleCount; $index++) {
+				$this->artListTitle[$index] = $this->articleIndex[$index] . mb_substr($specialData[$index]['article_maintitle'],0,13,'utf-8') . '…';
+				$this->artListHref[$index] = U('Content/index', array('type'=>'articles','specialId'=>$this->specialId,'articleId'=>$specialData[$index]['article_id'],'artListIndex'=>$index));
+				if($index == $this->artListIndex) {
+					$this->artListStyle[$index] = 'list-select';
+				} else {
+					$this->artListStyle[$index] = 'list-default';
+				}
+			}
+			$this->assign('artListTitle',$this->artListTitle);
+			$this->assign('artListHref',$this->artListHref);
+			$this->assign('artListStyle',$this->artListStyle);
+			//dump($userData);
+		}
+		//dump($this->articleId);
+		$condition['article_id'] = array('eq',$this->articleId);
+		$articleData = $this->ArticleView->where($condition)->find();
+		$condition = NULL;
+		//dump($articleData);
+		$this->articleMaintitle = $articleData['maintitle'];
+		$this->articleSubhead = $articleData['subhead'];
+		$this->articleIntroduction = $articleData['article_introduction'];
+		$this->articleImage = C('__ROOT__') . 'Public/resource/largerimage/' . $articleData['mainimage'] . '.jpg';
+		$this->expertImage = C('__ROOT__') . 'Public/resource/headportrait/' . $articleData['headimage'];
+		$this->expertNickname = $articleData['nickname'];
+		$this->expertJobs = $articleData['jobs'];
+		$this->expertCompany = $articleData['company'];
+		$this->expertIntroduction = $articleData['user_introduction'];
+
+		$this->assign('articleMaintitle',$this->articleMaintitle);
+		$this->assign('articleSubhead',$this->articleSubhead);
+		$this->assign('articleIntroduction',$this->articleIntroduction);
+		$this->assign('articleImage',$this->articleImage);
+		$this->assign('expertImage',$this->expertImage);
+		$this->assign('expertNickname',$this->expertNickname);
+		$this->assign('expertJobs',$this->expertJobs);
+		$this->assign('expertCompany',$this->expertCompany);
+		$this->assign('expertIntroduction',$this->expertIntroduction);
+		
+		$this->display();
 	}
 }

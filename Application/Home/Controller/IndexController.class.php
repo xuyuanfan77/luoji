@@ -21,7 +21,7 @@ class IndexController extends Controller {
 	public $specialSubheads;
 	public $specialHrefs;
 	
-	public $articleImage;
+	public $articleCoverImage;
 	public $articleClassification;
 	public $articleHref;
 	public $articleMaintitle;
@@ -58,7 +58,8 @@ class IndexController extends Controller {
 		$this->init();
 
 		//准备菜单栏数据
-		$this->navigation[$artCategory] = 'menu-select';
+		$this->navigation[$this->artCategory] = 'menu-select';
+		//dump($this->navigation);
 		$this->assign('navigation',$this->navigation);
 		
 		//准备专辑数据
@@ -67,7 +68,7 @@ class IndexController extends Controller {
 			$this->specialImages[$index] = C('__ROOT__') . 'Public/' . $specialData[$index]['coverimage'];
 			$this->specialMaintitles[$index] = $specialData[$index]['maintitle'];
 			$this->specialSubheads[$index] = $specialData[$index]['subhead'];
-			$this->specialHrefs[$index] = U('Content/index', array('type'=>'articles','specialId'=>$specialData[$index]['id'],'articleId'=>0));
+			$this->specialHrefs[$index] = U('Content/index', array('type'=>'articles','specialId'=>$specialData[$index]['id']));
 		}
 		$this->assign('specialImages',$this->specialImages);
 		$this->assign('specialMaintitles',$this->specialMaintitles);
@@ -81,7 +82,7 @@ class IndexController extends Controller {
 		$articleData = $this->Article->where($condition)->page($this->pageNum .',10')->select();
 		$articleCount = count($articleData);
 		for ($index=0; $index<$articleCount; $index++) {
-			$this->articleImage[$index] = C('__ROOT__') . 'Public/resource/minimalimage/' . $articleData[$index]['coverimage'] . '.jpg';
+			$this->articleCoverImage[$index] = C('__ROOT__') . 'Public/resource/minimalimage/' . $articleData[$index]['coverimage'] . '.jpg';
 			switch ($articleData[$index]['type1'])
 			{
 			case 1:
@@ -97,14 +98,14 @@ class IndexController extends Controller {
 				$this->articleClassification[$index] = '其他';
 				break;
 			}
-			$this->articleHref[$index] = U('Content/index', array('type'=>'article','id'=>$articleData[$index]['id']));
+			$this->articleHref[$index] = U('Content/index', array('type'=>'article','articleId'=>$articleData[$index]['article_id']));
 			$this->articleMaintitle[$index] = $articleData[$index]['maintitle'];
 			$this->articleIntroduction[$index] = $articleData[$index]['article_introduction'];
 			$this->articleReadnum[$index] = $articleData[$index]['readnum'];
 			$this->articleNickname[$index] = $articleData[$index]['nickname'];
 		}
 
-		$this->assign('articleImage',$this->articleImage);
+		$this->assign('articleCoverImage',$this->articleCoverImage);
 		$this->assign('articleClassification',$this->articleClassification);
 		$this->assign('articleHref',$this->articleHref);
 		$this->assign('articleMaintitle',$this->articleMaintitle);
@@ -120,7 +121,7 @@ class IndexController extends Controller {
 		}
 		$this->pageShow = $Page->show();
 		$this->assign('pageShow',$this->pageShow);
-		// //dump($Page);
+		//dump($Page);
 
 		//准备专家数据
 		$expertData = $this->User->limit(5)->select();

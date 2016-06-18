@@ -59,9 +59,9 @@
 	<div class="articles">
 		<ul>
 			<for start="0" end="10" name="articleIndex">
-				<if condition="$articleImage[$articleIndex] neq NULL">
+				<if condition="$articleCoverImage[$articleIndex] neq NULL">
 					<li>
-						<img src="{$articleImage[$articleIndex]}"/>
+						<img src="{$articleCoverImage[$articleIndex]}"/>
 						<ul>
 							<li class="article-firstline">
 								<a class="article-classify1">{$articleClassification[$articleIndex]}</a>
@@ -69,7 +69,7 @@
 								<div class="article-collection-default"></div>
 							</li>
 							<li class="article-secondline">
-								<a href="{$articleHref[$specialIndex]}" target="_blank" class="article-title">{$articleMaintitle[$articleIndex]}</a>
+								<a href="{$articleHref[$articleIndex]}" target="_blank" class="article-title">{$articleMaintitle[$articleIndex]}</a>
 								<a class="article-overview">{$articleIntroduction[$articleIndex]}</a>
 							</li>
 							<li class="article-thirdline">
