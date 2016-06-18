@@ -19,11 +19,11 @@
 			</div>
 			<div class="menu">
 				<ul>
-					<li><a href="<?php echo U('Index/index','sort=0');?>" class="<?php echo ($navigation[0]); ?>">首页</a></li>
-					<li><a href="<?php echo U('Index/index','sort=1');?>" class="<?php echo ($navigation[1]); ?>">技术</a></li>
-					<li><a href="<?php echo U('Index/index','sort=2');?>" class="<?php echo ($navigation[2]); ?>">产品</a></li>
-					<li><a href="<?php echo U('Index/index','sort=3');?>" class="<?php echo ($navigation[3]); ?>">经济</a></li>
-					<li><a href="<?php echo U('Index/index','sort=4');?>" class="<?php echo ($navigation[4]); ?>">其他</a></li>
+					<li><a href="<?php echo U('Index/index','category=0');?>" class="<?php echo ($navigation[0]); ?>">首页</a></li>
+					<li><a href="<?php echo U('Index/index','category=1');?>" class="<?php echo ($navigation[1]); ?>">技术</a></li>
+					<li><a href="<?php echo U('Index/index','category=2');?>" class="<?php echo ($navigation[2]); ?>">产品</a></li>
+					<li><a href="<?php echo U('Index/index','category=3');?>" class="<?php echo ($navigation[3]); ?>">经济</a></li>
+					<li><a href="<?php echo U('Index/index','category=4');?>" class="<?php echo ($navigation[4]); ?>">其他</a></li>
 				</ul>
 			</div>
 			<!--div class="login" onmouseover="showLoginMenu();" onmouseout="hideLoginMenu();">
@@ -52,18 +52,18 @@
 	
 		<!-- 标题栏 -->
 		<div class="article-title">
-			<p><?php echo ($article['maintitle']); ?></p>
-			<a><?php echo ($article['minortitle']); ?></a>
+			<p><?php echo ($articleMaintitle); ?></p>
+			<a><?php echo ($articleSubhead); ?></a>
 		</div>
 		
 		<!-- 概述栏 -->
 		<div class="article-text">
-			<a><?php echo ($article['introduct']); ?></a>
+			<a><?php echo ($articleIntroduction); ?></a>
 		</div>
 		
 		<!-- 图片栏 -->
 		<div class="article-image">
-			<img src="<?php echo ($article['imagesrc']); ?>"/>
+			<img src="<?php echo ($articleImage); ?>"/>
 		</div>
 		
 		<!-- 分享栏 -->
@@ -74,13 +74,11 @@
 		</div>
 		
 		<!-- 目录栏 -->
-		<div id="article-catalog" class="<?php echo ($style); ?>">
+		<div id="article-catalog" class="<?php echo ($artListDisplay); ?>">
 			<a id="catalog-text" onmouseover="display()" onmouseout="disappear()">目<br>录</a>
 			<div id="catalog-list" onmouseover="display()" onmouseout="disappear()">
 				<ul>
-					<?php $__FOR_START_27978__=0;$__FOR_END_27978__=$catalog['count'];for($articleNum=$__FOR_START_27978__;$articleNum < $__FOR_END_27978__;$articleNum+=1){ if($articleNum == $catalog['current']): ?><li><a class="list-select" href="<?php echo U('Content/index', array('type'=>'articles','albumid'=>$catalog['albumid'],'id'=>$articleNum));?>" target="_blank"><?php echo ($catalog[$articleNum]); ?></a></li>
-						<?php else: ?>
-							<li><a class="list-default" href="<?php echo U('Content/index', array('type'=>'articles','albumid'=>$catalog['albumid'],'id'=>$articleNum));?>" target="_blank"><?php echo ($catalog[$articleNum]); ?></a></li><?php endif; } ?>
+					<?php if(is_array($artListTitle)): foreach($artListTitle as $index=>$item): ?><li><a class="<?php echo ($artListStyle[$index]); ?>" href="<?php echo ($artListHref[$index]); ?>" target="_blank"><?php echo ($artListTitle[$index]); ?></a></li><?php endforeach; endif; ?>
 				</ul>
 			</div>
 		</div>
@@ -91,11 +89,11 @@
 	
 		<!-- 作者栏 -->
 		<div class="article-author">
-			<img src="/luoji/Public/picture/login.jpg"/>
-			<a class="author-name"><?php echo ($user['nickname']); ?></a>
-			<a class="author-jobs"><?php echo ($user['jobs']); ?></a>
-			<a class="author-company"><?php echo ($user['company']); ?></a>
-			<a class="author-introduct"><?php echo ($user['introduct']); ?></a>
+			<img src="<?php echo ($expertImage); ?>"/>
+			<a class="author-name"><?php echo ($expertNickname); ?></a>
+			<a class="author-jobs"><?php echo ($expertJobs); ?></a>
+			<a class="author-company"><?php echo ($expertCompany); ?></a>
+			<a class="author-introduct"><?php echo ($expertIntroduction); ?></a>
 		</div>
 		<div class="article-recommend">
 		</div>

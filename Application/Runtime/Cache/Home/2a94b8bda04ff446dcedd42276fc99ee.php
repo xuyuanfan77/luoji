@@ -79,7 +79,7 @@
 <!-- 专辑栏 -->
 <div class="special clearfix">
 	<ul>
-		<?php $__FOR_START_16164__=0;$__FOR_END_16164__=5;for($specialIndex=$__FOR_START_16164__;$specialIndex < $__FOR_END_16164__;$specialIndex+=1){ if($specialImages[$specialIndex] != NULL): ?><li>
+		<?php $__FOR_START_4600__=0;$__FOR_END_4600__=5;for($specialIndex=$__FOR_START_4600__;$specialIndex < $__FOR_END_4600__;$specialIndex+=1){ if($specialImages[$specialIndex] != NULL): ?><li>
 					<img src="<?php echo ($specialImages[$specialIndex]); ?>"/>
 					<div class="special-title">
 						<a class="main-title" href="<?php echo ($specialHrefs[$specialIndex]); ?>" target="_blank"><?php echo ($specialMaintitles[$specialIndex]); ?></a>
@@ -98,8 +98,8 @@
 	<!-- 文章栏 -->
 	<div class="articles">
 		<ul>
-			<?php $__FOR_START_2701__=0;$__FOR_END_2701__=10;for($articleIndex=$__FOR_START_2701__;$articleIndex < $__FOR_END_2701__;$articleIndex+=1){ if($articleImage[$articleIndex] != NULL): ?><li>
-						<img src="<?php echo ($articleImage[$articleIndex]); ?>"/>
+			<?php $__FOR_START_26321__=0;$__FOR_END_26321__=10;for($articleIndex=$__FOR_START_26321__;$articleIndex < $__FOR_END_26321__;$articleIndex+=1){ if($articleCoverImage[$articleIndex] != NULL): ?><li>
+						<img src="<?php echo ($articleCoverImage[$articleIndex]); ?>"/>
 						<ul>
 							<li class="article-firstline">
 								<a class="article-classify1"><?php echo ($articleClassification[$articleIndex]); ?></a>
@@ -107,7 +107,7 @@
 								<div class="article-collection-default"></div>
 							</li>
 							<li class="article-secondline">
-								<a href="<?php echo ($articleHref[$specialIndex]); ?>" target="_blank" class="article-title"><?php echo ($articleMaintitle[$articleIndex]); ?></a>
+								<a href="<?php echo ($articleHref[$articleIndex]); ?>" target="_blank" class="article-title"><?php echo ($articleMaintitle[$articleIndex]); ?></a>
 								<a class="article-overview"><?php echo ($articleIntroduction[$articleIndex]); ?></a>
 							</li>
 							<li class="article-thirdline">
@@ -134,7 +134,7 @@
 				<a>专家名榜</a>
 			</div>
 			<ul>
-				<?php $__FOR_START_9282__=0;$__FOR_END_9282__=5;for($expertsIndex=$__FOR_START_9282__;$expertsIndex < $__FOR_END_9282__;$expertsIndex+=1){ if($expertImage[$expertsIndex] != NULL): ?><li>
+				<?php $__FOR_START_9526__=0;$__FOR_END_9526__=5;for($expertsIndex=$__FOR_START_9526__;$expertsIndex < $__FOR_END_9526__;$expertsIndex+=1){ if($expertImage[$expertsIndex] != NULL): ?><li>
 							<img src="<?php echo ($expertImage[$expertsIndex]); ?>"/>
 							<a class="experts-name"><?php echo ($expertNickname[$expertsIndex]); ?></a>
 							<a class="experts-jobs"><?php echo ($expertJobs[$expertsIndex]); ?></a>
