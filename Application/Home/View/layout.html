@@ -7,6 +7,7 @@
 	<link type="text/css" href="__PUBLIC__/css/layout/frame.css" rel="stylesheet"/>
 	<link type="text/css" href="__PUBLIC__/css/layout/header.css" rel="stylesheet"/>
 	<link type="text/css" href="__PUBLIC__/css/layout/footer.css" rel="stylesheet"/>
+	<script type="text/javascript" src="__PUBLIC__/javascript/layout/header.js"></script>
 	<script type="text/javascript" src="__PUBLIC__/javascript/jquery-1.12.4.js"></script>
 </head>
 
@@ -26,17 +27,21 @@
 					<li><a href="{:U('Index/index','category=4')}" class="{$navigation[4]}">其他</a></li>
 				</ul>
 			</div>
-			<!--div class="login" onmouseover="showLoginMenu();" onmouseout="hideLoginMenu();">
+			<div class="login" id="login-image" onmouseover="showLoginMenu();" onmouseout="hideLoginMenu();">
 				<img src="__PUBLIC__/picture/login.jpg"/>
-				<div class="login-menu">
+				<div class="login-menu" id="login-menu">
+					
 					<ul>
-						<li><a href="#">我要发表</a></li>
+						<li><a href="#">我要投稿</a></li>
 						<li><a href="#">我的收藏</a></li>
-						<li><a href="#">我的发表</a></li>
-						<li><a href="#">退出</a></li>
+						<li><a href="#">我的投稿</a></li>
+						<li><a href="#">个人信息</a></li>
+						<li><a href="{:U('Account/index','operation=0')}">登 陆</a></li>
+						<li><a href="{:U('Account/index','operation=1')}">注 册</a></li>
+						<li><a href="#">退 出</a></li>
 					</ul>
 				</div>
-			</div-->
+			</div>
 		</div>
 	</div>
 	<div class="page-body">

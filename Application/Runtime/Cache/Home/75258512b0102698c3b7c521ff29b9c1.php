@@ -47,64 +47,40 @@
 	<div class="page-body">
 		<!--div class="test">
 		</div-->
-		<link type="text/css" href="/luoji/Public/css/article.css" rel="stylesheet"/>
-<script type="text/javascript" src="/luoji/Public/javascript/article.js"></script>
+		<link type="text/css" href="/luoji/Public/css/account.css" rel="stylesheet"/>
+<script type="text/javascript" src="/luoji/Public/javascript/account.js"></script>
 
-<div class="article clearfix">
-
-	<!-- 左边栏 -->
-	<div class="left-frame">
-	
-		<!-- 标题栏 -->
-		<div class="article-title">
-			<p><?php echo ($articleMaintitle); ?></p>
-			<a><?php echo ($articleSubhead); ?></a>
+<div>
+	<img src="/luoji/Public/picture/loginBg.jpg" width="100%"/>
+	<div id="account-tab">
+		<div class="tabList">
+			<ul>
+				<li class="<?php echo ($loginTab); ?>">登录</li>
+				<li class="<?php echo ($registerTab); ?>">注册</li>
+			</ul>
 		</div>
-		
-		<!-- 概述栏 -->
-		<div class="article-text">
-			<a><?php echo ($articleIntroduction); ?></a>
-		</div>
-		
-		<!-- 图片栏 -->
-		<div class="article-image">
-			<img src="<?php echo ($articleImage); ?>"/>
-		</div>
-		
-		<!-- 分享栏 -->
-		<div class="article-share">
-			<a class="weixin" href="#"><img src="/luoji/Public/picture/weixin.png"/>分享到微信</a>
-			<a class="weibo" href="#"><img src="/luoji/Public/picture/weibo.png"/>分享到微博</a>
-			<a class="qq" href="#"><img src="/luoji/Public/picture/qq.png"/>分享到QQ</a>
-		</div>
-		
-		<!-- 目录栏 -->
-		<div id="article-catalog" class="<?php echo ($artListDisplay); ?>">
-			<a id="catalog-text" onmouseover="display()" onmouseout="disappear()">目<br>录</a>
-			<div id="catalog-list" onmouseover="display()" onmouseout="disappear()">
-				<ul>
-					<?php if(is_array($artListTitle)): foreach($artListTitle as $index=>$item): ?><li><a class="<?php echo ($artListStyle[$index]); ?>" href="<?php echo ($artListHref[$index]); ?>" target="_blank"><?php echo ($artListTitle[$index]); ?></a></li><?php endforeach; endif; ?>
-				</ul>
+		<div class="tabCon">
+			<div class="<?php echo ($loginForm); ?>">
+				<form action="<?php echo U('Account/login');?>" method="post" class="login-form">
+					 <p><input type="text" name="username" class="input" placeholder="请输入用户名"/></p>
+					 <p><input type="password" name="password" class="input" placeholder="请输入密码"/></p>
+					 <p><input type="text" name="identifyingcode" class="input" placeholder="请输入验证码"/></p>
+					 <p><input type="submit" class="button" value="登录" /></p>
+				</form>
+			</div>
+			<div class="<?php echo ($registerForm); ?>">
+				<form action="<?php echo U('Account/register');?>" method="post" class="register-form">
+					 <p><input type="text" name="username" class="input" placeholder="请输入用户名"/></p>
+					 <p><input type="text" name="nickname" class="input" placeholder="请输入昵称"/></p>
+					 <p><input type="password" name="password" class="input" placeholder="请输入密码"/></p>
+					 <p><input type="password" name="confirmpassword" class="input" placeholder="请确认密码"/></p>
+					 <p><input type="text" name="identifyingcode" class="input" placeholder="请输入验证码"/></p>
+					 <p><input type="submit" class="button" value="注册" /></p>
+				</form>
 			</div>
 		</div>
 	</div>
-	
-	<!-- 右边栏 -->
-	<div class="right-frame">
-	
-		<!-- 作者栏 -->
-		<div class="article-author">
-			<img src="<?php echo ($expertImage); ?>"/>
-			<a class="author-name"><?php echo ($expertNickname); ?></a>
-			<a class="author-jobs"><?php echo ($expertJobs); ?></a>
-			<a class="author-company"><?php echo ($expertCompany); ?></a>
-			<a class="author-introduct"><?php echo ($expertIntroduction); ?></a>
-		</div>
-		<div class="article-recommend">
-		</div>
-	</div>
 </div>
-
 	</div>
 	<div class="page-footer">
 	</div>

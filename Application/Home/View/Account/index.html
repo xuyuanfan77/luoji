@@ -1,0 +1,34 @@
+<link type="text/css" href="__PUBLIC__/css/account.css" rel="stylesheet"/>
+<script type="text/javascript" src="__PUBLIC__/javascript/account.js"></script>
+
+<div>
+	<img src="__PUBLIC__/picture/loginBg.jpg" width="100%"/>
+	<div id="account-tab">
+		<div class="tabList">
+			<ul>
+				<li class="{$loginTab}">登录</li>
+				<li class="{$registerTab}">注册</li>
+			</ul>
+		</div>
+		<div class="tabCon">
+			<div class="{$loginForm}">
+				<form action="{:U('Account/login')}" method="post" class="login-form">
+					 <p><input type="text" name="username" class="input" placeholder="请输入用户名"/></p>
+					 <p><input type="password" name="password" class="input" placeholder="请输入密码"/></p>
+					 <p><input type="text" name="identifyingcode" class="input" placeholder="请输入验证码"/></p>
+					 <p><input type="submit" class="button" value="登录" /></p>
+				</form>
+			</div>
+			<div class="{$registerForm}">
+				<form action="{:U('Account/register')}" method="post" class="register-form">
+					 <p><input type="text" name="username" class="input" placeholder="请输入用户名"/></p>
+					 <p><input type="text" name="nickname" class="input" placeholder="请输入昵称"/></p>
+					 <p><input type="password" name="password" class="input" placeholder="请输入密码"/></p>
+					 <p><input type="password" name="confirmpassword" class="input" placeholder="请确认密码"/></p>
+					 <p><input type="text" name="identifyingcode" class="input" placeholder="请输入验证码"/></p>
+					 <p><input type="submit" class="button" value="注册" /></p>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
