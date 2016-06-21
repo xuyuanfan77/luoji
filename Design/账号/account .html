@@ -4,30 +4,32 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title>逻辑</title>
 
-	<link href="css/frame.css" rel="stylesheet" type="text/css" />
-	<link href="css/header.css" rel="stylesheet" type="text/css" />
-	<link href="css/body-account.css" rel="stylesheet" type="text/css" />
-	<script type="text/javascript" src="javascript/jquery-1.12.4.js"></script>
-	<script type="text/javascript" src="javascript/account.js"></script>
+	<link type="text/css" href="./css/layout/frame.css" rel="stylesheet"/>
+	<link type="text/css" href="./css/layout/header.css" rel="stylesheet"/>
+	<link type="text/css" href="./css/layout/footer.css" rel="stylesheet"/>
+	<link type="text/css" href="./css/account.css" rel="stylesheet"/>
+	<script type="text/javascript" src="./javascript/account.js"></script>
+	<script type="text/javascript" src="./javascript/jquery-1.12.4.js"></script>
 </head>
+
 
 <body>
 	<div class="page-header">
 		<div class="header">
 			<div class="logo">
-				<img src="picture/logo.png"/>
+				<img src="./picture/logo-white.png"/>
 			</div>
 			<div class="menu">
 				<ul>
-					<li><a href="#" class="menu-select">首页</a></li>
+					<li><a href="#" class="menu-default">首页</a></li>
 					<li><a href="#" class="menu-default">技术</a></li>
 					<li><a href="#" class="menu-default">产品</a></li>
 					<li><a href="#" class="menu-default">经济</a></li>
 					<li><a href="#" class="menu-default">其他</a></li>
 				</ul>
 			</div>
-			<div class="login" onmouseover="showLoginMenu();" onmouseout="hideLoginMenu();">
-				<img src="picture/login.jpg"/>
+			<!--div class="login" onmouseover="showLoginMenu();" onmouseout="hideLoginMenu();">
+				<img src="__PUBLIC__/picture/login.jpg"/>
 				<div class="login-menu">
 					<ul>
 						<li><a href="#">我要发表</a></li>
@@ -36,36 +38,40 @@
 						<li><a href="#">退出</a></li>
 					</ul>
 				</div>
-			</div>
+			</div-->
 		</div>
 	</div>
 	<div class="page-body">
-		<div id="tab-group">
-			<a class="tab-select">登录</a>
-			<a class="tab-default">注册</a>
-		</div>
-		<div id="panel-group">
-			<div class="login-panel">
-				<form>
-					<table class="login-table">
-						<tbody>
-							<tr>
-								<td><input type="text" class="text-input" placeholder="请输入账号"/></td>
-							</tr>
-							<tr>
-								<td><input type="text" class="text-input" placeholder="请输入密码"/></td>
-							</tr>
-							<tr>
-								<td><input type="text" class="text-input" placeholder="请输入验证码"/></td> 
-							</tr>
-							<tr>
-								<td><input type="submit" value="登录" class="login-button"/></td>
-							</tr>
-						</tbody>
-					</table>
-				</form>
+		<div>
+			<img src="picture/loginBg.jpg" width="100%"/>
+			<div id="account-tab">
+				<div class="tabList">
+					<ul>
+						<li class="tabList-cur">登录</li>
+						<li class="tabList-other">注册</li>
+					</ul>
+				</div>
+				<div class="tabCon">
+					<div class="tabCon-cur">
+						<form action="/example/html/form_action.asp" method="get" class="login">
+							 <p><input type="text" name="username" class="input" placeholder="请输入用户名"/></p>
+							 <p><input type="password" name="password" class="input" placeholder="请输入密码"/></p>
+							 <p><input type="text" name="identifyingcode" class="input" placeholder="请输入验证码"/></p>
+							 <p><input type="submit" class="button" value="登录" /></p>
+						</form>
+					</div>
+					<div class="tabCon-other">
+						<form action="/example/html/form_action.asp" method="get" class="register">
+							 <p><input type="text" name="username" class="input" placeholder="请输入用户名"/></p>
+							 <p><input type="text" name="nickname" class="input" placeholder="请输入昵称"/></p>
+							 <p><input type="password" name="password" class="input" placeholder="请输入密码"/></p>
+							 <p><input type="password" name="password" class="input" placeholder="请确认密码"/></p>
+							 <p><input type="text" name="identifyingcode" class="input" placeholder="请输入验证码"/></p>
+							 <p><input type="submit" class="button" value="注册" /></p>
+						</form>
+					</div>
+				</div>
 			</div>
-			<div style="display:none">注册</div>
 		</div>
 	</div>
 	<div class="page-footer">
