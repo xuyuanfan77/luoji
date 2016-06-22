@@ -55,8 +55,6 @@ class AccountController extends Controller {
 		$this->assign('registerTab',$this->registerTab);
 		$this->assign('loginForm',$this->loginForm);
 		$this->assign('registerForm',$this->registerForm);
-		
-		
 	
         $this->display();
 	}
@@ -72,6 +70,11 @@ class AccountController extends Controller {
 		$Verify->entry();
 	}
 	
+	function check_verify($code, $id = '') {
+		$verify = new \Think\Verify();
+		return $verify->check($code, $id);
+	}
+	
 	public function login(){
 		$contents['username'] = $_POST['username'];
 		$contents['password'] = $_POST['password'];
@@ -82,15 +85,19 @@ class AccountController extends Controller {
 	public function register(){
 		$this->init();
 		
-		if (!$this->User->create()){
-			// 如果创建失败 表示验证没有通过 输出错误提示信息
-			//dump($this->User->getError());
-			$this->redirect('Account/index', array('operation' => 1), 0, $this->User->getError());
-		}else{
-			$result = $this->User->add();
-			if($result){
-				$this->redirect('Index/index', array('category' => 0, 'p' => 1), 0, '恭喜您！你已经成功注册账号！页面跳转中...');
+		if (!$this->check_verify($_POST['verify'])) {
+			$this->redirect('Account/index', array('operation' => 1), 2, '验证码有误！');
+		} else {
+			if (!$this->User->create()){
+				$this->redirect('Account/index', array('operation' => 1), 2, $this->User->getError());
+			}else{
+				$result = $this->User->add();
+				if($result){
+					$this->redirect('Index/index', array('category' => 0, 'p' => 1), 0, '恭喜您！你已经成功注册账号！页面跳转中...');
+				}
 			}
 		}
+		
+		
 	}
 }
