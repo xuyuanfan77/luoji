@@ -4,9 +4,9 @@ use Think\Controller;
 header("Content-Type: text/html;charset=utf-8");
 class AccountController extends Controller {
 	
-	// //模型
+	//模型
 	// private $Article;
-	// private $User;
+	private $User;
 	// private $Special;
 	
 	//输入参数
@@ -21,7 +21,7 @@ class AccountController extends Controller {
 	
 	protected function init(){
 		// $this->Article = D('ArticleView');
-		// $this->User = M('User');
+		$this->User = D('User');
 		// $this->Special = M('Special');
 		
 		if($_GET['operation']) {
@@ -55,23 +55,42 @@ class AccountController extends Controller {
 		$this->assign('registerTab',$this->registerTab);
 		$this->assign('loginForm',$this->loginForm);
 		$this->assign('registerForm',$this->registerForm);
-
+		
+		
+	
         $this->display();
+	}
+	
+	public function verify(){
+		//准备验证码
+		$Verify = new \Think\Verify();
+		$Verify->useImgBg = true;
+		$Verify->fontSize = 18;
+		$Verify->imageW = 150;
+		$Verify->imageH = 39;
+		$Verify->length = 4; 
+		$Verify->entry();
 	}
 	
 	public function login(){
 		$contents['username'] = $_POST['username'];
 		$contents['password'] = $_POST['password'];
-		$contents['identifyingcode'] = $_POST['identifyingcode'];
+		$contents['verify'] = $_POST['verify'];
 		dump($contents);
 	}
 	
 	public function register(){
-		$contents['username'] = $_POST['username'];
-		$contents['nickname'] = $_POST['nickname'];
-		$contents['password'] = $_POST['password'];
-		$contents['confirmpassword'] = $_POST['confirmpassword'];
-		$contents['identifyingcode'] = $_POST['identifyingcode'];
-		dump($contents);
+		$this->init();
+		
+		if (!$this->User->create()){
+			// 如果创建失败 表示验证没有通过 输出错误提示信息
+			//dump($this->User->getError());
+			$this->redirect('Account/index', array('operation' => 1), 0, $this->User->getError());
+		}else{
+			$result = $this->User->add();
+			if($result){
+				$this->redirect('Index/index', array('category' => 0, 'p' => 1), 0, '恭喜您！你已经成功注册账号！页面跳转中...');
+			}
+		}
 	}
 }

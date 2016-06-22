@@ -60,16 +60,22 @@
 	margin:20px 0px 20px 0px;
 }
 
-.input {
+/*.input {
 	width:340px;
 	height:35px;
 	padding-left:5px;
 	padding-left:8px;
+	color:#999999;
 }
 
-.input:focus {
-	border:1px solid #3F7BED;
+.verify-input {
+	width:160px;
 }
+
+.input .verify-input:focus {
+	border:1px solid #3F7BED;
+	color:#999999;
+}*/
 
 .button {
 	width:352px;

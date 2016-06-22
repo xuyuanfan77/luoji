@@ -62,49 +62,20 @@
 		<div class="tabCon">
 			<div class="<?php echo ($loginForm); ?>">
 				<form action="<?php echo U('Account/login');?>" method="post" class="login-form">
-					 <p><input type="text" name="username" class="input" placeholder="请输入用户名（4至20位字符，仅支持字母和数字）"/></p>
-					 <p><input type="password" name="password" class="input" placeholder="请输入密码（4-20位字符，支持字母、数字和标点符号）"/></p>
-					 <p><input type="text" name="verify" class="verify-input" placeholder="请输入验证码"/></p>
+					 <p><input type="text" name="username" class="input" placeholder="请输入用户名"/></p>
+					 <p><input type="password" name="password" class="input" placeholder="请输入密码"/></p>
+					 <p><input type="text" name="verify" class="input" placeholder="请输入验证码"/></p>
 					 <p><input type="submit" class="button" value="登录" /></p>
 				</form>
 			</div>
 			<div class="<?php echo ($registerForm); ?>">
 				<form action="<?php echo U('Account/register');?>" method="post" class="register-form">
-					 <table>
-						<tr>
-							<td colspan="2">
-								<input type="text" name="username" class="input" placeholder="请输入用户名（4至20位字符，仅支持字母和数字）"/>
-							</td>
-						</tr>
-						<tr>
-							<td colspan="2">
-								<input type="text" name="nickname" class="input" placeholder="请输入昵称（1-20位字符，支持字母、数字和中文）"/>
-							</td>
-						<tr>
-						<tr>
-							<td colspan="2">
-								<input type="password" name="password" class="input" placeholder="请输入密码（4-20位字符，支持字母、数字和标点符号）"/>
-							</td>
-						</tr>
-						<tr>
-							<td colspan="2">
-								<input type="password" name="repassword" class="input" placeholder="请确认密码"/>
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<input type="text" name="verify" class="verify-input" placeholder="请输入验证码"/>
-							</td>
-							<td>
-								<img src="<?php echo U('Account/verify',array());?>" title="点击刷新"/>
-							</td>
-						</tr>
-						<tr>
-							<td colspan="2">
-								<input type="submit" class="button" value="注册" />
-							<td>
-						</tr>
-					</table>
+					 <p><input type="text" name="username" class="input" placeholder="请输入用户名"/></p>
+					 <p><input type="text" name="nickname" class="input" placeholder="请输入昵称"/></p>
+					 <p><input type="password" name="password" class="input" placeholder="请输入密码"/></p>
+					 <p><input type="password" name="repassword" class="input" placeholder="请确认密码"/></p>
+					 <p><input type="text" name="verify" class="input" placeholder="请输入验证码"/></p>
+					 <p><input type="submit" class="button" value="注册" /></p>
 				</form>
 			</div>
 		</div>
