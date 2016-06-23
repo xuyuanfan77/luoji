@@ -12,7 +12,7 @@
 		</div>
 		<div class="tabCon">
 			<div class="{$loginForm}">
-				<form action="{:U('Account/login')}" method="post" class="login-form">
+				<!--form action="{:U('Account/login')}" method="post" class="login-form">
 					<table class="login-table">
 						<tr>
 							<td colspan="2">
@@ -38,34 +38,34 @@
 							</td>
 						</tr>
 					</table>
-				</form>
+				</form-->
 			</div>
 			<div class="{$registerForm}">
-				<form action="{:U('Account/register')}" method="post" class="register-form">
+				<form class="register-form" action="{:U('Account/register')}" method="post">
 					 <table class="register-table">
 						<tr>
 							<td colspan="2">
-								<input type="text" name="username" class="input" placeholder="请输入用户名（4至20位字符，仅支持字母和数字）" onchange="registerVerifyInput(this)"/>
+								<input type="text" name="username" class="input" id="rusername" placeholder="请输入用户名（4至20位字符，仅支持字母和数字）" onchange="registerVerifyInput(this)"/>
 							</td>
 						</tr>
 						<tr>
 							<td colspan="2">
-								<input type="text" name="nickname" class="input" placeholder="请输入昵称（1-20位字符，支持字母、数字和中文）" onchange="registerVerifyInput(this)"/>
+								<input type="text" name="nickname" class="input" id="rnickname" placeholder="请输入昵称（1-20位字符，支持字母、数字和中文）" onchange="registerVerifyInput(this)"/>
 							</td>
 						</tr>
 						<tr>
 							<td colspan="2">
-								<input type="password" name="password" class="input" placeholder="请输入密码（4-20位字符，支持字母、数字和标点符号）" onchange="registerVerifyInput(this)"/>
+								<input type="password" name="password" class="input" id="rpassword" placeholder="请输入密码（4-20位字符，支持字母、数字和标点符号）" onchange="registerVerifyInput(this)"/>
 							</td>
 						</tr>
 						<tr>
 							<td colspan="2">
-								<input type="password" name="repassword" class="input" placeholder="请确认密码" onchange="registerVerifyInput(this)"/>
+								<input type="password" name="repassword" class="input" id="rrepassword" placeholder="请确认密码" onchange="registerVerifyInput(this)"/>
 							</td>
 						</tr>
 						<tr>
 							<td>
-								<input type="text" name="verify" class="verify-input" placeholder="请输入验证码"/>
+								<input type="text" name="verify" class="verify-input" id="rverify" placeholder="请输入验证码"/>
 							</td>
 							<td>
 								<img src="{:U('Account/verify',array())}" title="点击刷新"/>
@@ -73,10 +73,7 @@
 						</tr>
 						<tr>
 							<td colspan="2">
-								<input type="submit" class="button" value="注册" />
-							</td>
-							<td>
-								<div>{$error}</div>
+								<input type="submit" class="button" value="注册"/>
 							</td>
 						</tr>
 					</table>

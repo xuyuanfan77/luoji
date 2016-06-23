@@ -45,7 +45,30 @@ function registerVerifyInput(obj) {
 	
 	if(result) {
 		obj.style.border = "";
+		obj.style.boxShadow = "";
 	} else {
 		obj.style.border = "1px solid red";
+		obj.style.boxShadow = "0px 0px 2px red";
 	}
+}
+
+function registerSubmitForm() {
+	var rusername = document.getElementById("rusername").value;
+	var rnickname = document.getElementById("rnickname").value;
+	var rpassword = document.getElementById("rpassword").value;
+	var rrepassword = document.getElementById("rrepassword").value;
+	var rverify = document.getElementById("rverify").value;
+	var postData = 'username='+rusername+'&nickname='+rnickname+'&password='+rpassword+'&repassword='+rrepassword+'&verify='+rverify;
+	$.ajax({  
+		type : 'POST',
+		url : 'Account/register',/*action="{:U('Account/register')}" method="post"   onclick="registerSubmitForm()"*/
+		data : postData,  
+		dataType : 'json', 
+		success : function(data) {
+			alert("成功！");
+		},  
+		error : function() {  
+			alert("失败！");
+		}  
+	}); 
 }
