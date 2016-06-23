@@ -94,22 +94,22 @@
 					 <table class="register-table">
 						<tr>
 							<td colspan="2">
-								<input type="text" name="username" class="input" placeholder="请输入用户名（4至20位字符，仅支持字母和数字）"/>
+								<input type="text" name="username" class="input" placeholder="请输入用户名（4至20位字符，仅支持字母和数字）" onchange="registerVerifyInput(this)"/>
 							</td>
 						</tr>
 						<tr>
 							<td colspan="2">
-								<input type="text" name="nickname" class="input" placeholder="请输入昵称（1-20位字符，支持字母、数字和中文）"/>
+								<input type="text" name="nickname" class="input" placeholder="请输入昵称（1-20位字符，支持字母、数字和中文）" onchange="registerVerifyInput(this)"/>
 							</td>
 						</tr>
 						<tr>
 							<td colspan="2">
-								<input type="password" name="password" class="input" placeholder="请输入密码（4-20位字符，支持字母、数字和标点符号）"/>
+								<input type="password" name="password" class="input" placeholder="请输入密码（4-20位字符，支持字母、数字和标点符号）" onchange="registerVerifyInput(this)"/>
 							</td>
 						</tr>
 						<tr>
 							<td colspan="2">
-								<input type="password" name="repassword" class="input" placeholder="请确认密码"/>
+								<input type="password" name="repassword" class="input" placeholder="请确认密码" onchange="registerVerifyInput(this)"/>
 							</td>
 						</tr>
 						<tr>

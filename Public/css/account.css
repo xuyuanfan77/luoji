@@ -77,9 +77,8 @@
 	color:#999999;
 }
 
-.input .verify-input:focus {
+input:focus {
 	border:1px solid #3F7BED;
-	color:#999999;
 }
 
 .button {

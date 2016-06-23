@@ -19,3 +19,33 @@ window.onload = function() {
 		aCon[index].className = "tabCon-cur";
     }
 }
+
+function registerVerifyInput(obj) {
+	var result;
+	switch(obj.name)
+	{
+	case "username":
+		var userNameRegExp = /^[a-zA-Z0-9]{4,20}$/;
+		result = userNameRegExp.test(obj.value);
+		break;
+	case "nickname":
+		var nickNameRegExp = /^[\u0391-\uFFE5|a-zA-Z0-9]{1,20}$/;
+		result = nickNameRegExp.test(obj.value);
+		break;
+	case "password":
+		var passwordRegExp = /^[A-Za-z0-9\@\!\#\$\%\^\&\*\.\~]{4,20}$/;
+		result = passwordRegExp.test(obj.value);
+		break;
+	case "repassword":
+		var passwordRegExp = /^[A-Za-z0-9\@\!\#\$\%\^\&\*\.\~]{4,20}$/;
+		result = repasswordRegExp.test(obj.value);
+		break;
+	default:;
+	}
+	
+	if(result) {
+		obj.style.border = "";
+	} else {
+		obj.style.border = "1px solid red";
+	}
+}
