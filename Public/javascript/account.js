@@ -28,7 +28,8 @@ function refreshVerifyImg(obj) {
     }  
 }
 
-function registerVerifyAllInput() {
+function registerSubmitForm() {
+	
 	var result = true;
 	/*用户名验证*/
 	var usernameInput = document.getElementById("rusername");
@@ -38,7 +39,7 @@ function registerVerifyAllInput() {
 		usernameInput.style.border = "";
 		usernameInput.style.boxShadow = "";
 	} else {
-		usernameInput.style.border = "1px solid red";
+		usernameInput.style.border = "1px solid #FF0000";
 		usernameInput.style.boxShadow = "0px 0px 2px red";
 		result = false;
 	}
@@ -50,7 +51,7 @@ function registerVerifyAllInput() {
 		nicknameInput.style.border = "";
 		nicknameInput.style.boxShadow = "";
 	} else {
-		nicknameInput.style.border = "1px solid red";
+		nicknameInput.style.border = "1px solid #FF0000";
 		nicknameInput.style.boxShadow = "0px 0px 2px red";
 		result = false;
 	}
@@ -90,12 +91,19 @@ function registerVerifyAllInput() {
 		verifyInput.style.boxShadow = "0px 0px 2px red";
 		result = false;
 	}
-	return result;
-}
-
-function registerSubmitForm() {
-	if(!registerVerifyAllInput()) {
+	
+	if(!result) {
 		alert('红色框内信息填写不正确！');
+		usernameInput.style.border = "";
+		usernameInput.style.boxShadow = "";
+		nicknameInput.style.border = "";
+		nicknameInput.style.boxShadow = "";
+		passwordInput.style.border = "";
+		passwordInput.style.boxShadow = "";
+		repasswordInput.style.border = "";
+		repasswordInput.style.boxShadow = "";
+		verifyInput.style.border = "";
+		verifyInput.style.boxShadow = "";
 	} else {
 		var rusername = document.getElementById("rusername").value;
 		var rnickname = document.getElementById("rnickname").value;
@@ -113,7 +121,83 @@ function registerSubmitForm() {
 			url:rurl,
 			success : function(data) {
 				if(data == '注册成功！') {
-					window.history.back(-1);
+					location.href=document.referrer;
+					/*window.history.back(-1);*/
+				} else {
+					alert(data);
+				}
+			},  
+			error : function() {  
+				alert('响应异常！');
+			}  
+		}); 
+	}
+}
+
+function loginSubmitForm() {
+	
+	var result = true;
+	/*用户名验证*/
+	var usernameInput = document.getElementById("lusername");
+	var userNameRegExp = /^[a-zA-Z0-9]{4,20}$/;
+	var usernameResult = userNameRegExp.test(usernameInput.value);
+	if(usernameResult) {
+		usernameInput.style.border = "";
+		usernameInput.style.boxShadow = "";
+	} else {
+		usernameInput.style.border = "1px solid #FF0000";
+		usernameInput.style.boxShadow = "0px 0px 2px red";
+		result = false;
+	}
+	/*密码验证*/
+	var passwordInput = document.getElementById("lpassword");
+	var passwordRegExp = /^[A-Za-z0-9\@\!\#\$\%\^\&\*\.\~]{4,20}$/;
+	var passwordResult = passwordRegExp.test(passwordInput.value);
+	if(passwordResult) {
+		passwordInput.style.border = "";
+		passwordInput.style.boxShadow = "";
+	} else {
+		passwordInput.style.border = "1px solid red";
+		passwordInput.style.boxShadow = "0px 0px 2px red";
+		result = false;
+	}
+	/*验证码验证*/
+	var verifyInput = document.getElementById("lverify");
+	var verifyRegExp = /^[A-Za-z0-9]{4}$/;
+	var verifyResult = verifyRegExp.test(verifyInput.value);
+	if(verifyResult) {
+		verifyInput.style.border = "";
+		verifyInput.style.boxShadow = "";
+	} else {
+		verifyInput.style.border = "1px solid red";
+		verifyInput.style.boxShadow = "0px 0px 2px red";
+		result = false;
+	}
+	
+	if(!result) {
+		alert('红色框内信息填写不正确！');
+		usernameInput.style.border = "";
+		usernameInput.style.boxShadow = "";
+		passwordInput.style.border = "";
+		passwordInput.style.boxShadow = "";
+		verifyInput.style.border = "";
+		verifyInput.style.boxShadow = "";
+	} else {
+		var lusername = document.getElementById("lusername").value;
+		var lpassword = document.getElementById("lpassword").value;
+		var lverify = document.getElementById("lverify").value;
+		
+		var lurl = document.getElementById("lurl").value;
+		var ldata = 'username='+lusername+'&password='+lpassword+'&verify='+lverify;
+		
+		$.ajax({  
+			type:'post',
+			dataType:'json',
+			data:ldata,  
+			url:lurl,
+			success : function(data) {
+				if(data == '登录成功！') {
+					location.href=document.referrer;
 				} else {
 					alert(data);
 				}

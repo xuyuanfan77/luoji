@@ -28,7 +28,7 @@
 				</ul>
 			</div>
 			<div class="login" id="login-image" onmouseover="showLoginMenu();" onmouseout="hideLoginMenu();">
-				<img src="/luoji/Public/picture/login.jpg"/>
+				<img src="<?php echo ($headimage); ?>"/>
 				<div class="login-menu" id="login-menu">
 					
 					<ul>
@@ -70,7 +70,7 @@
 						</tr>
 						<tr>
 							<td colspan="2">
-								<input type="password" class="input" id="lnickname" placeholder="请输入密码（4-20位字符，支持字母、数字和标点符号）"/>
+								<input type="password" class="input" id="lpassword" placeholder="请输入密码（4-20位字符，支持字母、数字和标点符号）"/>
 							</td>
 						</tr>
 						<tr>
@@ -78,12 +78,12 @@
 								<input type="text" class="verify-input" id="lverify" placeholder="请输入验证码"/>
 							</td>
 							<td>
-								<img src="<?php echo U('Account/verify',array());?>" title="点击刷新"/>
+								<img src="<?php echo U('Account/verify',array());?>" class="verify-img" title="点击刷新" onclick="refreshVerifyImg(this)"/>
 							</td>
 						</tr>
 						<tr>
 							<td colspan="2">
-								<input type="button" class="button" value="登录" />
+								<input type="button" class="button" value="登录" onclick="loginSubmitForm()"/>
 							</td>
 						</tr>
 						<input type="hidden" id="lurl" value="<?php echo U('Account/login');?>">

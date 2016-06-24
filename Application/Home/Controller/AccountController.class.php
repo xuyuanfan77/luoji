@@ -79,7 +79,46 @@ class AccountController extends Controller {
 		$contents['username'] = $_POST['username'];
 		$contents['password'] = $_POST['password'];
 		$contents['verify'] = $_POST['verify'];
-		dump($contents);
+		
+		$this->init();
+		
+		if (!$this->check_verify($_POST['verify'])) {
+			$this->ajaxReturn('验证码有误！');
+		} else {
+
+			$condition['username'] = array('eq',$_POST['username']);
+			$userData = $this->User->where($condition)->find();
+			if($userData) {
+				$password = md5($_POST['password']);
+				if($password == $userData['password']) {
+					$sessionID = session_id();
+					session('id', $sessionID);
+					session('headimage', '1.jpg');
+					$this->ajaxReturn('登录成功！');
+				} else {
+					$this->ajaxReturn('密码不正确！');
+				}
+			} else {
+				$this->ajaxReturn('不存在此账号！快点注册吧！');
+			}
+			
+			
+			
+			if (!$this->User->create($_POST)){
+				$error = $this->User->getError();
+				$this->ajaxReturn($error);
+			}else{
+				$result = $this->User->add();
+				if($result){
+					$sessionID = session_id();
+					session('id', $sessionID);
+					session('headimage', '1.jpg'); 
+					$this->ajaxReturn('注册成功！');
+				} else {
+					$this->ajaxReturn('注册异常！');
+				}
+			}
+		}
 	}
 	
 	public function register(){
@@ -94,13 +133,14 @@ class AccountController extends Controller {
 			}else{
 				$result = $this->User->add();
 				if($result){
+					$sessionID = session_id();
+					session('id', $sessionID);
+					session('headimage', '1.jpg'); 
 					$this->ajaxReturn('注册成功！');
 				} else {
 					$this->ajaxReturn('注册异常！');
 				}
 			}
 		}
-		
-		
 	}
 }

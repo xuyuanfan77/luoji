@@ -15,6 +15,7 @@ class IndexController extends Controller {
 	
 	//输出参数
 	public $navigation;
+	public $headimage;
 	
 	public $specialImages;
 	public $specialMaintitles;
@@ -60,7 +61,13 @@ class IndexController extends Controller {
 		//准备菜单栏数据
 		$this->navigation[$this->artCategory] = 'menu-select';
 		//dump($this->navigation);
+		if(cookie('PHPSESSID') and session('id') and cookie('PHPSESSID') == session('id')) {
+			$this->headimage = C('__ROOT__') . 'Public/resource/headportrait/' .session('headimage');
+		} else {
+			$this->headimage = C('__ROOT__') . 'Public/resource/headportrait/' .'login.jpg';
+		}
 		$this->assign('navigation',$this->navigation);
+		$this->assign('headimage',$this->headimage);
 		
 		//准备专辑数据
 		$specialData = $this->Special->limit(5)->select();
@@ -135,6 +142,10 @@ class IndexController extends Controller {
 		$this->assign('expertNickname',$this->expertNickname);
 		$this->assign('expertJobs',$this->expertJobs);
 		$this->assign('expertIntroduction',$this->expertIntroduction);
+		
+		//test
+		//$value = session('id');
+		//dump($value);
 
         $this->display();
 	}
