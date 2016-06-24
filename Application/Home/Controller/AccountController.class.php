@@ -84,21 +84,22 @@ class AccountController extends Controller {
 	
 	public function register(){
 		$this->init();
-		dump($_POST['verify']);
-		$data = 'ok';
-		$this->ajaxReturn($data);
-		// if (!$this->check_verify($_POST['verify'])) {
-			// $this->redirect('Account/index', array('operation' => 1), 2, '验证码有误！');
-		// } else {
-			// if (!$this->User->create()){
-				// $this->redirect('Account/index', array('operation' => 1), 2, $this->User->getError());
-			// }else{
-				// $result = $this->User->add();
-				// if($result){
-					// $this->redirect('Index/index', array('category' => 0, 'p' => 1), 0, '恭喜您！你已经成功注册账号！页面跳转中...');
-				// }
-			// }
-		// }
+		
+		if (!$this->check_verify($_POST['verify'])) {
+			$this->ajaxReturn('验证码有误！');
+		} else {
+			if (!$this->User->create($_POST)){
+				$error = $this->User->getError();
+				$this->ajaxReturn($error);
+			}else{
+				$result = $this->User->add();
+				if($result){
+					$this->ajaxReturn('注册成功！');
+				} else {
+					$this->ajaxReturn('注册异常！');
+				}
+			}
+		}
 		
 		
 	}

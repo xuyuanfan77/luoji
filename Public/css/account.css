@@ -76,6 +76,10 @@ input:focus {
 	border:1px solid #3F7BED;
 }
 
+.verify-img {
+	cursor:pointer;
+}
+
 .button {
 	width:352px;
 	height:39px;
@@ -84,4 +88,5 @@ input:focus {
 	padding:0px;
 	border:0px;
 	font-size:18px;
+	cursor:pointer;
 }
