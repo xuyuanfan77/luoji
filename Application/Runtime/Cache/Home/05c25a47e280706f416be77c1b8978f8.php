@@ -28,17 +28,10 @@
 				</ul>
 			</div>
 			<div class="login" id="login-image" onmouseover="showLoginMenu();" onmouseout="hideLoginMenu();">
-				<img src="/luoji/Public/picture/login.jpg"/>
-				<div class="login-menu" id="login-menu">
-					
+				<img src="<?php echo ($headimage); ?>"/>
+				<div class="login-menu" id="login-menu">	
 					<ul>
-						<li><a href="#">我要投稿</a></li>
-						<li><a href="#">我的收藏</a></li>
-						<li><a href="#">我的投稿</a></li>
-						<li><a href="#">个人信息</a></li>
-						<li><a href="<?php echo U('Account/index','operation=0');?>">登 陆</a></li>
-						<li><a href="<?php echo U('Account/index','operation=1');?>">注 册</a></li>
-						<li><a href="#">退 出</a></li>
+						<?php if(is_array($accountMenuText)): foreach($accountMenuText as $index=>$item): ?><li><a href="<?php echo ($accountMenuUrl[$index]); ?>"><?php echo ($accountMenuText[$index]); ?></a></li><?php endforeach; endif; ?>
 					</ul>
 				</div>
 			</div>

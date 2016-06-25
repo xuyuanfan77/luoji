@@ -17,6 +17,10 @@ class ContentController extends Controller {
 	
 	//输出参数
 	public $navigation;
+	public $headimage;
+	public $accountMenuUrl;
+	public $accountMenuText;
+	
 	public $artListDisplay;
 	public $artListTitle;
 	public $artListHref;
@@ -64,7 +68,29 @@ class ContentController extends Controller {
 		$this->init();
 		
 		//准备菜单栏数据
+		if(cookie('PHPSESSID') and session('id') and cookie('PHPSESSID') == session('id')) {
+			$this->headimage = C('__ROOT__') . 'Public/resource/headportrait/' .session('headimage');
+			$this->accountMenuText[0] = '我要投稿';
+			$this->accountMenuText[1] = '我的收藏';
+			$this->accountMenuText[2] = '我的投稿';
+			$this->accountMenuText[3] = '个人信息';
+			$this->accountMenuText[4] = '退 出';
+			$this->accountMenuUrl[0] = '';
+			$this->accountMenuUrl[1] = '';
+			$this->accountMenuUrl[2] = '';
+			$this->accountMenuUrl[3] = '';
+			$this->accountMenuUrl[4] = U('Account/logout');
+		} else {
+			$this->headimage = C('__ROOT__') . 'Public/picture/' .'login.jpg';
+			$this->accountMenuText[0] = '登 陆';
+			$this->accountMenuText[1] = '注 册';
+			$this->accountMenuUrl[0] = U('Account/index', array('operation'=>0));
+			$this->accountMenuUrl[1] = U('Account/index', array('operation'=>1));
+		}
 		$this->assign('navigation',$this->navigation);
+		$this->assign('headimage',$this->headimage);
+		$this->assign('accountMenuText',$this->accountMenuText);
+		$this->assign('accountMenuUrl',$this->accountMenuUrl);
 		
 		if($this->type == 'article') {
 			$this->artListDisplay = 'hide';

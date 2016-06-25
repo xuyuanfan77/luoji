@@ -14,6 +14,10 @@ class AccountController extends Controller {
 	
 	//输出参数
 	public $navigation;
+	
+	public $headimage;
+	public $accountMenuUrl;
+	public $accountMenuText;
 	public $loginTab;
 	public $registerTab;
 	public $loginForm;
@@ -36,7 +40,29 @@ class AccountController extends Controller {
 		$this->init();
 
 		//准备菜单栏数据
+		if(cookie('PHPSESSID') and session('id') and cookie('PHPSESSID') == session('id')) {
+			$this->headimage = C('__ROOT__') . 'Public/resource/headportrait/' .session('headimage');
+			$this->accountMenuText[0] = '我要投稿';
+			$this->accountMenuText[1] = '我的收藏';
+			$this->accountMenuText[2] = '我的投稿';
+			$this->accountMenuText[3] = '个人信息';
+			$this->accountMenuText[4] = '退 出';
+			$this->accountMenuUrl[0] = '';
+			$this->accountMenuUrl[1] = '';
+			$this->accountMenuUrl[2] = '';
+			$this->accountMenuUrl[3] = '';
+			$this->accountMenuUrl[4] = U('Account/logout');
+		} else {
+			$this->headimage = C('__ROOT__') . 'Public/picture/' .'login.jpg';
+			$this->accountMenuText[0] = '登 陆';
+			$this->accountMenuText[1] = '注 册';
+			$this->accountMenuUrl[0] = U('Account/index', array('operation'=>0));
+			$this->accountMenuUrl[1] = U('Account/index', array('operation'=>1));
+		}
 		$this->assign('navigation',$this->navigation);
+		$this->assign('headimage',$this->headimage);
+		$this->assign('accountMenuText',$this->accountMenuText);
+		$this->assign('accountMenuUrl',$this->accountMenuUrl);
 		
 		//准备表单数据
 		if($this->operation == 0) {
@@ -93,30 +119,13 @@ class AccountController extends Controller {
 				if($password == $userData['password']) {
 					$sessionID = session_id();
 					session('id', $sessionID);
-					session('headimage', '1.jpg');
+					session('headimage', $userData['headimage']);
 					$this->ajaxReturn('登录成功！');
 				} else {
 					$this->ajaxReturn('密码不正确！');
 				}
 			} else {
 				$this->ajaxReturn('不存在此账号！快点注册吧！');
-			}
-			
-			
-			
-			if (!$this->User->create($_POST)){
-				$error = $this->User->getError();
-				$this->ajaxReturn($error);
-			}else{
-				$result = $this->User->add();
-				if($result){
-					$sessionID = session_id();
-					session('id', $sessionID);
-					session('headimage', '1.jpg'); 
-					$this->ajaxReturn('注册成功！');
-				} else {
-					$this->ajaxReturn('注册异常！');
-				}
 			}
 		}
 	}
@@ -135,12 +144,17 @@ class AccountController extends Controller {
 				if($result){
 					$sessionID = session_id();
 					session('id', $sessionID);
-					session('headimage', '1.jpg'); 
+					session('headimage', 'default.jpg'); 
 					$this->ajaxReturn('注册成功！');
 				} else {
 					$this->ajaxReturn('注册异常！');
 				}
 			}
 		}
+	}
+	
+	public function logout() {
+		session('[destroy]');
+		$this->redirect('Account/index', array('operation'=>0));
 	}
 }

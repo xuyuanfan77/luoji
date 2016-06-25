@@ -14,6 +14,7 @@ class UserModel extends Model {
 	//array(填充字段,填充内容,填充条件,附加规则)
 	protected $_auto=array(
 		array('password','md5',self::MODEL_INSERT,'function'),
+		array('headimage','default.jpg',self::MODEL_INSERT),
 		array('createtime','getDate',self::MODEL_INSERT,'callback'),
 	);
 	
