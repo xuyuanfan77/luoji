@@ -93,3 +93,50 @@ table {
 	position:relative;
 	width:850px;
 }
+
+#content-table {
+	position:relative;
+	top:40px;
+	width:850px;
+}
+
+.form-td1 {
+	width:170px;
+	height:75px;
+}
+
+.form-td2 {
+	width:385px;
+	height:75px;
+}
+
+.form-button {
+	margin-left:-255px;
+}
+
+.form-label {
+	font-size:15px;
+	padding-left:60px;
+}
+
+.form-input1 {
+	width:385px;
+	height:35px;
+}
+
+.form-input2 {
+	width:175px;
+	height:35px;
+	padding-left:8px;
+}
+
+.form-image {
+	width:90px;
+	height:90px;
+}
+
+.form-tip {
+	font-size:13px;
+	color:#CCCCCC;
+	padding-left:45px;
+}
