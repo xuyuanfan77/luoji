@@ -119,6 +119,7 @@ class AccountController extends Controller {
 				if($password == $userData['password']) {
 					$sessionID = session_id();
 					session('id', $sessionID);
+					session('userId', $userData['id']); 
 					session('headimage', $userData['headimage']);
 					$this->ajaxReturn('登录成功！');
 				} else {
@@ -144,6 +145,7 @@ class AccountController extends Controller {
 				if($result){
 					$sessionID = session_id();
 					session('id', $sessionID);
+					session('userId', $result); 
 					session('headimage', 'default.jpg'); 
 					$this->ajaxReturn('注册成功！');
 				} else {

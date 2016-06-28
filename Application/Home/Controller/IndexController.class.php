@@ -74,7 +74,7 @@ class IndexController extends Controller {
 			$this->accountMenuUrl[1] = '';
 			$this->accountMenuUrl[2] = '';
 			$this->accountMenuUrl[3] = '';
-			$this->accountMenuUrl[4] = '';
+			$this->accountMenuUrl[4] = U('Account/logout');
 		} else {
 			$this->headimage = C('__ROOT__') . 'Public/picture/' .'login.jpg';
 			$this->accountMenuText[0] = '登 陆';

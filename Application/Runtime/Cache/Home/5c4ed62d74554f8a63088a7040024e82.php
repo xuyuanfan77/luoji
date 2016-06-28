@@ -47,7 +47,8 @@
 	<div id="right-frame">
 		<div id="right-title">
 			<a>个人信息</a>
-			<input type="button" value="更新"/>
+			<input type="button" value="更新" onclick="updateSubmitForm()"/>
+			<input type="hidden" id="url" value="<?php echo U('Imformation/update');?>">
 		</div>
 		<div id="right-content">
 			<table id="content-table"> 
@@ -56,7 +57,7 @@
 						<a class="form-label">用户名：</a>
 					</td>
 					<td class="form-td2">
-						<input class="form-input1" type="text"/>
+						<input class="form-input1" id="username" type="text"/>
 					</td>
 					<td class="form-td3">
 						<a class="form-tip">仅支持字母和数字</a>
@@ -66,8 +67,8 @@
 					<td class="form-td1">
 						<a class="form-label">昵称：</a>
 					</td>
-					<td>
-						<input class="form-input1" type="text"/>
+					<td class="form-td2">
+						<input class="form-input1" id="nickname" type="text"/>
 					</td>
 					<td>
 						<a class="form-tip">不超10字</a>
@@ -77,9 +78,9 @@
 					<td class="form-td1">
 						<a class="form-label">密码：</a>
 					</td>
-					<td>
-						<input class="form-input2" type="text" placeholder="新密码"/>
-						<input class="form-input2" type="text" placeholder="确认密码"/>
+					<td class="form-td2">
+						<input class="form-input2" id="password" type="text" placeholder="新密码"/>
+						<input class="form-input2" id="repassword" type="text" placeholder="确认密码"/>
 					</td>
 					<td>
 						<a class="form-tip">字母、数字和符号混搭更加安全</a>
@@ -105,7 +106,7 @@
 					<td class="form-td1">
 						<a class="form-label">岗位：</a>
 					</td>
-					<td>
+					<td class="form-td2">
 						<input class="form-input1" type="text"/>
 					</td>
 					<td>
@@ -116,7 +117,7 @@
 					<td class="form-td1">
 						<a class="form-label">单位：</a>
 					</td>
-					<td>
+					<td class="form-td2">
 						<input class="form-input1" type="text"/>
 					</td>
 					<td>
@@ -127,8 +128,8 @@
 					<td class="form-td1">
 						<a class="form-label">介绍：</a>
 					</td>
-					<td>
-						<textarea rows="6" cols="52"></textarea>
+					<td class="form-td2">
+						<textarea class="form-textarea"></textarea>
 					</td>
 					<td>
 						<a class="form-tip">一句话介绍下自己，不超250字</a>
@@ -141,18 +142,18 @@
 		<table id="top-table"> 
 			<tr>
 				<td>
-					<img id="headimage" src="/luoji/Public/resource/headportrait/headimage.jpg"/>
+					<img id="headimage" src="<?php echo ($headimage); ?>"/>
 				</td> 
 			</tr>
 			<tr>
 				<td>
-					<a id="username">远航之帆</a>
+					<a id="mynickname"><?php echo ($nickname); ?></a>
 				</td> 
 			</tr> 
 		</table>
 		<table id="bottom-table"> 
 			<tr>
-				<td class="column-select">
+				<td class="column-default">
 					<a>我要投稿<a/>
 				</td> 
 			</tr>
@@ -167,7 +168,7 @@
 				</td> 
 			</tr>
 			<tr>
-				<td class="column-default">
+				<td class="column-select">
 					<a>个人信息</a>
 				</td> 
 			</tr> 

@@ -19,6 +19,8 @@ class InformationController extends Controller {
 	public $accountMenuUrl;
 	public $accountMenuText;
 	
+	public $nickname;
+	
 	public $specialImages;
 	public $specialMaintitles;
 	public $specialSubheads;
@@ -41,7 +43,7 @@ class InformationController extends Controller {
 	
 	protected function init(){
 		// $this->Article = D('ArticleView');
-		// $this->User = M('User');
+		$this->User = M('User');
 		// $this->Special = M('Special');
 		
 		// if($_GET['p']) {
@@ -61,33 +63,40 @@ class InformationController extends Controller {
 		$this->init();
 
 		//准备菜单栏数据
-		$this->navigation[$this->artCategory] = 'menu-select';
 		//dump($this->navigation);
-		// if(cookie('PHPSESSID') and session('id') and cookie('PHPSESSID') == session('id')) {
-			// $this->headimage = C('__ROOT__') . 'Public/resource/headportrait/' .session('headimage');
-			// $this->accountMenuText[0] = '我要投稿';
-			// $this->accountMenuText[1] = '我的收藏';
-			// $this->accountMenuText[2] = '我的投稿';
-			// $this->accountMenuText[3] = '个人信息';
-			// $this->accountMenuText[4] = '退 出';
-			// $this->accountMenuUrl[0] = '';
-			// $this->accountMenuUrl[1] = '';
-			// $this->accountMenuUrl[2] = '';
-			// $this->accountMenuUrl[3] = '';
-			// $this->accountMenuUrl[4] = '';
-		// } else {
-			// $this->headimage = C('__ROOT__') . 'Public/picture/' .'login.jpg';
-			// $this->accountMenuText[0] = '登 陆';
-			// $this->accountMenuText[1] = '注 册';
-			// $this->accountMenuUrl[0] = U('Account/index', array('operation'=>0));
-			// $this->accountMenuUrl[1] = U('Account/index', array('operation'=>1));
-		// }
+		if(cookie('PHPSESSID') and session('id') and cookie('PHPSESSID') == session('id')) {
+			$this->headimage = C('__ROOT__') . 'Public/resource/headportrait/' .session('headimage');
+			$this->accountMenuText[0] = '我要投稿';
+			$this->accountMenuText[1] = '我的收藏';
+			$this->accountMenuText[2] = '我的投稿';
+			$this->accountMenuText[3] = '个人信息';
+			$this->accountMenuText[4] = '退 出';
+			$this->accountMenuUrl[0] = '';
+			$this->accountMenuUrl[1] = '';
+			$this->accountMenuUrl[2] = '';
+			$this->accountMenuUrl[3] = '';
+			$this->accountMenuUrl[4] = U('Account/logout');
+		} else {
+			$this->headimage = C('__ROOT__') . 'Public/picture/' .'login.jpg';
+			$this->accountMenuText[0] = '登 陆';
+			$this->accountMenuText[1] = '注 册';
+			$this->accountMenuUrl[0] = U('Account/index', array('operation'=>0));
+			$this->accountMenuUrl[1] = U('Account/index', array('operation'=>1));
+		}
 		$this->assign('navigation',$this->navigation);
-		// $this->assign('headimage',$this->headimage);
-		// $this->assign('accountMenuText',$this->accountMenuText);
-		// $this->assign('accountMenuUrl',$this->accountMenuUrl);
+		$this->assign('headimage',$this->headimage);
+		$this->assign('accountMenuText',$this->accountMenuText);
+		$this->assign('accountMenuUrl',$this->accountMenuUrl);
 		
-		// //准备专辑数据
+		//准备个人信息数据
+		$condition['id'] = array('eq',session('userId'));
+		$userData = $this->User->where($condition)->find();
+		if($userData) {
+			$this->nickname = $userData['nickname'];
+		} else {
+			$this->redirect('Account/index', array('operation'=>0));
+		}
+		$this->assign('nickname',$this->nickname);
 		// $specialData = $this->Special->limit(5)->select();
 		// for ($index=0; $index<=4; $index++) {
 			// $this->specialImages[$index] = C('__ROOT__') . 'Public/' . $specialData[$index]['coverimage'];
@@ -162,5 +171,9 @@ class InformationController extends Controller {
 		// $this->assign('expertIntroduction',$this->expertIntroduction);
 
         $this->display();
+	}
+	
+	public function update(){
+		$this->ajaxReturn('更新成功！');
 	}
 }

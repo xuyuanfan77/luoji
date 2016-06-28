@@ -31,7 +31,7 @@ table {
 	height:150px;
 }
 
-#username {
+#mynickname {
 	line-height:35px;
 	font-size:20px;
 	font-weight:700;
@@ -106,7 +106,7 @@ table {
 }
 
 .form-td2 {
-	width:385px;
+	width:400px;
 	height:75px;
 }
 
@@ -122,12 +122,19 @@ table {
 .form-input1 {
 	width:385px;
 	height:35px;
+	padding-left:8px;
 }
 
 .form-input2 {
 	width:175px;
 	height:35px;
 	padding-left:8px;
+}
+
+.form-textarea {
+	width:390px;
+	height:110px;
+	resize: none; 
 }
 
 .form-image {
