@@ -78,7 +78,7 @@ class ContentController extends Controller {
 			$this->accountMenuUrl[0] = '';
 			$this->accountMenuUrl[1] = '';
 			$this->accountMenuUrl[2] = '';
-			$this->accountMenuUrl[3] = '';
+			$this->accountMenuUrl[3] = U('Information/index');
 			$this->accountMenuUrl[4] = U('Account/logout');
 		} else {
 			$this->headimage = C('__ROOT__') . 'Public/picture/' .'login.jpg';

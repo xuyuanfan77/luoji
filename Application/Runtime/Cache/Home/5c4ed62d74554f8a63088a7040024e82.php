@@ -24,7 +24,7 @@
 					<li><a href="<?php echo U('Index/index','category=1');?>" class="<?php echo ($navigation[1]); ?>">技术</a></li>
 					<li><a href="<?php echo U('Index/index','category=2');?>" class="<?php echo ($navigation[2]); ?>">产品</a></li>
 					<li><a href="<?php echo U('Index/index','category=3');?>" class="<?php echo ($navigation[3]); ?>">经济</a></li>
-					<li><a href="<?php echo U('Information/index','category=4');?>" class="<?php echo ($navigation[4]); ?>">其他</a></li>
+					<li><a href="<?php echo U('Index/index','category=4');?>" class="<?php echo ($navigation[4]); ?>">其他</a></li>
 				</ul>
 			</div>
 			<div class="login" id="login-image" onmouseover="showLoginMenu();" onmouseout="hideLoginMenu();">
@@ -48,11 +48,11 @@
 		<div id="right-title">
 			<a>个人信息</a>
 			<input type="button" value="更新" onclick="updateSubmitForm()"/>
-			<input type="hidden" id="url" value="<?php echo U('Imformation/update');?>">
+			<input type="hidden" id="url" value="<?php echo U('Information/update');?>">
 		</div>
 		<div id="right-content">
 			<table id="content-table"> 
-				<tr>
+				<!--tr>
 					<td class="form-td1">
 						<a class="form-label">用户名：</a>
 					</td>
@@ -62,7 +62,7 @@
 					<td class="form-td3">
 						<a class="form-tip">仅支持字母和数字</a>
 					</td>
-				</tr>
+				</tr-->
 				<tr>
 					<td class="form-td1">
 						<a class="form-label">昵称：</a>
@@ -94,7 +94,7 @@
 						<img class="form-image" src="/luoji/Public/resource/headportrait/headimage.jpg"/>
 					</td>
 					<td>
-						<input type="file" class="form-button" value="添加"/>
+						<input type="file" class="form-button" value="选择文件"/>
 					</td>
 				</tr>
 				<tr>
@@ -107,7 +107,7 @@
 						<a class="form-label">岗位：</a>
 					</td>
 					<td class="form-td2">
-						<input class="form-input1" type="text"/>
+						<input class="form-input1" id="jobs" type="text"/>
 					</td>
 					<td>
 						<a class="form-tip">不超10字</a>
@@ -118,7 +118,7 @@
 						<a class="form-label">单位：</a>
 					</td>
 					<td class="form-td2">
-						<input class="form-input1" type="text"/>
+						<input class="form-input1" id="company" type="text"/>
 					</td>
 					<td>
 						<a class="form-tip">不超20字</a>
@@ -128,8 +128,8 @@
 					<td class="form-td1">
 						<a class="form-label">介绍：</a>
 					</td>
-					<td class="form-td2">
-						<textarea class="form-textarea"></textarea>
+					<td class="form-td3">
+						<textarea class="form-textarea" id="introduction"></textarea>
 					</td>
 					<td>
 						<a class="form-tip">一句话介绍下自己，不超250字</a>

@@ -74,7 +74,7 @@ class InformationController extends Controller {
 			$this->accountMenuUrl[0] = '';
 			$this->accountMenuUrl[1] = '';
 			$this->accountMenuUrl[2] = '';
-			$this->accountMenuUrl[3] = '';
+			$this->accountMenuUrl[3] = U('Information/index');
 			$this->accountMenuUrl[4] = U('Account/logout');
 		} else {
 			$this->headimage = C('__ROOT__') . 'Public/picture/' .'login.jpg';
@@ -174,6 +174,25 @@ class InformationController extends Controller {
 	}
 	
 	public function update(){
-		$this->ajaxReturn('更新成功！');
+		// $User = M("User"); // 实例化User对象
+		// $User->create($_POST);
+		// $condition['id'] = array('eq',session('userId'));
+		// $User->where($condition)->save();
+		// $error = $User->getError();
+		// $this->ajaxReturn($error);
+		
+		$User = D("User");
+		if (!$User->create()){
+				$error = $User->getError();
+				$this->ajaxReturn($error);
+		}else{
+			$condition['id'] = array('eq',session('userId'));
+			$result = $User->where($condition)->save();
+			if($result){ 
+				$this->ajaxReturn('更新异常！');
+			} else {
+				$this->ajaxReturn('更新成功！');
+			}
+		}
 	}
 }
