@@ -1,4 +1,25 @@
 function updateSubmitForm() {
+	var updatebuttonInput = document.getElementById("updatebutton");
+	updatebuttonInput.value = "保存";
+	updatebuttonInput.onclick = saveSubmitForm;
+	
+	var nicknameInput = document.getElementById("nickname");
+	var imageInput = document.getElementById("imageInput");
+	var imageDelete = document.getElementById("imageDelete");
+	var emailInput = document.getElementById("email");
+	var jobsInput = document.getElementById("jobs");
+	var companyInput = document.getElementById("company");
+	var introductionInput = document.getElementById("introduction");
+	nicknameInput.disabled = false;
+	imageInput.disabled = false;
+	imageDelete.disabled = false;
+	emailInput.disabled = false;
+	jobsInput.disabled = false;
+	companyInput.disabled = false;
+	introductionInput.disabled = false;
+}
+
+function saveSubmitForm() {
 	
 	var result = true;
 	/*昵称验证*/
@@ -13,28 +34,16 @@ function updateSubmitForm() {
 		nicknameInput.style.boxShadow = "0px 0px 2px red";
 		result = false;
 	}
-	/*密码验证*/
-	var passwordInput = document.getElementById("password");
-	var passwordRegExp = /^[A-Za-z0-9\@\!\#\$\%\^\&\*\.\~]{4,20}$/;
-	var passwordResult = passwordRegExp.test(passwordInput.value);
-	if(passwordResult) {
-		passwordInput.style.border = "";
-		passwordInput.style.boxShadow = "";
+	/*邮箱验证*/
+	var emailInput = document.getElementById("email");
+	var emailRegExp = /^[a-z0-9]+([._\\-]*[a-z0-9])*@([a-z0-9]+[-a-z0-9]*[a-z0-9]+.){1,63}[a-z0-9]+$/;
+	var emailResult = emailRegExp.test(emailInput.value);
+	if(emailResult) {
+		emailInput.style.border = "";
+		emailInput.style.boxShadow = "";
 	} else {
-		passwordInput.style.border = "1px solid red";
-		passwordInput.style.boxShadow = "0px 0px 2px red";
-		result = false;
-	}
-	/*确认密码验证*/
-	var repasswordInput = document.getElementById("repassword");
-	var repasswordRegExp = /^[A-Za-z0-9\@\!\#\$\%\^\&\*\.\~]{4,20}$/;
-	var repasswordResult = repasswordRegExp.test(repasswordInput.value);
-	if(repasswordResult) {
-		repasswordInput.style.border = "";
-		repasswordInput.style.boxShadow = "";
-	} else {
-		repasswordInput.style.border = "1px solid red";
-		repasswordInput.style.boxShadow = "0px 0px 2px red";
+		emailInput.style.border = "1px solid red";
+		emailInput.style.boxShadow = "0px 0px 2px red";
 		result = false;
 	}
 	/*岗位验证*/
@@ -63,7 +72,7 @@ function updateSubmitForm() {
 	}
 	/*介绍验证*/
 	var introductionInput = document.getElementById("introduction");
-	var introductionRegExp = /^[\u0391-\uFFE5|a-zA-Z]{0,250}$/;
+	var introductionRegExp = /^[\s\S]{0,250}$/;
 	var introductionResult = introductionRegExp.test(introductionInput.value);
 	if(introductionResult) {
 		introductionInput.style.border = "";
@@ -78,10 +87,8 @@ function updateSubmitForm() {
 		alert('红色框内信息填写不正确！');
 		nicknameInput.style.border = "";
 		nicknameInput.style.boxShadow = "";
-		passwordInput.style.border = "";
-		passwordInput.style.boxShadow = "";
-		repasswordInput.style.border = "";
-		repasswordInput.style.boxShadow = "";
+		emailInput.style.border = "";
+		emailInput.style.boxShadow = "";
 		jobsInput.style.border = "";
 		jobsInput.style.boxShadow = "";
 		companyInput.style.border = "";
@@ -90,14 +97,13 @@ function updateSubmitForm() {
 		introductionInput.style.boxShadow = "";
 	} else {
 		var nickname = document.getElementById("nickname").value;
-		var password = document.getElementById("password").value;
-		var repassword = document.getElementById("repassword").value;
+		var email = document.getElementById("email").value;
 		var jobs = document.getElementById("jobs").value;
 		var company = document.getElementById("company").value;
 		var introduction = document.getElementById("introduction").value;
 		
 		var url = document.getElementById("url").value;
-		var data = 'nickname='+nickname+'&password='+password+'&repassword='+repassword+'&jobs='+jobs+'&company='+company+'&introduction='+introduction;
+		var data = 'nickname='+nickname+'&email='+email+'&jobs='+jobs+'&company='+company+'&introduction='+introduction;
 		
 		$.ajax({  
 			type:'post',
@@ -105,15 +111,55 @@ function updateSubmitForm() {
 			data:data,  
 			url:url,
 			success : function(data) {
-				// if(data == '注册成功！') {
-					// location.href=document.referrer;
-				// } else {
+				if(data == '更新成功！') {
+					location.href = location.href;
+				} else {
 					alert(data);
-				// }
+				}
 			},  
 			error : function() {  
 				alert('响应异常！');
 			}  
 		}); 
 	}
+}
+
+var inputImageFile = (function () { 
+	if (window.FileReader) { 
+		var oPreviewImg = null, oFReader = new window.FileReader(), 
+		rFilter = /^(?:image\/bmp|image\/cis\-cod|image\/gif|image\/ief|image\/jpeg|image\/jpeg|image\/jpeg|image\/pipeg|image\/png|image\/svg\+xml|image\/tiff|image\/x\-cmu\-raster|image\/x\-cmx|image\/x\-icon|image\/x\-portable\-anymap|image\/x\-portable\-bitmap|image\/x\-portable\-graymap|image\/x\-portable\-pixmap|image\/x\-rgb|image\/x\-xbitmap|image\/x\-xpixmap|image\/x\-xwindowdump)$/i; 
+
+		oFReader.onload = function (oFREvent) { 
+			if (!oPreviewImg) { 
+				var newPreview = document.getElementById("imagePreview"); 
+				oPreviewImg = new Image(); 
+				oPreviewImg.id = "image";
+				oPreviewImg.style.width = (newPreview.offsetWidth).toString() + "px"; 
+				oPreviewImg.style.height = (newPreview.offsetHeight).toString() + "px"; 
+				newPreview.appendChild(oPreviewImg); 
+			} 
+			oPreviewImg.src = oFREvent.target.result; 
+		}; 
+
+		return function () { 
+			var aFiles = document.getElementById("imageInput").files; 
+			if (aFiles.length === 0) { return; } 
+			if (!rFilter.test(aFiles[0].type)) { alert("You must select a valid image file!"); return; } 
+			oFReader.readAsDataURL(aFiles[0]); 
+		} 
+	} 
+	if (navigator.appName === "Microsoft Internet Explorer") { 
+		return function () { 
+			alert(document.getElementById("imageInput").value); 
+			document.getElementById("imagePreview").filters.item("DXImageTransform.Microsoft.AlphaImageLoader").src = document.getElementById("imageInput").value; 
+		} 
+	} 
+})(); 
+
+function deleteImageFile() { 
+	var imageInput = document.getElementById("imageInput"); 
+	imageInput.outerHTML=imageInput.outerHTML;
+
+	var imagePreview = document.getElementById("imagePreview");
+	imagePreview.removeChild(document.getElementById("image"));
 }

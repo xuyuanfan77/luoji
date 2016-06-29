@@ -47,43 +47,20 @@
 	<div id="right-frame">
 		<div id="right-title">
 			<a>个人信息</a>
-			<input type="button" value="更新" onclick="updateSubmitForm()"/>
+			<input type="button" value="修改" id="updatebutton" onclick="updateSubmitForm()"/>
 			<input type="hidden" id="url" value="<?php echo U('Information/update');?>">
 		</div>
 		<div id="right-content">
-			<table id="content-table"> 
-				<!--tr>
-					<td class="form-td1">
-						<a class="form-label">用户名：</a>
-					</td>
-					<td class="form-td2">
-						<input class="form-input1" id="username" type="text"/>
-					</td>
-					<td class="form-td3">
-						<a class="form-tip">仅支持字母和数字</a>
-					</td>
-				</tr-->
+			<table id="content-table">
 				<tr>
 					<td class="form-td1">
 						<a class="form-label">昵称：</a>
 					</td>
 					<td class="form-td2">
-						<input class="form-input1" id="nickname" type="text"/>
+						<input class="form-input1" id="nickname" type="text" value="<?php echo ($nickname); ?>" disabled="true"/>
 					</td>
 					<td>
-						<a class="form-tip">不超10字</a>
-					</td>
-				</tr>
-				<tr>
-					<td class="form-td1">
-						<a class="form-label">密码：</a>
-					</td>
-					<td class="form-td2">
-						<input class="form-input2" id="password" type="text" placeholder="新密码"/>
-						<input class="form-input2" id="repassword" type="text" placeholder="确认密码"/>
-					</td>
-					<td>
-						<a class="form-tip">字母、数字和符号混搭更加安全</a>
+						<a class="form-tip">1-20位字符，支持字母、数字和中文</a>
 					</td>
 				</tr>
 				<tr>
@@ -91,15 +68,28 @@
 						<a class="form-label">头像：</a>
 					</td>
 					<td rowspan="2">
-						<img class="form-image" src="/luoji/Public/resource/headportrait/headimage.jpg"/>
+						<div id="imagePreview"> 
+						</div> 
+						<!--img class="form-image" src="/luoji/Public/resource/headportrait/headimage.jpg"/-->
 					</td>
 					<td>
-						<input type="file" class="form-button" value="选择文件"/>
+						<input type="file" class="form-button" id="imageInput" onchange="inputImageFile()" disabled="true"/>
 					</td>
 				</tr>
 				<tr>
 					<td>
-						<input type="button" class="form-button" value="删除文件"/>
+						<input type="button" class="form-button" id="imageDelete" onclick="deleteImageFile()" value="删除文件" disabled="true"/>
+					</td>
+				</tr>
+				<tr>
+					<td class="form-td1">
+						<a class="form-label">邮箱：</a>
+					</td>
+					<td class="form-td2">
+						<input class="form-input1" id="email" type="text" value="<?php echo ($email); ?>" disabled="true"/>
+					</td>
+					<td>
+						<a class="form-tip">请输入正确的邮箱格式</a>
 					</td>
 				</tr>
 				<tr>
@@ -107,7 +97,7 @@
 						<a class="form-label">岗位：</a>
 					</td>
 					<td class="form-td2">
-						<input class="form-input1" id="jobs" type="text"/>
+						<input class="form-input1" id="jobs" type="text" value="<?php echo ($jobs); ?>" disabled="true"/>
 					</td>
 					<td>
 						<a class="form-tip">不超10字</a>
@@ -118,7 +108,7 @@
 						<a class="form-label">单位：</a>
 					</td>
 					<td class="form-td2">
-						<input class="form-input1" id="company" type="text"/>
+						<input class="form-input1" id="company" type="text" value="<?php echo ($company); ?>" disabled="true"/>
 					</td>
 					<td>
 						<a class="form-tip">不超20字</a>
@@ -129,7 +119,7 @@
 						<a class="form-label">介绍：</a>
 					</td>
 					<td class="form-td3">
-						<textarea class="form-textarea" id="introduction"></textarea>
+						<textarea class="form-textarea" id="introduction" disabled="true"><?php echo ($introduction); ?></textarea>
 					</td>
 					<td>
 						<a class="form-tip">一句话介绍下自己，不超250字</a>

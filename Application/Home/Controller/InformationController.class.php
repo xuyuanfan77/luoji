@@ -20,6 +20,10 @@ class InformationController extends Controller {
 	public $accountMenuText;
 	
 	public $nickname;
+	public $email;
+	public $jobs;
+	public $company;
+	public $introduction;
 	
 	public $specialImages;
 	public $specialMaintitles;
@@ -93,21 +97,18 @@ class InformationController extends Controller {
 		$userData = $this->User->where($condition)->find();
 		if($userData) {
 			$this->nickname = $userData['nickname'];
+			$this->email = $userData['email'];
+			$this->jobs = $userData['jobs'];
+			$this->company = $userData['company'];
+			$this->introduction = $userData['introduction'];
 		} else {
 			$this->redirect('Account/index', array('operation'=>0));
 		}
 		$this->assign('nickname',$this->nickname);
-		// $specialData = $this->Special->limit(5)->select();
-		// for ($index=0; $index<=4; $index++) {
-			// $this->specialImages[$index] = C('__ROOT__') . 'Public/' . $specialData[$index]['coverimage'];
-			// $this->specialMaintitles[$index] = $specialData[$index]['maintitle'];
-			// $this->specialSubheads[$index] = $specialData[$index]['subhead'];
-			// $this->specialHrefs[$index] = U('Content/index', array('type'=>'articles','specialId'=>$specialData[$index]['id']));
-		// }
-		// $this->assign('specialImages',$this->specialImages);
-		// $this->assign('specialMaintitles',$this->specialMaintitles);
-		// $this->assign('specialSubheads',$this->specialSubheads);
-		// $this->assign('specialHrefs',$this->specialHrefs);
+		$this->assign('email',$this->email);
+		$this->assign('jobs',$this->jobs);
+		$this->assign('company',$this->company);
+		$this->assign('introduction',$this->introduction);
 		
 		// //准备文章列表数据
 		// if ($this->artCategory != 0) {
@@ -173,14 +174,7 @@ class InformationController extends Controller {
         $this->display();
 	}
 	
-	public function update(){
-		// $User = M("User"); // 实例化User对象
-		// $User->create($_POST);
-		// $condition['id'] = array('eq',session('userId'));
-		// $User->where($condition)->save();
-		// $error = $User->getError();
-		// $this->ajaxReturn($error);
-		
+	public function update(){		
 		$User = D("User");
 		if (!$User->create()){
 				$error = $User->getError();
@@ -189,9 +183,9 @@ class InformationController extends Controller {
 			$condition['id'] = array('eq',session('userId'));
 			$result = $User->where($condition)->save();
 			if($result){ 
-				$this->ajaxReturn('更新异常！');
-			} else {
 				$this->ajaxReturn('更新成功！');
+			} else {
+				$this->ajaxReturn('更新异常！');
 			}
 		}
 	}
