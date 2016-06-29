@@ -153,6 +153,11 @@ table {
 	padding-left:45px;
 }
 
+#image { 
+	width:90px;
+	height:90px;
+} 
+
 #imagePreview { 
 	width:90px;
 	height:90px;

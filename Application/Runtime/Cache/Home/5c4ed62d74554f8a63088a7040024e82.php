@@ -42,13 +42,14 @@
 		</div-->
 		<link type="text/css" href="/luoji/Public/css/information.css" rel="stylesheet"/>
 <script type="text/javascript" src="/luoji/Public/javascript/information.js"></script>
+<script type="text/javascript" src="/luoji/Public/javascript/ajaxfileupload.js"></script>
 
 <div id="total-frame">
 	<div id="right-frame">
 		<div id="right-title">
 			<a>个人信息</a>
 			<input type="button" value="修改" id="updatebutton" onclick="updateSubmitForm()"/>
-			<input type="hidden" id="url" value="<?php echo U('Information/update');?>">
+			<input type="hidden" id="updateUrl" value="<?php echo U('Information/update');?>"/>
 		</div>
 		<div id="right-content">
 			<table id="content-table">
@@ -69,11 +70,13 @@
 					</td>
 					<td rowspan="2">
 						<div id="imagePreview"> 
+							<img id="image"/>
 						</div> 
 						<!--img class="form-image" src="/luoji/Public/resource/headportrait/headimage.jpg"/-->
 					</td>
 					<td>
 						<input type="file" class="form-button" id="imageInput" onchange="inputImageFile()" disabled="true"/>
+						<input type="hidden" id="uploadUrl" value="<?php echo U('Information/upload');?>"/>
 					</td>
 				</tr>
 				<tr>

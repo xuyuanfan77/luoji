@@ -102,7 +102,7 @@ function saveSubmitForm() {
 		var company = document.getElementById("company").value;
 		var introduction = document.getElementById("introduction").value;
 		
-		var url = document.getElementById("url").value;
+		var url = document.getElementById("updateUrl").value;
 		var data = 'nickname='+nickname+'&email='+email+'&jobs='+jobs+'&company='+company+'&introduction='+introduction;
 		
 		$.ajax({  
@@ -121,6 +121,27 @@ function saveSubmitForm() {
 				alert('响应异常！');
 			}  
 		}); 
+		
+		var url = document.getElementById("uploadUrl").value;
+		
+		$.ajaxFileUpload({
+			type: 'post',       //提交的方式
+			url:url,   //处理图片的脚本路径
+			secureuri :false,   //是否启用安全提交
+			fileElementId :'imageInput',     //file控件ID
+			dataType : 'json',  //服务器返回的数据类型      
+			success : function (data, status){  //提交成功后自动执行的处理函数
+				alert(data);
+				// if(1 != data.total) return;   //因为此处指允许上传单张图片，所以数量如果不是1，那就是有错误了
+				// var url = data.files[0].path;  
+				// $('.imageInput').empty();
+				// //此处效果是：当成功上传后会返回一个json数据，里面有url，取出url赋给img标签，然后追加到.id_photos类里显示出图片
+				// $('.imageInput').append('<img src="'+url+'" value="'+url+'" style="width:80%" >');
+			},
+			error: function(data, status, e){   //提交失败自动执行的处理函数
+				alert(e);
+			}
+		});
 	}
 }
 
@@ -130,14 +151,15 @@ var inputImageFile = (function () {
 		rFilter = /^(?:image\/bmp|image\/cis\-cod|image\/gif|image\/ief|image\/jpeg|image\/jpeg|image\/jpeg|image\/pipeg|image\/png|image\/svg\+xml|image\/tiff|image\/x\-cmu\-raster|image\/x\-cmx|image\/x\-icon|image\/x\-portable\-anymap|image\/x\-portable\-bitmap|image\/x\-portable\-graymap|image\/x\-portable\-pixmap|image\/x\-rgb|image\/x\-xbitmap|image\/x\-xpixmap|image\/x\-xwindowdump)$/i; 
 
 		oFReader.onload = function (oFREvent) { 
-			if (!oPreviewImg) { 
+			/*if (!oPreviewImg) { 
 				var newPreview = document.getElementById("imagePreview"); 
 				oPreviewImg = new Image(); 
 				oPreviewImg.id = "image";
 				oPreviewImg.style.width = (newPreview.offsetWidth).toString() + "px"; 
 				oPreviewImg.style.height = (newPreview.offsetHeight).toString() + "px"; 
 				newPreview.appendChild(oPreviewImg); 
-			} 
+			}*/
+			var oPreviewImg = document.getElementById("image");			
 			oPreviewImg.src = oFREvent.target.result; 
 		}; 
 
@@ -146,6 +168,8 @@ var inputImageFile = (function () {
 			if (aFiles.length === 0) { return; } 
 			if (!rFilter.test(aFiles[0].type)) { alert("You must select a valid image file!"); return; } 
 			oFReader.readAsDataURL(aFiles[0]); 
+			var imagePreview = document.getElementById("image");
+			imagePreview.style.visibility = "visible";
 		} 
 	} 
 	if (navigator.appName === "Microsoft Internet Explorer") { 
@@ -160,6 +184,6 @@ function deleteImageFile() {
 	var imageInput = document.getElementById("imageInput"); 
 	imageInput.outerHTML=imageInput.outerHTML;
 
-	var imagePreview = document.getElementById("imagePreview");
-	imagePreview.removeChild(document.getElementById("image"));
+	var imagePreview = document.getElementById("image");
+	imagePreview.style.visibility = "hidden";
 }

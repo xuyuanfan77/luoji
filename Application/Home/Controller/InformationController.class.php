@@ -109,67 +109,6 @@ class InformationController extends Controller {
 		$this->assign('jobs',$this->jobs);
 		$this->assign('company',$this->company);
 		$this->assign('introduction',$this->introduction);
-		
-		// //准备文章列表数据
-		// if ($this->artCategory != 0) {
-			// $condition['type1'] = array('eq',$this->artCategory);
-		// }
-		// $articleData = $this->Article->where($condition)->page($this->pageNum .',10')->select();
-		// $articleCount = count($articleData);
-		// for ($index=0; $index<$articleCount; $index++) {
-			// $this->articleCoverImage[$index] = C('__ROOT__') . 'Public/resource/minimalimage/' . $articleData[$index]['coverimage'] . '.jpg';
-			// switch ($articleData[$index]['type1'])
-			// {
-			// case 1:
-				// $this->articleClassification[$index] = '技术开发';
-				// break;
-			// case 2:
-				// $this->articleClassification[$index] = '产品设计';
-				// break;
-			// case 3:
-				// $this->articleClassification[$index] = '金融经济';
-				// break;
-			// default:
-				// $this->articleClassification[$index] = '其他';
-				// break;
-			// }
-			// $this->articleHref[$index] = U('Content/index', array('type'=>'article','articleId'=>$articleData[$index]['article_id']));
-			// $this->articleMaintitle[$index] = $articleData[$index]['maintitle'];
-			// $this->articleIntroduction[$index] = $articleData[$index]['article_introduction'];
-			// $this->articleReadnum[$index] = $articleData[$index]['readnum'];
-			// $this->articleNickname[$index] = $articleData[$index]['nickname'];
-		// }
-
-		// $this->assign('articleCoverImage',$this->articleCoverImage);
-		// $this->assign('articleClassification',$this->articleClassification);
-		// $this->assign('articleHref',$this->articleHref);
-		// $this->assign('articleMaintitle',$this->articleMaintitle);
-		// $this->assign('articleIntroduction',$this->articleIntroduction);
-		// $this->assign('articleReadnum',$this->articleReadnum);
-		// $this->assign('articleNickname',$this->articleNickname);
-		
-		// //准备分页数据
-		// $articleCount = $this->Article->where($condition)->count();
-		// $Page = new \Think\Page($articleCount,10);
-		// foreach($condition as $key=>$val) {
-			// $Page->parameter[$key] = urlencode($val);
-		// }
-		// $this->pageShow = $Page->show();
-		// $this->assign('pageShow',$this->pageShow);
-		// //dump($Page);
-
-		// //准备专家数据
-		// $expertData = $this->User->limit(5)->select();
-		// for ($index=0; $index<=4; $index++) {
-			// $this->expertImage[$index] = C('__ROOT__') . 'Public/resource/headportrait/' . $expertData[$index]['headimage'];	
-			// $this->expertNickname[$index] = $expertData[$index]['nickname'];
-			// $this->expertJobs[$index] = $expertData[$index]['jods'];
-			// $this->expertIntroduction[$index] = $expertData[$index]['introduction'];			
-		// }
-		// $this->assign('expertImage',$this->expertImage);
-		// $this->assign('expertNickname',$this->expertNickname);
-		// $this->assign('expertJobs',$this->expertJobs);
-		// $this->assign('expertIntroduction',$this->expertIntroduction);
 
         $this->display();
 	}
@@ -188,5 +127,31 @@ class InformationController extends Controller {
 				$this->ajaxReturn('更新异常！');
 			}
 		}
+	}
+	
+	public function upload(){	
+
+		if(move_uploaded_file($_FILES['imageInput']['tmp_name'], 'G://wamp//www//luoji//Public//resource//headportrait//aaaa.jpg' )){
+			$res = "ok";
+		}else{
+			$res = "error";
+		}
+		echo json_encode($res);
+
+
+	
+		// $User = D("User");
+		// if (!$User->create()){
+				// $error = $User->getError();
+				// $this->ajaxReturn($error);
+		// }else{
+			// $condition['id'] = array('eq',session('userId'));
+			// $result = $User->where($condition)->save();
+			// if($result){ 
+				// $this->ajaxReturn('更新成功！');
+			// } else {
+				// $this->ajaxReturn('更新异常！');
+			// }
+		// }
 	}
 }
