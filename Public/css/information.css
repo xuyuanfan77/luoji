@@ -96,27 +96,23 @@ table {
 
 #content-table {
 	position:relative;
-	top:40px;
+	top:28px;
 	width:850px;
 }
 
 .form-td1 {
-	width:170px;
-	height:80px;
+	width:130px;
 }
 
 .form-td2 {
 	width:400px;
-	height:80px;
+	padding:15px 0px 15px 0px;
 }
 
 .form-td3 {
-	width:400px;
-	height:155px;
-}
-
-.form-button {
-	margin-left:-255px;
+	font-size:13px;
+	color:#CCCCCC;
+	padding-left:20px;
 }
 
 .form-label {
@@ -139,7 +135,7 @@ table {
 .form-textarea {
 	width:390px;
 	height:110px;
-	resize: none; 
+	resize:none; 
 }
 
 .form-image {
@@ -147,20 +143,13 @@ table {
 	height:90px;
 }
 
-.form-tip {
-	font-size:13px;
-	color:#CCCCCC;
-	padding-left:45px;
-}
-
 #image { 
 	width:90px;
 	height:90px;
 } 
 
-#imagePreview { 
-	width:90px;
-	height:90px;
+#imagePreview {
+	margin-right:20px;
 	background-color:#F2F2F2;
 	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=scale); 
 } 
