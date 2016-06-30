@@ -97,42 +97,60 @@ class InformationController extends Controller {
 	}
 	
 	public function update(){		
-		$User = D("User");
-		if (!$User->create()){
-				$error = $User->getError();
-				$this->ajaxReturn($error);
-		}else{
-			$condition['id'] = array('eq',session('userId'));
-			$result = $User->where($condition)->save();
-			if($result){ 
-				$this->ajaxReturn('更新成功！');
-			} else {
-				$this->ajaxReturn('更新异常！');
-			}
-		}
-	}
-	
-	public function upload(){
+		// $User = D("User");
+		// if (!$User->create()){
+				// $error = $User->getError();
+				// $this->ajaxReturn($error);
+		// }else{
+			// $condition['id'] = array('eq',session('userId'));
+			// $result = $User->where($condition)->save();
+			// if($result){ 
+				// $this->ajaxReturn('更新成功！');
+			// } else {
+				// $this->ajaxReturn('更新异常！');
+			// }
+		// }
+		dump($_POST);
 		$fileName = session('headimage');
 		if(session('headimage') == 'default.jpg'){
 			$fileName = session('userId').'.jpg';
 		}
-		$filePath = 'D:\wamp\www\luoji\Public\resource\headportrait\\';
-		if(move_uploaded_file($_FILES['imageInput']['tmp_name'], $filePath.$fileName)){
-			session('headimage',$fileName);
-			$User = D('User');
-			$data['id'] = session('userId');
-			$data['headimage'] = $fileName;
-			$User->create($data);
-			$res = $User->save();
-			if($res){
-				$result = "上传成功！";
-			} else {
-				$result = "上传头像失败！";
-			}
-		}else{
-			$result = "上传头像失败！";
+		$upload = new \Think\Upload();			// 实例化上传类
+		$upload->maxSize	= 3145728 ;			// 设置附件上传大小
+		$upload->exts		= array('jpg', 'gif', 'png', 'jpeg');				// 设置附件上传类型
+		$upload->rootPath	=  	'./Public/resource/headportrait/';// 设置附件上传根目录
+		$upload->autoSub	= false;
+		$upload->saveName	= $fileName;
+		// 上传文件 
+		$info	= $upload->upload();
+		if(!$info) {							// 上传错误提示错误信息
+			$this->error($upload->getError());
+		}else{									// 上传成功
+			$this->success('上传成功！');
 		}
-		echo json_encode($result);
+	}
+	
+	public function upload(){
+		// $fileName = session('headimage');
+		// if(session('headimage') == 'default.jpg'){
+			// $fileName = session('userId').'.jpg';
+		// }
+		// $filePath = 'D:\wamp\www\luoji\Public\resource\headportrait\\';
+		// if(move_uploaded_file($_FILES['imageInput']['tmp_name'], $filePath.$fileName)){
+			// session('headimage',$fileName);
+			// $User = D('User');
+			// $data['id'] = session('userId');
+			// $data['headimage'] = $fileName;
+			// $User->create($data);
+			// $res = $User->save();
+			// if($res){
+				// $result = "上传成功！";
+			// } else {
+				// $result = "上传头像失败！";
+			// }
+		// }else{
+			// $result = "上传头像失败！";
+		// }
+		// echo json_encode($result);
 	}
 }
