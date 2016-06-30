@@ -28,12 +28,12 @@
 					</td>
 					<td rowspan="2">
 						<div id="imagePreview"> 
-							<img id="image"/>
+							<img id="image" src="{$headimage}"/>
 						</div> 
 						<!--img class="form-image" src="__PUBLIC__/resource/headportrait/headimage.jpg"/-->
 					</td>
 					<td>
-						<input type="file" class="form-button" id="imageInput" onchange="inputImageFile()" disabled="true"/>
+						<input type="file" class="form-button" id="imageInput" name="imageInput" onchange="inputImageFile()" disabled="true"/>
 						<input type="hidden" id="uploadUrl" value="{:U('Information/upload')}"/>
 					</td>
 				</tr>

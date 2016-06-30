@@ -10,8 +10,6 @@ class InformationController extends Controller {
 	private $Special;
 	
 	//输入参数
-	private $pageNum;
-	private $artCategory;
 	
 	//输出参数
 	public $navigation;
@@ -25,25 +23,7 @@ class InformationController extends Controller {
 	public $company;
 	public $introduction;
 	
-	public $specialImages;
-	public $specialMaintitles;
-	public $specialSubheads;
-	public $specialHrefs;
-	
-	public $articleCoverImage;
-	public $articleClassification;
-	public $articleHref;
-	public $articleMaintitle;
-	public $articleIntroduction;
-	public $articleReadnum;
-	public $articleNickname;
-	
-	public $pageShow;
-	
-	public $expertImage;
-	public $expertNickname;
-	public $expertJobs;
-	public $expertIntroduction;
+	public $formstatus;
 	
 	protected function init(){
 		// $this->Article = D('ArticleView');
@@ -109,6 +89,9 @@ class InformationController extends Controller {
 		$this->assign('jobs',$this->jobs);
 		$this->assign('company',$this->company);
 		$this->assign('introduction',$this->introduction);
+		
+		$this->formstatus = true;
+		$this->assign('formstatus',$this->formstatus);
 
         $this->display();
 	}
@@ -129,29 +112,27 @@ class InformationController extends Controller {
 		}
 	}
 	
-	public function upload(){	
-
-		if(move_uploaded_file($_FILES['imageInput']['tmp_name'], 'G://wamp//www//luoji//Public//resource//headportrait//aaaa.jpg' )){
-			$res = "ok";
-		}else{
-			$res = "error";
+	public function upload(){
+		$fileName = session('headimage');
+		if(session('headimage') == 'default.jpg'){
+			$fileName = session('userId').'.jpg';
 		}
-		echo json_encode($res);
-
-
-	
-		// $User = D("User");
-		// if (!$User->create()){
-				// $error = $User->getError();
-				// $this->ajaxReturn($error);
-		// }else{
-			// $condition['id'] = array('eq',session('userId'));
-			// $result = $User->where($condition)->save();
-			// if($result){ 
-				// $this->ajaxReturn('更新成功！');
-			// } else {
-				// $this->ajaxReturn('更新异常！');
-			// }
-		// }
+		$filePath = 'D:\wamp\www\luoji\Public\resource\headportrait\\';
+		if(move_uploaded_file($_FILES['imageInput']['tmp_name'], $filePath.$fileName)){
+			session('headimage',$fileName);
+			$User = D('User');
+			$data['id'] = session('userId');
+			$data['headimage'] = $fileName;
+			$User->create($data);
+			$res = $User->save();
+			if($res){
+				$result = "上传成功！";
+			} else {
+				$result = "上传头像失败！";
+			}
+		}else{
+			$result = "上传头像失败！";
+		}
+		echo json_encode($result);
 	}
 }

@@ -70,12 +70,12 @@
 					</td>
 					<td rowspan="2">
 						<div id="imagePreview"> 
-							<img id="image"/>
+							<img id="image" src="<?php echo ($headimage); ?>"/>
 						</div> 
 						<!--img class="form-image" src="/luoji/Public/resource/headportrait/headimage.jpg"/-->
 					</td>
 					<td>
-						<input type="file" class="form-button" id="imageInput" onchange="inputImageFile()" disabled="true"/>
+						<input type="file" class="form-button" id="imageInput" name="imageInput" onchange="inputImageFile()" disabled="true"/>
 						<input type="hidden" id="uploadUrl" value="<?php echo U('Information/upload');?>"/>
 					</td>
 				</tr>

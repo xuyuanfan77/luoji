@@ -112,7 +112,29 @@ function saveSubmitForm() {
 			url:url,
 			success : function(data) {
 				if(data == '更新成功！') {
-					location.href = location.href;
+					var aFiles = document.getElementById("imageInput").files; 
+					if (aFiles.length === 0) {
+						location.href = location.href;
+					} else {
+						var url = document.getElementById("uploadUrl").value;
+						$.ajaxFileUpload({
+							type: 'post',
+							url:url,
+							secureuri :false,
+							fileElementId :'imageInput',
+							dataType : 'json',     
+							success : function (data, status){
+								if(data == '上传成功！') {
+									location.href = location.href;
+								} else {
+									alert(data);
+								}
+							},
+							error: function(data, status, e){
+								alert('响应异常！');
+							}
+						});
+					}
 				} else {
 					alert(data);
 				}
@@ -120,27 +142,6 @@ function saveSubmitForm() {
 			error : function() {  
 				alert('响应异常！');
 			}  
-		}); 
-		
-		var url = document.getElementById("uploadUrl").value;
-		
-		$.ajaxFileUpload({
-			type: 'post',       //提交的方式
-			url:url,   //处理图片的脚本路径
-			secureuri :false,   //是否启用安全提交
-			fileElementId :'imageInput',     //file控件ID
-			dataType : 'json',  //服务器返回的数据类型      
-			success : function (data, status){  //提交成功后自动执行的处理函数
-				alert(data);
-				// if(1 != data.total) return;   //因为此处指允许上传单张图片，所以数量如果不是1，那就是有错误了
-				// var url = data.files[0].path;  
-				// $('.imageInput').empty();
-				// //此处效果是：当成功上传后会返回一个json数据，里面有url，取出url赋给img标签，然后追加到.id_photos类里显示出图片
-				// $('.imageInput').append('<img src="'+url+'" value="'+url+'" style="width:80%" >');
-			},
-			error: function(data, status, e){   //提交失败自动执行的处理函数
-				alert(e);
-			}
 		});
 	}
 }
@@ -150,15 +151,7 @@ var inputImageFile = (function () {
 		var oPreviewImg = null, oFReader = new window.FileReader(), 
 		rFilter = /^(?:image\/bmp|image\/cis\-cod|image\/gif|image\/ief|image\/jpeg|image\/jpeg|image\/jpeg|image\/pipeg|image\/png|image\/svg\+xml|image\/tiff|image\/x\-cmu\-raster|image\/x\-cmx|image\/x\-icon|image\/x\-portable\-anymap|image\/x\-portable\-bitmap|image\/x\-portable\-graymap|image\/x\-portable\-pixmap|image\/x\-rgb|image\/x\-xbitmap|image\/x\-xpixmap|image\/x\-xwindowdump)$/i; 
 
-		oFReader.onload = function (oFREvent) { 
-			/*if (!oPreviewImg) { 
-				var newPreview = document.getElementById("imagePreview"); 
-				oPreviewImg = new Image(); 
-				oPreviewImg.id = "image";
-				oPreviewImg.style.width = (newPreview.offsetWidth).toString() + "px"; 
-				oPreviewImg.style.height = (newPreview.offsetHeight).toString() + "px"; 
-				newPreview.appendChild(oPreviewImg); 
-			}*/
+		oFReader.onload = function (oFREvent) {
 			var oPreviewImg = document.getElementById("image");			
 			oPreviewImg.src = oFREvent.target.result; 
 		}; 
