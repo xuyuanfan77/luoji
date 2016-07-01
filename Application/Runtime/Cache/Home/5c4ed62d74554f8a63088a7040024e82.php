@@ -48,7 +48,6 @@
 		<div id="right-title">
 			<a>个人信息</a>
 			<input type="button" value="修改" id="updatebutton" onclick="updateSubmitForm()"/>
-			<input type="hidden" id="updateUrl" value="<?php echo U('Information/update');?>"/>
 		</div>
 		<div id="right-content">
 			<form action="<?php echo U('Information/update');?>" id="information" enctype="multipart/form-data" method="post" >

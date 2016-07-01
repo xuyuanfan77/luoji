@@ -39,12 +39,14 @@ table {
 
 .column-select{
 	height:50px;
+	cursor:pointer;
 	border-right:5px solid #3F7BED;
 	background-color:#F2F2F2;
 }
 
 .column-default{
 	height:50px;
+	cursor:pointer;
 	background-color:#FFFFFF;
 }
 
