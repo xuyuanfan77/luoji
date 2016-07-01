@@ -143,7 +143,14 @@ table {
 	height:90px;
 }
 
+#imageBg{
+	
+	width:90px;
+	height:90px;
+}
+
 #image { 
+	position:absolute;
 	width:90px;
 	height:90px;
 } 

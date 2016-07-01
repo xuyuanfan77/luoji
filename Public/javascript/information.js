@@ -14,54 +14,6 @@ function updateSubmitForm() {
 function saveSubmitForm() {
 	var information = document.getElementById("information");
 	information.submit()
-/* 	
-	var nickname = document.getElementById("nickname").value;
-	var email = document.getElementById("email").value;
-	var jobs = document.getElementById("jobs").value;
-	var company = document.getElementById("company").value;
-	var introduction = document.getElementById("introduction").value;
-	
-	var url = document.getElementById("updateUrl").value;
-	var data = 'nickname='+nickname+'&email='+email+'&jobs='+jobs+'&company='+company+'&introduction='+introduction;
-	
-	$.ajax({  
-		type:'post',
-		dataType:'json',
-		data:data,  
-		url:url,
-		success : function(data) {
-			if(data == '更新成功！') {
-				var aFiles = document.getElementById("imageInput").files; 
-				if (aFiles.length === 0) {
-					location.href = location.href;
-				} else {
-					var url = document.getElementById("uploadUrl").value;
-					$.ajaxFileUpload({
-						type: 'post',
-						url:url,
-						secureuri :false,
-						fileElementId :'imageInput',
-						dataType : 'json',     
-						success : function (data, status){
-							if(data == '上传成功！') {
-								location.href = location.href;
-							} else {
-								alert(data);
-							}
-						},
-						error: function(data, status, e){
-							alert('响应异常！');
-						}
-					});
-				}
-			} else {
-				alert(data);
-			}
-		},  
-		error : function() {  
-			alert('响应异常！');
-		}  
-	}); */
 }
 
 var inputImageFile = (function () { 

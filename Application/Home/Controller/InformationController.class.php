@@ -23,23 +23,8 @@ class InformationController extends Controller {
 	public $company;
 	public $introduction;
 	
-	public $formstatus;
-	
 	protected function init(){
-		// $this->Article = D('ArticleView');
 		$this->User = M('User');
-		// $this->Special = M('Special');
-		
-		// if($_GET['p']) {
-			// $this->pageNum = $_GET['p'];
-		// } else {
-			// $this->pageNum = 1;
-		// }
-		// if($_GET['category']) {
-			// $this->artCategory = $_GET['category'];
-		// } else {
-			// $this->artCategory = 0;
-		// }
 		$this->navigation = array('menu-default','menu-default','menu-default','menu-default','menu-default');
 	}
 	
@@ -88,9 +73,6 @@ class InformationController extends Controller {
 		$this->assign('jobs',$this->jobs);
 		$this->assign('company',$this->company);
 		$this->assign('introduction',$this->introduction);
-		
-		$this->formstatus = true;
-		$this->assign('formstatus',$this->formstatus);
 
         $this->display();
 	}
@@ -142,45 +124,61 @@ class InformationController extends Controller {
 		return $tips;
 	}
 	
+	private function alert($tips, $url) {
+		$scriptCode = '<script>alert("';
+		$index = 1;
+		foreach ($tips as $tip) {
+		  $scriptCode = $scriptCode . $index . '、' . $tip . '\\n';
+		  $index = $index+1;
+		}
+		$scriptCode = $scriptCode . '");location.href="' . $url . '";</script>';
+		echo $scriptCode;
+	}
+	
 	public function update(){
+		$result = true;
+		
 		$postData = $_POST;
 		if(!$postData['password'] && !$postData['repassword']){
 			unset($postData['password']); 
 			unset($postData['repassword']);
 		}
-
-		
-		dump($postData);
 		$tips = $this->validate($postData);
 		if(count($tips)==0){
 			$postData['password'] = md5($postData['password']);
 			$User = D("User");
 			$condition['id'] = array('eq',session('userId'));
 			$User-> where($condition)->setField($postData);
+		} else {
+			$result = false;
+		}
+
+		if ($_FILES["headimage"]["error"] <= 0)
+		{
+			$upload = new \Think\Upload();											// 实例化上传类
+			$upload->maxSize	= 3145728;											// 设置附件上传大小
+			$upload->exts		= array('jpg', 'gif', 'png', 'jpeg');				// 设置附件上传类型
+			$upload->rootPath	= './Public/resource/headportrait/';				// 设置附件上传根目录
+			$upload->autoSub	= false;
+			$upload->replace 	= true;
+			$upload->saveName	= session('userId');
+			$info = $upload->upload();
+			if($info) {
+				$fileName = session('userId').'.'.pathinfo($_FILES["headimage"]["name"],PATHINFO_EXTENSION);
+				session('headimage',$fileName);
+				$User = D("User");
+				$condition['id'] = array('eq',session('userId'));
+				$User-> where($condition)->setField('headimage',$fileName);
+			} else {
+				$tips['headimage'] = '上传头像失败';
+				$result = false;
+			}
+		}
+
+		if($result)	{
 			$this->redirect('Information/index');
 		} else {
-			//设置好提示，返回
-		}
-		
-		
-		
-		
-		$fileName = session('headimage');
-		if(session('headimage') == 'default.jpg'){
-			$fileName = session('userId').'.jpg';
-		}
-		$upload = new \Think\Upload();											// 实例化上传类
-		$upload->maxSize	= 3145728 ;											// 设置附件上传大小
-		$upload->exts		= array('jpg', 'gif', 'png', 'jpeg');				// 设置附件上传类型
-		$upload->rootPath	=  	'./Public/resource/headportrait/';				// 设置附件上传根目录
-		$upload->autoSub	= false;
-		$upload->saveName	= $fileName;
-		// 上传文件 
-		$info	= $upload->upload();
-		if(!$info) {															// 上传错误提示错误信息
-			$this->error($upload->getError(),U('Information/index'),5);
-		}else{																	// 上传成功
-			$this->success('上传成功！',U('Information/index'),5);
+			$this->alert($tips, U('Information/index'));
 		}
 	}
 }

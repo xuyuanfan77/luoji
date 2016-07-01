@@ -42,7 +42,6 @@
 		</div-->
 		<link type="text/css" href="/luoji/Public/css/information.css" rel="stylesheet"/>
 <script type="text/javascript" src="/luoji/Public/javascript/information.js"></script>
-<script type="text/javascript" src="/luoji/Public/javascript/ajaxfileupload.js"></script>
 
 <div id="total-frame">
 	<div id="right-frame">
@@ -66,7 +65,9 @@
 								<tr>
 									<td rowspan="2">
 										<div id="imagePreview">
-											<img id="image" src="<?php echo ($headimage); ?>"/>
+											
+											<img id="image" src="<?php echo ($headimage); ?>" style="visibility:hidden"/>
+											<img id="imageBg" src="<?php echo ($headimage); ?>"/>
 										</div>
 									</td>
 									<td>
