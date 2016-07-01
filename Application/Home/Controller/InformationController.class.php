@@ -47,7 +47,6 @@ class InformationController extends Controller {
 		$this->init();
 
 		//准备菜单栏数据
-		//dump($this->navigation);
 		if(cookie('PHPSESSID') and session('id') and cookie('PHPSESSID') == session('id')) {
 			$this->headimage = C('__ROOT__') . 'Public/resource/headportrait/' .session('headimage');
 			$this->accountMenuText[0] = '我要投稿';
@@ -96,61 +95,92 @@ class InformationController extends Controller {
         $this->display();
 	}
 	
-	public function update(){		
-		// $User = D("User");
-		// if (!$User->create()){
-				// $error = $User->getError();
-				// $this->ajaxReturn($error);
-		// }else{
-			// $condition['id'] = array('eq',session('userId'));
-			// $result = $User->where($condition)->save();
-			// if($result){ 
-				// $this->ajaxReturn('更新成功！');
-			// } else {
-				// $this->ajaxReturn('更新异常！');
-			// }
-		// }
-		dump($_POST);
+	private function validate($data) {
+		$tips = array();		
+		if(isset($data['nickname'])){
+			if (!preg_match('/^[\x{4e00}-\x{9fa5}a-zA-Z0-9]{1,20}$/u', $data['nickname'])){
+				$tips['nickname'] = '昵称需1-20位字符，支持字母、数字和中文';
+			}
+		}
+		
+		if(isset($data['password'])){
+			if (!preg_match('/^[A-Za-z0-9\@\!\#\$\%\^\&\*\.\~]{4,20}$/', $data['password'])){
+				$tips['password'] = '密码需4-20位字符，支持字母、数字和标点符号';
+			}
+		}
+		
+		if(isset($data['repassword'])){
+			if ($data['repassword'] != $data['password']){
+				$tips['repassword'] = '两次输入密码不一致';
+			}
+		}
+		
+		if(isset($data['email'])){
+			if (!preg_match('/^([a-z0-9]+([._\\-]*[a-z0-9])*@([a-z0-9]+[-a-z0-9]*[a-z0-9]+.){1,63}[a-z0-9]+)?$/', $data['email'])){
+				$tips['email'] = '请输入正确的邮箱格式';
+			}
+		}
+		
+		if(isset($data['jobs'])){
+			if (!preg_match('/^[\x{4e00}-\x{9fa5}a-zA-Z]{0,10}$/u', $data['jobs'])){
+				$tips['jobs'] = '岗位需0-10位字符，支持字母和中文';
+			}
+		}
+		
+		if(isset($data['company'])){
+			if (!preg_match('/^[\x{4e00}-\x{9fa5}a-zA-Z]{0,20}$/u', $data['company'])){
+				$tips['company'] = '单位需0-20位字符，支持字母和中文';
+			}
+		}
+		
+		if(isset($data['introduction'])){
+			if (!preg_match('/^[\s\S]{0,250}$/u', $data['introduction'])){
+				$tips['introduction'] = '介绍需0-250位字符';
+			}
+		}
+		
+		return $tips;
+	}
+	
+	public function update(){
+		$postData = $_POST;
+		if(!$postData['password'] && !$postData['repassword']){
+			unset($postData['password']); 
+			unset($postData['repassword']);
+		}
+
+		
+		dump($postData);
+		$tips = $this->validate($postData);
+		if(count($tips)==0){
+			$postData['password'] = md5($postData['password']);
+			$User = D("User");
+			$condition['id'] = array('eq',session('userId'));
+			$User-> where($condition)->setField($postData);
+			$this->redirect('Information/index');
+		} else {
+			//设置好提示，返回
+		}
+		
+		
+		
+		
 		$fileName = session('headimage');
 		if(session('headimage') == 'default.jpg'){
 			$fileName = session('userId').'.jpg';
 		}
-		$upload = new \Think\Upload();			// 实例化上传类
-		$upload->maxSize	= 3145728 ;			// 设置附件上传大小
+		$upload = new \Think\Upload();											// 实例化上传类
+		$upload->maxSize	= 3145728 ;											// 设置附件上传大小
 		$upload->exts		= array('jpg', 'gif', 'png', 'jpeg');				// 设置附件上传类型
-		$upload->rootPath	=  	'./Public/resource/headportrait/';// 设置附件上传根目录
+		$upload->rootPath	=  	'./Public/resource/headportrait/';				// 设置附件上传根目录
 		$upload->autoSub	= false;
 		$upload->saveName	= $fileName;
 		// 上传文件 
 		$info	= $upload->upload();
-		if(!$info) {							// 上传错误提示错误信息
-			$this->error($upload->getError());
-		}else{									// 上传成功
-			$this->success('上传成功！');
+		if(!$info) {															// 上传错误提示错误信息
+			$this->error($upload->getError(),U('Information/index'),5);
+		}else{																	// 上传成功
+			$this->success('上传成功！',U('Information/index'),5);
 		}
-	}
-	
-	public function upload(){
-		// $fileName = session('headimage');
-		// if(session('headimage') == 'default.jpg'){
-			// $fileName = session('userId').'.jpg';
-		// }
-		// $filePath = 'D:\wamp\www\luoji\Public\resource\headportrait\\';
-		// if(move_uploaded_file($_FILES['imageInput']['tmp_name'], $filePath.$fileName)){
-			// session('headimage',$fileName);
-			// $User = D('User');
-			// $data['id'] = session('userId');
-			// $data['headimage'] = $fileName;
-			// $User->create($data);
-			// $res = $User->save();
-			// if($res){
-				// $result = "上传成功！";
-			// } else {
-				// $result = "上传头像失败！";
-			// }
-		// }else{
-			// $result = "上传头像失败！";
-		// }
-		// echo json_encode($result);
 	}
 }

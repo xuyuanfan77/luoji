@@ -9,7 +9,7 @@ class UserModel extends Model {
 		array('nickname', '/^[\x{4e00}-\x{9fa5}a-zA-Z0-9]{1,20}$/u', '昵称需1-20位字符，支持字母、数字和中文', self::EXISTS_VALIDATE, 'regex', self::MODEL_BOTH),
 		array('password', '/^[A-Za-z0-9\@\!\#\$\%\^\&\*\.\~]{4,20}$/', '密码需4-20位字符，支持字母、数字和标点符号', self::EXISTS_VALIDATE, 'regex', self::MODEL_BOTH),
 		array('repassword', 'password', '两次输入密码不一致', self::EXISTS_VALIDATE, 'confirm', self::MODEL_BOTH),
-		array('email', '/^[a-z0-9]+([._\\-]*[a-z0-9])*@([a-z0-9]+[-a-z0-9]*[a-z0-9]+.){1,63}[a-z0-9]+$/', '请输入正确的邮箱格式', self::EXISTS_VALIDATE, 'regex', self::MODEL_BOTH),
+		array('email', '/^([a-z0-9]+([._\\-]*[a-z0-9])*@([a-z0-9]+[-a-z0-9]*[a-z0-9]+.){1,63}[a-z0-9]+)?$/', '请输入正确的邮箱格式', self::EXISTS_VALIDATE, 'regex', self::MODEL_BOTH),
 		array('jobs', '/^[\x{4e00}-\x{9fa5}a-zA-Z]{0,10}$/u', '岗位需0-10位字符，支持字母和中文', self::EXISTS_VALIDATE, 'regex', self::MODEL_BOTH),
 		array('company', '/^[\x{4e00}-\x{9fa5}a-zA-Z]{0,20}$/u', '单位需0-20位字符，支持字母和中文', self::EXISTS_VALIDATE, 'regex', self::MODEL_BOTH),
 		array('introduction', '/^[\s\S]{0,250}$/u', '介绍需0-250位字符', self::EXISTS_VALIDATE, 'regex', self::MODEL_BOTH),
