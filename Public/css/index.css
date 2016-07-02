@@ -271,9 +271,10 @@
 	float:right;
 	width:0px;
 	height:0px;
+	cursor:pointer;
 	border-top: 16px solid #3F7BED;
-    border-left: 12px solid #3F7BED;
-    border-right: 12px solid #3F7BED;
+	border-left: 12px solid #3F7BED;
+	border-right: 12px solid #3F7BED;
 	border-bottom: 8px solid #FFFFFF;
 }
 
@@ -281,6 +282,7 @@
 	float:right;
 	width:0px;
 	height:0px;
+	cursor:pointer;
 	border-top: 16px solid #F2F2F2;
     border-left: 12px solid #F2F2F2;
     border-right: 12px solid #F2F2F2;

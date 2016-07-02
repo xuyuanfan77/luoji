@@ -66,6 +66,18 @@ class IndexController extends LayoutController {
 				$articleClassification[$index] = '其他';
 				break;
 			}
+			
+			$Collect = M("Collect");
+			$condition['user_id'] = array('eq',session('userId'));
+			$condition['article_id'] = array('eq',$articleData[$index]['article_id']);
+			$collectData = $Collect->where($condition)->find();
+			if($collectData) {
+				$articleCollect[$index] = 'article-collection-select';
+			} else {
+				$articleCollect[$index] = 'article-collection-default';
+			}	
+
+			$articleId[$index] = $articleData[$index]['article_id'];
 			$articleHref[$index] = U('Content/index', array('type'=>'article','articleId'=>$articleData[$index]['article_id']));
 			$articleMaintitle[$index] = $articleData[$index]['maintitle'];
 			$articleIntroduction[$index] = $articleData[$index]['article_introduction'];
@@ -75,6 +87,8 @@ class IndexController extends LayoutController {
 
 		$this->assign('articleCoverImage',$articleCoverImage);
 		$this->assign('articleClassification',$articleClassification);
+		$this->assign('articleCollect',$articleCollect);
+		$this->assign('articleId',$articleId);
 		$this->assign('articleHref',$articleHref);
 		$this->assign('articleMaintitle',$articleMaintitle);
 		$this->assign('articleIntroduction',$articleIntroduction);

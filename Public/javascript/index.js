@@ -24,3 +24,26 @@ function showAuto()
 	n = n >=(count - 1) ? 0 : ++n;
 	$("#banner-button > ul > li").eq(n).trigger('click');
 }
+
+function collect(articleObj) {
+	var curl = document.getElementById("collectUrl").value;
+	$.ajax({  
+		type:'post',
+		dataType:'json',
+		data:"articleId="+articleObj.id,  
+		url:curl,
+		success : function(data) {
+			if(data == 'yes') {
+				articleObj.className = 'article-collection-select'; 
+			} else if(data == 'yes'){
+				articleObj.className = 'article-collection-default'; 
+			} else {
+				alert('收藏异常！');
+			}
+		},  
+		error : function() {  
+			alert('响应异常！');
+		}  
+	});
+	
+}

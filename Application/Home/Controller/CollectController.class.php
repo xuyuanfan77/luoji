@@ -52,4 +52,29 @@ class CollectController extends LayoutController {
 		$this->initPage();
         $this->display();
 	}
+	
+	public function collect() {
+		$Collect = M("Collect");
+		$condition['user_id'] = array('eq',session('userId'));
+		$condition['article_id'] = array('eq',$_POST['articleId']);
+		$collectData = $Collect->where($condition)->find();
+		if($collectData) {
+			$result = $Collect->where($condition)->delete();
+			if($result){
+				$this->ajaxReturn('no');
+			} else {
+				$this->ajaxReturn('error');
+			}
+		} else {
+			$data['user_id'] = session('userId');
+			$data['article_id'] = $_POST['articleId'];
+			$data['createtime'] = date('Y-m-d H:i:s');;
+			$result = $Collect->add($data);
+			if($result){
+				$this->ajaxReturn('yes');
+			} else {
+				$this->ajaxReturn('error');
+			}
+		}	
+	}
 }
