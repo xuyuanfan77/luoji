@@ -55,9 +55,10 @@ table {
 	background-color:#F2F2F2;
 }
 
-#bottom-table > tr > td > a{
+.column-text{
 	line-height:50px;
 	font-size:18px;
+	text-decoration:none;
 }
 
 #right-frame {
@@ -89,4 +90,30 @@ table {
 #content-table {
 	position:relative;
 	width:850px;
+	border-collapse:collapse;
 }
+
+#content-table > tbody > tr{
+	height:75px;
+	border-bottom:2px solid #F2F2F2;
+}
+
+.title {
+	
+}
+
+.date-time {
+	color:#999999;
+}
+
+.author {
+	font-size:14px;
+	color:#CCCCCC;
+}
+
+.content-td1 {
+	width:660px;
+	height:25px;
+	padding-left:35px;
+}
+

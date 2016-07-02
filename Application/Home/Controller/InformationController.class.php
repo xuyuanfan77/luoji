@@ -1,82 +1,34 @@
 <?php
 namespace Home\Controller;
-use Think\Controller;
 header("Content-Type: text/html;charset=utf-8");
-class InformationController extends Controller {
-	
-	//模型
-	private $Article;
-	private $User;
-	private $Special;
-	
-	//输入参数
-	
-	//输出参数
-	public $navigation;
-	public $headimage;
-	public $accountMenuUrl;
-	public $accountMenuText;
-	
-	public $nickname;
-	public $email;
-	public $jobs;
-	public $company;
-	public $introduction;
-	
-	protected function init(){
-		$this->User = M('User');
-		$this->navigation = array('menu-default','menu-default','menu-default','menu-default','menu-default');
-	}
+class InformationController extends LayoutController {
 	
     public function index(){
-		$this->init();
-
-		//准备菜单栏数据
-		if(cookie('PHPSESSID') and session('id') and cookie('PHPSESSID') == session('id')) {
-			$this->headimage = C('__ROOT__') . 'Public/resource/headportrait/' .session('headimage');
-			$this->accountMenuText[0] = '我要投稿';
-			$this->accountMenuText[1] = '我的收藏';
-			$this->accountMenuText[2] = '我的投稿';
-			$this->accountMenuText[3] = '个人信息';
-			$this->accountMenuText[4] = '退 出';
-			$this->accountMenuUrl[0] = '';
-			$this->accountMenuUrl[1] = '';
-			$this->accountMenuUrl[2] = '';
-			$this->accountMenuUrl[3] = U('Information/index');
-			$this->accountMenuUrl[4] = U('Account/logout');
-		} else {
-			$this->headimage = C('__ROOT__') . 'Public/picture/' .'login.jpg';
-			$this->accountMenuText[0] = '登 陆';
-			$this->accountMenuText[1] = '注 册';
-			$this->accountMenuUrl[0] = U('Account/index', array('operation'=>0));
-			$this->accountMenuUrl[1] = U('Account/index', array('operation'=>1));
-		}
-		$this->assign('navigation',$this->navigation);
-		$this->assign('headimage',$this->headimage);
-		$this->assign('accountMenuText',$this->accountMenuText);
-		$this->assign('accountMenuUrl',$this->accountMenuUrl);
+		$this->initLayout();
 		
 		//准备个人信息数据
+		$User = M('User');
 		$condition['id'] = array('eq',session('userId'));
-		$userData = $this->User->where($condition)->find();
+		$userData = $User->where($condition)->find();
 		if($userData) {
-			$this->nickname = $userData['nickname'];
-			$this->email = $userData['email'];
-			$this->jobs = $userData['jobs'];
-			$this->company = $userData['company'];
-			$this->introduction = $userData['introduction'];
+			$nickname = $userData['nickname'];
+			$email = $userData['email'];
+			$jobs = $userData['jobs'];
+			$company = $userData['company'];
+			$introduction = $userData['introduction'];
 		} else {
 			$this->redirect('Account/index', array('operation'=>0));
 		}
-		$this->assign('nickname',$this->nickname);
-		$this->assign('email',$this->email);
-		$this->assign('jobs',$this->jobs);
-		$this->assign('company',$this->company);
-		$this->assign('introduction',$this->introduction);
+		$this->assign('nickname',$nickname);
+		$this->assign('email',$email);
+		$this->assign('jobs',$jobs);
+		$this->assign('company',$company);
+		$this->assign('introduction',$introduction);
 
         $this->display();
 	}
 	
+	//数据检验
 	private function validate($data) {
 		$tips = array();		
 		if(isset($data['nickname'])){
@@ -124,6 +76,7 @@ class InformationController extends Controller {
 		return $tips;
 	}
 	
+	//提示弹框
 	private function alert($tips, $url) {
 		$scriptCode = '<script>alert("';
 		$index = 1;
@@ -135,6 +88,7 @@ class InformationController extends Controller {
 		echo $scriptCode;
 	}
 	
+	//更新信息
 	public function update(){
 		$result = true;
 		
@@ -145,10 +99,15 @@ class InformationController extends Controller {
 		}
 		$tips = $this->validate($postData);
 		if(count($tips)==0){
-			$postData['password'] = md5($postData['password']);
+			if($postData['password']){
+				$postData['password'] = md5($postData['password']);
+			}
 			$User = D("User");
 			$condition['id'] = array('eq',session('userId'));
 			$User-> where($condition)->setField($postData);
+			if(isset($postData['nickname'])){
+				session('nickname',$postData['nickname']);
+			}
 		} else {
 			$result = false;
 		}

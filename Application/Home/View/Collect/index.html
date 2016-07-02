@@ -1,0 +1,72 @@
+<link type="text/css" href="__PUBLIC__/css/collect.css" rel="stylesheet"/>
+<script type="text/javascript" src="__PUBLIC__/javascript/collect.js"></script>
+
+<div id="total-frame">
+	<div id="right-frame">
+		<div id="right-title">
+			<a>我的收藏</a>
+		</div>
+		<div id="right-content">
+			<table id="content-table"> 
+			
+			
+				<for start="0" end="8" name="articleIndex">
+					<if condition="$articleMaintitle[$articleIndex] neq NULL">
+						<tr>
+							<td>
+								<table> 
+									<tr>
+										<td class="content-td1"><a class="title" href="{$articleHref[$articleIndex]}">{$articleMaintitle[$articleIndex]}</a></td>
+										<td rowspan="2"><a class="date-time">{$collectCreatetime[$articleIndex]}</a></td>
+									</tr>
+									<tr>
+										<td class="content-td1"><a class="author" href="{$articleHref[$articleIndex]}">{$articleSubhead[$articleIndex]}</a></td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+					</if>
+				</for>	
+			</table>
+			<div id="pages">
+				{$pageShow}
+			</div>
+		</div>
+	</div>
+	<div id="left-frame">
+		<table id="top-table"> 
+			<tr>
+				<td>
+					<img id="headimage" src="{$headimage}"/>
+				</td> 
+			</tr>
+			<tr>
+				<td>
+					<a id="username">{$nickname}</a>
+				</td> 
+			</tr> 
+		</table>
+		<table id="bottom-table"> 
+			<tr>
+				<td class="column-default">
+					<a>我要投稿<a/>
+				</td> 
+			</tr>
+			<tr>
+				<td class="column-default">
+					<a>我的投稿</a>
+				</td> 
+			</tr>
+			<tr>
+				<td class="column-select">
+					<a href="{:U('Collect/index')}">我的收藏<a/>
+				</td> 
+			</tr>
+			<tr>
+				<td class="column-default">
+					<a href="{:U('Information/index')}">个人信息</a>
+				</td> 
+			</tr> 
+		</table> 
+	</div>
+</div>

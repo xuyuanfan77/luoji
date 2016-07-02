@@ -31,7 +31,7 @@ table {
 	height:150px;
 }
 
-#mynickname {
+#username {
 	line-height:35px;
 	font-size:20px;
 	font-weight:700;
@@ -83,16 +83,6 @@ table {
 	padding:0px 635px 0px 30px;
 }
 
-#right-title > input {
-	height:35px;
-	width:75px;
-	font-size:14px;
-	border:0px;
-	cursor:pointer;
-	color:#FFFFFF;
-	background-color:#3F7BED;
-}
-
 #right-content {
 	position:relative;
 	width:850px;
@@ -100,67 +90,97 @@ table {
 
 #content-table {
 	position:relative;
-	top:28px;
 	width:850px;
+	border-collapse:collapse;
 }
 
-.form-td1 {
-	width:130px;
+#content-table > tbody > tr{
+	height:75px;
+	border-bottom:2px solid #F2F2F2;
 }
 
-.form-td2 {
-	width:400px;
-	padding:15px 0px 15px 0px;
+.title {
+	text-decoration:none;
+	color:#000000;
 }
 
-.form-td3 {
-	font-size:13px;
+.date-time {
+	color:#999999;
+}
+
+.author {
+	text-decoration:none;
+	font-size:14px;
 	color:#CCCCCC;
-	padding-left:20px;
 }
 
-.form-label {
-	font-size:15px;
-	padding-left:60px;
+.content-td1 {
+	width:700px;
+	height:25px;
+	padding-left:35px;
 }
 
-.form-input1 {
-	width:385px;
-	height:35px;
-	padding-left:8px;
+#pages {
+	position:relative;
+	width:850px;
+	padding:18px 70px 18px 70px;
 }
 
-.form-input2 {
-	width:175px;
-	height:35px;
-	padding-left:8px;
-}
-
-.form-textarea {
-	width:390px;
-	height:110px;
-	resize:none; 
-}
-
-.form-image {
-	width:90px;
-	height:90px;
-}
-
-#imageBg{
-	
-	width:90px;
-	height:90px;
-}
-
-#image { 
-	position:absolute;
-	width:90px;
-	height:90px;
-} 
-
-#imagePreview {
-	margin-right:20px;
+.num {
+	width:60px;
+	line-height:30px;
+	color:#000000;
 	background-color:#F2F2F2;
-	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=scale); 
-} 
+	display:inline-block;
+	margin:0px 2px 0px 2px;
+	text-align:center;
+	text-decoration:none;
+}
+
+.num:hover{
+	background-color:#3F7BED;
+	color:#FFFFFF;
+}
+
+.prev {
+	width:60px;
+	line-height:30px;
+	color:#000000;
+	background-color:#F2F2F2;
+	display:inline-block;
+	margin:0px 2px 0px 2px;
+	text-align:center;
+	text-decoration:none;
+}
+
+.prev:hover{
+	background-color:#3F7BED;
+	color:#FFFFFF;
+}
+
+.next {
+	width:60px;
+	line-height:30px;
+	color:#000000;
+	background-color:#F2F2F2;
+	display:inline-block;
+	margin:0px 2px 0px 2px;
+	text-align:center;
+	text-decoration:none;
+}
+
+.next:hover{
+	background-color:#3F7BED;
+	color:#FFFFFF;
+}
+
+.current {
+	width:60px;
+	line-height:30px;
+	color:#FFFFFF;
+	background-color:#3F7BED;
+	display:inline-block;
+	margin:0px 2px 0px 2px;
+	text-align:center;
+	text-decoration:none;
+}

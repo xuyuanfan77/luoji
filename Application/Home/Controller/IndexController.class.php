@@ -1,166 +1,127 @@
 <?php
 namespace Home\Controller;
-use Think\Controller;
 header("Content-Type: text/html;charset=utf-8");
-class IndexController extends Controller {
+class IndexController extends LayoutController {
 	
-	//模型
-	private $Article;
-	private $User;
-	private $Special;
-	
-	//输入参数
-	private $pageNum;
-	private $artCategory;
-	
-	//输出参数
-	public $navigation;
-	public $headimage;
-	public $accountMenuUrl;
-	public $accountMenuText;
-	
-	public $specialImages;
-	public $specialMaintitles;
-	public $specialSubheads;
-	public $specialHrefs;
-	
-	public $articleCoverImage;
-	public $articleClassification;
-	public $articleHref;
-	public $articleMaintitle;
-	public $articleIntroduction;
-	public $articleReadnum;
-	public $articleNickname;
-	
-	public $pageShow;
-	
-	public $expertImage;
-	public $expertNickname;
-	public $expertJobs;
-	public $expertIntroduction;
-	
-	protected function init(){
-		$this->Article = D('ArticleView');
-		$this->User = M('User');
-		$this->Special = M('Special');
-		
-		if($_GET['p']) {
-			$this->pageNum = $_GET['p'];
-		} else {
-			$this->pageNum = 1;
-		}
+	//获取栏目
+	private function getCategory() {
 		if($_GET['category']) {
-			$this->artCategory = $_GET['category'];
+			$artCategory = $_GET['category'];
 		} else {
-			$this->artCategory = 0;
+			$artCategory = 0;
 		}
-		$this->navigation = array('menu-default','menu-default','menu-default','menu-default','menu-default');
+		return $artCategory;
 	}
 	
-    public function index(){
-		$this->init();
-
-		//准备菜单栏数据
-		$this->navigation[$this->artCategory] = 'menu-select';
-		//dump($this->navigation);
-		if(cookie('PHPSESSID') and session('id') and cookie('PHPSESSID') == session('id')) {
-			$this->headimage = C('__ROOT__') . 'Public/resource/headportrait/' .session('headimage');
-			$this->accountMenuText[0] = '我要投稿';
-			$this->accountMenuText[1] = '我的收藏';
-			$this->accountMenuText[2] = '我的投稿';
-			$this->accountMenuText[3] = '个人信息';
-			$this->accountMenuText[4] = '退 出';
-			$this->accountMenuUrl[0] = '';
-			$this->accountMenuUrl[1] = '';
-			$this->accountMenuUrl[2] = '';
-			$this->accountMenuUrl[3] = U('Information/index');
-			$this->accountMenuUrl[4] = U('Account/logout');
+	//获取页数
+	private function getPageNum() {
+		if($_GET['p']) {
+			$pageNum = $_GET['p'];
 		} else {
-			$this->headimage = C('__ROOT__') . 'Public/picture/' .'login.jpg';
-			$this->accountMenuText[0] = '登 陆';
-			$this->accountMenuText[1] = '注 册';
-			$this->accountMenuUrl[0] = U('Account/index', array('operation'=>0));
-			$this->accountMenuUrl[1] = U('Account/index', array('operation'=>1));
+			$pageNum = 1;
 		}
-		$this->assign('navigation',$this->navigation);
-		$this->assign('headimage',$this->headimage);
-		$this->assign('accountMenuText',$this->accountMenuText);
-		$this->assign('accountMenuUrl',$this->accountMenuUrl);
-		
-		//准备专辑数据
-		$specialData = $this->Special->limit(5)->select();
+		return $pageNum;
+	}
+	
+	//初始化专辑
+	private function initSpecial() {
+		$Special = M('Special');
+		$specialData = $Special->limit(5)->select();
 		for ($index=0; $index<=4; $index++) {
-			$this->specialImages[$index] = C('__ROOT__') . 'Public/' . $specialData[$index]['coverimage'];
-			$this->specialMaintitles[$index] = $specialData[$index]['maintitle'];
-			$this->specialSubheads[$index] = $specialData[$index]['subhead'];
-			$this->specialHrefs[$index] = U('Content/index', array('type'=>'articles','specialId'=>$specialData[$index]['id']));
+			$specialImages[$index] = C('__ROOT__') . 'Public/' . $specialData[$index]['coverimage'];
+			$specialMaintitles[$index] = $specialData[$index]['maintitle'];
+			$specialSubheads[$index] = $specialData[$index]['subhead'];
+			$specialHrefs[$index] = U('Content/index', array('type'=>'articles','specialId'=>$specialData[$index]['id']));
 		}
-		$this->assign('specialImages',$this->specialImages);
-		$this->assign('specialMaintitles',$this->specialMaintitles);
-		$this->assign('specialSubheads',$this->specialSubheads);
-		$this->assign('specialHrefs',$this->specialHrefs);
-		
-		//准备文章列表数据
-		if ($this->artCategory != 0) {
-			$condition['type1'] = array('eq',$this->artCategory);
+		$this->assign('specialImages',$specialImages);
+		$this->assign('specialMaintitles',$specialMaintitles);
+		$this->assign('specialSubheads',$specialSubheads);
+		$this->assign('specialHrefs',$specialHrefs);
+	}
+	
+	//初始化文章列表
+	private function initArticle() {
+		$artCategory = $this->getCategory();
+		if ($artCategory != 0) {
+			$condition['type1'] = array('eq',$artCategory);
 		}
-		$articleData = $this->Article->where($condition)->page($this->pageNum .',10')->select();
+		$Article = D('ArticleView');
+		$pageNum = $this->getPageNum();
+		$articleData = $Article->where($condition)->page($pageNum .',10')->select();
 		$articleCount = count($articleData);
 		for ($index=0; $index<$articleCount; $index++) {
-			$this->articleCoverImage[$index] = C('__ROOT__') . 'Public/resource/minimalimage/' . $articleData[$index]['coverimage'] . '.jpg';
+			$articleCoverImage[$index] = C('__ROOT__') . 'Public/resource/minimalimage/' . $articleData[$index]['coverimage'] . '.jpg';
 			switch ($articleData[$index]['type1'])
 			{
 			case 1:
-				$this->articleClassification[$index] = '技术开发';
+				$articleClassification[$index] = '技术开发';
 				break;
 			case 2:
-				$this->articleClassification[$index] = '产品设计';
+				$articleClassification[$index] = '产品设计';
 				break;
 			case 3:
-				$this->articleClassification[$index] = '金融经济';
+				$articleClassification[$index] = '金融经济';
 				break;
 			default:
-				$this->articleClassification[$index] = '其他';
+				$articleClassification[$index] = '其他';
 				break;
 			}
-			$this->articleHref[$index] = U('Content/index', array('type'=>'article','articleId'=>$articleData[$index]['article_id']));
-			$this->articleMaintitle[$index] = $articleData[$index]['maintitle'];
-			$this->articleIntroduction[$index] = $articleData[$index]['article_introduction'];
-			$this->articleReadnum[$index] = $articleData[$index]['readnum'];
-			$this->articleNickname[$index] = $articleData[$index]['nickname'];
+			$articleHref[$index] = U('Content/index', array('type'=>'article','articleId'=>$articleData[$index]['article_id']));
+			$articleMaintitle[$index] = $articleData[$index]['maintitle'];
+			$articleIntroduction[$index] = $articleData[$index]['article_introduction'];
+			$articleReadnum[$index] = $articleData[$index]['readnum'];
+			$articleNickname[$index] = $articleData[$index]['nickname'];
 		}
 
-		$this->assign('articleCoverImage',$this->articleCoverImage);
-		$this->assign('articleClassification',$this->articleClassification);
-		$this->assign('articleHref',$this->articleHref);
-		$this->assign('articleMaintitle',$this->articleMaintitle);
-		$this->assign('articleIntroduction',$this->articleIntroduction);
-		$this->assign('articleReadnum',$this->articleReadnum);
-		$this->assign('articleNickname',$this->articleNickname);
-		
-		//准备分页数据
-		$articleCount = $this->Article->where($condition)->count();
+		$this->assign('articleCoverImage',$articleCoverImage);
+		$this->assign('articleClassification',$articleClassification);
+		$this->assign('articleHref',$articleHref);
+		$this->assign('articleMaintitle',$articleMaintitle);
+		$this->assign('articleIntroduction',$articleIntroduction);
+		$this->assign('articleReadnum',$articleReadnum);
+		$this->assign('articleNickname',$articleNickname);
+	}
+	
+	//准备分页
+	private function initPage() {
+		$Article = D('ArticleView');
+		$artCategory = $this->getCategory();
+		if ($artCategory != 0) {
+			$condition['type1'] = array('eq',$artCategory);
+		}
+		$articleCount = $Article->where($condition)->count();
 		$Page = new \Think\Page($articleCount,10);
 		foreach($condition as $key=>$val) {
 			$Page->parameter[$key] = urlencode($val);
 		}
-		$this->pageShow = $Page->show();
-		$this->assign('pageShow',$this->pageShow);
-		//dump($Page);
-
-		//准备专家数据
-		$expertData = $this->User->limit(5)->select();
+		$pageShow = $Page->show();
+		$this->assign('pageShow',$pageShow);
+	}
+	
+	//准备专家数据
+	private function initUser() {
+		$User = M('User');
+		$expertData = $User->limit(5)->select();
 		for ($index=0; $index<=4; $index++) {
-			$this->expertImage[$index] = C('__ROOT__') . 'Public/resource/headportrait/' . $expertData[$index]['headimage'];	
-			$this->expertNickname[$index] = $expertData[$index]['nickname'];
-			$this->expertJobs[$index] = $expertData[$index]['jods'];
-			$this->expertIntroduction[$index] = $expertData[$index]['introduction'];			
+			$expertImage[$index] = C('__ROOT__') . 'Public/resource/headportrait/' . $expertData[$index]['headimage'];	
+			$expertNickname[$index] = $expertData[$index]['nickname'];
+			$expertJobs[$index] = $expertData[$index]['jods'];
+			$expertIntroduction[$index] = $expertData[$index]['introduction'];			
 		}
-		$this->assign('expertImage',$this->expertImage);
-		$this->assign('expertNickname',$this->expertNickname);
-		$this->assign('expertJobs',$this->expertJobs);
-		$this->assign('expertIntroduction',$this->expertIntroduction);
-
+		$this->assign('expertImage',$expertImage);
+		$this->assign('expertNickname',$expertNickname);
+		$this->assign('expertJobs',$expertJobs);
+		$this->assign('expertIntroduction',$expertIntroduction);
+	}
+	
+    public function index(){
+		$artCategory = $this->getCategory();
+		$this->setArtCategory($artCategory);
+		$this->initLayout();
+		$this->initSpecial();
+		$this->initArticle();
+		$this->initPage();
+		$this->initUser();
         $this->display();
 	}
 }

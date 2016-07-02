@@ -138,12 +138,12 @@
 			</tr>
 			<tr>
 				<td class="column-default">
-					<a>我的收藏<a/>
+					<a href="<?php echo U('Collect/index');?>">我的收藏<a/>
 				</td> 
 			</tr>
 			<tr>
 				<td class="column-select">
-					<a>个人信息</a>
+					<a href="<?php echo U('Information/index');?>">个人信息</a>
 				</td> 
 			</tr> 
 		</table> 
