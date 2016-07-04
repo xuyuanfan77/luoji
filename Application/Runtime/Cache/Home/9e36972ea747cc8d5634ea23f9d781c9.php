@@ -52,7 +52,7 @@
 			<table id="content-table"> 
 			
 			
-				<?php $__FOR_START_24366__=0;$__FOR_END_24366__=8;for($articleIndex=$__FOR_START_24366__;$articleIndex < $__FOR_END_24366__;$articleIndex+=1){ if($articleMaintitle[$articleIndex] != NULL): ?><tr>
+				<?php $__FOR_START_3389__=0;$__FOR_END_3389__=8;for($articleIndex=$__FOR_START_3389__;$articleIndex < $__FOR_END_3389__;$articleIndex+=1){ if($articleMaintitle[$articleIndex] != NULL): ?><tr>
 							<td>
 								<table> 
 									<tr>

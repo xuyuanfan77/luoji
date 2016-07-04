@@ -53,28 +53,33 @@ class CollectController extends LayoutController {
         $this->display();
 	}
 	
+	//收藏文章
 	public function collect() {
-		$Collect = M("Collect");
-		$condition['user_id'] = array('eq',session('userId'));
-		$condition['article_id'] = array('eq',$_POST['articleId']);
-		$collectData = $Collect->where($condition)->find();
-		if($collectData) {
-			$result = $Collect->where($condition)->delete();
-			if($result){
-				$this->ajaxReturn('no');
+		if(cookie('PHPSESSID') && session('id') && cookie('PHPSESSID') == session('id')) {
+			$Collect = M("Collect");
+			$condition['user_id'] = array('eq',session('userId'));
+			$condition['article_id'] = array('eq',$_POST['articleId']);
+			$collectData = $Collect->where($condition)->find();
+			if($collectData) {
+				$result = $Collect->where($condition)->delete();
+				if($result){
+					$this->ajaxReturn('no');
+				} else {
+					$this->ajaxReturn('error');
+				}
 			} else {
-				$this->ajaxReturn('error');
+				$data['user_id'] = session('userId');
+				$data['article_id'] = $_POST['articleId'];
+				$data['createtime'] = date('Y-m-d H:i:s');;
+				$result = $Collect->add($data);
+				if($result){
+					$this->ajaxReturn('yes');
+				} else {
+					$this->ajaxReturn('error');
+				}
 			}
 		} else {
-			$data['user_id'] = session('userId');
-			$data['article_id'] = $_POST['articleId'];
-			$data['createtime'] = date('Y-m-d H:i:s');;
-			$result = $Collect->add($data);
-			if($result){
-				$this->ajaxReturn('yes');
-			} else {
-				$this->ajaxReturn('error');
-			}
+			$this->ajaxReturn('permission');
 		}	
 	}
 }

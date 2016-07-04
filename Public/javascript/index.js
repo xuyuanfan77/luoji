@@ -35,8 +35,10 @@ function collect(articleObj) {
 		success : function(data) {
 			if(data == 'yes') {
 				articleObj.className = 'article-collection-select'; 
-			} else if(data == 'yes'){
+			} else if(data == 'no'){
 				articleObj.className = 'article-collection-default'; 
+			} else if(data == 'permission'){
+				alert('请先登录！');
 			} else {
 				alert('收藏异常！');
 			}
