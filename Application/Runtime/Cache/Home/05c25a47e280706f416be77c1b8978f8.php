@@ -86,7 +86,29 @@
 	<div class="right-frame">
 	
 		<!-- 作者栏 -->
-		<div class="article-author">
+		<table class="article-author">
+			<tr><td>
+				<table>
+					<tr>
+						<td rowspan="2"><img class="author-image" src="<?php echo ($expertImage); ?>"/></td>
+						<td><a class="author-name"><?php echo ($expertNickname); ?></a></td>
+					</tr>
+					<tr>
+						<td><a class="author-rank">少尉</a></td>
+					</tr>
+				</table>
+			</td></tr>
+			<tr><td><hr class="line"/></td></tr>
+			<tr><td>
+				<a class="author-jobs"><?php echo ($expertJobs); ?></a>
+				<a class="author-company"><?php echo ($expertCompany); ?></a>
+			</td></tr>
+			<tr><td><hr class="line"/></td></tr>
+			<tr><td>
+				<div class="author-introduct"><?php echo ($expertIntroduction); ?></div>
+			</td></tr>
+		</table>
+		<!--div class="article-author">
 			<img src="<?php echo ($expertImage); ?>"/>
 			<a class="author-name"><?php echo ($expertNickname); ?></a>
 			<a class="author-jobs"><?php echo ($expertJobs); ?></a>
@@ -94,7 +116,7 @@
 			<a class="author-introduct"><?php echo ($expertIntroduction); ?></a>
 		</div>
 		<div class="article-recommend">
-		</div>
+		</div-->
 	</div>
 </div>
 

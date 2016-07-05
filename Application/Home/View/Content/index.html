@@ -46,14 +46,27 @@
 	<div class="right-frame">
 	
 		<!-- 作者栏 -->
-		<div class="article-author">
-			<img src="{$expertImage}"/>
-			<a class="author-name">{$expertNickname}</a>
-			<a class="author-jobs">{$expertJobs}</a>
-			<a class="author-company">{$expertCompany}</a>
-			<a class="author-introduct">{$expertIntroduction}</a>
-		</div>
-		<div class="article-recommend">
-		</div>
+		<table class="article-author">
+			<tr><td>
+				<table>
+					<tr>
+						<td rowspan="2"><img class="author-image" src="{$expertImage}"/></td>
+						<td><a class="author-name">{$expertNickname}</a></td>
+					</tr>
+					<tr>
+						<td><a class="author-rank">少尉</a></td>
+					</tr>
+				</table>
+			</td></tr>
+			<tr><td><hr class="line"/></td></tr>
+			<tr><td>
+				<a class="author-jobs">{$expertJobs}</a>
+				<a class="author-company">{$expertCompany}</a>
+			</td></tr>
+			<tr><td><hr class="line"/></td></tr>
+			<tr><td>
+				<div class="author-introduct">{$expertIntroduction}</div>
+			</td></tr>
+		</table>
 	</div>
 </div>
