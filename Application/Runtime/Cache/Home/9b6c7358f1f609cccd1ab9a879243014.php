@@ -8,11 +8,11 @@
 		<a>专家名榜</a>
 	</div>
 	<ul>
-		<?php $__FOR_START_32394__=0;$__FOR_END_32394__=5;for($expertsIndex=$__FOR_START_32394__;$expertsIndex < $__FOR_END_32394__;$expertsIndex+=1){ if($expertImage[$expertsIndex] != NULL): ?><li>
+		<?php $__FOR_START_7890__=0;$__FOR_END_7890__=5;for($expertsIndex=$__FOR_START_7890__;$expertsIndex < $__FOR_END_7890__;$expertsIndex+=1){ if($expertImage[$expertsIndex] != NULL): ?><li>
 					<img src="<?php echo ($expertImage[$expertsIndex]); ?>"/>
 					<a class="experts-name"><?php echo ($expertNickname[$expertsIndex]); ?></a>
 					<a class="experts-jobs"><?php echo ($expertJobs[$expertsIndex]); ?></a>
-					<a class="experts-introduction"><?php echo ($expertIntroduction[$expertsIndex]); ?></a>
+					<a class="experts-company"><?php echo ($expertCompany[$expertsIndex]); ?></a>
 				</li><?php endif; } ?>
 	</ul>
 </div>

@@ -108,15 +108,10 @@
 				<div class="author-introduct"><?php echo ($expertIntroduction); ?></div>
 			</td></tr>
 		</table>
-		<!--div class="article-author">
-			<img src="<?php echo ($expertImage); ?>"/>
-			<a class="author-name"><?php echo ($expertNickname); ?></a>
-			<a class="author-jobs"><?php echo ($expertJobs); ?></a>
-			<a class="author-company"><?php echo ($expertCompany); ?></a>
-			<a class="author-introduct"><?php echo ($expertIntroduction); ?></a>
-		</div>
-		<div class="article-recommend">
-		</div-->
+		<div class="segmentation"></div>
+		<?php echo W('Special/index');?>
+		<div class="segmentation"></div>
+		<?php echo W('Article/index');?>
 	</div>
 </div>
 

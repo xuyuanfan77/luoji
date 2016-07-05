@@ -1,0 +1,61 @@
+
+.wSpecial {
+	position:relative;
+	width:245px;
+}
+
+.wSpecial-title {
+	position:relative;
+	width:245px;
+	height:45px;
+	background-color:#FFFFFF;
+}
+
+.wSpecial-title > div {
+	float:left;
+	width:15px;
+	height:45px;
+	background-color:#3F7BED;
+}
+
+.wSpecial-title > a {
+	float:left;
+	height:45px;
+	font-weight:700;
+	line-height:45px;
+	margin-left:10px;
+}
+
+.wSpecial > ul {
+	margin:0px;
+	padding:0px;
+}
+
+.wSpecial > ul > li {
+	position:relative;
+	width:245px;
+	height:100px;
+	list-style:none;
+	background-color:#FFFFFF;
+	margin:2px 0px 2px 0px;
+}
+
+.wSpecial-coverimage {
+	position:absolute;
+	width:80px;
+	height:80px;
+	margin:10px 10px 10px 10px;
+}
+
+.wSpecial-maintitle {
+	position:absolute;
+	margin:25px 10px 15px 100px;
+	font-size:15px;
+	font-weight:700;
+}
+
+.wSpecial-subhead {
+	position:absolute;
+	margin:55px 10px 15px 100px;
+	font-size:15px;
+}

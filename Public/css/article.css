@@ -249,6 +249,11 @@ td {
 	padding:0px 15px 0px 15px;
 }
 
+.segmentation {
+	width:145px;
+	height:15px;
+}
+
 .clearfix:before, .clearfix:after {
 	display: table;
 	line-height: 0;

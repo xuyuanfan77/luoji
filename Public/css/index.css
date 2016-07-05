@@ -413,6 +413,11 @@
 	width:245px;
 }
 
+.segmentation {
+	width:145px;
+	height:15px;
+}
+
 .clearfix:before, .clearfix:after {
 	display: table;
 	line-height: 0;

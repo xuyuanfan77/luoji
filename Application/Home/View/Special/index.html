@@ -1,0 +1,21 @@
+{__NOLAYOUT__}
+<link type="text/css" href="__PUBLIC__/css/widget/special.css" rel="stylesheet"/>
+
+<div class="wSpecial">
+	<div class="wSpecial-title">
+		<div>
+		</div>
+		<a>专辑精选</a>
+	</div>
+	<ul>
+		<for start="0" end="3" name="specialIndex">
+			<if condition="$specialImage[$specialIndex] neq NULL">
+				<li>
+					<img class="wSpecial-coverimage" src="{$specialImage[$specialIndex]}"/>
+					<a class="wSpecial-maintitle">{$specialMaintitle[$specialIndex]}</a>
+					<a class="wSpecial-subhead">{$specialSubhead[$specialIndex]}</a>
+				</li>
+			</if>
+		</for>
+	</ul>
+</div>

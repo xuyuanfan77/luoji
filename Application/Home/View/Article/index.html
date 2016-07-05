@@ -1,0 +1,20 @@
+{__NOLAYOUT__}
+<link type="text/css" href="__PUBLIC__/css/widget/article.css" rel="stylesheet"/>
+
+<div class="wArticle">
+	<div class="wArticle-title">
+		<div>
+		</div>
+		<a>精图排行</a>
+	</div>
+	<ul>
+		<for start="0" end="8" name="articleIndex">
+			<if condition="$articleMaintitle[$articleIndex] neq NULL">
+				<li>
+					<a class="wArticle-index">{$articleIndex+1}</a>
+					<a class="wArticle-maintitle"><nobr>{$articleMaintitle[$articleIndex]}</nobr></a>
+				</li>
+			</if>
+		</for>
+	</ul>
+</div>
