@@ -1,0 +1,22 @@
+{__NOLAYOUT__}
+<link type="text/css" href="__PUBLIC__/css/widget/experts.css" rel="stylesheet"/>
+
+<div class="experts">
+	<div class="experts-title">
+		<div>
+		</div>
+		<a>专家名榜</a>
+	</div>
+	<ul>
+		<for start="0" end="5" name="expertsIndex">
+			<if condition="$expertImage[$expertsIndex] neq NULL">
+				<li>
+					<img src="{$expertImage[$expertsIndex]}"/>
+					<a class="experts-name">{$expertNickname[$expertsIndex]}</a>
+					<a class="experts-jobs">{$expertJobs[$expertsIndex]}</a>
+					<a class="experts-introduction">{$expertIntroduction[$expertsIndex]}</a>
+				</li>
+			</if>
+		</for>
+	</ul>
+</div>

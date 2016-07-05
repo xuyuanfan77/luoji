@@ -112,22 +112,6 @@ class IndexController extends LayoutController {
 		$this->assign('pageShow',$pageShow);
 	}
 	
-	//准备专家数据
-	private function initUser() {
-		$User = M('User');
-		$expertData = $User->limit(5)->select();
-		for ($index=0; $index<=4; $index++) {
-			$expertImage[$index] = C('__ROOT__') . 'Public/resource/headportrait/' . $expertData[$index]['headimage'];	
-			$expertNickname[$index] = $expertData[$index]['nickname'];
-			$expertJobs[$index] = $expertData[$index]['jods'];
-			$expertIntroduction[$index] = $expertData[$index]['introduction'];			
-		}
-		$this->assign('expertImage',$expertImage);
-		$this->assign('expertNickname',$expertNickname);
-		$this->assign('expertJobs',$expertJobs);
-		$this->assign('expertIntroduction',$expertIntroduction);
-	}
-	
     public function index(){
 		$artCategory = $this->getCategory();
 		$this->setArtCategory($artCategory);
@@ -135,7 +119,6 @@ class IndexController extends LayoutController {
 		$this->initSpecial();
 		$this->initArticle();
 		$this->initPage();
-		$this->initUser();
         $this->display();
 	}
 }
