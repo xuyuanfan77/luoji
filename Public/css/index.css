@@ -216,12 +216,13 @@
 
 .articles > ul > li  > img{
 	height:180px;
+	width:280px;
 	margin:10px 10px 10px 10px;
 }
 
 .articles > ul > li  > ul {
 	float:right;
-	width:522px;
+	width:530px;
 	height:180px;
 	margin:10px 10px 10px 0px;
 	padding:0px;
@@ -232,29 +233,28 @@
 }
 
 .article-firstline {
-	width:512px;
-	height:24px;
+	width:530px;
+	height:30px;
 }
 
 .article-secondline {
-	width:512px;
+	width:530px;
 	height:132px;
 }
 
 .article-thirdline {
-	width:512px;
+	width:530px;
 	height:24px;
 }
 
 .article-classify1 {
 	float:left;
-	width:80px;
-	height:24px;
-	line-height:24px;
+	width:100px;
+	height:30px;
+	line-height:30px;
 	text-align:center;
 	font-size:15px;
 	color:#FFFFFF;
-	margin-left:10px;
 	background-color:#3F7BED;
 }
 
@@ -262,9 +262,9 @@
 	float:left;
 	width:0px;
 	height:0px;
-	border-top: 12px solid #FFFFFF;
-    border-left: 12px solid #3F7BED;
-    border-bottom: 12px solid #FFFFFF;
+	border-top: 15px solid #FFFFFF;
+    border-left: 15px solid #3F7BED;
+    border-bottom: 15px solid #FFFFFF;
 }
 
 .article-collection-select {
@@ -272,7 +272,7 @@
 	width:0px;
 	height:0px;
 	cursor:pointer;
-	border-top: 16px solid #3F7BED;
+	border-top: 22px solid #3F7BED;
 	border-left: 12px solid #3F7BED;
 	border-right: 12px solid #3F7BED;
 	border-bottom: 8px solid #FFFFFF;
@@ -283,14 +283,14 @@
 	width:0px;
 	height:0px;
 	cursor:pointer;
-	border-top: 16px solid #F2F2F2;
+	border-top: 22px solid #F2F2F2;
     border-left: 12px solid #F2F2F2;
     border-right: 12px solid #F2F2F2;
 	border-bottom: 8px solid #FFFFFF;
 }
 
 .article-collection-default:hover {
-	border-top: 16px solid #3F7BED;
+	border-top: 22px solid #3F7BED;
     border-left: 12px solid #3F7BED;
     border-right: 12px solid #3F7BED;
 	border-bottom: 8px solid #FFFFFF;
@@ -299,10 +299,9 @@
 .article-title {
 	position:relative;
 	display:block;
-	width:512px;
+	width:530px;
 	height:24px;
 	top:10px;
-	left:10px;
 	line-height:24px;
 	font-weight:700;
 	font-size:20px;
@@ -313,12 +312,15 @@
 .article-overview {
 	position:relative;
 	display:block;
-	width:512px;
-	height:100px;
+	width:530px;
+	height:90px;
 	top:15px;
-	left:10px;
-	line-height:24px;
+	line-height:22px;
+	font-size:14px;
 	color:#999999;
+	text-decoration:none;
+	text-overflow:ellipsis;
+	overflow:hidden;
 }
 
 .article-thirdline > a {

@@ -50,13 +50,13 @@
 	
 		<!-- 标题栏 -->
 		<div class="article-title">
-			<p><?php echo ($articleMaintitle); ?></p>
-			<a><?php echo ($articleSubhead); ?></a>
+			<h1><?php echo ($articleMaintitle); ?></h1>
+			<h2><?php echo ($articleSubhead); ?></h2>
 		</div>
 		
 		<!-- 概述栏 -->
 		<div class="article-text">
-			<a><?php echo ($articleIntroduction); ?></a>
+			<h3><?php echo ($articleIntroduction); ?></h3>
 		</div>
 		
 		<!-- 图片栏 -->

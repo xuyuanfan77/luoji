@@ -77,7 +77,7 @@
 <!-- 专辑栏 -->
 <div class="special clearfix">
 	<ul>
-		<?php $__FOR_START_1094__=0;$__FOR_END_1094__=5;for($specialIndex=$__FOR_START_1094__;$specialIndex < $__FOR_END_1094__;$specialIndex+=1){ if($specialImages[$specialIndex] != NULL): ?><li>
+		<?php $__FOR_START_24102__=0;$__FOR_END_24102__=5;for($specialIndex=$__FOR_START_24102__;$specialIndex < $__FOR_END_24102__;$specialIndex+=1){ if($specialImages[$specialIndex] != NULL): ?><li>
 					<img src="<?php echo ($specialImages[$specialIndex]); ?>"/>
 					<div class="special-title">
 						<a class="main-title" href="<?php echo ($specialHrefs[$specialIndex]); ?>" target="_blank"><?php echo ($specialMaintitles[$specialIndex]); ?></a>
@@ -97,8 +97,8 @@
 	<div class="articles">
 		<input type="hidden" id="collectUrl" value="<?php echo U('Collect/collect');?>">
 		<ul>
-			<?php $__FOR_START_22023__=0;$__FOR_END_22023__=10;for($articleIndex=$__FOR_START_22023__;$articleIndex < $__FOR_END_22023__;$articleIndex+=1){ if($articleCoverImage[$articleIndex] != NULL): ?><li>
-						<img src="<?php echo ($articleCoverImage[$articleIndex]); ?>"/>
+			<?php $__FOR_START_23143__=0;$__FOR_END_23143__=10;for($articleIndex=$__FOR_START_23143__;$articleIndex < $__FOR_END_23143__;$articleIndex+=1){ if($articleCoverImage[$articleIndex] != NULL): ?><li>
+						<img  href="<?php echo ($articleHref[$articleIndex]); ?>" src="<?php echo ($articleCoverImage[$articleIndex]); ?>"/>
 						<ul>
 							<li class="article-firstline">
 								<a class="article-classify1"><?php echo ($articleClassification[$articleIndex]); ?></a>
@@ -107,7 +107,7 @@
 							</li>
 							<li class="article-secondline">
 								<a href="<?php echo ($articleHref[$articleIndex]); ?>" target="_blank" class="article-title"><?php echo ($articleMaintitle[$articleIndex]); ?></a>
-								<a class="article-overview"><?php echo ($articleIntroduction[$articleIndex]); ?></a>
+								<a href="<?php echo ($articleHref[$articleIndex]); ?>" class="article-overview">&nbsp;&nbsp;<?php echo ($articleIntroduction[$articleIndex]); ?></a>
 							</li>
 							<li class="article-thirdline">
 								<a>阅读：<?php echo ($articleReadnum[$articleIndex]); ?></a>

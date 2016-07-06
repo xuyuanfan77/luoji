@@ -62,7 +62,7 @@
 			<for start="0" end="10" name="articleIndex">
 				<if condition="$articleCoverImage[$articleIndex] neq NULL">
 					<li>
-						<img src="{$articleCoverImage[$articleIndex]}"/>
+						<img  href="{$articleHref[$articleIndex]}" src="{$articleCoverImage[$articleIndex]}"/>
 						<ul>
 							<li class="article-firstline">
 								<a class="article-classify1">{$articleClassification[$articleIndex]}</a>
@@ -71,7 +71,7 @@
 							</li>
 							<li class="article-secondline">
 								<a href="{$articleHref[$articleIndex]}" target="_blank" class="article-title">{$articleMaintitle[$articleIndex]}</a>
-								<a class="article-overview">{$articleIntroduction[$articleIndex]}</a>
+								<a href="{$articleHref[$articleIndex]}" class="article-overview">&nbsp;&nbsp;{$articleIntroduction[$articleIndex]}</a>
 							</li>
 							<li class="article-thirdline">
 								<a>阅读：{$articleReadnum[$articleIndex]}</a>

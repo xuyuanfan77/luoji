@@ -26,43 +26,36 @@ td {
 .article-title {
 	position:relative;
 	width:840px;
-	height:100px;
 	background-color:#FFFFFF;
 }
 
-.article-title > p{
+h1{
 	position:relative;
-	display:block;
 	text-align:center;
-	font-size:23px;
-	font-weight:700;
 	margin:0px;
-	top:20px;
+	padding:20px 10px 10px 10px;
 }
 
-.article-title > a{
+h2{
 	position:relative;
-	display:block;
 	text-align:center;
 	margin:0px;
-	top:25px;
+	padding:10px 10px 10px 20px;
+	font-weight:normal;
 }
 
 .article-text {
 	position:relative;
 	width:840px;
-	height:170px;
 	background-color:#FFFFFF;
 	margin-top:2px;
 }
 
-.article-text > a {
-	position:absolute;
-	width:810px;
-	height:140px;
-	top:15px;
-	left:15px;
-	color:#999999;
+h3 {
+	position:relative;
+	padding:15px 15px 15px 15px;
+	margin:0px;
+	font-weight:normal;
 }
 
 .article-image {
