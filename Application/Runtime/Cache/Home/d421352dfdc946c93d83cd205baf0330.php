@@ -8,7 +8,7 @@
 		<a>专辑精选</a>
 	</div>
 	<ul>
-		<?php $__FOR_START_13827__=0;$__FOR_END_13827__=3;for($specialIndex=$__FOR_START_13827__;$specialIndex < $__FOR_END_13827__;$specialIndex+=1){ if($specialImage[$specialIndex] != NULL): ?><li>
+		<?php $__FOR_START_9191__=0;$__FOR_END_9191__=3;for($specialIndex=$__FOR_START_9191__;$specialIndex < $__FOR_END_9191__;$specialIndex+=1){ if($specialImage[$specialIndex] != NULL): ?><li>
 					<img class="wSpecial-coverimage" src="<?php echo ($specialImage[$specialIndex]); ?>"/>
 					<a class="wSpecial-maintitle"><?php echo ($specialMaintitle[$specialIndex]); ?></a>
 					<a class="wSpecial-subhead"><?php echo ($specialSubhead[$specialIndex]); ?></a>
