@@ -1,0 +1,69 @@
+<link type="text/css" href="__PUBLIC__/css/user.css" rel="stylesheet"/>
+
+<div id="total-frame" class="clearfix">
+	<div id="right-frame">
+		{:W('Special/index')}
+		<div class="segmentation"></div>
+		{:W('Article/index')}
+		<div class="segmentation"></div>
+		{:W('Experts/index')}
+	</div>
+	<div id="left-frame">
+		<div id="left-title">
+			<table id="achievement">
+				<tr>
+					<td><a class="achievement-text">作品</a></td>
+					<td rowspan="2"> <div id="achievement-segmentation"></div></td>
+					<td><a class="achievement-text">阅读量</a></td>
+				</tr>
+				<tr>
+					<td><a class="achievement-text">20</a></td>
+					<td><a class="achievement-text">1353</a></td>
+				</tr>
+			</table>
+			
+			<table>
+				<tr>
+					<td rowspan="3"><img id="experts-headimage" src="{$user['headimage']}"/></td>
+					<td><a id="experts-nickname">{$user['nickname']}</a><a id="experts-jobs">{$user['jobs']}</a><!--a id="experts-rank">少尉</a--></td>
+				</tr>
+				<!--tr>
+					<td><a id="experts-jobs">{$user['jobs']}</a></td>
+				</tr-->
+				<tr>
+					<td><a id="experts-company">{$user['company']}</a></td>
+				</tr>
+				<tr>
+					<td><a id="experts-introduction">{$user['introduction']}</a></td>
+				</tr>
+			</table>
+
+		</div>
+		
+		<for start="0" end="8" name="articleIndex">
+			<if condition="$articleCoverImage[$articleIndex] neq NULL">
+				<div class="left-article">
+					<table>
+						<tr>
+							<td rowspan="4"><img class="article-coverimage" src="{$articleCoverImage[$articleIndex]}"/></td>
+							<td class="article-firstline"><div class="article-classify1">{$articleClassification[$articleIndex]}</div><a class="article-classify2"></a></td>
+						</tr>
+						<tr>
+							<td class="article-secondline"><a class="article-title" href="{$articleHref[$articleIndex]}" target="_blank" ><nobr>{$articleMaintitle[$articleIndex]}</nobr></a></td>
+						</tr>
+						<tr>
+							<td class="article-thirdline"><div class="article-introduction">{$articleIntroduction[$articleIndex]}</div></td>
+						</tr>
+						<tr>
+							<td class="article-forthline"><a class="article-readnum">阅读：{$articleReadnum[$articleIndex]}</a><a class="article-author">作者：{$user['nickname']}</a></td>
+						</tr>
+					</table>
+				</div>
+			</if>
+		</for>
+
+		<div id="page">
+			{$pageShow}
+		</div>
+	</div>
+</div>

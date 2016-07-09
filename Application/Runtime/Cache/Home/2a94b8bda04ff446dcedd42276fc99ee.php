@@ -24,7 +24,7 @@
 					<li><a href="<?php echo U('Index/index','category=1');?>" class="<?php echo ($navigation[1]); ?>">技术</a></li>
 					<li><a href="<?php echo U('Index/index','category=2');?>" class="<?php echo ($navigation[2]); ?>">产品</a></li>
 					<li><a href="<?php echo U('Index/index','category=3');?>" class="<?php echo ($navigation[3]); ?>">经济</a></li>
-					<li><a href="<?php echo U('Index/index','category=4');?>" class="<?php echo ($navigation[4]); ?>">其他</a></li>
+					<li><a href="<?php echo U('User/index','category=4');?>" class="<?php echo ($navigation[4]); ?>">其他</a></li>
 				</ul>
 			</div>
 			<div class="login" id="login-image" onmouseover="showLoginMenu();" onmouseout="hideLoginMenu();">
@@ -77,7 +77,7 @@
 <!-- 专辑栏 -->
 <div class="special clearfix">
 	<ul>
-		<?php $__FOR_START_29594__=0;$__FOR_END_29594__=5;for($specialIndex=$__FOR_START_29594__;$specialIndex < $__FOR_END_29594__;$specialIndex+=1){ if($specialImages[$specialIndex] != NULL): ?><li>
+		<?php $__FOR_START_23874__=0;$__FOR_END_23874__=5;for($specialIndex=$__FOR_START_23874__;$specialIndex < $__FOR_END_23874__;$specialIndex+=1){ if($specialImages[$specialIndex] != NULL): ?><li>
 					<img src="<?php echo ($specialImages[$specialIndex]); ?>"/>
 					<div class="special-title">
 						<a class="main-title" href="<?php echo ($specialHrefs[$specialIndex]); ?>" target="_blank"><?php echo ($specialMaintitles[$specialIndex]); ?></a>
@@ -97,8 +97,8 @@
 	<div class="articles">
 		<input type="hidden" id="collectUrl" value="<?php echo U('Collect/collect');?>">
 		<ul>
-			<?php $__FOR_START_21707__=0;$__FOR_END_21707__=10;for($articleIndex=$__FOR_START_21707__;$articleIndex < $__FOR_END_21707__;$articleIndex+=1){ if($articleCoverImage[$articleIndex] != NULL): ?><li>
-						<img  href="<?php echo ($articleHref[$articleIndex]); ?>" src="<?php echo ($articleCoverImage[$articleIndex]); ?>"/>
+			<?php $__FOR_START_339__=0;$__FOR_END_339__=10;for($articleIndex=$__FOR_START_339__;$articleIndex < $__FOR_END_339__;$articleIndex+=1){ if($articleCoverImage[$articleIndex] != NULL): ?><li>
+						<img src="<?php echo ($articleCoverImage[$articleIndex]); ?>"/>
 						<ul>
 							<li class="article-firstline">
 								<a class="article-classify1"><?php echo ($articleClassification[$articleIndex]); ?></a>
