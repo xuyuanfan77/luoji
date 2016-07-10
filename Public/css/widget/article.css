@@ -61,4 +61,6 @@
 	font-size:15px;
 	text-overflow:ellipsis;
 	overflow:hidden;
+	text-decoration:none;
+	color:#000000;
 }

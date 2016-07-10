@@ -45,6 +45,7 @@ class UserController extends LayoutController {
 		$pageNum = $this->getPageNum();
 		$articleData = $Article->where($condition)->page($pageNum .',8')->select();
 		$articleCount = count($articleData);
+		$articleTotalReadnum = 0;
 		for ($index=0; $index<$articleCount; $index++) {
 			$articleCoverImage[$index] = C('__ROOT__') . 'Public/resource/minimalimage/' . $articleData[$index]['coverimage'] . '.jpg';
 			switch ($articleData[$index]['type1'])
@@ -66,6 +67,7 @@ class UserController extends LayoutController {
 			$articleMaintitle[$index] = $articleData[$index]['maintitle'];
 			$articleIntroduction[$index] = $articleData[$index]['introduction'];
 			$articleReadnum[$index] = $articleData[$index]['readnum'];
+			$articleTotalReadnum = $articleTotalReadnum + $articleData[$index]['readnum'];
 		}
 		$this->assign('articleCoverImage',$articleCoverImage);
 		$this->assign('articleClassification',$articleClassification);
@@ -73,6 +75,8 @@ class UserController extends LayoutController {
 		$this->assign('articleMaintitle',$articleMaintitle);
 		$this->assign('articleIntroduction',$articleIntroduction);
 		$this->assign('articleReadnum',$articleReadnum);
+		$this->assign('articleTotalReadnum',$articleTotalReadnum);
+		$this->assign('articleCount',$articleCount);
 	}
 	
 	//初始化页数

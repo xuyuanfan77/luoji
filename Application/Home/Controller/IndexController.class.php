@@ -83,6 +83,7 @@ class IndexController extends LayoutController {
 			$articleIntroduction[$index] = $articleData[$index]['article_introduction'];
 			$articleReadnum[$index] = $articleData[$index]['readnum'];
 			$articleNickname[$index] = $articleData[$index]['nickname'];
+			$expertHref[$index] = U('User/index', array('authorId'=>$articleData[$index]['user_id']));
 		}
 
 		$this->assign('articleCoverImage',$articleCoverImage);
@@ -94,6 +95,7 @@ class IndexController extends LayoutController {
 		$this->assign('articleIntroduction',$articleIntroduction);
 		$this->assign('articleReadnum',$articleReadnum);
 		$this->assign('articleNickname',$articleNickname);
+		$this->assign('expertHref',$expertHref);
 	}
 	
 	//准备分页

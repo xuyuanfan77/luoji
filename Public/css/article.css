@@ -219,6 +219,8 @@ h3 {
 .author-name {
 	font-weight:700;
 	font-size:20px;
+	text-decoration:none;
+	color:#000000;
 }
 
 .author-rank {

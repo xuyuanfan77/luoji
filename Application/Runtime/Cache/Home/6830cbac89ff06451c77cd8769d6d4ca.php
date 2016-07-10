@@ -59,8 +59,8 @@
 					<td><a class="achievement-text">阅读量</a></td>
 				</tr>
 				<tr>
-					<td><a class="achievement-text">20</a></td>
-					<td><a class="achievement-text">1353</a></td>
+					<td><a class="achievement-text"><?php echo ($articleCount); ?></a></td>
+					<td><a class="achievement-text"><?php echo ($articleTotalReadnum); ?></a></td>
 				</tr>
 			</table>
 			
@@ -82,7 +82,7 @@
 
 		</div>
 		
-		<?php $__FOR_START_14611__=0;$__FOR_END_14611__=8;for($articleIndex=$__FOR_START_14611__;$articleIndex < $__FOR_END_14611__;$articleIndex+=1){ if($articleCoverImage[$articleIndex] != NULL): ?><div class="left-article">
+		<?php $__FOR_START_30792__=0;$__FOR_END_30792__=8;for($articleIndex=$__FOR_START_30792__;$articleIndex < $__FOR_END_30792__;$articleIndex+=1){ if($articleCoverImage[$articleIndex] != NULL): ?><div class="left-article">
 					<table>
 						<tr>
 							<td rowspan="4"><img class="article-coverimage" src="<?php echo ($articleCoverImage[$articleIndex]); ?>"/></td>

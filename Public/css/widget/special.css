@@ -52,10 +52,14 @@
 	margin:25px 10px 15px 100px;
 	font-size:15px;
 	font-weight:700;
+	text-decoration:none;
+	color:#000000;
 }
 
 .wSpecial-subhead {
 	position:absolute;
 	margin:55px 10px 15px 100px;
 	font-size:15px;
+	text-decoration:none;
+	color:#000000;
 }

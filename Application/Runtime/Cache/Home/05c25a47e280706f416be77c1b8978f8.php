@@ -91,7 +91,7 @@
 				<table>
 					<tr>
 						<td rowspan="2"><img class="author-image" src="<?php echo ($expertImage); ?>"/></td>
-						<td><a class="author-name"><?php echo ($expertNickname); ?></a></td>
+						<td><a href="<?php echo ($expertHref); ?>" target="_blank" class="author-name"><?php echo ($expertNickname); ?></a></td>
 					</tr>
 					<tr>
 						<td><a class="author-rank">少尉</a></td>

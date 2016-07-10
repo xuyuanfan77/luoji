@@ -12,7 +12,7 @@
 			<if condition="$expertImage[$expertsIndex] neq NULL">
 				<li>
 					<img src="{$expertImage[$expertsIndex]}"/>
-					<a class="experts-name">{$expertNickname[$expertsIndex]}</a>
+					<a href="{$expertHref[$expertsIndex]}" target="_blank" class="experts-name">{$expertNickname[$expertsIndex]}</a>
 					<a class="experts-jobs">{$expertJobs[$expertsIndex]}</a>
 					<a class="experts-company">{$expertCompany[$expertsIndex]}</a>
 				</li>

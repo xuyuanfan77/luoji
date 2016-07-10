@@ -71,6 +71,7 @@ class ContentController extends LayoutController {
 		$expertJobs = $articleData['jobs'];
 		$expertCompany = $articleData['company'];
 		$expertIntroduction = $articleData['user_introduction'];
+		$expertHref = U('User/index', array('authorId'=>$articleData['user_id']));
 
 		$this->assign('articleMaintitle',$articleMaintitle);
 		$this->assign('articleSubhead',$articleSubhead);
@@ -81,6 +82,7 @@ class ContentController extends LayoutController {
 		$this->assign('expertJobs',$expertJobs);
 		$this->assign('expertCompany',$expertCompany);
 		$this->assign('expertIntroduction',$expertIntroduction);
+		$this->assign('expertHref',$expertHref);
 	}
 	
     public function index(){

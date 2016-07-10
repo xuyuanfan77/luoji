@@ -12,12 +12,14 @@ class ExpertsWidget extends Controller {
 			$expertImage[$index] = C('__ROOT__') . 'Public/resource/headportrait/' . $expertData[$index]['headimage'];	
 			$expertNickname[$index] = $expertData[$index]['nickname'];
 			$expertJobs[$index] = $expertData[$index]['jobs'];
-			$expertCompany[$index] = $expertData[$index]['company'];			
+			$expertCompany[$index] = $expertData[$index]['company'];
+			$expertHref[$index] = U('User/index', array('authorId'=>$expertData[$index]['id']));
 		}
 		$this->assign('expertImage',$expertImage);
 		$this->assign('expertNickname',$expertNickname);
 		$this->assign('expertJobs',$expertJobs);
 		$this->assign('expertCompany',$expertCompany);
+		$this->assign('expertHref',$expertHref);
 			
 		$this->display('Experts:index');
 	}

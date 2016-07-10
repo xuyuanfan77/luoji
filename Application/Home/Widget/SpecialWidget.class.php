@@ -11,11 +11,13 @@ class SpecialWidget extends Controller {
 		for ($index=0; $index<=2; $index++) {
 			$specialImage[$index] = C('__ROOT__') . 'Public/resource/coverimage/' . $specialData[$index]['coverimage'];	
 			$specialMaintitle[$index] = $specialData[$index]['maintitle'];	
-			$specialSubhead[$index] = $specialData[$index]['subhead'];	
+			$specialSubhead[$index] = $specialData[$index]['subhead'];
+			$specialHrefs[$index] = U('Content/index', array('type'=>'articles','specialId'=>$specialData[$index]['id']));
 		}
 		$this->assign('specialImage',$specialImage);
 		$this->assign('specialMaintitle',$specialMaintitle);
 		$this->assign('specialSubhead',$specialSubhead);
+		$this->assign('specialHrefs',$specialHrefs);
 			
 		$this->display('Special:index');
 	}

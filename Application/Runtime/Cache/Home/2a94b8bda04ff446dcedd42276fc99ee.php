@@ -77,7 +77,7 @@
 <!-- 专辑栏 -->
 <div class="special clearfix">
 	<ul>
-		<?php $__FOR_START_23874__=0;$__FOR_END_23874__=5;for($specialIndex=$__FOR_START_23874__;$specialIndex < $__FOR_END_23874__;$specialIndex+=1){ if($specialImages[$specialIndex] != NULL): ?><li>
+		<?php $__FOR_START_24745__=0;$__FOR_END_24745__=5;for($specialIndex=$__FOR_START_24745__;$specialIndex < $__FOR_END_24745__;$specialIndex+=1){ if($specialImages[$specialIndex] != NULL): ?><li>
 					<img src="<?php echo ($specialImages[$specialIndex]); ?>"/>
 					<div class="special-title">
 						<a class="main-title" href="<?php echo ($specialHrefs[$specialIndex]); ?>" target="_blank"><?php echo ($specialMaintitles[$specialIndex]); ?></a>
@@ -97,7 +97,7 @@
 	<div class="articles">
 		<input type="hidden" id="collectUrl" value="<?php echo U('Collect/collect');?>">
 		<ul>
-			<?php $__FOR_START_339__=0;$__FOR_END_339__=10;for($articleIndex=$__FOR_START_339__;$articleIndex < $__FOR_END_339__;$articleIndex+=1){ if($articleCoverImage[$articleIndex] != NULL): ?><li>
+			<?php $__FOR_START_22062__=0;$__FOR_END_22062__=10;for($articleIndex=$__FOR_START_22062__;$articleIndex < $__FOR_END_22062__;$articleIndex+=1){ if($articleCoverImage[$articleIndex] != NULL): ?><li>
 						<img src="<?php echo ($articleCoverImage[$articleIndex]); ?>"/>
 						<ul>
 							<li class="article-firstline">
@@ -107,11 +107,11 @@
 							</li>
 							<li class="article-secondline">
 								<a href="<?php echo ($articleHref[$articleIndex]); ?>" target="_blank" class="article-title"><?php echo ($articleMaintitle[$articleIndex]); ?></a>
-								<a href="<?php echo ($articleHref[$articleIndex]); ?>" class="article-overview">&nbsp;&nbsp;<?php echo ($articleIntroduction[$articleIndex]); ?></a>
+								<a href="<?php echo ($articleHref[$articleIndex]); ?>" target="_blank" class="article-overview">&nbsp;&nbsp;<?php echo ($articleIntroduction[$articleIndex]); ?></a>
 							</li>
 							<li class="article-thirdline">
 								<a>阅读：<?php echo ($articleReadnum[$articleIndex]); ?></a>
-								<a>作者：<?php echo ($articleNickname[$articleIndex]); ?></a>
+								<a href="<?php echo ($expertHref[$articleIndex]); ?>" target="_blank">作者：<?php echo ($articleNickname[$articleIndex]); ?></a>
 							</li>
 						</ul>
 					</li><?php endif; } ?>
