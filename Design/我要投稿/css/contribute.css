@@ -41,16 +41,19 @@ table {
 	height:50px;
 	border-right:5px solid #3F7BED;
 	background-color:#F2F2F2;
+	cursor:pointer;
 }
 
 .column-default{
 	height:50px;
 	background-color:#FFFFFF;
+	cursor:pointer;
 }
 
 .column-default:hover{
 	height:50px;
 	background-color:#F2F2F2;
+	cursor:pointer;
 }
 
 #bottom-table > tr > td > a{
@@ -76,7 +79,7 @@ table {
 	line-height:60px;
 	font-size:18px;
 	font-weight:700;
-	padding:0px 635px 0px 30px;
+	padding:0px 550px 0px 30px;
 }
 
 #right-title > input {
@@ -101,17 +104,17 @@ table {
 }
 
 .form-td1 {
-	width:170px;
+	width:132px;
 	height:75px;
 }
 
 .form-td2 {
-	width:385px;
+	width:500px;
 	height:75px;
 }
 
 .form-td3 {
-	width:385px;
+	width:500px;
 	height:290px;
 }
 
@@ -121,17 +124,21 @@ table {
 }
 
 .form-input {
-	width:385px;
+	width:500px;
 	height:35px;
 }
 
+.form-fileinput {
+	width:500px;
+}
+
 .form-select {
-	width:391px;
+	width:504px;
 	height:41px;
 }
 
 .form-tip {
 	font-size:13px;
 	color:#CCCCCC;
-	padding:0px 45px 0px 45px;
+	padding:0px 20px 0px 20px;
 }

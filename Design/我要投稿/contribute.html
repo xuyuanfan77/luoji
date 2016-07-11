@@ -46,73 +46,74 @@
 			<div id="right-frame">
 				<div id="right-title">
 					<a>我要投稿</a>
+					<input type="button" value="预览"/>
 					<input type="button" value="投稿"/>
 				</div>
 				<div id="right-content">
-					<table id="content-table"> 
-						<tr>
-							<td class="form-td1">
-								<a class="form-label">主标题：</a>
-							</td>
-							<td class="form-td2">
-								<input class="form-input" type="text"/>
-							</td>
-							<td>
-								<a class="form-tip">不超100字</a>
-							</td>
-						</tr>
-						<tr>
-							<td class="form-td1">
-								<a class="form-label">副标题：</a>
-							</td>
-							<td>
-								<input class="form-input" type="text"/>
-							</td>
-							<td>
-								<a class="form-tip">不超100字</a>
-							</td>
-						</tr>
-						<tr>
-							<td class="form-td1">
-								<a class="form-label">分类：</a>
-							</td>
-							<td>
-								<select class="form-select">
-									<option value="1">技术开发</option>
-									<option value="2">产品设计</option>
-									<option value="3">商业经济</option>
-									<option value="4">其他</option>
-								</select>
-							</td>
-							<td>
-								<a class="form-tip">不超100字</a>
-							</td>
-						</tr>
-						<tr>
-							<td class="form-td1">
-								<a class="form-label">简介：</a>
-							</td>
-							<td class="form-td3">
-								<textarea id="form-textarea1" style="height:250px;">
-									<p>请输入内容...</p>
-								</textarea>
-							</td>
-							<td>
-								<a class="form-tip">不超250字</a>
-							</td>
-						</tr>
-						<tr>
-							<td class="form-td1">
-								<a class="form-label">逻辑图：</a>
-							</td>
-							<td class="form-td2">
-								<input type="file"/>
-							</td>
-							<td>
-								<div class="form-tip">内容丰富，逻辑清晰的图片更容易通过审核</div>
-							</td>
-						</tr>
-					</table>
+					<form action="{:U('Information/update')}" id="information" enctype="multipart/form-data" method="post" >
+						<table id="content-table"> 
+							<tr>
+								<td class="form-td1">
+									<a class="form-label">主标题：</a>
+								</td>
+								<td class="form-td2">
+									<input class="form-input" type="text"/>
+								</td>
+								<td>
+									<a class="form-tip">不超100字</a>
+								</td>
+							</tr>
+							<tr>
+								<td class="form-td1">
+									<a class="form-label">副标题：</a>
+								</td>
+								<td>
+									<input class="form-input" type="text"/>
+								</td>
+								<td>
+									<a class="form-tip">不超100字</a>
+								</td>
+							</tr>
+							<tr>
+								<td class="form-td1">
+									<a class="form-label">分类：</a>
+								</td>
+								<td>
+									<select class="form-select">
+										<option value="1">技术开发</option>
+										<option value="2">产品设计</option>
+										<option value="3">商业经济</option>
+										<option value="4">其他</option>
+									</select>
+								</td>
+								<td>
+									<a class="form-tip">不超100字</a>
+								</td>
+							</tr>
+							<tr>
+								<td class="form-td1">
+									<a class="form-label">简介：</a>
+								</td>
+								<td class="form-td3">
+									<textarea id="form-textarea1" style="height:250px;"></textarea>
+								</td>
+								<td>
+									<a class="form-tip">不超250字</a>
+								</td>
+							</tr>
+							<tr>
+								<td class="form-td1">
+									<a class="form-label">逻辑图：</a>
+								</td>
+								<td class="form-td2">
+									<input class="form-fileinput" type="file"/>
+								</td>
+								<td>
+									<div class="form-tip">内容丰富，逻辑清晰的图片更容易通过审核</div>
+								</td>
+							</tr>
+						</table>
+					</form>
 				</div>
 			</div>
 			<div id="left-frame">
@@ -170,6 +171,9 @@
         'quote',
 		'unorderlist',
         'orderlist',
+		'alignleft',
+        'aligncenter',
+        'alignright',
 		'table',
 		'eraser',
     ];
