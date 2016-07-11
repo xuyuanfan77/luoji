@@ -1,0 +1,179 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>逻辑</title>
+
+	<link type="text/css" href="./css/layout/frame.css" rel="stylesheet"/>
+	<link type="text/css" href="./css/layout/header.css" rel="stylesheet"/>
+	<link type="text/css" href="./css/layout/footer.css" rel="stylesheet"/>
+	<link type="text/css" href="./css/contribute.css" rel="stylesheet"/>
+	<link type="text/css" href="./css/wangEditor.css" rel="stylesheet">
+	<script type="text/javascript" src="./javascript/contribute.js"></script>
+	<script type="text/javascript" src="./javascript/jquery-1.12.4.js"></script>
+</head>
+
+<body>
+	<div class="page-header">
+		<div class="header">
+			<div class="logo">
+				<img src="./picture/logo-white.png"/>
+			</div>
+			<div class="menu">
+				<ul>
+					<li><a href="#" class="menu-default">首页</a></li>
+					<li><a href="#" class="menu-default">技术</a></li>
+					<li><a href="#" class="menu-default">产品</a></li>
+					<li><a href="#" class="menu-default">经济</a></li>
+					<li><a href="#" class="menu-default">其他</a></li>
+				</ul>
+			</div>
+			<!--div class="login" onmouseover="showLoginMenu();" onmouseout="hideLoginMenu();">
+				<img src="__PUBLIC__/picture/login.jpg"/>
+				<div class="login-menu">
+					<ul>
+						<li><a href="#">我要发表</a></li>
+						<li><a href="#">我的收藏</a></li>
+						<li><a href="#">我的发表</a></li>
+						<li><a href="#">退出</a></li>
+					</ul>
+				</div>
+			</div-->
+		</div>
+	</div>
+	<div class="page-body">
+		<div id="total-frame">
+			<div id="right-frame">
+				<div id="right-title">
+					<a>我要投稿</a>
+					<input type="button" value="投稿"/>
+				</div>
+				<div id="right-content">
+					<table id="content-table"> 
+						<tr>
+							<td class="form-td1">
+								<a class="form-label">主标题：</a>
+							</td>
+							<td class="form-td2">
+								<input class="form-input" type="text"/>
+							</td>
+							<td>
+								<a class="form-tip">不超100字</a>
+							</td>
+						</tr>
+						<tr>
+							<td class="form-td1">
+								<a class="form-label">副标题：</a>
+							</td>
+							<td>
+								<input class="form-input" type="text"/>
+							</td>
+							<td>
+								<a class="form-tip">不超100字</a>
+							</td>
+						</tr>
+						<tr>
+							<td class="form-td1">
+								<a class="form-label">分类：</a>
+							</td>
+							<td>
+								<select class="form-select">
+									<option value="1">技术开发</option>
+									<option value="2">产品设计</option>
+									<option value="3">商业经济</option>
+									<option value="4">其他</option>
+								</select>
+							</td>
+							<td>
+								<a class="form-tip">不超100字</a>
+							</td>
+						</tr>
+						<tr>
+							<td class="form-td1">
+								<a class="form-label">简介：</a>
+							</td>
+							<td class="form-td3">
+								<textarea id="form-textarea1" style="height:250px;">
+									<p>请输入内容...</p>
+								</textarea>
+							</td>
+							<td>
+								<a class="form-tip">不超250字</a>
+							</td>
+						</tr>
+						<tr>
+							<td class="form-td1">
+								<a class="form-label">逻辑图：</a>
+							</td>
+							<td class="form-td2">
+								<input type="file"/>
+							</td>
+							<td>
+								<div class="form-tip">内容丰富，逻辑清晰的图片更容易通过审核</div>
+							</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			<div id="left-frame">
+				<table id="top-table"> 
+					<tr>
+						<td>
+							<img id="headimage" src="./picture/headimage.jpg"/>
+						</td> 
+					</tr>
+					<tr>
+						<td>
+							<a id="username">远航之帆</a>
+						</td> 
+					</tr> 
+				</table>
+				<table id="bottom-table"> 
+					<tr>
+						<td class="column-select">
+							<a>我要投稿<a/>
+						</td> 
+					</tr>
+					<tr>
+						<td class="column-default">
+							<a>我的投稿</a>
+						</td> 
+					</tr>
+					<tr>
+						<td class="column-default">
+							<a>我的收藏<a/>
+						</td> 
+					</tr>
+					<tr>
+						<td class="column-default">
+							<a>个人信息</a>
+						</td> 
+					</tr> 
+				</table> 
+			</div>
+		</div>
+	</div>
+	<div class="page-footer">
+	</div>
+</body>
+<script type="text/javascript" src="./javascript/wangEditor.min.js"></script>
+<script type="text/javascript">
+	var editor = new wangEditor('form-textarea1');
+	editor.config.zindex = 201;
+	editor.config.menus = [
+        'bold',
+        'underline',
+        'italic',
+        'strikethrough',
+        'forecolor',
+        'bgcolor',
+        'quote',
+		'unorderlist',
+        'orderlist',
+		'table',
+		'eraser',
+    ];
+	editor.config.menuFixed = false;
+	editor.create();
+</script>
+</html>
