@@ -27,7 +27,7 @@ class LayoutController extends Controller {
 			$accountMenuText[2] = '我的收藏';
 			$accountMenuText[3] = '个人信息';
 			$accountMenuText[4] = '退 出';
-			$accountMenuUrl[0] = '';
+			$accountMenuUrl[0] = U('Contribute/index');
 			$accountMenuUrl[1] = '';
 			$accountMenuUrl[2] = U('Collect/index');
 			$accountMenuUrl[3] = U('Information/index');

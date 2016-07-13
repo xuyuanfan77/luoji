@@ -128,7 +128,7 @@
 		<table id="bottom-table"> 
 			<tr>
 				<td class="column-default">
-					<a>我要投稿<a/>
+					<a href="<?php echo U('Contribute/index');?>">我要投稿<a/>
 				</td> 
 			</tr>
 			<tr>

@@ -40,35 +40,105 @@
 	<div class="page-body">
 		<!--div class="test">
 		</div-->
-		<link type="text/css" href="/luoji/Public/css/collect.css" rel="stylesheet"/>
-<script type="text/javascript" src="/luoji/Public/javascript/collect.js"></script>
+		<link type="text/css" href="/luoji/Public/css/contribute.css" rel="stylesheet"/>
+<link type="text/css" href="/luoji/Public/css/wangEditor.css" rel="stylesheet">
+<script type="text/javascript" src="/luoji/Public/javascript/contribute.js"></script>
 
 <div id="total-frame">
 	<div id="right-frame">
 		<div id="right-title">
-			<a>我的收藏</a>
+			<a>我要投稿</a>
+			<input type="button" value="预览" id="previewbutton" onclick="previewForm()"/>
+			<input type="button" value="投稿" id="contributebutton" onclick="submitForm()"/>
 		</div>
 		<div id="right-content">
-			<table id="content-table"> 
-			
-			
-				<?php $__FOR_START_29593__=0;$__FOR_END_29593__=8;for($articleIndex=$__FOR_START_29593__;$articleIndex < $__FOR_END_29593__;$articleIndex+=1){ if($articleMaintitle[$articleIndex] != NULL): ?><tr>
-							<td>
-								<table> 
-									<tr>
-										<td class="content-td1"><a class="title" href="<?php echo ($articleHref[$articleIndex]); ?>"><?php echo ($articleMaintitle[$articleIndex]); ?></a></td>
-										<td rowspan="2"><a class="date-time"><?php echo ($collectCreatetime[$articleIndex]); ?></a></td>
-									</tr>
-									<tr>
-										<td class="content-td1"><a class="author" href="<?php echo ($articleHref[$articleIndex]); ?>"><?php echo ($articleSubhead[$articleIndex]); ?></a></td>
-									</tr>
-								</table>
-							</td>
-						</tr><?php endif; } ?>	
-			</table>
-			<div id="pages">
-				<?php echo ($pageShow); ?>
-			</div>
+			<form id="information" enctype="multipart/form-data" method="post" >
+				<table id="content-table"> 
+					<tr>
+						<td class="form-td1">
+							<a class="form-label">主标题：</a>
+						</td>
+						<td class="form-td2">
+							<input class="form-input" type="text" name="maintitle"/>
+						</td>
+						<td>
+							<a class="form-tip">不超25字</a>
+						</td>
+					</tr>
+					<tr>
+						<td class="form-td1">
+							<a class="form-label">副标题：</a>
+						</td>
+						<td>
+							<input class="form-input" type="text" name="subhead"/>
+						</td>
+						<td>
+							<a class="form-tip">不超30字</a>
+						</td>
+					</tr>
+					<tr>
+						<td class="form-td1">
+							<a class="form-label">分类：</a>
+						</td>
+						<td>
+							<select class="form-select" name="type1">
+								<option value="1">技术开发</option>
+								<option value="2">产品设计</option>
+								<option value="3">商业经济</option>
+								<option value="4">其他</option>
+							</select>
+						</td>
+						<td>
+							<a class="form-tip">对应的文章分类更易被推荐</a>
+						</td>
+					</tr>
+					<tr>
+						<td class="form-td1">
+							<a class="form-label">简介：</a>
+						</td>
+						<td class="form-td3">
+							<textarea id="form-textarea1" style="height:250px;" name="introduction"></textarea>
+							<script type="text/javascript" src="/luoji/Public/javascript/wangEditor.min.js"></script>
+							<script type="text/javascript">
+								var editor = new wangEditor('form-textarea1');
+								editor.config.zindex = 201;
+								editor.config.menus = [
+									'bold',
+									'underline',
+									'italic',
+									'strikethrough',
+									'forecolor',
+									'bgcolor',
+									'quote',
+									'unorderlist',
+									'orderlist',
+									'alignleft',
+									'aligncenter',
+									'alignright',
+									'table',
+									'eraser',
+								];
+								editor.config.menuFixed = false;
+								editor.create();
+							</script>
+						</td>
+						<td>
+							<a class="form-tip">无格式文本不超1000字</a>
+						</td>
+					</tr>
+					<tr>
+						<td class="form-td1">
+							<a class="form-label">逻辑图：</a>
+						</td>
+						<td class="form-td2">
+							<input class="form-fileinput" type="file" name="mainimage"/>
+						</td>
+						<td>
+							<div class="form-tip">内容丰富，逻辑清晰的图片更容易通过审核</div>
+						</td>
+					</tr>
+				</table>
+			</form>
 		</div>
 	</div>
 	<div id="left-frame">
@@ -86,7 +156,7 @@
 		</table>
 		<table id="bottom-table"> 
 			<tr>
-				<td class="column-default">
+				<td class="column-select">
 					<a href="<?php echo U('Contribute/index');?>">我要投稿<a/>
 				</td> 
 			</tr>
@@ -96,7 +166,7 @@
 				</td> 
 			</tr>
 			<tr>
-				<td class="column-select">
+				<td class="column-default">
 					<a href="<?php echo U('Collect/index');?>">我的收藏<a/>
 				</td> 
 			</tr>
@@ -108,6 +178,7 @@
 		</table> 
 	</div>
 </div>
+
 	</div>
 	<div class="page-footer">
 	</div>

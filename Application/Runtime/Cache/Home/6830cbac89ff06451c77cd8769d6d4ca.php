@@ -82,7 +82,7 @@
 
 		</div>
 		
-		<?php $__FOR_START_30792__=0;$__FOR_END_30792__=8;for($articleIndex=$__FOR_START_30792__;$articleIndex < $__FOR_END_30792__;$articleIndex+=1){ if($articleCoverImage[$articleIndex] != NULL): ?><div class="left-article">
+		<?php $__FOR_START_17710__=0;$__FOR_END_17710__=8;for($articleIndex=$__FOR_START_17710__;$articleIndex < $__FOR_END_17710__;$articleIndex+=1){ if($articleCoverImage[$articleIndex] != NULL): ?><div class="left-article">
 					<table>
 						<tr>
 							<td rowspan="4"><img class="article-coverimage" src="<?php echo ($articleCoverImage[$articleIndex]); ?>"/></td>
