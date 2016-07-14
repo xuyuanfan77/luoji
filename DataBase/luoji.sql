@@ -10,13 +10,13 @@ Target Server Type    : MYSQL
 Target Server Version : 50617
 File Encoding         : 65001
 
-Date: 2016-07-14 16:24:19
+Date: 2016-07-14 22:11:21
 */
 
 SET FOREIGN_KEY_CHECKS=0;
 
 -- ----------------------------
--- Table structure for article
+-- Table structure for `article`
 -- ----------------------------
 DROP TABLE IF EXISTS `article`;
 CREATE TABLE `article` (
@@ -34,14 +34,15 @@ CREATE TABLE `article` (
   `readnum` mediumint(9) unsigned NOT NULL COMMENT '阅读量',
   `createtime` datetime NOT NULL COMMENT '创建时间',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8 COMMENT='文章表';
+) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=utf8 COMMENT='文章表';
 
 -- ----------------------------
 -- Records of article
 -- ----------------------------
+INSERT INTO `article` VALUES ('23', '23.jpg', '23.jpg', '数据表之间的关系', '一对一关系、一对多关系、多对多关系', '</p></blockquote><p><ul><li><span style=\"line-height: 1.8;\">一对多关系：这是最普通的一种关系。在这种关系中，A表中的一行可以匹配B表中的多行，但是B表中的一行只能匹配A表中的一行。只有当一个相关列是一个主键或具有唯一约束时，才能创建一对多关系。</span></li><li><span style=\"line-height: 1.8;\">多对多关系：A表中的一行可以匹配B表中的多行，反之亦然。要创建这种关系，需要定义第三个表，称为结合表，它的主键由A表和B表的外部键组成。</span></li><li><span style=\"line-height: 1.8;\">一对一关系：A表中的一行最多只能匹配于B表中的一行，反之亦然。如果相关列都是主键或都具有唯一约束，则可以创建一对一关系。这种关系并不常见，因为一般来说，按照这种方式相关的信息可以都在一个表中。</span></li></ul></p>', '12', '1', '0', '0', '0', '0', '2016-07-14 19:52:57');
 
 -- ----------------------------
--- Table structure for collect
+-- Table structure for `collect`
 -- ----------------------------
 DROP TABLE IF EXISTS `collect`;
 CREATE TABLE `collect` (
@@ -55,9 +56,10 @@ CREATE TABLE `collect` (
 -- ----------------------------
 -- Records of collect
 -- ----------------------------
+INSERT INTO `collect` VALUES ('12', '23', '2016-07-14 20:08:51');
 
 -- ----------------------------
--- Table structure for include
+-- Table structure for `include`
 -- ----------------------------
 DROP TABLE IF EXISTS `include`;
 CREATE TABLE `include` (
@@ -73,7 +75,7 @@ CREATE TABLE `include` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for manuscript
+-- Table structure for `manuscript`
 -- ----------------------------
 DROP TABLE IF EXISTS `manuscript`;
 CREATE TABLE `manuscript` (
@@ -89,14 +91,15 @@ CREATE TABLE `manuscript` (
   `status` tinyint(4) NOT NULL COMMENT '审核状态',
   `createtime` datetime NOT NULL COMMENT '创建时间',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8 COMMENT='稿件表';
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8 COMMENT='稿件表';
 
 -- ----------------------------
 -- Records of manuscript
 -- ----------------------------
+INSERT INTO `manuscript` VALUES ('20', '20.jpg', '数据表之间的关系', '一对一关系、一对多关系、多对多关系', '<blockquote><p>数据表之间有三种关系：1、一对一关系；2、一对多关系；3、多对多关系；\r\n</p></blockquote><p><ul><li><span style=\"line-height: 1.8;\">一对多关系：这是最普通的一种关系。在这种关系中，A表中的一行可以匹配B表中的多行，但是B表中的一行只能匹配A表中的一行。只有当一个相关列是一个主键或具有唯一约束时，才能创建一对多关系。</span></li><li><span style=\"line-height: 1.8;\">多对多关系：A表中的一行可以匹配B表中的多行，反之亦然。要创建这种关系，需要定义第三个表，称为结合表，它的主键由A表和B表的外部键组成。</span></li><li><span style=\"line-height: 1.8;\">一对一关系：A表中的一行最多只能匹配于B表中的一行，反之亦然。如果相关列都是主键或都具有唯一约束，则可以创建一对一关系。这种关系并不常见，因为一般来说，按照这种方式相关的信息可以都在一个表中。</span></li></ul></p>', '12', '1', '0', '0', '1', '2016-07-14 19:40:45');
 
 -- ----------------------------
--- Table structure for special
+-- Table structure for `special`
 -- ----------------------------
 DROP TABLE IF EXISTS `special`;
 CREATE TABLE `special` (
@@ -119,7 +122,7 @@ CREATE TABLE `special` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for user
+-- Table structure for `user`
 -- ----------------------------
 DROP TABLE IF EXISTS `user`;
 CREATE TABLE `user` (
@@ -141,4 +144,4 @@ CREATE TABLE `user` (
 -- ----------------------------
 -- Records of user
 -- ----------------------------
-INSERT INTO `user` VALUES ('12', 'xuyuanfan1', '4e829d20119f31638dd50f6db5bf514b', '许远帆', 'default.jpg', '', '0', '', '', '', '2016-07-14 16:07:20');
+INSERT INTO `user` VALUES ('12', 'xuyuanfan1', '4e829d20119f31638dd50f6db5bf514b', '许远帆', 'default.jpg', 'xuyuanfan77@outlook.com', '0', '产品助理', '广东医群科技有限公司', '随心，只为梦想，无所畏惧……', '2016-07-14 16:07:20');
