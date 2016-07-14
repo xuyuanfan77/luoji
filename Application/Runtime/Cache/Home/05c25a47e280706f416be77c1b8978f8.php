@@ -61,7 +61,7 @@
 		
 		<!-- 图片栏 -->
 		<div class="article-image">
-			<img src="<?php echo ($articleImage); ?>"/>
+			<?php if($articleImage != NULL): ?><img src="<?php echo ($articleImage); ?>"/><?php endif; ?>
 		</div>
 		
 		<!-- 分享栏 -->

@@ -77,7 +77,7 @@
 <!-- 专辑栏 -->
 <div class="special clearfix">
 	<ul>
-		<?php $__FOR_START_31953__=0;$__FOR_END_31953__=5;for($specialIndex=$__FOR_START_31953__;$specialIndex < $__FOR_END_31953__;$specialIndex+=1){ if($specialImages[$specialIndex] != NULL): ?><li>
+		<?php $__FOR_START_2840__=0;$__FOR_END_2840__=5;for($specialIndex=$__FOR_START_2840__;$specialIndex < $__FOR_END_2840__;$specialIndex+=1){ if($specialImages[$specialIndex] != NULL): ?><li>
 					<img src="<?php echo ($specialImages[$specialIndex]); ?>"/>
 					<div class="special-title">
 						<a class="main-title" href="<?php echo ($specialHrefs[$specialIndex]); ?>" target="_blank"><?php echo ($specialMaintitles[$specialIndex]); ?></a>
@@ -97,7 +97,7 @@
 	<div class="articles">
 		<input type="hidden" id="collectUrl" value="<?php echo U('Collect/collect');?>">
 		<ul>
-			<?php $__FOR_START_822__=0;$__FOR_END_822__=10;for($articleIndex=$__FOR_START_822__;$articleIndex < $__FOR_END_822__;$articleIndex+=1){ if($articleCoverImage[$articleIndex] != NULL): ?><li>
+			<?php $__FOR_START_14705__=0;$__FOR_END_14705__=10;for($articleIndex=$__FOR_START_14705__;$articleIndex < $__FOR_END_14705__;$articleIndex+=1){ if($articleCoverImage[$articleIndex] != NULL): ?><li>
 						<img src="<?php echo ($articleCoverImage[$articleIndex]); ?>"/>
 						<ul>
 							<li class="article-firstline">

@@ -52,7 +52,7 @@
 			<input type="button" value="投稿" id="contributebutton" onclick="submitForm()"/>
 		</div>
 		<div id="right-content">
-			<form id="information" enctype="multipart/form-data" method="post" >
+			<form id="information" enctype="multipart/form-data" method="post">
 				<table id="content-table"> 
 					<tr>
 						<td class="form-td1">

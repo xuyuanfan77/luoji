@@ -19,7 +19,9 @@
 		
 		<!-- 图片栏 -->
 		<div class="article-image">
-			<img src="{$articleImage}"/>
+			<if condition="$articleImage neq NULL">
+				<img src="{$articleImage}"/>
+			</if>
 		</div>
 		
 		<!-- 分享栏 -->
