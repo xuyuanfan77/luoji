@@ -65,7 +65,7 @@ class ContributeController extends LayoutController {
 				$Manuscript = D("Manuscript");
 				$condition['id'] = array('eq',$manuscriptId);
 				$Manuscript-> where($condition)->setField('mainimage',$fileName);
-				$this->redirect('Collect/index');
+				$this->redirect('Manuscript/index');
 				return;
 			}
 		}

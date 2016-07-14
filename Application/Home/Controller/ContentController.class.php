@@ -66,7 +66,7 @@ class ContentController extends LayoutController {
 			$articleMaintitle = $articleData['maintitle'];
 			$articleSubhead = $articleData['subhead'];
 			$articleIntroduction = $articleData['article_introduction'];
-			$articleImage = C('__ROOT__') . 'Public/resource/largerimage/' . $articleData['mainimage'] . '.jpg';
+			$articleImage = C('__ROOT__') . 'Public/resource/largerimage/' . $articleData['mainimage'];
 			$expertImage = C('__ROOT__') . 'Public/resource/headportrait/' . $articleData['headimage'];
 			$expertNickname = $articleData['nickname'];
 			$expertJobs = $articleData['jobs'];

@@ -50,7 +50,7 @@ class IndexController extends LayoutController {
 		$articleData = $Article->where($condition)->page($pageNum .',10')->select();
 		$articleCount = count($articleData);
 		for ($index=0; $index<$articleCount; $index++) {
-			$articleCoverImage[$index] = C('__ROOT__') . 'Public/resource/minimalimage/' . $articleData[$index]['coverimage'] . '.jpg';
+			$articleCoverImage[$index] = C('__ROOT__') . 'Public/resource/minimalimage/' . $articleData[$index]['coverimage'];
 			switch ($articleData[$index]['type1'])
 			{
 			case 1:
