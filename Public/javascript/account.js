@@ -122,7 +122,6 @@ function registerSubmitForm() {
 			success : function(data) {
 				if(data == '注册成功！') {
 					location.href=document.referrer;
-					/*window.history.back(-1);*/
 				} else {
 					alert(data);
 				}

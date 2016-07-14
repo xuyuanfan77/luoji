@@ -28,7 +28,7 @@ class LayoutController extends Controller {
 			$accountMenuText[3] = '个人信息';
 			$accountMenuText[4] = '退 出';
 			$accountMenuUrl[0] = U('Contribute/index');
-			$accountMenuUrl[1] = '';
+			$accountMenuUrl[1] = U('Manuscript/index');
 			$accountMenuUrl[2] = U('Collect/index');
 			$accountMenuUrl[3] = U('Information/index');
 			$accountMenuUrl[4] = U('Account/logout');

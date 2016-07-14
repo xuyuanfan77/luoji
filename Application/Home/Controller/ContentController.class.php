@@ -27,7 +27,7 @@ class ContentController extends LayoutController {
 	
 	//初始化文章列表
 	private function initArtList() {
-		if($_GET['type'] == 'article') {
+		if($_GET['type'] == 'article' || $_GET['type'] == 'manuscript') {
 			$this->assign('artListDisplay','hide');
 		} elseif($_GET['type'] == 'articles') {
 			$this->assign('artListDisplay','show');
@@ -57,22 +57,39 @@ class ContentController extends LayoutController {
 	
 	//初始化文章与作者
 	private function initArticleExpert() {
-		$ArticleView = D('ArticleView');
-		$articleId = $this->getArticleId();
-		$condition['article_id'] = array('eq',$articleId);
-		$articleData = $ArticleView->where($condition)->find();
+		if($_GET['type'] == 'article' || $_GET['type'] == 'articles') {
+			$ArticleView = D('ArticleView');
+			$articleId = $this->getArticleId();
+			$condition['article_id'] = array('eq',$articleId);
+			$articleData = $ArticleView->where($condition)->find();
 
-		$articleMaintitle = $articleData['maintitle'];
-		$articleSubhead = $articleData['subhead'];
-		$articleIntroduction = $articleData['article_introduction'];
-		$articleImage = C('__ROOT__') . 'Public/resource/largerimage/' . $articleData['mainimage'] . '.jpg';
-		$expertImage = C('__ROOT__') . 'Public/resource/headportrait/' . $articleData['headimage'];
-		$expertNickname = $articleData['nickname'];
-		$expertJobs = $articleData['jobs'];
-		$expertCompany = $articleData['company'];
-		$expertIntroduction = $articleData['user_introduction'];
-		$expertHref = U('User/index', array('authorId'=>$articleData['user_id']));
+			$articleMaintitle = $articleData['maintitle'];
+			$articleSubhead = $articleData['subhead'];
+			$articleIntroduction = $articleData['article_introduction'];
+			$articleImage = C('__ROOT__') . 'Public/resource/largerimage/' . $articleData['mainimage'] . '.jpg';
+			$expertImage = C('__ROOT__') . 'Public/resource/headportrait/' . $articleData['headimage'];
+			$expertNickname = $articleData['nickname'];
+			$expertJobs = $articleData['jobs'];
+			$expertCompany = $articleData['company'];
+			$expertIntroduction = $articleData['user_introduction'];
+			$expertHref = U('User/index', array('authorId'=>$articleData['user_id']));
+		} elseif($_GET['type'] == 'manuscript') {
+			$ManuscriptView = D('ManuscriptView');
+			$articleId = $this->getArticleId();
+			$condition['manuscript_id'] = array('eq',$articleId);
+			$articleData = $ManuscriptView->where($condition)->find();
 
+			$articleMaintitle = $articleData['maintitle'];
+			$articleSubhead = $articleData['subhead'];
+			$articleIntroduction = $articleData['manuscript_introduction'];
+			$articleImage = C('__ROOT__') . 'Public/resource/manuscriptimage/' . $articleData['mainimage'];
+			$expertImage = C('__ROOT__') . 'Public/resource/headportrait/' . $articleData['headimage'];
+			$expertNickname = $articleData['nickname'];
+			$expertJobs = $articleData['jobs'];
+			$expertCompany = $articleData['company'];
+			$expertIntroduction = $articleData['user_introduction'];
+			$expertHref = U('User/index', array('authorId'=>$articleData['user_id']));
+		}
 		$this->assign('articleMaintitle',$articleMaintitle);
 		$this->assign('articleSubhead',$articleSubhead);
 		$this->assign('articleIntroduction',$articleIntroduction);

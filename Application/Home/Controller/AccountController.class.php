@@ -88,8 +88,6 @@ class AccountController extends LayoutController {
 	
 	//注册账号
 	public function register(){
-		$this->init();
-		
 		if (!$this->check_verify($_POST['verify'])) {
 			$this->ajaxReturn('验证码有误！');
 		} else {

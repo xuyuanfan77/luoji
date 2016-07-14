@@ -11,10 +11,15 @@ class ManuscriptModel extends Model {
 	
 	//array(填充字段,填充内容,填充条件,附加规则)
 	protected $_auto=array(
+		array('status','getStatus',self::MODEL_INSERT,'callback'),
 		array('createtime','getDate',self::MODEL_INSERT,'callback'),
 	);
 	
 	function getDate(){
 		return date('Y-m-d H:i:s');
+	}
+	
+	function getStatus(){
+		return 0;
 	}
 }
