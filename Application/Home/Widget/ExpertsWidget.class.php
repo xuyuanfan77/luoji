@@ -8,7 +8,7 @@ class ExpertsWidget extends Controller {
 		$User = M('User');
 		$expertData = $User->order('rank desc')->limit(5)->select();
 		
-		for ($index=0; $index<=4; $index++) {
+		for ($index=0; $index<count($expertData); $index++) {
 			$expertImage[$index] = C('__ROOT__') . 'Public/resource/headportrait/' . $expertData[$index]['headimage'];	
 			$expertNickname[$index] = $expertData[$index]['nickname'];
 			$expertJobs[$index] = $expertData[$index]['jobs'];

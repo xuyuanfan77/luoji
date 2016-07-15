@@ -8,7 +8,7 @@ class ArticleWidget extends Controller {
 		$Article = M('Article');
 		$articleData = $Article->order('readnum desc')->limit(8)->select();
 		
-		for ($index=0; $index<=7; $index++) {
+		for ($index=0; $index<count($articleData); $index++) {
 			$articleMaintitle[$index] = $articleData[$index]['maintitle'];
 			$articleHref[$index] = U('Content/index', array('type'=>'article','articleId'=>$articleData[$index]['id']));
 		}

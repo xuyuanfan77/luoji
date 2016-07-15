@@ -8,7 +8,7 @@ class SpecialWidget extends Controller {
 		$Special = M('Special');
 		$specialData = $Special->order('readnum desc')->limit(5)->select();
 		
-		for ($index=0; $index<=2; $index++) {
+		for ($index=0; $index<count($specialData); $index++) {
 			$specialImage[$index] = C('__ROOT__') . 'Public/resource/coverimage/' . $specialData[$index]['coverimage'];	
 			$specialMaintitle[$index] = $specialData[$index]['maintitle'];	
 			$specialSubhead[$index] = $specialData[$index]['subhead'];

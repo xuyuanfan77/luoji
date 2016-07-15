@@ -27,7 +27,7 @@ class IndexController extends LayoutController {
 	private function initSpecial() {
 		$Special = M('Special');
 		$specialData = $Special->limit(5)->select();
-		for ($index=0; $index<=4; $index++) {
+		for ($index=0; $index<count($specialData); $index++) {
 			$specialImages[$index] = C('__ROOT__') . 'Public/resource/coverimage/' . $specialData[$index]['coverimage'];
 			$specialMaintitles[$index] = $specialData[$index]['maintitle'];
 			$specialSubheads[$index] = $specialData[$index]['subhead'];
