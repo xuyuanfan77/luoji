@@ -62,6 +62,11 @@ class ContentController extends LayoutController {
 			$articleId = $this->getArticleId();
 			$condition['article_id'] = array('eq',$articleId);
 			$articleData = $ArticleView->where($condition)->find();
+			
+			$Article = M('Article');
+			$articleId = $this->getArticleId();
+			$condition['id'] = array('eq',$articleId);
+			$Article->where($condition)->setInc('readnum',1,60);
 
 			$articleMaintitle = $articleData['maintitle'];
 			$articleSubhead = $articleData['subhead'];

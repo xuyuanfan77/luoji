@@ -1,0 +1,652 @@
+[ 2016-07-15T22:55:06+08:00 ] ::1 /luoji/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.211012s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.034002s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.034002s ]
+NOTIC: [8] Undefined index: category G:\wamp\www\luoji\Application\Home\Controller\IndexController.class.php 第 8 行.
+SQL: SHOW COLUMNS FROM `special` [ RunTime:0.1000s ]
+SQL: SELECT * FROM `special` LIMIT 5   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: category G:\wamp\www\luoji\Application\Home\Controller\IndexController.class.php 第 8 行.
+NOTIC: [8] Undefined index: p G:\wamp\www\luoji\Application\Home\Controller\IndexController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: condition G:\wamp\www\luoji\Application\Home\Controller\IndexController.class.php 第 50 行.
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0060s ]
+SQL: SELECT Article.id AS article_id,Article.mainimage AS mainimage,Article.coverimage AS coverimage,Article.maintitle AS maintitle,Article.subhead AS subhead,Article.introduction AS article_introduction,Article.author AS author,Article.type1 AS type1,Article.type2 AS type2,Article.type3 AS type3,Article.collectnum AS collectnum,Article.readnum AS readnum,Article.createtime AS article_createtime,User.id AS user_id,User.username AS username,User.password AS password,User.nickname AS nickname,User.headimage AS headimage,User.rank AS rank,User.jobs AS jobs,User.company AS company,User.introduction AS user_introduction,User.createtime AS user_createtime FROM article Article LEFT JOIN user User ON Article.author=User.id LIMIT 0,10   [ RunTime:0.1250s ]
+SQL: SHOW COLUMNS FROM `collect` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `collect` WHERE `user_id` = null AND `article_id` = '23' LIMIT 1   [ RunTime:0.0380s ]
+SQL: SELECT * FROM `collect` WHERE `user_id` = null AND `article_id` = '24' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `collect` WHERE `user_id` = null AND `article_id` = '25' LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: category G:\wamp\www\luoji\Application\Home\Controller\IndexController.class.php 第 8 行.
+NOTIC: [8] Undefined variable: condition G:\wamp\www\luoji\Application\Home\Controller\IndexController.class.php 第 108 行.
+SQL: SELECT COUNT(*) AS tp_count FROM article Article LEFT JOIN user User ON Article.author=User.id LIMIT 1   [ RunTime:0.0180s ]
+NOTIC: [8] Undefined variable: condition G:\wamp\www\luoji\Application\Home\Controller\IndexController.class.php 第 110 行.
+NOTIC: [2] Invalid argument supplied for foreach() G:\wamp\www\luoji\Application\Home\Controller\IndexController.class.php 第 110 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.002000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined offset: 1 G:\wamp\www\luoji\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 80 行.
+NOTIC: [8] Undefined offset: 2 G:\wamp\www\luoji\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 80 行.
+NOTIC: [8] Undefined offset: 3 G:\wamp\www\luoji\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 80 行.
+NOTIC: [8] Undefined offset: 4 G:\wamp\www\luoji\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 80 行.
+NOTIC: [8] Undefined offset: 3 G:\wamp\www\luoji\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 100 行.
+NOTIC: [8] Undefined offset: 4 G:\wamp\www\luoji\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 100 行.
+NOTIC: [8] Undefined offset: 5 G:\wamp\www\luoji\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 100 行.
+NOTIC: [8] Undefined offset: 6 G:\wamp\www\luoji\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 100 行.
+NOTIC: [8] Undefined offset: 7 G:\wamp\www\luoji\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 100 行.
+NOTIC: [8] Undefined offset: 8 G:\wamp\www\luoji\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 100 行.
+NOTIC: [8] Undefined offset: 9 G:\wamp\www\luoji\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 100 行.
+SQL: SELECT * FROM `special` ORDER BY readnum desc LIMIT 5   [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.140008s ]
+NOTIC: [8] Undefined offset: 1 G:\wamp\www\luoji\Application\Runtime\Cache\Home\d421352dfdc946c93d83cd205baf0330.php 第 11 行.
+NOTIC: [8] Undefined offset: 2 G:\wamp\www\luoji\Application\Runtime\Cache\Home\d421352dfdc946c93d83cd205baf0330.php 第 11 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.011001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.013001s ]
+SQL: SELECT * FROM `article` ORDER BY readnum desc LIMIT 8   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.186010s ]
+NOTIC: [8] Undefined offset: 3 G:\wamp\www\luoji\Application\Runtime\Cache\Home\2ac6c1276904b87404ed678dbabb985c.php 第 11 行.
+NOTIC: [8] Undefined offset: 4 G:\wamp\www\luoji\Application\Runtime\Cache\Home\2ac6c1276904b87404ed678dbabb985c.php 第 11 行.
+NOTIC: [8] Undefined offset: 5 G:\wamp\www\luoji\Application\Runtime\Cache\Home\2ac6c1276904b87404ed678dbabb985c.php 第 11 行.
+NOTIC: [8] Undefined offset: 6 G:\wamp\www\luoji\Application\Runtime\Cache\Home\2ac6c1276904b87404ed678dbabb985c.php 第 11 行.
+NOTIC: [8] Undefined offset: 7 G:\wamp\www\luoji\Application\Runtime\Cache\Home\2ac6c1276904b87404ed678dbabb985c.php 第 11 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011001s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.035002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.033002s ]
+SQL: SELECT * FROM `user` ORDER BY rank desc LIMIT 5   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.237013s ]
+NOTIC: [8] Undefined offset: 2 G:\wamp\www\luoji\Application\Runtime\Cache\Home\9b6c7358f1f609cccd1ab9a879243014.php 第 11 行.
+NOTIC: [8] Undefined offset: 3 G:\wamp\www\luoji\Application\Runtime\Cache\Home\9b6c7358f1f609cccd1ab9a879243014.php 第 11 行.
+NOTIC: [8] Undefined offset: 4 G:\wamp\www\luoji\Application\Runtime\Cache\Home\9b6c7358f1f609cccd1ab9a879243014.php 第 11 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017001s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.078005s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.083005s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018001s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.078005s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.083005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.100005s ]
+INFO: [ app_end ] --END-- [ RunTime:0.101005s ]
+
+[ 2016-07-15T22:55:49+08:00 ] ::1 /luoji/index.php/Home/Account/index/operation/0.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.199011s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.201011s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-07-15T22:55:50+08:00 ] ::1 /luoji/index.php/Home/Account/verify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-07-15T22:56:17+08:00 ] ::1 /luoji/index.php/Home/Account/verify.html?0.76391566429759
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-07-15T22:56:19+08:00 ] ::1 /luoji/index.php/Home/Account/verify.html?0.76391566429759&random=0.2944638293023496
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-07-15T22:56:28+08:00 ] ::1 /luoji/index.php/Home/Account/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `user` WHERE `username` = 'xuyuanfan1' LIMIT 1   [ RunTime:0.0020s ]
+
+[ 2016-07-15T22:56:28+08:00 ] ::1 /luoji/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: category G:\wamp\www\luoji\Application\Home\Controller\IndexController.class.php 第 8 行.
+SQL: SHOW COLUMNS FROM `special` [ RunTime:0.0420s ]
+SQL: SELECT * FROM `special` LIMIT 5   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: category G:\wamp\www\luoji\Application\Home\Controller\IndexController.class.php 第 8 行.
+NOTIC: [8] Undefined index: p G:\wamp\www\luoji\Application\Home\Controller\IndexController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: condition G:\wamp\www\luoji\Application\Home\Controller\IndexController.class.php 第 50 行.
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0060s ]
+SQL: SELECT Article.id AS article_id,Article.mainimage AS mainimage,Article.coverimage AS coverimage,Article.maintitle AS maintitle,Article.subhead AS subhead,Article.introduction AS article_introduction,Article.author AS author,Article.type1 AS type1,Article.type2 AS type2,Article.type3 AS type3,Article.collectnum AS collectnum,Article.readnum AS readnum,Article.createtime AS article_createtime,User.id AS user_id,User.username AS username,User.password AS password,User.nickname AS nickname,User.headimage AS headimage,User.rank AS rank,User.jobs AS jobs,User.company AS company,User.introduction AS user_introduction,User.createtime AS user_createtime FROM article Article LEFT JOIN user User ON Article.author=User.id LIMIT 0,10   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `collect` [ RunTime:0.0260s ]
+SQL: SELECT * FROM `collect` WHERE `user_id` = '12' AND `article_id` = '23' LIMIT 1   [ RunTime:0.0550s ]
+SQL: SELECT * FROM `collect` WHERE `user_id` = '12' AND `article_id` = '24' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `collect` WHERE `user_id` = '12' AND `article_id` = '25' LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: category G:\wamp\www\luoji\Application\Home\Controller\IndexController.class.php 第 8 行.
+NOTIC: [8] Undefined variable: condition G:\wamp\www\luoji\Application\Home\Controller\IndexController.class.php 第 108 行.
+SQL: SELECT COUNT(*) AS tp_count FROM article Article LEFT JOIN user User ON Article.author=User.id LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: condition G:\wamp\www\luoji\Application\Home\Controller\IndexController.class.php 第 110 行.
+NOTIC: [2] Invalid argument supplied for foreach() G:\wamp\www\luoji\Application\Home\Controller\IndexController.class.php 第 110 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined offset: 1 G:\wamp\www\luoji\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 80 行.
+NOTIC: [8] Undefined offset: 2 G:\wamp\www\luoji\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 80 行.
+NOTIC: [8] Undefined offset: 3 G:\wamp\www\luoji\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 80 行.
+NOTIC: [8] Undefined offset: 4 G:\wamp\www\luoji\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 80 行.
+NOTIC: [8] Undefined offset: 3 G:\wamp\www\luoji\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 100 行.
+NOTIC: [8] Undefined offset: 4 G:\wamp\www\luoji\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 100 行.
+NOTIC: [8] Undefined offset: 5 G:\wamp\www\luoji\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 100 行.
+NOTIC: [8] Undefined offset: 6 G:\wamp\www\luoji\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 100 行.
+NOTIC: [8] Undefined offset: 7 G:\wamp\www\luoji\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 100 行.
+NOTIC: [8] Undefined offset: 8 G:\wamp\www\luoji\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 100 行.
+NOTIC: [8] Undefined offset: 9 G:\wamp\www\luoji\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 100 行.
+SQL: SELECT * FROM `special` ORDER BY readnum desc LIMIT 5   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.020001s ]
+NOTIC: [8] Undefined offset: 1 G:\wamp\www\luoji\Application\Runtime\Cache\Home\d421352dfdc946c93d83cd205baf0330.php 第 11 行.
+NOTIC: [8] Undefined offset: 2 G:\wamp\www\luoji\Application\Runtime\Cache\Home\d421352dfdc946c93d83cd205baf0330.php 第 11 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+SQL: SELECT * FROM `article` ORDER BY readnum desc LIMIT 8   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.033002s ]
+NOTIC: [8] Undefined offset: 3 G:\wamp\www\luoji\Application\Runtime\Cache\Home\2ac6c1276904b87404ed678dbabb985c.php 第 11 行.
+NOTIC: [8] Undefined offset: 4 G:\wamp\www\luoji\Application\Runtime\Cache\Home\2ac6c1276904b87404ed678dbabb985c.php 第 11 行.
+NOTIC: [8] Undefined offset: 5 G:\wamp\www\luoji\Application\Runtime\Cache\Home\2ac6c1276904b87404ed678dbabb985c.php 第 11 行.
+NOTIC: [8] Undefined offset: 6 G:\wamp\www\luoji\Application\Runtime\Cache\Home\2ac6c1276904b87404ed678dbabb985c.php 第 11 行.
+NOTIC: [8] Undefined offset: 7 G:\wamp\www\luoji\Application\Runtime\Cache\Home\2ac6c1276904b87404ed678dbabb985c.php 第 11 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006001s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.007000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.013001s ]
+SQL: SELECT * FROM `user` ORDER BY rank desc LIMIT 5   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.045002s ]
+NOTIC: [8] Undefined offset: 2 G:\wamp\www\luoji\Application\Runtime\Cache\Home\9b6c7358f1f609cccd1ab9a879243014.php 第 11 行.
+NOTIC: [8] Undefined offset: 3 G:\wamp\www\luoji\Application\Runtime\Cache\Home\9b6c7358f1f609cccd1ab9a879243014.php 第 11 行.
+NOTIC: [8] Undefined offset: 4 G:\wamp\www\luoji\Application\Runtime\Cache\Home\9b6c7358f1f609cccd1ab9a879243014.php 第 11 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005000s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.019001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.024001s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006000s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.019001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.025001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2016-07-15T23:22:02+08:00 ] ::1 /luoji/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+NOTIC: [8] Undefined index: category G:\wamp\www\luoji\Application\Home\Controller\IndexController.class.php 第 8 行.
+SQL: SHOW COLUMNS FROM `special` [ RunTime:0.2290s ]
+SQL: SELECT * FROM `special` LIMIT 5   [ RunTime:0.0490s ]
+NOTIC: [8] Undefined index: category G:\wamp\www\luoji\Application\Home\Controller\IndexController.class.php 第 8 行.
+NOTIC: [8] Undefined index: p G:\wamp\www\luoji\Application\Home\Controller\IndexController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: condition G:\wamp\www\luoji\Application\Home\Controller\IndexController.class.php 第 50 行.
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0210s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0460s ]
+SQL: SELECT Article.id AS article_id,Article.mainimage AS mainimage,Article.coverimage AS coverimage,Article.maintitle AS maintitle,Article.subhead AS subhead,Article.introduction AS article_introduction,Article.author AS author,Article.type1 AS type1,Article.type2 AS type2,Article.type3 AS type3,Article.collectnum AS collectnum,Article.readnum AS readnum,Article.createtime AS article_createtime,User.id AS user_id,User.username AS username,User.password AS password,User.nickname AS nickname,User.headimage AS headimage,User.rank AS rank,User.jobs AS jobs,User.company AS company,User.introduction AS user_introduction,User.createtime AS user_createtime FROM article Article LEFT JOIN user User ON Article.author=User.id LIMIT 0,10   [ RunTime:0.0280s ]
+SQL: SHOW COLUMNS FROM `collect` [ RunTime:0.0130s ]
+SQL: SELECT * FROM `collect` WHERE `user_id` = '12' AND `article_id` = '23' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `collect` WHERE `user_id` = '12' AND `article_id` = '24' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `collect` WHERE `user_id` = '12' AND `article_id` = '25' LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: category G:\wamp\www\luoji\Application\Home\Controller\IndexController.class.php 第 8 行.
+NOTIC: [8] Undefined variable: condition G:\wamp\www\luoji\Application\Home\Controller\IndexController.class.php 第 108 行.
+SQL: SELECT COUNT(*) AS tp_count FROM article Article LEFT JOIN user User ON Article.author=User.id LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: condition G:\wamp\www\luoji\Application\Home\Controller\IndexController.class.php 第 110 行.
+NOTIC: [2] Invalid argument supplied for foreach() G:\wamp\www\luoji\Application\Home\Controller\IndexController.class.php 第 110 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined offset: 1 G:\wamp\www\luoji\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 80 行.
+NOTIC: [8] Undefined offset: 2 G:\wamp\www\luoji\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 80 行.
+NOTIC: [8] Undefined offset: 3 G:\wamp\www\luoji\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 80 行.
+NOTIC: [8] Undefined offset: 4 G:\wamp\www\luoji\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 80 行.
+NOTIC: [8] Undefined offset: 3 G:\wamp\www\luoji\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 100 行.
+NOTIC: [8] Undefined offset: 4 G:\wamp\www\luoji\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 100 行.
+NOTIC: [8] Undefined offset: 5 G:\wamp\www\luoji\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 100 行.
+NOTIC: [8] Undefined offset: 6 G:\wamp\www\luoji\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 100 行.
+NOTIC: [8] Undefined offset: 7 G:\wamp\www\luoji\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 100 行.
+NOTIC: [8] Undefined offset: 8 G:\wamp\www\luoji\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 100 行.
+NOTIC: [8] Undefined offset: 9 G:\wamp\www\luoji\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 100 行.
+SQL: SELECT * FROM `special` ORDER BY readnum desc LIMIT 5   [ RunTime:0.0150s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.031002s ]
+NOTIC: [8] Undefined offset: 1 G:\wamp\www\luoji\Application\Runtime\Cache\Home\d421352dfdc946c93d83cd205baf0330.php 第 11 行.
+NOTIC: [8] Undefined offset: 2 G:\wamp\www\luoji\Application\Runtime\Cache\Home\d421352dfdc946c93d83cd205baf0330.php 第 11 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT * FROM `article` ORDER BY readnum desc LIMIT 8   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.044002s ]
+NOTIC: [8] Undefined offset: 3 G:\wamp\www\luoji\Application\Runtime\Cache\Home\2ac6c1276904b87404ed678dbabb985c.php 第 11 行.
+NOTIC: [8] Undefined offset: 4 G:\wamp\www\luoji\Application\Runtime\Cache\Home\2ac6c1276904b87404ed678dbabb985c.php 第 11 行.
+NOTIC: [8] Undefined offset: 5 G:\wamp\www\luoji\Application\Runtime\Cache\Home\2ac6c1276904b87404ed678dbabb985c.php 第 11 行.
+NOTIC: [8] Undefined offset: 6 G:\wamp\www\luoji\Application\Runtime\Cache\Home\2ac6c1276904b87404ed678dbabb985c.php 第 11 行.
+NOTIC: [8] Undefined offset: 7 G:\wamp\www\luoji\Application\Runtime\Cache\Home\2ac6c1276904b87404ed678dbabb985c.php 第 11 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008001s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.006000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.014001s ]
+SQL: SELECT * FROM `user` ORDER BY rank desc LIMIT 5   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.058003s ]
+NOTIC: [8] Undefined offset: 2 G:\wamp\www\luoji\Application\Runtime\Cache\Home\9b6c7358f1f609cccd1ab9a879243014.php 第 11 行.
+NOTIC: [8] Undefined offset: 3 G:\wamp\www\luoji\Application\Runtime\Cache\Home\9b6c7358f1f609cccd1ab9a879243014.php 第 11 行.
+NOTIC: [8] Undefined offset: 4 G:\wamp\www\luoji\Application\Runtime\Cache\Home\9b6c7358f1f609cccd1ab9a879243014.php 第 11 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007000s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.021001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.027001s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008000s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.021001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.028001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002001s ]
+
+[ 2016-07-15T23:32:42+08:00 ] ::1 /luoji/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined index: category G:\wamp\www\luoji\Application\Home\Controller\IndexController.class.php 第 8 行.
+SQL: SHOW COLUMNS FROM `special` [ RunTime:0.0280s ]
+SQL: SELECT * FROM `special` LIMIT 5   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: category G:\wamp\www\luoji\Application\Home\Controller\IndexController.class.php 第 8 行.
+NOTIC: [8] Undefined index: p G:\wamp\www\luoji\Application\Home\Controller\IndexController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: condition G:\wamp\www\luoji\Application\Home\Controller\IndexController.class.php 第 50 行.
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0120s ]
+SQL: SELECT Article.id AS article_id,Article.mainimage AS mainimage,Article.coverimage AS coverimage,Article.maintitle AS maintitle,Article.subhead AS subhead,Article.introduction AS article_introduction,Article.author AS author,Article.type1 AS type1,Article.type2 AS type2,Article.type3 AS type3,Article.collectnum AS collectnum,Article.readnum AS readnum,Article.createtime AS article_createtime,User.id AS user_id,User.username AS username,User.password AS password,User.nickname AS nickname,User.headimage AS headimage,User.rank AS rank,User.jobs AS jobs,User.company AS company,User.introduction AS user_introduction,User.createtime AS user_createtime FROM article Article LEFT JOIN user User ON Article.author=User.id LIMIT 0,10   [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `collect` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `collect` WHERE `user_id` = '12' AND `article_id` = '23' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `collect` WHERE `user_id` = '12' AND `article_id` = '24' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `collect` WHERE `user_id` = '12' AND `article_id` = '25' LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: category G:\wamp\www\luoji\Application\Home\Controller\IndexController.class.php 第 8 行.
+NOTIC: [8] Undefined variable: condition G:\wamp\www\luoji\Application\Home\Controller\IndexController.class.php 第 108 行.
+SQL: SELECT COUNT(*) AS tp_count FROM article Article LEFT JOIN user User ON Article.author=User.id LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: condition G:\wamp\www\luoji\Application\Home\Controller\IndexController.class.php 第 110 行.
+NOTIC: [2] Invalid argument supplied for foreach() G:\wamp\www\luoji\Application\Home\Controller\IndexController.class.php 第 110 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined offset: 3 G:\wamp\www\luoji\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 100 行.
+NOTIC: [8] Undefined offset: 4 G:\wamp\www\luoji\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 100 行.
+NOTIC: [8] Undefined offset: 5 G:\wamp\www\luoji\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 100 行.
+NOTIC: [8] Undefined offset: 6 G:\wamp\www\luoji\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 100 行.
+NOTIC: [8] Undefined offset: 7 G:\wamp\www\luoji\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 100 行.
+NOTIC: [8] Undefined offset: 8 G:\wamp\www\luoji\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 100 行.
+NOTIC: [8] Undefined offset: 9 G:\wamp\www\luoji\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 100 行.
+SQL: SELECT * FROM `special` ORDER BY readnum desc LIMIT 5   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.025001s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT * FROM `article` ORDER BY readnum desc LIMIT 8   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.038002s ]
+NOTIC: [8] Undefined offset: 3 G:\wamp\www\luoji\Application\Runtime\Cache\Home\2ac6c1276904b87404ed678dbabb985c.php 第 11 行.
+NOTIC: [8] Undefined offset: 4 G:\wamp\www\luoji\Application\Runtime\Cache\Home\2ac6c1276904b87404ed678dbabb985c.php 第 11 行.
+NOTIC: [8] Undefined offset: 5 G:\wamp\www\luoji\Application\Runtime\Cache\Home\2ac6c1276904b87404ed678dbabb985c.php 第 11 行.
+NOTIC: [8] Undefined offset: 6 G:\wamp\www\luoji\Application\Runtime\Cache\Home\2ac6c1276904b87404ed678dbabb985c.php 第 11 行.
+NOTIC: [8] Undefined offset: 7 G:\wamp\www\luoji\Application\Runtime\Cache\Home\2ac6c1276904b87404ed678dbabb985c.php 第 11 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006000s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.007001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.012001s ]
+SQL: SELECT * FROM `user` ORDER BY rank desc LIMIT 5   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.050002s ]
+NOTIC: [8] Undefined offset: 2 G:\wamp\www\luoji\Application\Runtime\Cache\Home\9b6c7358f1f609cccd1ab9a879243014.php 第 11 行.
+NOTIC: [8] Undefined offset: 3 G:\wamp\www\luoji\Application\Runtime\Cache\Home\9b6c7358f1f609cccd1ab9a879243014.php 第 11 行.
+NOTIC: [8] Undefined offset: 4 G:\wamp\www\luoji\Application\Runtime\Cache\Home\9b6c7358f1f609cccd1ab9a879243014.php 第 11 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006001s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.019001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.024002s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007001s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.019001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.025002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-07-15T23:34:54+08:00 ] ::1 /luoji/index.php/Home/Content/index/type/articles/specialId/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `special` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `include` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0090s ]
+SQL: SELECT Special.id AS special_id,Special.maintitle AS specical_maintitle,Special.subhead AS specical_subhead,Special.introduction AS specical_introduction,Special.coverimage AS specical_coverimage,Special.type1 AS specical_type1,Special.type2 AS specical_type2,Special.type3 AS specical_type3,Special.createtime AS specical_createtime,Include.createtime AS include_createtime,Article.id AS article_id,Article.mainimage AS mainimage,Article.coverimage AS article_coverimage,Article.maintitle AS article_maintitle,Article.subhead AS article_subhead,Article.introduction AS article_introduction,Article.author AS author,Article.type1 AS article_type1,Article.type2 AS article_type2,Article.type3 AS article_type3,Article.collectnum AS collectnum,Article.readnum AS readnum,Article.createtime AS article_createtime FROM special Special RIGHT JOIN include Include ON Special.id=Include.special_id LEFT JOIN article Article ON Article.id=Include.article_id WHERE Special.id = '2'  [ RunTime:0.0490s ]
+NOTIC: [8] Undefined index: artListIndex G:\wamp\www\luoji\Application\Home\Controller\ContentController.class.php 第 21 行.
+NOTIC: [8] Undefined index: artListIndex G:\wamp\www\luoji\Application\Home\Controller\ContentController.class.php 第 21 行.
+NOTIC: [8] Undefined index: articleId G:\wamp\www\luoji\Application\Home\Controller\ContentController.class.php 第 8 行.
+SQL: SELECT Special.id AS special_id,Special.maintitle AS specical_maintitle,Special.subhead AS specical_subhead,Special.introduction AS specical_introduction,Special.coverimage AS specical_coverimage,Special.type1 AS specical_type1,Special.type2 AS specical_type2,Special.type3 AS specical_type3,Special.createtime AS specical_createtime,Include.createtime AS include_createtime,Article.id AS article_id,Article.mainimage AS mainimage,Article.coverimage AS article_coverimage,Article.maintitle AS article_maintitle,Article.subhead AS article_subhead,Article.introduction AS article_introduction,Article.author AS author,Article.type1 AS article_type1,Article.type2 AS article_type2,Article.type3 AS article_type3,Article.collectnum AS collectnum,Article.readnum AS readnum,Article.createtime AS article_createtime FROM special Special RIGHT JOIN include Include ON Special.id=Include.special_id LEFT JOIN article Article ON Article.id=Include.article_id WHERE Special.id = '2'  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0080s ]
+SQL: SELECT Article.id AS article_id,Article.mainimage AS mainimage,Article.coverimage AS coverimage,Article.maintitle AS maintitle,Article.subhead AS subhead,Article.introduction AS article_introduction,Article.author AS author,Article.type1 AS type1,Article.type2 AS type2,Article.type3 AS type3,Article.collectnum AS collectnum,Article.readnum AS readnum,Article.createtime AS article_createtime,User.id AS user_id,User.username AS username,User.password AS password,User.nickname AS nickname,User.headimage AS headimage,User.rank AS rank,User.jobs AS jobs,User.company AS company,User.introduction AS user_introduction,User.createtime AS user_createtime FROM article Article LEFT JOIN user User ON Article.author=User.id WHERE Article.id = '23' LIMIT 1   [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT * FROM `special` ORDER BY readnum desc LIMIT 5   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.020001s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+SQL: SELECT * FROM `article` ORDER BY readnum desc LIMIT 8   [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.034002s ]
+NOTIC: [8] Undefined offset: 3 G:\wamp\www\luoji\Application\Runtime\Cache\Home\2ac6c1276904b87404ed678dbabb985c.php 第 11 行.
+NOTIC: [8] Undefined offset: 4 G:\wamp\www\luoji\Application\Runtime\Cache\Home\2ac6c1276904b87404ed678dbabb985c.php 第 11 行.
+NOTIC: [8] Undefined offset: 5 G:\wamp\www\luoji\Application\Runtime\Cache\Home\2ac6c1276904b87404ed678dbabb985c.php 第 11 行.
+NOTIC: [8] Undefined offset: 6 G:\wamp\www\luoji\Application\Runtime\Cache\Home\2ac6c1276904b87404ed678dbabb985c.php 第 11 行.
+NOTIC: [8] Undefined offset: 7 G:\wamp\www\luoji\Application\Runtime\Cache\Home\2ac6c1276904b87404ed678dbabb985c.php 第 11 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007001s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.008000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.013001s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008001s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.008000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.014001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-07-15T23:35:01+08:00 ] ::1 /luoji/index.php/Home/Content/index/type/articles/specialId/2/articleId/24/artListIndex/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `special` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `include` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0050s ]
+SQL: SELECT Special.id AS special_id,Special.maintitle AS specical_maintitle,Special.subhead AS specical_subhead,Special.introduction AS specical_introduction,Special.coverimage AS specical_coverimage,Special.type1 AS specical_type1,Special.type2 AS specical_type2,Special.type3 AS specical_type3,Special.createtime AS specical_createtime,Include.createtime AS include_createtime,Article.id AS article_id,Article.mainimage AS mainimage,Article.coverimage AS article_coverimage,Article.maintitle AS article_maintitle,Article.subhead AS article_subhead,Article.introduction AS article_introduction,Article.author AS author,Article.type1 AS article_type1,Article.type2 AS article_type2,Article.type3 AS article_type3,Article.collectnum AS collectnum,Article.readnum AS readnum,Article.createtime AS article_createtime FROM special Special RIGHT JOIN include Include ON Special.id=Include.special_id LEFT JOIN article Article ON Article.id=Include.article_id WHERE Special.id = '2'  [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0060s ]
+SQL: SELECT Article.id AS article_id,Article.mainimage AS mainimage,Article.coverimage AS coverimage,Article.maintitle AS maintitle,Article.subhead AS subhead,Article.introduction AS article_introduction,Article.author AS author,Article.type1 AS type1,Article.type2 AS type2,Article.type3 AS type3,Article.collectnum AS collectnum,Article.readnum AS readnum,Article.createtime AS article_createtime,User.id AS user_id,User.username AS username,User.password AS password,User.nickname AS nickname,User.headimage AS headimage,User.rank AS rank,User.jobs AS jobs,User.company AS company,User.introduction AS user_introduction,User.createtime AS user_createtime FROM article Article LEFT JOIN user User ON Article.author=User.id WHERE Article.id = '24' LIMIT 1   [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+SQL: SELECT * FROM `special` ORDER BY readnum desc LIMIT 5   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.023001s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+SQL: SELECT * FROM `article` ORDER BY readnum desc LIMIT 8   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.036002s ]
+NOTIC: [8] Undefined offset: 3 G:\wamp\www\luoji\Application\Runtime\Cache\Home\2ac6c1276904b87404ed678dbabb985c.php 第 11 行.
+NOTIC: [8] Undefined offset: 4 G:\wamp\www\luoji\Application\Runtime\Cache\Home\2ac6c1276904b87404ed678dbabb985c.php 第 11 行.
+NOTIC: [8] Undefined offset: 5 G:\wamp\www\luoji\Application\Runtime\Cache\Home\2ac6c1276904b87404ed678dbabb985c.php 第 11 行.
+NOTIC: [8] Undefined offset: 6 G:\wamp\www\luoji\Application\Runtime\Cache\Home\2ac6c1276904b87404ed678dbabb985c.php 第 11 行.
+NOTIC: [8] Undefined offset: 7 G:\wamp\www\luoji\Application\Runtime\Cache\Home\2ac6c1276904b87404ed678dbabb985c.php 第 11 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005000s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.006000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.009000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006000s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.006000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.010000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2016-07-15T23:58:50+08:00 ] ::1 /luoji/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+NOTIC: [8] Undefined index: category G:\wamp\www\luoji\Application\Home\Controller\IndexController.class.php 第 8 行.
+SQL: SHOW COLUMNS FROM `special` [ RunTime:0.0170s ]
+SQL: SELECT * FROM `special` LIMIT 5   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: category G:\wamp\www\luoji\Application\Home\Controller\IndexController.class.php 第 8 行.
+NOTIC: [8] Undefined index: p G:\wamp\www\luoji\Application\Home\Controller\IndexController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: condition G:\wamp\www\luoji\Application\Home\Controller\IndexController.class.php 第 50 行.
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0070s ]
+SQL: SELECT Article.id AS article_id,Article.mainimage AS mainimage,Article.coverimage AS coverimage,Article.maintitle AS maintitle,Article.subhead AS subhead,Article.introduction AS article_introduction,Article.author AS author,Article.type1 AS type1,Article.type2 AS type2,Article.type3 AS type3,Article.collectnum AS collectnum,Article.readnum AS readnum,Article.createtime AS article_createtime,User.id AS user_id,User.username AS username,User.password AS password,User.nickname AS nickname,User.headimage AS headimage,User.rank AS rank,User.jobs AS jobs,User.company AS company,User.introduction AS user_introduction,User.createtime AS user_createtime FROM article Article LEFT JOIN user User ON Article.author=User.id LIMIT 0,10   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `collect` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `collect` WHERE `user_id` = '12' AND `article_id` = '23' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `collect` WHERE `user_id` = '12' AND `article_id` = '24' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `collect` WHERE `user_id` = '12' AND `article_id` = '25' LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: category G:\wamp\www\luoji\Application\Home\Controller\IndexController.class.php 第 8 行.
+NOTIC: [8] Undefined variable: condition G:\wamp\www\luoji\Application\Home\Controller\IndexController.class.php 第 108 行.
+SQL: SELECT COUNT(*) AS tp_count FROM article Article LEFT JOIN user User ON Article.author=User.id LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: condition G:\wamp\www\luoji\Application\Home\Controller\IndexController.class.php 第 110 行.
+NOTIC: [2] Invalid argument supplied for foreach() G:\wamp\www\luoji\Application\Home\Controller\IndexController.class.php 第 110 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined offset: 3 G:\wamp\www\luoji\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 100 行.
+NOTIC: [8] Undefined offset: 4 G:\wamp\www\luoji\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 100 行.
+NOTIC: [8] Undefined offset: 5 G:\wamp\www\luoji\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 100 行.
+NOTIC: [8] Undefined offset: 6 G:\wamp\www\luoji\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 100 行.
+NOTIC: [8] Undefined offset: 7 G:\wamp\www\luoji\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 100 行.
+NOTIC: [8] Undefined offset: 8 G:\wamp\www\luoji\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 100 行.
+NOTIC: [8] Undefined offset: 9 G:\wamp\www\luoji\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 100 行.
+SQL: SELECT * FROM `special` ORDER BY readnum desc LIMIT 5   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.019001s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT * FROM `article` ORDER BY readnum desc LIMIT 8   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.030002s ]
+NOTIC: [8] Undefined offset: 3 G:\wamp\www\luoji\Application\Runtime\Cache\Home\2ac6c1276904b87404ed678dbabb985c.php 第 11 行.
+NOTIC: [8] Undefined offset: 4 G:\wamp\www\luoji\Application\Runtime\Cache\Home\2ac6c1276904b87404ed678dbabb985c.php 第 11 行.
+NOTIC: [8] Undefined offset: 5 G:\wamp\www\luoji\Application\Runtime\Cache\Home\2ac6c1276904b87404ed678dbabb985c.php 第 11 行.
+NOTIC: [8] Undefined offset: 6 G:\wamp\www\luoji\Application\Runtime\Cache\Home\2ac6c1276904b87404ed678dbabb985c.php 第 11 行.
+NOTIC: [8] Undefined offset: 7 G:\wamp\www\luoji\Application\Runtime\Cache\Home\2ac6c1276904b87404ed678dbabb985c.php 第 11 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006000s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.006001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.012001s ]
+SQL: SELECT * FROM `user` ORDER BY rank desc LIMIT 5   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.043003s ]
+NOTIC: [8] Undefined offset: 2 G:\wamp\www\luoji\Application\Runtime\Cache\Home\9b6c7358f1f609cccd1ab9a879243014.php 第 11 行.
+NOTIC: [8] Undefined offset: 3 G:\wamp\www\luoji\Application\Runtime\Cache\Home\9b6c7358f1f609cccd1ab9a879243014.php 第 11 行.
+NOTIC: [8] Undefined offset: 4 G:\wamp\www\luoji\Application\Runtime\Cache\Home\9b6c7358f1f609cccd1ab9a879243014.php 第 11 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006001s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.018001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.023002s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007001s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.018001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.024002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-07-15T23:58:55+08:00 ] ::1 /luoji/index.php/Home/Content/index/type/article/articleId/23.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0090s ]
+SQL: SELECT Article.id AS article_id,Article.mainimage AS mainimage,Article.coverimage AS coverimage,Article.maintitle AS maintitle,Article.subhead AS subhead,Article.introduction AS article_introduction,Article.author AS author,Article.type1 AS type1,Article.type2 AS type2,Article.type3 AS type3,Article.collectnum AS collectnum,Article.readnum AS readnum,Article.createtime AS article_createtime,User.id AS user_id,User.username AS username,User.password AS password,User.nickname AS nickname,User.headimage AS headimage,User.rank AS rank,User.jobs AS jobs,User.company AS company,User.introduction AS user_introduction,User.createtime AS user_createtime FROM article Article LEFT JOIN user User ON Article.author=User.id WHERE Article.id = '23' LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: artListTitle G:\wamp\www\luoji\Application\Runtime\Cache\Home\05c25a47e280706f416be77c1b8978f8.php 第 79 行.
+SQL: SHOW COLUMNS FROM `special` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `special` ORDER BY readnum desc LIMIT 5   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.023001s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT * FROM `article` ORDER BY readnum desc LIMIT 8   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.036002s ]
+NOTIC: [8] Undefined offset: 3 G:\wamp\www\luoji\Application\Runtime\Cache\Home\2ac6c1276904b87404ed678dbabb985c.php 第 11 行.
+NOTIC: [8] Undefined offset: 4 G:\wamp\www\luoji\Application\Runtime\Cache\Home\2ac6c1276904b87404ed678dbabb985c.php 第 11 行.
+NOTIC: [8] Undefined offset: 5 G:\wamp\www\luoji\Application\Runtime\Cache\Home\2ac6c1276904b87404ed678dbabb985c.php 第 11 行.
+NOTIC: [8] Undefined offset: 6 G:\wamp\www\luoji\Application\Runtime\Cache\Home\2ac6c1276904b87404ed678dbabb985c.php 第 11 行.
+NOTIC: [8] Undefined offset: 7 G:\wamp\www\luoji\Application\Runtime\Cache\Home\2ac6c1276904b87404ed678dbabb985c.php 第 11 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005000s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.007001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.011001s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006000s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.007001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.012001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
