@@ -8,9 +8,9 @@
 		<a>精图排行</a>
 	</div>
 	<ul>
-		<?php $__FOR_START_28583__=0;$__FOR_END_28583__=8;for($articleIndex=$__FOR_START_28583__;$articleIndex < $__FOR_END_28583__;$articleIndex+=1){ if($articleMaintitle[$articleIndex] != NULL): ?><li>
+		<?php $__FOR_START_12359__=0;$__FOR_END_12359__=8;for($articleIndex=$__FOR_START_12359__;$articleIndex < $__FOR_END_12359__;$articleIndex+=1){ if($wArticleMaintitle[$articleIndex] != NULL): ?><li>
 					<a class="wArticle-index"><?php echo ($articleIndex+1); ?></a>
-					<a href="<?php echo ($articleHref[$articleIndex]); ?>" target="_blank" class="wArticle-maintitle"><nobr><?php echo ($articleMaintitle[$articleIndex]); ?></nobr></a>
+					<a href="<?php echo ($wArticleHref[$articleIndex]); ?>" target="_blank" class="wArticle-maintitle"><nobr><?php echo ($wArticleMaintitle[$articleIndex]); ?></nobr></a>
 				</li><?php endif; } ?>
 	</ul>
 </div>

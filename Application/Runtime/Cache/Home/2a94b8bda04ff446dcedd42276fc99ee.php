@@ -24,7 +24,7 @@
 					<li><a href="<?php echo U('Index/index','category=1');?>" class="<?php echo ($navigation[1]); ?>">技术</a></li>
 					<li><a href="<?php echo U('Index/index','category=2');?>" class="<?php echo ($navigation[2]); ?>">产品</a></li>
 					<li><a href="<?php echo U('Index/index','category=3');?>" class="<?php echo ($navigation[3]); ?>">经济</a></li>
-					<li><a href="<?php echo U('User/index','category=4');?>" class="<?php echo ($navigation[4]); ?>">其他</a></li>
+					<li><a href="<?php echo U('Index/index','category=4');?>" class="<?php echo ($navigation[4]); ?>">其他</a></li>
 				</ul>
 			</div>
 			<div class="login" id="login-image" onmouseover="showLoginMenu();" onmouseout="hideLoginMenu();">
@@ -77,7 +77,7 @@
 <!-- 专辑栏 -->
 <div class="special clearfix">
 	<ul>
-		<?php $__FOR_START_19880__=0;$__FOR_END_19880__=5;for($specialIndex=$__FOR_START_19880__;$specialIndex < $__FOR_END_19880__;$specialIndex+=1){ if($specialImages[$specialIndex] != NULL): ?><li>
+		<?php $__FOR_START_4040__=0;$__FOR_END_4040__=5;for($specialIndex=$__FOR_START_4040__;$specialIndex < $__FOR_END_4040__;$specialIndex+=1){ if($specialImages[$specialIndex] != NULL): ?><li>
 					<img src="<?php echo ($specialImages[$specialIndex]); ?>"/>
 					<div class="special-title">
 						<a class="main-title" href="<?php echo ($specialHrefs[$specialIndex]); ?>" target="_blank"><?php echo ($specialMaintitles[$specialIndex]); ?></a>
@@ -97,7 +97,7 @@
 	<div class="articles">
 		<input type="hidden" id="collectUrl" value="<?php echo U('Collect/collect');?>">
 		<ul>
-			<?php $__FOR_START_28865__=0;$__FOR_END_28865__=10;for($articleIndex=$__FOR_START_28865__;$articleIndex < $__FOR_END_28865__;$articleIndex+=1){ if($articleCoverImage[$articleIndex] != NULL): ?><li>
+			<?php $__FOR_START_22625__=0;$__FOR_END_22625__=10;for($articleIndex=$__FOR_START_22625__;$articleIndex < $__FOR_END_22625__;$articleIndex+=1){ if($articleCoverImage[$articleIndex] != NULL): ?><li>
 						<img src="<?php echo ($articleCoverImage[$articleIndex]); ?>"/>
 						<ul>
 							<li class="article-firstline">
@@ -130,6 +130,7 @@
 		<?php echo W('Article/index');?>
 		<div class="segmentation"></div>
 		<?php echo W('Experts/index');?>
+		<div class="segmentation"></div>
 	</div>
 </div>
 

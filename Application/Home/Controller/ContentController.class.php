@@ -62,11 +62,6 @@ class ContentController extends LayoutController {
 			$articleId = $this->getArticleId();
 			$condition['article_id'] = array('eq',$articleId);
 			$articleData = $ArticleView->where($condition)->find();
-			
-			$Article = M('Article');
-			$articleId = $this->getArticleId();
-			$condition['id'] = array('eq',$articleId);
-			$Article->where($condition)->setInc('readnum',1,60);
 
 			$articleMaintitle = $articleData['maintitle'];
 			$articleSubhead = $articleData['subhead'];
@@ -107,10 +102,20 @@ class ContentController extends LayoutController {
 		$this->assign('expertHref',$expertHref);
 	}
 	
+	//更新阅读数
+	private function updateReadnum() {
+		$Article = M('Article');
+		$articleId = $this->getArticleId();
+		$condition['id'] = array('eq',$articleId);
+		$Article->where($condition)->setInc('readnum',1,60);
+	}
+	
     public function index(){
+		
 		$this->initLayout();
 		$this->initArtList();
 		$this->initArticleExpert();
 		$this->display();
+		$this->updateReadnum();
 	}
 }

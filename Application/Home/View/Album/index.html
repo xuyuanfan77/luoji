@@ -1,4 +1,4 @@
-<link type="text/css" href="__PUBLIC__/css/user.css" rel="stylesheet"/>
+<link type="text/css" href="__PUBLIC__/css/special.css" rel="stylesheet"/>
 
 <div id="total-frame" class="clearfix">
 	<div id="right-frame">
@@ -7,13 +7,12 @@
 		{:W('Article/index')}
 		<div class="segmentation"></div>
 		{:W('Experts/index')}
-		<div class="segmentation"></div>
 	</div>
 	<div id="left-frame">
 		<div id="left-title">
 			<table id="achievement">
 				<tr>
-					<td><a class="achievement-text">作品</a></td>
+					<td><a class="achievement-text">收录数</a></td>
 					<td rowspan="2"> <div id="achievement-segmentation"></div></td>
 					<td><a class="achievement-text">阅读量</a></td>
 				</tr>
@@ -25,17 +24,14 @@
 			
 			<table>
 				<tr>
-					<td rowspan="3"><img id="experts-headimage" src="{$user['headimage']}"/></td>
-					<td><a id="experts-nickname">{$user['nickname']}</a><a id="experts-jobs">{$user['jobs']}</a><!--a id="experts-rank">少尉</a--></td>
-				</tr>
-				<!--tr>
-					<td><a id="experts-jobs">{$user['jobs']}</a></td>
-				</tr-->
-				<tr>
-					<td><a id="experts-company">{$user['company']}</a></td>
+					<td rowspan="3"><img id="special-coverimage" src="{$special['coverimage']}"/></td>
+					<td><a id="special-maintitle">{$special['maintitle']}</a></td>
 				</tr>
 				<tr>
-					<td><a id="experts-introduction">{$user['introduction']}</a></td>
+					<td><a id="special-subhead">{$special['subhead']}</a></td>
+				</tr>
+				<tr>
+					<td><a id="special-introduction">{$special['introduction']}</a></td>
 				</tr>
 			</table>
 
@@ -56,7 +52,7 @@
 							<td class="article-thirdline"><div class="article-introduction">{$articleIntroduction[$articleIndex]}</div></td>
 						</tr>
 						<tr>
-							<td class="article-forthline"><a class="article-readnum">阅读：{$articleReadnum[$articleIndex]}</a><a class="article-author">作者：{$user['nickname']}</a></td>
+							<td class="article-forthline"><a class="article-readnum">阅读：{$articleReadnum[$articleIndex]}</a><a class="article-author">作者：{$articleAuthor[$articleIndex]}</a></td>
 						</tr>
 					</table>
 				</div>

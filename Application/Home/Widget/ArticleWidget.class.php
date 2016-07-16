@@ -5,15 +5,14 @@ header("Content-Type: text/html;charset=utf-8");
 class ArticleWidget extends Controller {
 
     public function index(){
-		$Article = M('Article');
-		$articleData = $Article->order('readnum desc')->limit(8)->select();
-		
+		$wArticle = M('Article');
+		$articleData = $wArticle->order('readnum desc')->limit(8)->select();
 		for ($index=0; $index<count($articleData); $index++) {
-			$articleMaintitle[$index] = $articleData[$index]['maintitle'];
-			$articleHref[$index] = U('Content/index', array('type'=>'article','articleId'=>$articleData[$index]['id']));
+			$wArticleMaintitle[$index] = $articleData[$index]['maintitle'];
+			$wArticleHref[$index] = U('Content/index', array('type'=>'article','articleId'=>$articleData[$index]['id']));
 		}
-		$this->assign('articleMaintitle',$articleMaintitle);
-		$this->assign('articleHref',$articleHref);
+		$this->assign('wArticleMaintitle',$wArticleMaintitle);
+		$this->assign('wArticleHref',$wArticleHref);
 			
 		$this->display('Article:index');
 	}

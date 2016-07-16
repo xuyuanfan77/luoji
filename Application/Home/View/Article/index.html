@@ -9,10 +9,10 @@
 	</div>
 	<ul>
 		<for start="0" end="8" name="articleIndex">
-			<if condition="$articleMaintitle[$articleIndex] neq NULL">
+			<if condition="$wArticleMaintitle[$articleIndex] neq NULL">
 				<li>
 					<a class="wArticle-index">{$articleIndex+1}</a>
-					<a href="{$articleHref[$articleIndex]}" target="_blank" class="wArticle-maintitle"><nobr>{$articleMaintitle[$articleIndex]}</nobr></a>
+					<a href="{$wArticleHref[$articleIndex]}" target="_blank" class="wArticle-maintitle"><nobr>{$wArticleMaintitle[$articleIndex]}</nobr></a>
 				</li>
 			</if>
 		</for>

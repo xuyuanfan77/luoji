@@ -12,7 +12,7 @@ class SpecialWidget extends Controller {
 			$specialImage[$index] = C('__ROOT__') . 'Public/resource/coverimage/' . $specialData[$index]['coverimage'];	
 			$specialMaintitle[$index] = $specialData[$index]['maintitle'];	
 			$specialSubhead[$index] = $specialData[$index]['subhead'];
-			$specialHrefs[$index] = U('Content/index', array('type'=>'articles','specialId'=>$specialData[$index]['id']));
+			$specialHrefs[$index] = U('Album/index', array('specialId'=>$specialData[$index]['id']));
 		}
 		$this->assign('specialImage',$specialImage);
 		$this->assign('specialMaintitle',$specialMaintitle);

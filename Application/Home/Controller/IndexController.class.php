@@ -31,7 +31,7 @@ class IndexController extends LayoutController {
 			$specialImages[$index] = C('__ROOT__') . 'Public/resource/coverimage/' . $specialData[$index]['coverimage'];
 			$specialMaintitles[$index] = $specialData[$index]['maintitle'];
 			$specialSubheads[$index] = $specialData[$index]['subhead'];
-			$specialHrefs[$index] = U('Content/index', array('type'=>'articles','specialId'=>$specialData[$index]['id']));
+			$specialHrefs[$index] = U('Album/index', array('specialId'=>$specialData[$index]['id']));
 		}
 		$this->assign('specialImages',$specialImages);
 		$this->assign('specialMaintitles',$specialMaintitles);

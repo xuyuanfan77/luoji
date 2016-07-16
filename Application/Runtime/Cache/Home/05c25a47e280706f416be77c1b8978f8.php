@@ -24,7 +24,7 @@
 					<li><a href="<?php echo U('Index/index','category=1');?>" class="<?php echo ($navigation[1]); ?>">技术</a></li>
 					<li><a href="<?php echo U('Index/index','category=2');?>" class="<?php echo ($navigation[2]); ?>">产品</a></li>
 					<li><a href="<?php echo U('Index/index','category=3');?>" class="<?php echo ($navigation[3]); ?>">经济</a></li>
-					<li><a href="<?php echo U('User/index','category=4');?>" class="<?php echo ($navigation[4]); ?>">其他</a></li>
+					<li><a href="<?php echo U('Index/index','category=4');?>" class="<?php echo ($navigation[4]); ?>">其他</a></li>
 				</ul>
 			</div>
 			<div class="login" id="login-image" onmouseover="showLoginMenu();" onmouseout="hideLoginMenu();">
@@ -44,7 +44,39 @@
 <script type="text/javascript" src="/luoji/Public/javascript/article.js"></script>
 
 <div class="article clearfix">
-
+	<!-- 右边栏 -->
+	<div class="right-frame">
+	
+		<!-- 作者栏 -->
+		<table class="article-author">
+			<tr><td>
+				<table>
+					<tr>
+						<td rowspan="2"><img class="author-image" src="<?php echo ($expertImage); ?>"/></td>
+						<td><a href="<?php echo ($expertHref); ?>" target="_blank" class="author-name"><?php echo ($expertNickname); ?></a></td>
+					</tr>
+					<tr>
+						<td><a class="author-rank">少尉</a></td>
+					</tr>
+				</table>
+			</td></tr>
+			<tr><td><hr class="line"/></td></tr>
+			<tr><td>
+				<a class="author-jobs"><?php echo ($expertJobs); ?></a>
+				<a class="author-company"><?php echo ($expertCompany); ?></a>
+			</td></tr>
+			<tr><td><hr class="line"/></td></tr>
+			<tr><td>
+				<div class="author-introduct"><?php echo ($expertIntroduction); ?></div>
+			</td></tr>
+		</table>
+		<div class="segmentation"></div>
+		<?php echo W('Special/index');?>
+		<div class="segmentation"></div>
+		<?php echo W('Article/index');?>
+		<div class="segmentation"></div>
+	</div>
+	
 	<!-- 左边栏 -->
 	<div class="left-frame">
 	
@@ -82,37 +114,7 @@
 		</div>
 	</div>
 	
-	<!-- 右边栏 -->
-	<div class="right-frame">
 	
-		<!-- 作者栏 -->
-		<table class="article-author">
-			<tr><td>
-				<table>
-					<tr>
-						<td rowspan="2"><img class="author-image" src="<?php echo ($expertImage); ?>"/></td>
-						<td><a href="<?php echo ($expertHref); ?>" target="_blank" class="author-name"><?php echo ($expertNickname); ?></a></td>
-					</tr>
-					<tr>
-						<td><a class="author-rank">少尉</a></td>
-					</tr>
-				</table>
-			</td></tr>
-			<tr><td><hr class="line"/></td></tr>
-			<tr><td>
-				<a class="author-jobs"><?php echo ($expertJobs); ?></a>
-				<a class="author-company"><?php echo ($expertCompany); ?></a>
-			</td></tr>
-			<tr><td><hr class="line"/></td></tr>
-			<tr><td>
-				<div class="author-introduct"><?php echo ($expertIntroduction); ?></div>
-			</td></tr>
-		</table>
-		<div class="segmentation"></div>
-		<?php echo W('Special/index');?>
-		<div class="segmentation"></div>
-		<?php echo W('Article/index');?>
-	</div>
 </div>
 
 	</div>
