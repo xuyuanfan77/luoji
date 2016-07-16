@@ -62,18 +62,6 @@
 			<a class="weibo" href="#"><img src="__PUBLIC__/picture/weibo.png"/>分享到微博</a>
 			<a class="qq" href="#"><img src="__PUBLIC__/picture/qq.png"/>分享到QQ</a>
 		</div>
-		
-		<!-- 目录栏 -->
-		<div id="article-catalog" class="{$artListDisplay}">
-			<a id="catalog-text" onmouseover="display()" onmouseout="disappear()">目<br>录</a>
-			<div id="catalog-list" onmouseover="display()" onmouseout="disappear()">
-				<ul>
-					<foreach name="artListTitle" item="item" key="index" >
-						<li><a class="{$artListStyle[$index]}" href="{$artListHref[$index]}" target="_blank">{$artListTitle[$index]}</a></li>
-					</foreach>
-				</ul>
-			</div>
-		</div>
 	</div>
 	
 	

@@ -40,73 +40,72 @@
 	<div class="page-body">
 		<!--div class="test">
 		</div-->
-		<link type="text/css" href="/luoji/Public/css/article.css" rel="stylesheet"/>
-<script type="text/javascript" src="/luoji/Public/javascript/article.js"></script>
+		<link type="text/css" href="/luoji/Public/css/manuscript.css" rel="stylesheet"/>
+<script type="text/javascript" src="/luoji/Public/javascript/manuscript.js"></script>
 
-<div class="article clearfix">
-	<!-- 右边栏 -->
-	<div class="right-frame">
-	
-		<!-- 作者栏 -->
-		<table class="article-author">
-			<tr><td>
-				<table>
-					<tr>
-						<td rowspan="2"><img class="author-image" src="<?php echo ($expertImage); ?>"/></td>
-						<td><a href="<?php echo ($expertHref); ?>" target="_blank" class="author-name"><?php echo ($expertNickname); ?></a></td>
-					</tr>
-					<tr>
-						<td><a class="author-rank">少尉</a></td>
-					</tr>
-				</table>
-			</td></tr>
-			<tr><td><hr class="line"/></td></tr>
-			<tr><td>
-				<a class="author-jobs"><?php echo ($expertJobs); ?></a>
-				<a class="author-company"><?php echo ($expertCompany); ?></a>
-			</td></tr>
-			<tr><td><hr class="line"/></td></tr>
-			<tr><td>
-				<div class="author-introduct"><?php echo ($expertIntroduction); ?></div>
-			</td></tr>
+<div id="total-frame">
+	<div id="right-frame">
+		<div id="right-title">
+			<a>我的投稿</a>
+		</div>
+		<div id="right-content">
+			<table id="content-table">
+				<?php $__FOR_START_4220__=0;$__FOR_END_4220__=8;for($manuscriptIndex=$__FOR_START_4220__;$manuscriptIndex < $__FOR_END_4220__;$manuscriptIndex+=1){ if($manuscriptMaintitle[$manuscriptIndex] != NULL): ?><tr>
+							<td>
+								<table> 
+									<tr>
+										<td class="content-td1"><a class="title" href="<?php echo ($manuscriptHref[$manuscriptIndex]); ?>" target="_blank"><?php echo ($manuscriptMaintitle[$manuscriptIndex]); ?></a></td>
+										<td rowspan="2"><a class="<?php echo ($manuscriptStatusStyl[$manuscriptIndex]); ?>"><?php echo ($manuscriptStatus[$manuscriptIndex]); ?></a></td>
+									</tr>
+									<tr>
+										<td class="content-td1"><a class="date-time"><?php echo ($manuscriptCreatetime[$manuscriptIndex]); ?></a><a class="delete">删除</a></td>
+									</tr>
+								</table>
+							</td>
+						</tr><?php endif; } ?>
+			</table>
+			<div id="pages">
+				<?php echo ($pageShow); ?>
+			</div>
+		</div>
+	</div>
+	<div id="left-frame">
+		<table id="top-table"> 
+			<tr>
+				<td>
+					<img id="headimage" src="<?php echo ($headimage); ?>"/>
+				</td> 
+			</tr>
+			<tr>
+				<td>
+					<a id="username">远航之帆</a>
+				</td> 
+			</tr> 
 		</table>
-		<div class="segmentation"></div>
-		<?php echo W('Special/index');?>
-		<div class="segmentation"></div>
-		<?php echo W('Article/index');?>
-		<div class="segmentation"></div>
+		<table id="bottom-table"> 
+			<tr>
+				<td class="column-default">
+					<a href="<?php echo U('Contribute/index');?>">我要投稿<a/>
+				</td> 
+			</tr>
+			<tr>
+				<td class="column-select">
+					<a href="<?php echo U('Manuscript/index');?>">我的投稿</a>
+				</td> 
+			</tr>
+			<tr>
+				<td class="column-default">
+					<a href="<?php echo U('Collect/index');?>">我的收藏<a/>
+				</td> 
+			</tr>
+			<tr>
+				<td class="column-default">
+					<a href="<?php echo U('Information/index');?>">个人信息</a>
+				</td> 
+			</tr> 
+		</table>
 	</div>
-	
-	<!-- 左边栏 -->
-	<div class="left-frame">
-	
-		<!-- 标题栏 -->
-		<div class="article-title">
-			<h1><?php echo ($articleMaintitle); ?></h1>
-			<h2><?php echo ($articleSubhead); ?></h2>
-		</div>
-		
-		<!-- 概述栏 -->
-		<div class="article-text">
-			<h3><?php echo ($articleIntroduction); ?></h3>
-		</div>
-		
-		<!-- 图片栏 -->
-		<div class="article-image">
-			<?php if($articleImage != NULL): ?><img src="<?php echo ($articleImage); ?>"/><?php endif; ?>
-		</div>
-		
-		<!-- 分享栏 -->
-		<div class="article-share">
-			<a class="weixin" href="#"><img src="/luoji/Public/picture/weixin.png"/>分享到微信</a>
-			<a class="weibo" href="#"><img src="/luoji/Public/picture/weibo.png"/>分享到微博</a>
-			<a class="qq" href="#"><img src="/luoji/Public/picture/qq.png"/>分享到QQ</a>
-		</div>
-	</div>
-	
-	
 </div>
-
 	</div>
 	<div class="page-footer">
 	</div>

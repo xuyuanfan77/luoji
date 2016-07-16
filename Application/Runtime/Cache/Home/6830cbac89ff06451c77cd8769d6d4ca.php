@@ -49,6 +49,7 @@
 		<?php echo W('Article/index');?>
 		<div class="segmentation"></div>
 		<?php echo W('Experts/index');?>
+		<div class="segmentation"></div>
 	</div>
 	<div id="left-frame">
 		<div id="left-title">
@@ -82,7 +83,7 @@
 
 		</div>
 		
-		<?php $__FOR_START_5398__=0;$__FOR_END_5398__=8;for($articleIndex=$__FOR_START_5398__;$articleIndex < $__FOR_END_5398__;$articleIndex+=1){ if($articleCoverImage[$articleIndex] != NULL): ?><div class="left-article">
+		<?php $__FOR_START_26894__=0;$__FOR_END_26894__=8;for($articleIndex=$__FOR_START_26894__;$articleIndex < $__FOR_END_26894__;$articleIndex+=1){ if($articleCoverImage[$articleIndex] != NULL): ?><div class="left-article">
 					<table>
 						<tr>
 							<td rowspan="4"><img class="article-coverimage" src="<?php echo ($articleCoverImage[$articleIndex]); ?>"/></td>
