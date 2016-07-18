@@ -14,28 +14,32 @@ class AccountController extends LayoutController {
 	}
 	
     public function index(){
-		$this->initLayout();
-
-		//准备表单数据
-		$operation = $this->getOperation();
-		if($operation == 0) {
-			$loginTab = 'tabList-cur';
-			$registerTab = 'tabList-other';
-			$loginForm = 'tabCon-cur';
-			$registerForm = 'tabCon-other';
+		if(cookie('PHPSESSID') && session('id') && cookie('PHPSESSID') == session('id')) {
+			$this->redirect('Contribute/index');
 		} else {
-			$loginTab = 'tabList-other';
-			$registerTab = 'tabList-cur';
-			$loginForm = 'tabCon-other';
-			$registerForm = 'tabCon-cur';
-		}
+			$this->initLayout();
+			
+			//准备表单数据
+			$operation = $this->getOperation();
+			if($operation == 0) {
+				$loginTab = 'tabList-cur';
+				$registerTab = 'tabList-other';
+				$loginForm = 'tabCon-cur';
+				$registerForm = 'tabCon-other';
+			} else {
+				$loginTab = 'tabList-other';
+				$registerTab = 'tabList-cur';
+				$loginForm = 'tabCon-other';
+				$registerForm = 'tabCon-cur';
+			}
+			
+			$this->assign('loginTab',$loginTab);
+			$this->assign('registerTab',$registerTab);
+			$this->assign('loginForm',$loginForm);
+			$this->assign('registerForm',$registerForm);
 		
-		$this->assign('loginTab',$loginTab);
-		$this->assign('registerTab',$registerTab);
-		$this->assign('loginForm',$loginForm);
-		$this->assign('registerForm',$registerForm);
-	
-        $this->display();
+			$this->display();
+		}
 	}
 	
 	//刷新验证码

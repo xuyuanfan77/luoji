@@ -148,7 +148,6 @@ table {
 }
 
 #imageBg{
-	
 	width:90px;
 	height:90px;
 }
@@ -157,6 +156,10 @@ table {
 	position:absolute;
 	width:90px;
 	height:90px;
+}
+
+#imageInput {
+	width:280px;
 } 
 
 #imagePreview {
