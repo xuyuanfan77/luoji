@@ -23,6 +23,23 @@ class IndexController extends LayoutController {
 		return $pageNum;
 	}
 	
+	//初始化通知
+	private function initNotification() {
+		$Carouselfigure = M("Carouselfigure");
+		$condition['show'] = array('eq','yes');
+		$carouselData = $Carouselfigure->where($condition)->order('ordernum asc')->limit(8)->select();
+		for ($index=0; $index<count($carouselData); $index++) {
+			$carouselImages[$index] = C('__ROOT__') . 'Public/resource/carouselfigure/' . $carouselData[$index]['image'];
+			$carouselTitles[$index] = $carouselData[$index]['title'];
+			$carouselIndexs[$index] = $carouselData[$index]['ordernum'];
+			$carouselHrefs[$index] = $carouselData[$index]['url'];
+		}
+		$this->assign('carouselImages',$carouselImages);
+		$this->assign('carouselTitles',$carouselTitles);
+		$this->assign('carouselIndexs',$carouselIndexs);
+		$this->assign('carouselHrefs',$carouselHrefs);
+	}
+	
 	//初始化专辑
 	private function initSpecial() {
 		$Special = M('Special');
@@ -118,6 +135,7 @@ class IndexController extends LayoutController {
 		$artCategory = $this->getCategory();
 		$this->setArtCategory($artCategory);
 		$this->initLayout();
+		$this->initNotification();
 		$this->initSpecial();
 		$this->initArticle();
 		$this->initPage();

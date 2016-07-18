@@ -2,24 +2,7 @@
 <script type="text/javascript" src="__PUBLIC__/javascript/index.js"></script>
 
 <!-- 通知栏 -->
-<div class="notification clearfix">
-	<div id="banner">
-		<div id="banner-list">
-			<a href="www.baidu.com"><img src="__PUBLIC__/picture/p1.jpg" title="橡树小屋的blog" alt="橡树小屋的blog1" /></a>
-			<a href="www.baidu.com"><img src="__PUBLIC__/picture/p2.jpg" title="橡树小屋的blog" alt="橡树小屋的blog2" /></a>
-			<a href="www.baidu.com"><img src="__PUBLIC__/picture/p3.jpg" title="橡树小屋的blog" alt="橡树小屋的blog3" /></a>
-			<a href="www.baidu.com"><img src="__PUBLIC__/picture/p4.jpg" title="橡树小屋的blog" alt="橡树小屋的blog4" /></a>
-		</div>
-		<a id="banner-info"></a>
-		<div id="banner-button">
-			<ul>
-				<li alt="1" class="on"></li>
-				<li alt="2"></li>
-				<li alt="3"></li>
-				<li alt="4"></li>
-			</ul>
-		</div>
-	</div>
+<div class="pr notification">
 	<div class="channel">
 		<a>交流频道</a>
 		<ul>
@@ -30,10 +13,33 @@
 			<li><a>产品交流群：</a><a>548588839</a></li>
 		</ul>
 	</div>
+	<div class="pr" id="banner">
+		<div id="banner-pic">
+			<for start="0" end="8" name="carouselIndex">
+				<if condition="$carouselImages[$carouselIndex] neq NULL">
+					<a href="{$carouselHrefs[$carouselIndex]}"><img src="{$carouselImages[$carouselIndex]}" title="{$carouselTitles[$carouselIndex]}"/></a>
+				</if>
+			</for>
+		</div>
+		<a id="banner-tit"></a>
+		<div id="banner-but">
+			<ul>
+				<for start="0" end="8" name="carouselIndex">
+					<if condition="$carouselImages[$carouselIndex] neq NULL">
+						<if condition="$carouselIndex eq 0">
+							<li alt="{$carouselIndexs[$carouselIndex]}" class="on"></li>
+							<else />
+							<li alt="{$carouselIndexs[$carouselIndex]}"></li>
+						</if>
+					</if>
+				</for>
+			</ul>
+		</div>
+	</div>
 </div>
 
 <!-- 专辑栏 -->
-<div class="special clearfix">
+<div class="special">
 	<ul>
 		<for start="0" end="5" name="specialIndex">
 			<if condition="$specialImages[$specialIndex] neq NULL">
@@ -54,9 +60,17 @@
 
 <!-- 内容栏 -->
 <div class="content clearfix">
-
+	<!-- 其他栏 -->
+	<div class="others">
+		{:W('Special/index')}
+		<div class="segmentation"></div>
+		{:W('Article/index')}
+		<div class="segmentation"></div>
+		{:W('Experts/index')}
+	</div>
+	
 	<!-- 文章栏 -->
-	<div class="articles">
+	<div class="pr articles">
 		<input type="hidden" id="collectUrl" value="{:U('Collect/collect')}">
 		<ul>
 			<for start="0" end="10" name="articleIndex">
@@ -87,15 +101,5 @@
 				{$pageShow}
 			</ul>
 		</div>
-	</div>
-	
-	<!-- 其他栏 -->
-	<div class="others">
-		{:W('Special/index')}
-		<div class="segmentation"></div>
-		{:W('Article/index')}
-		<div class="segmentation"></div>
-		{:W('Experts/index')}
-		<div class="segmentation"></div>
 	</div>
 </div>

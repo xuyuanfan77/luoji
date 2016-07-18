@@ -1,36 +1,38 @@
+.pr{position:relative;}
+.pa{position:absolute;}
+.fl{float:left;}
+.fr{float:right;}
+
 .notification {
-	position:relative;
 	width:1100px;
 	left:50%;
 	margin:15px 0px 0px -550px;
 }
 
 #banner {
-	position:relative;
-	float:left;
 	width:840px;
 	height:240px;
 }
 
-#banner-list > a {
+#banner-pic a {
 	position:absolute;
 }
 
-#banner-list > a > img {
+#banner-pic img {
 	width:840px;
 	height:240px;
 }
 
-#banner-info {
+#banner-tit {
 	position:absolute;
 	top:170px;
 	left:50px;
 	font-size:22px;
 	font-weight:bold;
-	color:#FFFFFF;
+	color:#FFF;
 }
 
-#banner-button {
+#banner-but {
 	position:absolute;
 	width:88px;
 	left:50%;
@@ -38,7 +40,7 @@
 	top:220px;
 }
 
-#banner-button > ul{
+#banner-but ul{
 	position:absolute;
 	width:88px;
 	margin:0;
@@ -46,23 +48,21 @@
 	list-style-type:none;
 }
 
-#banner-button > ul > li {
+#banner-but li {
 	float:left;
 	opacity:0.2;
 	width:20px;
-	height:5px;
+	height:6px;
 	margin:0px 1px 0px 1px;
 	cursor:pointer;
 	background:#FFFFFF;
 	text-decoration:none;
 }
 
-#banner-button > ul > li.on {
+#banner-but li.on {
 	background-color:#FFFFFF;
 	opacity:0.7;
 }
-
-
 
 .channel {
 	position:relative;
@@ -197,7 +197,6 @@
 }
 
 .articles {
-	float:left;
 	width:840px;
 }
 

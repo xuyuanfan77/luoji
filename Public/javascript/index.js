@@ -1,16 +1,16 @@
 var t = n = 0, count;
 $(document).ready(function(){	
-	count=$("#banner-list a").length;
-	$("#banner-list a:not(:first-child)").hide();
-	$("#banner-info").html($("#banner-list a:first-child").find("img").attr('alt'));
-	$("#banner-info").click(function(){window.open($("#banner-list a:first-child").attr('href'), "_blank")});
-	$("#banner-button > ul > li").click(function() {
-		var i = $(this).attr('alt') - 1;
+	count=$("#banner-pic a").length;
+	$("#banner-pic a:not(:first-child)").hide();
+	$("#banner-tit").html($("#banner-pic a:first-child").find("img").attr('title'));
+	$("#banner-tit").click(function(){window.open($("#banner-pic a:first-child").attr('href'), "_blank")});
+	$("#banner-but li").click(function() {
+		var i = $(this).attr('alt');
 		n = i;
 		if (i >= count) return;
-		$("#banner-info").html($("#banner-list a").eq(i).find("img").attr('alt'));
-		$("#banner-info").unbind().click(function(){window.open($("#banner-list a").eq(i).attr('href'), "_blank")})
-		$("#banner-list a").filter(":visible").fadeOut(500).parent().children().eq(i).fadeIn(1000);
+		$("#banner-tit").html($("#banner-pic a").eq(i).find("img").attr('title'));
+		$("#banner-tit").unbind().click(function(){window.open($("#banner-pic a").eq(i).attr('href'), "_blank")})
+		$("#banner-pic a").filter(":visible").fadeOut(500).parent().children().eq(i).fadeIn(1000);
 		document.getElementById("banner").style.background="";
 		$(this).toggleClass("on");
 		$(this).siblings().removeAttr("class");
@@ -22,7 +22,7 @@ $(document).ready(function(){
 function showAuto()
 {
 	n = n >=(count - 1) ? 0 : ++n;
-	$("#banner-button > ul > li").eq(n).trigger('click');
+	$("#banner-but li").eq(n).trigger('click');
 }
 
 function collect(articleObj) {

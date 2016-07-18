@@ -44,24 +44,7 @@
 <script type="text/javascript" src="/luoji/Public/javascript/index.js"></script>
 
 <!-- 通知栏 -->
-<div class="notification clearfix">
-	<div id="banner">
-		<div id="banner-list">
-			<a href="www.baidu.com"><img src="/luoji/Public/picture/p1.jpg" title="橡树小屋的blog" alt="橡树小屋的blog1" /></a>
-			<a href="www.baidu.com"><img src="/luoji/Public/picture/p2.jpg" title="橡树小屋的blog" alt="橡树小屋的blog2" /></a>
-			<a href="www.baidu.com"><img src="/luoji/Public/picture/p3.jpg" title="橡树小屋的blog" alt="橡树小屋的blog3" /></a>
-			<a href="www.baidu.com"><img src="/luoji/Public/picture/p4.jpg" title="橡树小屋的blog" alt="橡树小屋的blog4" /></a>
-		</div>
-		<a id="banner-info"></a>
-		<div id="banner-button">
-			<ul>
-				<li alt="1" class="on"></li>
-				<li alt="2"></li>
-				<li alt="3"></li>
-				<li alt="4"></li>
-			</ul>
-		</div>
-	</div>
+<div class="pr notification">
 	<div class="channel">
 		<a>交流频道</a>
 		<ul>
@@ -72,12 +55,25 @@
 			<li><a>产品交流群：</a><a>548588839</a></li>
 		</ul>
 	</div>
+	<div class="pr" id="banner">
+		<div id="banner-pic">
+			<?php $__FOR_START_28593__=0;$__FOR_END_28593__=8;for($carouselIndex=$__FOR_START_28593__;$carouselIndex < $__FOR_END_28593__;$carouselIndex+=1){ if($carouselImages[$carouselIndex] != NULL): ?><a href="<?php echo ($carouselHrefs[$carouselIndex]); ?>"><img src="<?php echo ($carouselImages[$carouselIndex]); ?>" title="<?php echo ($carouselTitles[$carouselIndex]); ?>"/></a><?php endif; } ?>
+		</div>
+		<a id="banner-tit"></a>
+		<div id="banner-but">
+			<ul>
+				<?php $__FOR_START_11414__=0;$__FOR_END_11414__=8;for($carouselIndex=$__FOR_START_11414__;$carouselIndex < $__FOR_END_11414__;$carouselIndex+=1){ if($carouselImages[$carouselIndex] != NULL): if($carouselIndex == 0): ?><li alt="<?php echo ($carouselIndexs[$carouselIndex]); ?>" class="on"></li>
+							<?php else: ?>
+							<li alt="<?php echo ($carouselIndexs[$carouselIndex]); ?>"></li><?php endif; endif; } ?>
+			</ul>
+		</div>
+	</div>
 </div>
 
 <!-- 专辑栏 -->
-<div class="special clearfix">
+<div class="special">
 	<ul>
-		<?php $__FOR_START_7806__=0;$__FOR_END_7806__=5;for($specialIndex=$__FOR_START_7806__;$specialIndex < $__FOR_END_7806__;$specialIndex+=1){ if($specialImages[$specialIndex] != NULL): ?><li>
+		<?php $__FOR_START_24599__=0;$__FOR_END_24599__=5;for($specialIndex=$__FOR_START_24599__;$specialIndex < $__FOR_END_24599__;$specialIndex+=1){ if($specialImages[$specialIndex] != NULL): ?><li>
 					<img src="<?php echo ($specialImages[$specialIndex]); ?>"/>
 					<div class="special-title">
 						<a class="main-title" href="<?php echo ($specialHrefs[$specialIndex]); ?>" target="_blank"><nobr><?php echo ($specialMaintitles[$specialIndex]); ?></nobr></a>
@@ -92,12 +88,20 @@
 
 <!-- 内容栏 -->
 <div class="content clearfix">
-
+	<!-- 其他栏 -->
+	<div class="others">
+		<?php echo W('Special/index');?>
+		<div class="segmentation"></div>
+		<?php echo W('Article/index');?>
+		<div class="segmentation"></div>
+		<?php echo W('Experts/index');?>
+	</div>
+	
 	<!-- 文章栏 -->
-	<div class="articles">
+	<div class="pr articles">
 		<input type="hidden" id="collectUrl" value="<?php echo U('Collect/collect');?>">
 		<ul>
-			<?php $__FOR_START_4063__=0;$__FOR_END_4063__=10;for($articleIndex=$__FOR_START_4063__;$articleIndex < $__FOR_END_4063__;$articleIndex+=1){ if($articleCoverImage[$articleIndex] != NULL): ?><li>
+			<?php $__FOR_START_7172__=0;$__FOR_END_7172__=10;for($articleIndex=$__FOR_START_7172__;$articleIndex < $__FOR_END_7172__;$articleIndex+=1){ if($articleCoverImage[$articleIndex] != NULL): ?><li>
 						<img src="<?php echo ($articleCoverImage[$articleIndex]); ?>"/>
 						<ul>
 							<li class="article-firstline">
@@ -121,16 +125,6 @@
 				<?php echo ($pageShow); ?>
 			</ul>
 		</div>
-	</div>
-	
-	<!-- 其他栏 -->
-	<div class="others">
-		<?php echo W('Special/index');?>
-		<div class="segmentation"></div>
-		<?php echo W('Article/index');?>
-		<div class="segmentation"></div>
-		<?php echo W('Experts/index');?>
-		<div class="segmentation"></div>
 	</div>
 </div>
 
