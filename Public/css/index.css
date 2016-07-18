@@ -307,6 +307,8 @@
 	font-size:20px;
 	color:#000000;
 	text-decoration:none;
+	text-overflow:ellipsis;
+	overflow:hidden;
 }
 
 .article-overview {

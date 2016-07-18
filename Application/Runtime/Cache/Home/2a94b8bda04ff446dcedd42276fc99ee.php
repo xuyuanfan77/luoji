@@ -77,11 +77,11 @@
 <!-- 专辑栏 -->
 <div class="special clearfix">
 	<ul>
-		<?php $__FOR_START_9886__=0;$__FOR_END_9886__=5;for($specialIndex=$__FOR_START_9886__;$specialIndex < $__FOR_END_9886__;$specialIndex+=1){ if($specialImages[$specialIndex] != NULL): ?><li>
+		<?php $__FOR_START_7806__=0;$__FOR_END_7806__=5;for($specialIndex=$__FOR_START_7806__;$specialIndex < $__FOR_END_7806__;$specialIndex+=1){ if($specialImages[$specialIndex] != NULL): ?><li>
 					<img src="<?php echo ($specialImages[$specialIndex]); ?>"/>
 					<div class="special-title">
-						<a class="main-title" href="<?php echo ($specialHrefs[$specialIndex]); ?>" target="_blank"><?php echo ($specialMaintitles[$specialIndex]); ?></a>
-						<a class="minor-title" href="<?php echo ($specialHrefs[$specialIndex]); ?>" target="_blank"><?php echo ($specialSubheads[$specialIndex]); ?></a>
+						<a class="main-title" href="<?php echo ($specialHrefs[$specialIndex]); ?>" target="_blank"><nobr><?php echo ($specialMaintitles[$specialIndex]); ?></nobr></a>
+						<a class="minor-title" href="<?php echo ($specialHrefs[$specialIndex]); ?>" target="_blank"><nobr><?php echo ($specialSubheads[$specialIndex]); ?></nobr></a>
 					</div>
 				</li><?php endif; } ?>
 	</ul>
@@ -97,7 +97,7 @@
 	<div class="articles">
 		<input type="hidden" id="collectUrl" value="<?php echo U('Collect/collect');?>">
 		<ul>
-			<?php $__FOR_START_17791__=0;$__FOR_END_17791__=10;for($articleIndex=$__FOR_START_17791__;$articleIndex < $__FOR_END_17791__;$articleIndex+=1){ if($articleCoverImage[$articleIndex] != NULL): ?><li>
+			<?php $__FOR_START_4063__=0;$__FOR_END_4063__=10;for($articleIndex=$__FOR_START_4063__;$articleIndex < $__FOR_END_4063__;$articleIndex+=1){ if($articleCoverImage[$articleIndex] != NULL): ?><li>
 						<img src="<?php echo ($articleCoverImage[$articleIndex]); ?>"/>
 						<ul>
 							<li class="article-firstline">
@@ -106,7 +106,7 @@
 								<div class="<?php echo ($articleCollect[$articleIndex]); ?>" id="<?php echo ($articleId[$articleIndex]); ?>" onclick="collect(this)"></div>
 							</li>
 							<li class="article-secondline">
-								<a href="<?php echo ($articleHref[$articleIndex]); ?>" target="_blank" class="article-title"><?php echo ($articleMaintitle[$articleIndex]); ?></a>
+								<a href="<?php echo ($articleHref[$articleIndex]); ?>" target="_blank" class="article-title"><nobr><?php echo ($articleMaintitle[$articleIndex]); ?></nobr></a>
 								<a href="<?php echo ($articleHref[$articleIndex]); ?>" target="_blank" class="article-overview">&nbsp;&nbsp;<?php echo ($articleIntroduction[$articleIndex]); ?></a>
 							</li>
 							<li class="article-thirdline">

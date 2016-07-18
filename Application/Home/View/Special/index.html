@@ -12,8 +12,8 @@
 			<if condition="$specialImage[$specialIndex] neq NULL">
 				<li>
 					<img class="wSpecial-coverimage" src="{$specialImage[$specialIndex]}"/>
-					<a href="{$specialHrefs[$specialIndex]}" target="_blank" class="wSpecial-maintitle">{$specialMaintitle[$specialIndex]}</a>
-					<a href="{$specialHrefs[$specialIndex]}" target="_blank" class="wSpecial-subhead">{$specialSubhead[$specialIndex]}</a>
+					<a href="{$specialHrefs[$specialIndex]}" target="_blank" class="wSpecial-maintitle"><nobr>{$specialMaintitle[$specialIndex]}</nobr></a>
+					<a href="{$specialHrefs[$specialIndex]}" target="_blank" class="wSpecial-subhead"><nobr>{$specialSubhead[$specialIndex]}</nobr></a>
 				</li>
 			</if>
 		</for>

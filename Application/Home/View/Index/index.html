@@ -40,8 +40,8 @@
 				<li>
 					<img src="{$specialImages[$specialIndex]}"/>
 					<div class="special-title">
-						<a class="main-title" href="{$specialHrefs[$specialIndex]}" target="_blank">{$specialMaintitles[$specialIndex]}</a>
-						<a class="minor-title" href="{$specialHrefs[$specialIndex]}" target="_blank">{$specialSubheads[$specialIndex]}</a>
+						<a class="main-title" href="{$specialHrefs[$specialIndex]}" target="_blank"><nobr>{$specialMaintitles[$specialIndex]}</nobr></a>
+						<a class="minor-title" href="{$specialHrefs[$specialIndex]}" target="_blank"><nobr>{$specialSubheads[$specialIndex]}</nobr></a>
 					</div>
 				</li>
 			</if>
@@ -70,7 +70,7 @@
 								<div class="{$articleCollect[$articleIndex]}" id="{$articleId[$articleIndex]}" onclick="collect(this)"></div>
 							</li>
 							<li class="article-secondline">
-								<a href="{$articleHref[$articleIndex]}" target="_blank" class="article-title">{$articleMaintitle[$articleIndex]}</a>
+								<a href="{$articleHref[$articleIndex]}" target="_blank" class="article-title"><nobr>{$articleMaintitle[$articleIndex]}</nobr></a>
 								<a href="{$articleHref[$articleIndex]}" target="_blank" class="article-overview">&nbsp;&nbsp;{$articleIntroduction[$articleIndex]}</a>
 							</li>
 							<li class="article-thirdline">
