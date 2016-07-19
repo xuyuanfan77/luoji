@@ -45,51 +45,66 @@
 
 <!-- 通知栏 -->
 <div class="pr notification">
-	<div class="channel">
-		<a>交流频道</a>
-		<ul>
-			<li><a>HTML交流群：</a><a>548588839</a></li>
-			<li><a>JS交流群：</a><a>548588839</a></li>
-			<li><a>PHP交流群：</a><a>548588839</a></li>
-			<li><a>MySQL交流群：</a><a>548588839</a></li>
-			<li><a>产品交流群：</a><a>548588839</a></li>
-		</ul>
+	<div class="fr channel">
+		<div class="pr channel-tit">交流频道</div>
+		<table class="pr channel-con">
+			<tr>
+				<td>HTML交流群：</td>
+				<td>548588839</td>
+			</tr>
+			<tr>
+				<td>JS交流群：</td>
+				<td>548588839</td>
+			</tr>
+			<tr>
+				<td>PHP交流群：</td>
+				<td>548588839</td>
+			</tr>
+			<tr>
+				<td>MySQL交流群：</td>
+				<td>548588839</td>
+			</tr>
+			<tr>
+				<td>产品交流群：</td>
+				<td>548588839</td>
+			</tr>
+		</table>
 	</div>
 	<div class="pr" id="banner">
 		<div id="banner-pic">
-			<?php $__FOR_START_28593__=0;$__FOR_END_28593__=8;for($carouselIndex=$__FOR_START_28593__;$carouselIndex < $__FOR_END_28593__;$carouselIndex+=1){ if($carouselImages[$carouselIndex] != NULL): ?><a href="<?php echo ($carouselHrefs[$carouselIndex]); ?>"><img src="<?php echo ($carouselImages[$carouselIndex]); ?>" title="<?php echo ($carouselTitles[$carouselIndex]); ?>"/></a><?php endif; } ?>
+			<?php $__FOR_START_9529__=0;$__FOR_END_9529__=8;for($carouselIndex=$__FOR_START_9529__;$carouselIndex < $__FOR_END_9529__;$carouselIndex+=1){ if($carouselImages[$carouselIndex] != NULL): ?><a href="<?php echo ($carouselHrefs[$carouselIndex]); ?>"><img src="<?php echo ($carouselImages[$carouselIndex]); ?>" title="<?php echo ($carouselTitles[$carouselIndex]); ?>"/></a><?php endif; } ?>
 		</div>
 		<a id="banner-tit"></a>
-		<div id="banner-but">
+		<table id="banner-but"><tr><td>
 			<ul>
-				<?php $__FOR_START_11414__=0;$__FOR_END_11414__=8;for($carouselIndex=$__FOR_START_11414__;$carouselIndex < $__FOR_END_11414__;$carouselIndex+=1){ if($carouselImages[$carouselIndex] != NULL): if($carouselIndex == 0): ?><li alt="<?php echo ($carouselIndexs[$carouselIndex]); ?>" class="on"></li>
+				<?php $__FOR_START_26494__=0;$__FOR_END_26494__=8;for($carouselIndex=$__FOR_START_26494__;$carouselIndex < $__FOR_END_26494__;$carouselIndex+=1){ if($carouselImages[$carouselIndex] != NULL): if($carouselIndex == 0): ?><li alt="<?php echo ($carouselIndexs[$carouselIndex]); ?>" class="on"></li>
 							<?php else: ?>
 							<li alt="<?php echo ($carouselIndexs[$carouselIndex]); ?>"></li><?php endif; endif; } ?>
 			</ul>
-		</div>
+		</td></tr></table>
 	</div>
 </div>
 
 <!-- 专辑栏 -->
-<div class="special">
+<div class="pr special">
+	<a class="fr special-more" href="#">
+		<br/><br/><br/>换<br/>一<br/>批<br/><br/><br/>
+	</a>
 	<ul>
-		<?php $__FOR_START_24599__=0;$__FOR_END_24599__=5;for($specialIndex=$__FOR_START_24599__;$specialIndex < $__FOR_END_24599__;$specialIndex+=1){ if($specialImages[$specialIndex] != NULL): ?><li>
+		<?php $__FOR_START_9439__=0;$__FOR_END_9439__=5;for($specialIndex=$__FOR_START_9439__;$specialIndex < $__FOR_END_9439__;$specialIndex+=1){ if($specialImages[$specialIndex] != NULL): ?><li>
 					<img src="<?php echo ($specialImages[$specialIndex]); ?>"/>
-					<div class="special-title">
-						<a class="main-title" href="<?php echo ($specialHrefs[$specialIndex]); ?>" target="_blank"><nobr><?php echo ($specialMaintitles[$specialIndex]); ?></nobr></a>
-						<a class="minor-title" href="<?php echo ($specialHrefs[$specialIndex]); ?>" target="_blank"><nobr><?php echo ($specialSubheads[$specialIndex]); ?></nobr></a>
+					<div class="pa special-title">
+						<a class="pa main-title" href="<?php echo ($specialHrefs[$specialIndex]); ?>" target="_blank"><nobr><?php echo ($specialMaintitles[$specialIndex]); ?></nobr></a>
+						<a class="pa minor-title" href="<?php echo ($specialHrefs[$specialIndex]); ?>" target="_blank"><nobr><?php echo ($specialSubheads[$specialIndex]); ?></nobr></a>
 					</div>
 				</li><?php endif; } ?>
 	</ul>
-	<a class="special-more" href="#">
-		<br/><br/><br/>换<br/>一<br/>批<br/><br/><br/>
-	</a>
 </div>
 
 <!-- 内容栏 -->
-<div class="content clearfix">
+<div class="pr content clearfix">
 	<!-- 其他栏 -->
-	<div class="others">
+	<div class="fr others">
 		<?php echo W('Special/index');?>
 		<div class="segmentation"></div>
 		<?php echo W('Article/index');?>
@@ -101,19 +116,19 @@
 	<div class="pr articles">
 		<input type="hidden" id="collectUrl" value="<?php echo U('Collect/collect');?>">
 		<ul>
-			<?php $__FOR_START_7172__=0;$__FOR_END_7172__=10;for($articleIndex=$__FOR_START_7172__;$articleIndex < $__FOR_END_7172__;$articleIndex+=1){ if($articleCoverImage[$articleIndex] != NULL): ?><li>
+			<?php $__FOR_START_21804__=0;$__FOR_END_21804__=10;for($articleIndex=$__FOR_START_21804__;$articleIndex < $__FOR_END_21804__;$articleIndex+=1){ if($articleCoverImage[$articleIndex] != NULL): ?><li class="article">
 						<img src="<?php echo ($articleCoverImage[$articleIndex]); ?>"/>
 						<ul>
-							<li class="article-firstline">
-								<a class="article-classify1"><?php echo ($articleClassification[$articleIndex]); ?></a>
-								<div class="article-classify2"></div>
-								<div class="<?php echo ($articleCollect[$articleIndex]); ?>" id="<?php echo ($articleId[$articleIndex]); ?>" onclick="collect(this)"></div>
+							<li class="article-l1">
+								<a class="fl classify1"><?php echo ($articleClassification[$articleIndex]); ?></a>
+								<div class="fl classify2"></div>
+								<div class="fr <?php echo ($articleCollect[$articleIndex]); ?>" id="<?php echo ($articleId[$articleIndex]); ?>" onclick="collect(this)"></div>
 							</li>
-							<li class="article-secondline">
-								<a href="<?php echo ($articleHref[$articleIndex]); ?>" target="_blank" class="article-title"><nobr><?php echo ($articleMaintitle[$articleIndex]); ?></nobr></a>
-								<a href="<?php echo ($articleHref[$articleIndex]); ?>" target="_blank" class="article-overview">&nbsp;&nbsp;<?php echo ($articleIntroduction[$articleIndex]); ?></a>
+							<li class="article-l2">
+								<a href="<?php echo ($articleHref[$articleIndex]); ?>" target="_blank" class="pr title"><nobr><?php echo ($articleMaintitle[$articleIndex]); ?></nobr></a>
+								<a href="<?php echo ($articleHref[$articleIndex]); ?>" target="_blank" class="pr overview">&nbsp;&nbsp;<?php echo ($articleIntroduction[$articleIndex]); ?></a>
 							</li>
-							<li class="article-thirdline">
+							<li class="article-l3">
 								<a>阅读：<?php echo ($articleReadnum[$articleIndex]); ?></a>
 								<a href="<?php echo ($expertHref[$articleIndex]); ?>" target="_blank">作者：<?php echo ($articleNickname[$articleIndex]); ?></a>
 							</li>

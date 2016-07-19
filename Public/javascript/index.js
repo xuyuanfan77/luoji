@@ -34,9 +34,9 @@ function collect(articleObj) {
 		url:curl,
 		success : function(data) {
 			if(data == 'yes') {
-				articleObj.className = 'article-collection-select'; 
+				articleObj.className = 'fr collect1'; 
 			} else if(data == 'no'){
-				articleObj.className = 'article-collection-default'; 
+				articleObj.className = 'fr collect2'; 
 			} else if(data == 'permission'){
 				alert('请先登录！');
 			} else {

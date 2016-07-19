@@ -89,9 +89,9 @@ class IndexController extends LayoutController {
 			$condition['article_id'] = array('eq',$articleData[$index]['article_id']);
 			$collectData = $Collect->where($condition)->find();
 			if($collectData) {
-				$articleCollect[$index] = 'article-collection-select';
+				$articleCollect[$index] = 'collect1';
 			} else {
-				$articleCollect[$index] = 'article-collection-default';
+				$articleCollect[$index] = 'collect2';
 			}	
 
 			$articleId[$index] = $articleData[$index]['article_id'];

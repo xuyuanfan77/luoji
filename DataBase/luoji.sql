@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50617
 File Encoding         : 65001
 
-Date: 2016-07-18 18:17:42
+Date: 2016-07-19 15:40:04
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -39,7 +39,7 @@ CREATE TABLE `article` (
 -- ----------------------------
 -- Records of article
 -- ----------------------------
-INSERT INTO `article` VALUES ('23', '23.jpg', '23.jpg', '数据表之间的关系', '一对一关系、一对多关系、多对多关系', '</p></blockquote><p><ul><li><span style=\"line-height: 1.8;\">一对多关系：这是最普通的一种关系。在这种关系中，A表中的一行可以匹配B表中的多行，但是B表中的一行只能匹配A表中的一行。只有当一个相关列是一个主键或具有唯一约束时，才能创建一对多关系。</span></li><li><span style=\"line-height: 1.8;\">多对多关系：A表中的一行可以匹配B表中的多行，反之亦然。要创建这种关系，需要定义第三个表，称为结合表，它的主键由A表和B表的外部键组成。</span></li><li><span style=\"line-height: 1.8;\">一对一关系：A表中的一行最多只能匹配于B表中的一行，反之亦然。如果相关列都是主键或都具有唯一约束，则可以创建一对一关系。这种关系并不常见，因为一般来说，按照这种方式相关的信息可以都在一个表中。</span></li></ul></p>', '12', '1', '0', '0', '0', '21', '2016-07-14 19:52:57');
+INSERT INTO `article` VALUES ('23', '23.jpg', '23.jpg', '数据表之间的关系', '一对一关系、一对多关系、多对多关系', '<ul><li><span style=\"line-height: 1.8;\">一对多关系：这是最普通的一种关系。在这种关系中，A表中的一行可以匹配B表中的多行，但是B表中的一行只能匹配A表中的一行。只有当一个相关列是一个主键或具有唯一约束时，才能创建一对多关系。</span></li><li><span style=\"line-height: 1.8;\">多对多关系：A表中的一行可以匹配B表中的多行，反之亦然。要创建这种关系，需要定义第三个表，称为结合表，它的主键由A表和B表的外部键组成。</span></li><li><span style=\"line-height: 1.8;\">一对一关系：A表中的一行最多只能匹配于B表中的一行，反之亦然。如果相关列都是主键或都具有唯一约束，则可以创建一对一关系。这种关系并不常见，因为一般来说，按照这种方式相关的信息可以都在一个表中。</span></li></ul>', '12', '1', '0', '0', '0', '21', '2016-07-14 19:52:57');
 INSERT INTO `article` VALUES ('24', '24.png', '24.jpg', '深入理解sql的五种连接', '内连接、左外连接、右外连接、全连接、交叉连接', '<ol><li>内连接：只有两个表相匹配的行才能在结果集中出现</li><li>外连接：包括&nbsp;（1）左连接(左边的表不加限制)&nbsp;（2）右连接(右边的表不加限制)&nbsp;（3）全连接(左右两表都不加限制)</li><li>交叉连接：也叫做笛卡尔积</li></ol>', '12', '1', '0', '0', '0', '36', '2016-07-15 16:47:45');
 INSERT INTO `article` VALUES ('25', '25.png', '25.jpg', 'Mysql常用数据类型', '整数型、小数型、字符串型、时间日期型', '<p>SQL中将数据类型分了四大类：整数型、小数型、字符串型和时间日期型。</p><p><br></p>', '12', '1', '0', '0', '0', '17', '2016-07-15 16:49:42');
 
@@ -60,11 +60,10 @@ CREATE TABLE `carouselfigure` (
 -- ----------------------------
 -- Records of carouselfigure
 -- ----------------------------
-INSERT INTO `carouselfigure` VALUES ('1', '1.jpg', '1', '1', 'http://www.baidu.com', 'yes');
-INSERT INTO `carouselfigure` VALUES ('2', '2.jpg', '2', '2', 'http://www.baidu.com', 'yes');
-INSERT INTO `carouselfigure` VALUES ('3', '3.jpg', '3', '3', 'http://www.baidu.com', 'yes');
-INSERT INTO `carouselfigure` VALUES ('4', '4.jpg', '4', '0', 'http://www.baidu.com', 'yes');
-INSERT INTO `carouselfigure` VALUES ('5', '5.jpg', '5', '4', 'http://www.baidu.com', 'yes');
+INSERT INTO `carouselfigure` VALUES ('1', '1.png', '诚信 . 专业 . 双赢', '1', 'http://www.baidu.com', 'yes');
+INSERT INTO `carouselfigure` VALUES ('2', '2.png', '自主合作业务', '2', 'http://www.baidu.com', 'yes');
+INSERT INTO `carouselfigure` VALUES ('3', '3.png', '开创TOE品牌未来的事业巅峰', '3', 'http://www.baidu.com', 'yes');
+INSERT INTO `carouselfigure` VALUES ('4', '4.png', '从现代哲学思想出发，构筑品牌发展规划', '0', 'http://www.baidu.com', 'yes');
 
 -- ----------------------------
 -- Table structure for category
@@ -99,6 +98,8 @@ CREATE TABLE `collect` (
 -- Records of collect
 -- ----------------------------
 INSERT INTO `collect` VALUES ('12', '23', '2016-07-14 20:08:51');
+INSERT INTO `collect` VALUES ('12', '24', '2016-07-19 14:08:53');
+INSERT INTO `collect` VALUES ('12', '25', '2016-07-19 14:08:54');
 
 -- ----------------------------
 -- Table structure for include
