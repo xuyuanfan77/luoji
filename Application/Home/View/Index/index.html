@@ -55,10 +55,10 @@
 
 <!-- 专辑栏 -->
 <div class="pr special">
-	<a class="fr special-more" href="#">
+	<a class="fr special-more" id="special-more" alt="1" onclick="changeALot(this)">
 		<br/><br/><br/>换<br/>一<br/>批<br/><br/><br/>
 	</a>
-	<ul>
+	<ul id="specials">
 		<for start="0" end="5" name="specialIndex">
 			<if condition="$specialImages[$specialIndex] neq NULL">
 				<li>
@@ -86,7 +86,6 @@
 	
 	<!-- 文章栏 -->
 	<div class="pr articles">
-		<input type="hidden" id="collectUrl" value="{:U('Collect/collect')}">
 		<ul>
 			<for start="0" end="10" name="articleIndex">
 				<if condition="$articleCoverImage[$articleIndex] neq NULL">

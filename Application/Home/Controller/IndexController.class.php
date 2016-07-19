@@ -141,4 +141,22 @@ class IndexController extends LayoutController {
 		$this->initPage();
         $this->display();
 	}
+	
+	//换一批
+	public function changeALot() {
+		$Special = M('Special');
+		$pageNum = $_POST['specialPage'];
+		$specialData = $Special->page($pageNum .',5')->select();
+		$specialCount = count($specialData);
+		$count = ceil($Special->count()/5);
+		$nextPage = $pageNum<$count?$pageNum+1:1;
+		for ($index=0; $index<$specialCount; $index++) {
+			$data[$index]['coverimage'] = C('__ROOT__') . 'Public/resource/coverimage/' . $specialData[$index]['coverimage'];
+			$data[$index]['maintitle'] = $specialData[$index]['maintitle'];
+			$data[$index]['subhead'] = $specialData[$index]['subhead'];
+			$data[$index]['href'] = U('Album/index', array('specialId'=>$specialData[$index]['id']));
+			$data['nextPage'] = $nextPage;
+		}
+		$this->ajaxReturn($data);
+	}
 }
