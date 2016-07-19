@@ -49,11 +49,11 @@ function collect(articleObj){
 	});
 }
 
-function changeALot(specialPage){
+function changeALot(specialObj){
 	$.ajax({  
 		type:'post',
 		dataType:'json',
-		data:"specialPage="+specialPage.alt,  
+		data:"specialPage="+specialObj.title,  
 		url:"/luoji/index.php/Home/Index/changeALot",
 		success:function(data) {
 			var htmlCode='';
@@ -69,7 +69,8 @@ function changeALot(specialPage){
 				}
 			}
 			$("#specials").html(htmlCode);
-			specialPage.alt = data['nextPage'];
+			specialObj.title = data['nextPage'];
+			/*alert(data);*/
 		},  
 		error:function() {  
 			alert('响应异常！');

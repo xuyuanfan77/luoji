@@ -8,7 +8,7 @@
 		<a>精图排行</a>
 	</div>
 	<ul>
-		<?php $__FOR_START_2154__=0;$__FOR_END_2154__=8;for($articleIndex=$__FOR_START_2154__;$articleIndex < $__FOR_END_2154__;$articleIndex+=1){ if($wArticleMaintitle[$articleIndex] != NULL): ?><li>
+		<?php $__FOR_START_4967__=0;$__FOR_END_4967__=8;for($articleIndex=$__FOR_START_4967__;$articleIndex < $__FOR_END_4967__;$articleIndex+=1){ if($wArticleMaintitle[$articleIndex] != NULL): ?><li>
 					<a class="wArticle-index"><?php echo ($articleIndex+1); ?></a>
 					<a href="<?php echo ($wArticleHref[$articleIndex]); ?>" target="_blank" class="wArticle-maintitle"><nobr><?php echo ($wArticleMaintitle[$articleIndex]); ?></nobr></a>
 				</li><?php endif; } ?>

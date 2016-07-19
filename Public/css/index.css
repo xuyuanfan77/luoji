@@ -125,6 +125,8 @@ a{text-decoration:none;}
 	width:204px;
 	text-align:center;
 	color:#FFFFFF;
+	text-overflow:ellipsis;
+	overflow:hidden;
 }
 
 .main-title{
@@ -297,9 +299,9 @@ a{text-decoration:none;}
 }
 
 .clearfix:before, .clearfix:after {
-	display: table;
-	line-height: 0;
-	content: '';
+	display:table;
+	line-height:0;
+	content:'';
 }
 .clearfix:after {
 	clear: both;

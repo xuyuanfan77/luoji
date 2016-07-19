@@ -155,8 +155,8 @@ class IndexController extends LayoutController {
 			$data[$index]['maintitle'] = $specialData[$index]['maintitle'];
 			$data[$index]['subhead'] = $specialData[$index]['subhead'];
 			$data[$index]['href'] = U('Album/index', array('specialId'=>$specialData[$index]['id']));
-			$data['nextPage'] = $nextPage;
 		}
+		$data['nextPage'] = $nextPage;
 		$this->ajaxReturn($data);
 	}
 }

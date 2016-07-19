@@ -10,13 +10,13 @@ Target Server Type    : MYSQL
 Target Server Version : 50617
 File Encoding         : 65001
 
-Date: 2016-07-19 15:40:04
+Date: 2016-07-19 22:12:02
 */
 
 SET FOREIGN_KEY_CHECKS=0;
 
 -- ----------------------------
--- Table structure for article
+-- Table structure for `article`
 -- ----------------------------
 DROP TABLE IF EXISTS `article`;
 CREATE TABLE `article` (
@@ -44,7 +44,7 @@ INSERT INTO `article` VALUES ('24', '24.png', '24.jpg', '深入理解sql的五�
 INSERT INTO `article` VALUES ('25', '25.png', '25.jpg', 'Mysql常用数据类型', '整数型、小数型、字符串型、时间日期型', '<p>SQL中将数据类型分了四大类：整数型、小数型、字符串型和时间日期型。</p><p><br></p>', '12', '1', '0', '0', '0', '17', '2016-07-15 16:49:42');
 
 -- ----------------------------
--- Table structure for carouselfigure
+-- Table structure for `carouselfigure`
 -- ----------------------------
 DROP TABLE IF EXISTS `carouselfigure`;
 CREATE TABLE `carouselfigure` (
@@ -66,7 +66,7 @@ INSERT INTO `carouselfigure` VALUES ('3', '3.png', '开创TOE品牌未来的事�
 INSERT INTO `carouselfigure` VALUES ('4', '4.png', '从现代哲学思想出发，构筑品牌发展规划', '0', 'http://www.baidu.com', 'yes');
 
 -- ----------------------------
--- Table structure for category
+-- Table structure for `category`
 -- ----------------------------
 DROP TABLE IF EXISTS `category`;
 CREATE TABLE `category` (
@@ -83,7 +83,7 @@ CREATE TABLE `category` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for collect
+-- Table structure for `collect`
 -- ----------------------------
 DROP TABLE IF EXISTS `collect`;
 CREATE TABLE `collect` (
@@ -102,7 +102,7 @@ INSERT INTO `collect` VALUES ('12', '24', '2016-07-19 14:08:53');
 INSERT INTO `collect` VALUES ('12', '25', '2016-07-19 14:08:54');
 
 -- ----------------------------
--- Table structure for include
+-- Table structure for `include`
 -- ----------------------------
 DROP TABLE IF EXISTS `include`;
 CREATE TABLE `include` (
@@ -128,7 +128,7 @@ INSERT INTO `include` VALUES ('5', '23', '2016-07-15 23:32:21');
 INSERT INTO `include` VALUES ('5', '25', '2016-07-15 23:32:28');
 
 -- ----------------------------
--- Table structure for manuscript
+-- Table structure for `manuscript`
 -- ----------------------------
 DROP TABLE IF EXISTS `manuscript`;
 CREATE TABLE `manuscript` (
@@ -154,7 +154,7 @@ INSERT INTO `manuscript` VALUES ('21', '21.png', '深入理解sql的五种连接
 INSERT INTO `manuscript` VALUES ('22', '22.png', 'Mysql常用数据类型', '整数型、小数型、字符串型、时间日期型', '<p>SQL中将数据类型分了四大类：整数型、小数型、字符串型和时间日期型。</p><p><br></p>', '12', '1', '0', '0', '0', '2016-07-15 15:58:43');
 
 -- ----------------------------
--- Table structure for special
+-- Table structure for `special`
 -- ----------------------------
 DROP TABLE IF EXISTS `special`;
 CREATE TABLE `special` (
@@ -170,7 +170,7 @@ CREATE TABLE `special` (
   `createtime` datetime NOT NULL COMMENT '创建时间',
   PRIMARY KEY (`id`),
   KEY `username` (`maintitle`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COMMENT='专辑表';
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8 COMMENT='专辑表';
 
 -- ----------------------------
 -- Records of special
@@ -180,9 +180,15 @@ INSERT INTO `special` VALUES ('2', '数据的世界', '数据库基础知识', '
 INSERT INTO `special` VALUES ('3', '数据的世界', '数据库基础知识', '在信息化社会，充分有效地管理和利用各类信息资源，是进行科学研究和决策管理的前提条件。数据库技术是管理信息系统、办公自动化系统、决策支持系统等各类信息系统的核心部分，是进行科学研究和决策管理的重要技术手段。', '3.jpg', '0', '1', '0', '0', '2016-07-15 23:30:11');
 INSERT INTO `special` VALUES ('4', '数据的世界', '数据库基础知识', '在信息化社会，充分有效地管理和利用各类信息资源，是进行科学研究和决策管理的前提条件。数据库技术是管理信息系统、办公自动化系统、决策支持系统等各类信息系统的核心部分，是进行科学研究和决策管理的重要技术手段。', '4.jpg', '0', '1', '0', '0', '2016-07-15 23:30:19');
 INSERT INTO `special` VALUES ('5', '数据的世界', '数据库基础知识', '在信息化社会，充分有效地管理和利用各类信息资源，是进行科学研究和决策管理的前提条件。数据库技术是管理信息系统、办公自动化系统、决策支持系统等各类信息系统的核心部分，是进行科学研究和决策管理的重要技术手段。', '5.jpg', '0', '1', '0', '0', '2016-07-15 23:31:13');
+INSERT INTO `special` VALUES ('6', '数据的世界', '数据库基础知识', '在信息化社会，充分有效地管理和利用各类信息资源，是进行科学研究和决策管理的前提条件。数据库技术是管理信息系统、办公自动化系统、决策支持系统等各类信息系统的核心部分，是进行科学研究和决策管理的重要技术手段。', '5.jpg', '0', '1', '0', '0', '2016-07-19 20:16:51');
+INSERT INTO `special` VALUES ('7', '数据的世界', '数据库基础知识', '在信息化社会，充分有效地管理和利用各类信息资源，是进行科学研究和决策管理的前提条件。数据库技术是管理信息系统、办公自动化系统、决策支持系统等各类信息系统的核心部分，是进行科学研究和决策管理的重要技术手段。', '4.jpg', '0', '1', '0', '0', '2016-07-19 20:58:08');
+INSERT INTO `special` VALUES ('8', '数据的世界', '数据库基础知识', '在信息化社会，充分有效地管理和利用各类信息资源，是进行科学研究和决策管理的前提条件。数据库技术是管理信息系统、办公自动化系统、决策支持系统等各类信息系统的核心部分，是进行科学研究和决策管理的重要技术手段。', '3.jpg', '0', '1', '0', '0', '2016-07-19 20:58:11');
+INSERT INTO `special` VALUES ('9', '数据的世界', '数据库基础知识', '在信息化社会，充分有效地管理和利用各类信息资源，是进行科学研究和决策管理的前提条件。数据库技术是管理信息系统、办公自动化系统、决策支持系统等各类信息系统的核心部分，是进行科学研究和决策管理的重要技术手段。', '3.jpg', '0', '1', '0', '0', '2016-07-19 20:58:13');
+INSERT INTO `special` VALUES ('10', '数据的世界数据的世界数据的世界数据的世界', '数据库基础知识数据库基础知识数据库基础知识数据库基础知识', '在信息化社会，充分有效地管理和利用各类信息资源，是进行科学研究和决策管理的前提条件。数据库技术是管理信息系统、办公自动化系统、决策支持系统等各类信息系统的核心部分，是进行科学研究和决策管理的重要技术手段。', '2.jpg', '0', '1', '0', '0', '2016-07-19 20:58:17');
+INSERT INTO `special` VALUES ('11', '数据的世界', '数据库基础知识', '在信息化社会，充分有效地管理和利用各类信息资源，是进行科学研究和决策管理的前提条件。数据库技术是管理信息系统、办公自动化系统、决策支持系统等各类信息系统的核心部分，是进行科学研究和决策管理的重要技术手段。', '4.jpg', '0', '1', '0', '0', '2016-07-19 20:58:05');
 
 -- ----------------------------
--- Table structure for user
+-- Table structure for `user`
 -- ----------------------------
 DROP TABLE IF EXISTS `user`;
 CREATE TABLE `user` (
