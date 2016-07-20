@@ -72,7 +72,6 @@ class ContentController extends LayoutController {
 	}
 	
     public function index(){
-		
 		$this->initLayout();
 		$this->initArticleExpert();
 		$this->display();

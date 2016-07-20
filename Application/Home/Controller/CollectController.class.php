@@ -63,6 +63,9 @@ class CollectController extends LayoutController {
 			if($collectData) {
 				$result = $Collect->where($condition)->delete();
 				if($result){
+					$Article = M('Article');
+					$condition['id'] = array('eq',$_POST['articleId']);
+					$Article->where($condition)->setDec('collectnum',1);
 					$this->ajaxReturn('no');
 				} else {
 					$this->ajaxReturn('error');
@@ -73,6 +76,9 @@ class CollectController extends LayoutController {
 				$data['createtime'] = date('Y-m-d H:i:s');;
 				$result = $Collect->add($data);
 				if($result){
+					$Article = M('Article');
+					$condition['id'] = array('eq',$_POST['articleId']);
+					$Article->where($condition)->setInc('collectnum',1);
 					$this->ajaxReturn('yes');
 				} else {
 					$this->ajaxReturn('error');

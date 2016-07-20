@@ -50,7 +50,7 @@
 		</div>
 		<div id="right-content">
 			<table id="content-table"> 
-				<?php $__FOR_START_10412__=0;$__FOR_END_10412__=8;for($articleIndex=$__FOR_START_10412__;$articleIndex < $__FOR_END_10412__;$articleIndex+=1){ if($articleMaintitle[$articleIndex] != NULL): ?><tr>
+				<?php $__FOR_START_3144__=0;$__FOR_END_3144__=8;for($articleIndex=$__FOR_START_3144__;$articleIndex < $__FOR_END_3144__;$articleIndex+=1){ if($articleMaintitle[$articleIndex] != NULL): ?><tr>
 							<td>
 								<table> 
 									<tr>

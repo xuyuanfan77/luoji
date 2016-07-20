@@ -50,7 +50,7 @@
 		</div>
 		<div id="right-content">
 			<table id="content-table">
-				<?php $__FOR_START_4220__=0;$__FOR_END_4220__=8;for($manuscriptIndex=$__FOR_START_4220__;$manuscriptIndex < $__FOR_END_4220__;$manuscriptIndex+=1){ if($manuscriptMaintitle[$manuscriptIndex] != NULL): ?><tr>
+				<?php $__FOR_START_5867__=0;$__FOR_END_5867__=8;for($manuscriptIndex=$__FOR_START_5867__;$manuscriptIndex < $__FOR_END_5867__;$manuscriptIndex+=1){ if($manuscriptMaintitle[$manuscriptIndex] != NULL): ?><tr>
 							<td>
 								<table> 
 									<tr>
@@ -58,7 +58,7 @@
 										<td rowspan="2"><a class="<?php echo ($manuscriptStatusStyl[$manuscriptIndex]); ?>"><?php echo ($manuscriptStatus[$manuscriptIndex]); ?></a></td>
 									</tr>
 									<tr>
-										<td class="content-td1"><a class="date-time"><?php echo ($manuscriptCreatetime[$manuscriptIndex]); ?></a><a class="delete">删除</a></td>
+										<td class="content-td1"><a class="date-time"><?php echo ($manuscriptCreatetime[$manuscriptIndex]); ?></a><a class="delete" href="<?php echo ($manuscriptDelHref[$manuscriptIndex]); ?>">删除</a></td>
 									</tr>
 								</table>
 							</td>

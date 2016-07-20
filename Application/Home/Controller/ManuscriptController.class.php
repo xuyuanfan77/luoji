@@ -42,7 +42,9 @@ class ManuscriptController extends LayoutController {
 				$manuscriptStatusStyl[$index] = 'pending-audit';
 			}
 			$manuscriptCreatetime[$index] = $manuscriptData[$index]['createtime'];
+			$manuscriptDelHref[$index] = U('Manuscript/cancel', array('articleId'=>$manuscriptData[$index]['id']));
 		}
+		$this->assign('manuscriptDelHref',$manuscriptDelHref);
 		$this->assign('manuscriptMaintitle',$manuscriptMaintitle);
 		$this->assign('manuscriptHref',$manuscriptHref);
 		$this->assign('manuscriptStatus',$manuscriptStatus);
@@ -69,5 +71,20 @@ class ManuscriptController extends LayoutController {
 		$this->initManuscript();
 		$this->initPage();
         $this->display();
+	}
+	
+	public function cancel(){
+		$Manuscript = M('Manuscript');
+		$condition['id'] = array('eq',$_GET['articleId']);
+		$mainimage = $Manuscript->where($condition)->getField('mainimage');
+		$file = './Public/resource/manuscriptimage/' . $mainimage;
+		$result = $Manuscript->delete($_GET['articleId']);
+		if($result){
+			unlink($file);
+			$this->redirect('Manuscript/index');
+		}else{
+			$scriptCode = '<script>alert("删除失败！");</script>';
+			echo $scriptCode;
+		}
 	}
 }
