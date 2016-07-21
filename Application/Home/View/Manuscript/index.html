@@ -1,13 +1,12 @@
 <link type="text/css" href="__PUBLIC__/css/manuscript.css" rel="stylesheet"/>
-<script type="text/javascript" src="__PUBLIC__/javascript/manuscript.js"></script>
 
-<div id="total-frame">
-	<div id="right-frame">
-		<div id="right-title">
+<div class="pr total-frame">
+	<div class="right-frame">
+		<div class="right-title">
 			<a>我的投稿</a>
 		</div>
-		<div id="right-content">
-			<table id="content-table">
+		<div class="right-content">
+			<table class="content-table">
 				<for start="0" end="8" name="manuscriptIndex">
 					<if condition="$manuscriptMaintitle[$manuscriptIndex] neq NULL">
 						<tr>
@@ -26,42 +25,42 @@
 					</if>
 				</for>
 			</table>
-			<div id="pages">
+			<div class="pages">
 				{$pageShow}
 			</div>
 		</div>
 	</div>
-	<div id="left-frame">
-		<table id="top-table"> 
+	<div class="left-frame">
+		<table class="top-table"> 
 			<tr>
 				<td>
-					<img id="headimage" src="{$headimage}"/>
+					<img class="headimage" src="{$headimage}"/>
 				</td> 
 			</tr>
 			<tr>
 				<td>
-					<a id="username">远航之帆</a>
+					<a class="username">{$nickname}</a>
 				</td> 
 			</tr> 
 		</table>
-		<table id="bottom-table"> 
+		<table class="bottom-table"> 
 			<tr>
-				<td class="column-default">
+				<td class="default">
 					<a href="{:U('Contribute/index')}">我要投稿<a/>
 				</td> 
 			</tr>
 			<tr>
-				<td class="column-select">
+				<td class="select">
 					<a href="{:U('Manuscript/index')}">我的投稿</a>
 				</td> 
 			</tr>
 			<tr>
-				<td class="column-default">
+				<td class="default">
 					<a href="{:U('Collect/index')}">我的收藏<a/>
 				</td> 
 			</tr>
 			<tr>
-				<td class="column-default">
+				<td class="default">
 					<a href="{:U('Information/index')}">个人信息</a>
 				</td> 
 			</tr> 

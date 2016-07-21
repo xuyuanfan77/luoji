@@ -41,16 +41,15 @@
 		<!--div class="test">
 		</div-->
 		<link type="text/css" href="/luoji/Public/css/manuscript.css" rel="stylesheet"/>
-<script type="text/javascript" src="/luoji/Public/javascript/manuscript.js"></script>
 
-<div id="total-frame">
-	<div id="right-frame">
-		<div id="right-title">
+<div class="pr total-frame">
+	<div class="right-frame">
+		<div class="right-title">
 			<a>我的投稿</a>
 		</div>
-		<div id="right-content">
-			<table id="content-table">
-				<?php $__FOR_START_25501__=0;$__FOR_END_25501__=8;for($manuscriptIndex=$__FOR_START_25501__;$manuscriptIndex < $__FOR_END_25501__;$manuscriptIndex+=1){ if($manuscriptMaintitle[$manuscriptIndex] != NULL): ?><tr>
+		<div class="right-content">
+			<table class="content-table">
+				<?php $__FOR_START_31295__=0;$__FOR_END_31295__=8;for($manuscriptIndex=$__FOR_START_31295__;$manuscriptIndex < $__FOR_END_31295__;$manuscriptIndex+=1){ if($manuscriptMaintitle[$manuscriptIndex] != NULL): ?><tr>
 							<td>
 								<table> 
 									<tr>
@@ -64,42 +63,42 @@
 							</td>
 						</tr><?php endif; } ?>
 			</table>
-			<div id="pages">
+			<div class="pages">
 				<?php echo ($pageShow); ?>
 			</div>
 		</div>
 	</div>
-	<div id="left-frame">
-		<table id="top-table"> 
+	<div class="left-frame">
+		<table class="top-table"> 
 			<tr>
 				<td>
-					<img id="headimage" src="<?php echo ($headimage); ?>"/>
+					<img class="headimage" src="<?php echo ($headimage); ?>"/>
 				</td> 
 			</tr>
 			<tr>
 				<td>
-					<a id="username">远航之帆</a>
+					<a class="username"><?php echo ($nickname); ?></a>
 				</td> 
 			</tr> 
 		</table>
-		<table id="bottom-table"> 
+		<table class="bottom-table"> 
 			<tr>
-				<td class="column-default">
+				<td class="default">
 					<a href="<?php echo U('Contribute/index');?>">我要投稿<a/>
 				</td> 
 			</tr>
 			<tr>
-				<td class="column-select">
+				<td class="select">
 					<a href="<?php echo U('Manuscript/index');?>">我的投稿</a>
 				</td> 
 			</tr>
 			<tr>
-				<td class="column-default">
+				<td class="default">
 					<a href="<?php echo U('Collect/index');?>">我的收藏<a/>
 				</td> 
 			</tr>
 			<tr>
-				<td class="column-default">
+				<td class="default">
 					<a href="<?php echo U('Information/index');?>">个人信息</a>
 				</td> 
 			</tr> 
