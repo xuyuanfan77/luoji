@@ -43,14 +43,14 @@
 		<link type="text/css" href="/luoji/Public/css/collect.css" rel="stylesheet"/>
 <script type="text/javascript" src="/luoji/Public/javascript/collect.js"></script>
 
-<div id="total-frame">
-	<div id="right-frame">
-		<div id="right-title">
+<div class="pr total-frame">
+	<div class="right-frame">
+		<div class="right-title">
 			<a>我的收藏</a>
 		</div>
-		<div id="right-content">
-			<table id="content-table"> 
-				<?php $__FOR_START_607__=0;$__FOR_END_607__=8;for($articleIndex=$__FOR_START_607__;$articleIndex < $__FOR_END_607__;$articleIndex+=1){ if($articleMaintitle[$articleIndex] != NULL): ?><tr>
+		<div class="right-content">
+			<table class="content-table"> 
+				<?php $__FOR_START_15968__=0;$__FOR_END_15968__=8;for($articleIndex=$__FOR_START_15968__;$articleIndex < $__FOR_END_15968__;$articleIndex+=1){ if($articleMaintitle[$articleIndex] != NULL): ?><tr>
 							<td>
 								<table> 
 									<tr>
@@ -64,42 +64,42 @@
 							</td>
 						</tr><?php endif; } ?>	
 			</table>
-			<div id="pages">
+			<div class="pages">
 				<?php echo ($pageShow); ?>
 			</div>
 		</div>
 	</div>
-	<div id="left-frame">
-		<table id="top-table"> 
+	<div class="left-frame">
+		<table class="top-table"> 
 			<tr>
 				<td>
-					<img id="headimage" src="<?php echo ($headimage); ?>"/>
+					<img class="headimage" src="<?php echo ($headimage); ?>"/>
 				</td> 
 			</tr>
 			<tr>
 				<td>
-					<a id="username"><?php echo ($nickname); ?></a>
+					<a class="username"><?php echo ($nickname); ?></a>
 				</td> 
 			</tr> 
 		</table>
-		<table id="bottom-table"> 
+		<table class="bottom-table"> 
 			<tr>
-				<td class="column-default">
+				<td class="default">
 					<a href="<?php echo U('Contribute/index');?>">我要投稿<a/>
 				</td> 
 			</tr>
 			<tr>
-				<td class="column-default">
+				<td class="default">
 					<a href="<?php echo U('Manuscript/index');?>">我的投稿</a>
 				</td> 
 			</tr>
 			<tr>
-				<td class="column-select">
+				<td class="select">
 					<a href="<?php echo U('Collect/index');?>">我的收藏<a/>
 				</td> 
 			</tr>
 			<tr>
-				<td class="column-default">
+				<td class="default">
 					<a href="<?php echo U('Information/index');?>">个人信息</a>
 				</td> 
 			</tr> 

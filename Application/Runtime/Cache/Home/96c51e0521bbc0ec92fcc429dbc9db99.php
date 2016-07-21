@@ -49,7 +49,7 @@
 		</div>
 		<div class="right-content">
 			<table class="content-table">
-				<?php $__FOR_START_31295__=0;$__FOR_END_31295__=8;for($manuscriptIndex=$__FOR_START_31295__;$manuscriptIndex < $__FOR_END_31295__;$manuscriptIndex+=1){ if($manuscriptMaintitle[$manuscriptIndex] != NULL): ?><tr>
+				<?php $__FOR_START_2887__=0;$__FOR_END_2887__=8;for($manuscriptIndex=$__FOR_START_2887__;$manuscriptIndex < $__FOR_END_2887__;$manuscriptIndex+=1){ if($manuscriptMaintitle[$manuscriptIndex] != NULL): ?><tr>
 							<td>
 								<table> 
 									<tr>
