@@ -72,12 +72,12 @@
 	</div>
 	<div class="pr" id="banner">
 		<div id="banner-pic">
-			<?php $__FOR_START_23265__=0;$__FOR_END_23265__=8;for($carouselIndex=$__FOR_START_23265__;$carouselIndex < $__FOR_END_23265__;$carouselIndex+=1){ if($carouselImages[$carouselIndex] != NULL): ?><a href="<?php echo ($carouselHrefs[$carouselIndex]); ?>"><img src="<?php echo ($carouselImages[$carouselIndex]); ?>" title="<?php echo ($carouselTitles[$carouselIndex]); ?>"/></a><?php endif; } ?>
+			<?php $__FOR_START_11874__=0;$__FOR_END_11874__=8;for($carouselIndex=$__FOR_START_11874__;$carouselIndex < $__FOR_END_11874__;$carouselIndex+=1){ if($carouselImages[$carouselIndex] != NULL): ?><a href="<?php echo ($carouselHrefs[$carouselIndex]); ?>"><img src="<?php echo ($carouselImages[$carouselIndex]); ?>" title="<?php echo ($carouselTitles[$carouselIndex]); ?>"/></a><?php endif; } ?>
 		</div>
 		<a id="banner-tit"></a>
 		<table id="banner-but"><tr><td>
 			<ul>
-				<?php $__FOR_START_28678__=0;$__FOR_END_28678__=8;for($carouselIndex=$__FOR_START_28678__;$carouselIndex < $__FOR_END_28678__;$carouselIndex+=1){ if($carouselImages[$carouselIndex] != NULL): if($carouselIndex == 0): ?><li alt="<?php echo ($carouselIndexs[$carouselIndex]); ?>" class="on"></li>
+				<?php $__FOR_START_19443__=0;$__FOR_END_19443__=8;for($carouselIndex=$__FOR_START_19443__;$carouselIndex < $__FOR_END_19443__;$carouselIndex+=1){ if($carouselImages[$carouselIndex] != NULL): if($carouselIndex == 0): ?><li alt="<?php echo ($carouselIndexs[$carouselIndex]); ?>" class="on"></li>
 							<?php else: ?>
 							<li alt="<?php echo ($carouselIndexs[$carouselIndex]); ?>"></li><?php endif; endif; } ?>
 			</ul>
@@ -91,7 +91,7 @@
 		<tr><td><a id="special-more">换<br/>一<br/>批</a></td></tr>
 	</table>
 	<ul id="specials">
-		<?php $__FOR_START_14023__=0;$__FOR_END_14023__=5;for($specialIndex=$__FOR_START_14023__;$specialIndex < $__FOR_END_14023__;$specialIndex+=1){ if($specialImages[$specialIndex] != NULL): ?><li>
+		<?php $__FOR_START_4272__=0;$__FOR_END_4272__=5;for($specialIndex=$__FOR_START_4272__;$specialIndex < $__FOR_END_4272__;$specialIndex+=1){ if($specialImages[$specialIndex] != NULL): ?><li>
 					<img src="<?php echo ($specialImages[$specialIndex]); ?>"/>
 					<div class="pa special-title">
 						<a class="pa main-title" href="<?php echo ($specialHrefs[$specialIndex]); ?>" target="_blank"><nobr><?php echo ($specialMaintitles[$specialIndex]); ?></nobr></a>
@@ -115,7 +115,7 @@
 	<!-- 文章栏 -->
 	<div class="pr articles">
 		<ul>
-			<?php $__FOR_START_9460__=0;$__FOR_END_9460__=10;for($articleIndex=$__FOR_START_9460__;$articleIndex < $__FOR_END_9460__;$articleIndex+=1){ if($articleCoverImage[$articleIndex] != NULL): ?><li class="article">
+			<?php $__FOR_START_27433__=0;$__FOR_END_27433__=10;for($articleIndex=$__FOR_START_27433__;$articleIndex < $__FOR_END_27433__;$articleIndex+=1){ if($articleCoverImage[$articleIndex] != NULL): ?><li class="article">
 						<img src="<?php echo ($articleCoverImage[$articleIndex]); ?>"/>
 						<ul>
 							<li class="article-l1">

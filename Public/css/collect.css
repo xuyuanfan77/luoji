@@ -1,6 +1,5 @@
-table {
-	border-spacing:0px;
-}
+table {border-spacing:0px;}
+a{text-decoration:none;}
 
 #total-frame {
 	position:relative;
@@ -109,7 +108,12 @@ table {
 }
 
 .author {
-	text-decoration:none;
+	font-size:14px;
+	color:#CCCCCC;
+	padding-right:20px;
+}
+
+.delete {
 	font-size:14px;
 	color:#CCCCCC;
 }

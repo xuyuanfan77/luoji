@@ -50,7 +50,7 @@
 		</div>
 		<div id="right-content">
 			<table id="content-table"> 
-				<?php $__FOR_START_3144__=0;$__FOR_END_3144__=8;for($articleIndex=$__FOR_START_3144__;$articleIndex < $__FOR_END_3144__;$articleIndex+=1){ if($articleMaintitle[$articleIndex] != NULL): ?><tr>
+				<?php $__FOR_START_4325__=0;$__FOR_END_4325__=8;for($articleIndex=$__FOR_START_4325__;$articleIndex < $__FOR_END_4325__;$articleIndex+=1){ if($articleMaintitle[$articleIndex] != NULL): ?><tr>
 							<td>
 								<table> 
 									<tr>
@@ -58,7 +58,7 @@
 										<td rowspan="2"><a class="date-time"><?php echo ($collectCreatetime[$articleIndex]); ?></a></td>
 									</tr>
 									<tr>
-										<td class="content-td1"><a class="author" href="<?php echo ($articleHref[$articleIndex]); ?>" target="_blank"><?php echo ($articleSubhead[$articleIndex]); ?></a></td>
+										<td class="content-td1"><a class="author" target="_blank"><?php echo ($articleNickname[$articleIndex]); ?></a><a class="delete" href="<?php echo ($articleDelHref[$articleIndex]); ?>">删除</a></td>
 									</tr>
 								</table>
 							</td>

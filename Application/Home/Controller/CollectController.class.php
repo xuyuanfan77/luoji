@@ -21,14 +21,16 @@ class CollectController extends LayoutController {
 		$articleData = $Collect->where($condition)->page($pageNum .',8')->select();
 		$articleCount = count($articleData);
 		for ($index=0; $index<$articleCount; $index++) {
+			$articleDelHref[$index] = U('Collect/cancel', array('articleId'=>$articleData[$index]['article_id']));
 			$articleHref[$index] = U('Content/index', array('type'=>'article','articleId'=>$articleData[$index]['article_id']));
 			$articleMaintitle[$index] = $articleData[$index]['maintitle'];
-			$articleSubhead[$index] = $articleData[$index]['subhead'];
+			$articleNickname[$index] = $articleData[$index]['nickname'];
 			$collectCreatetime[$index] = $articleData[$index]['collect_createtime'];
 		}
+		$this->assign('articleDelHref',$articleDelHref);
 		$this->assign('articleHref',$articleHref);
 		$this->assign('articleMaintitle',$articleMaintitle);
-		$this->assign('articleSubhead',$articleSubhead);
+		$this->assign('articleNickname',$articleNickname);
 		$this->assign('collectCreatetime',$collectCreatetime);
 	}
 	
@@ -87,5 +89,22 @@ class CollectController extends LayoutController {
 		} else {
 			$this->ajaxReturn('permission');
 		}	
+	}
+	
+	//取消收藏
+	public function cancel() {
+		if(cookie('PHPSESSID') && session('id') && cookie('PHPSESSID') == session('id')) {
+			$Collect = M("Collect");
+			$condition['user_id'] = array('eq',session('userId'));
+			$condition['article_id'] = array('eq',$_GET['articleId']);
+			$collectData = $Collect->where($condition)->find();
+			$result = $Collect->where($condition)->delete();
+			if($result){
+				$Article = M('Article');
+				$condition['id'] = array('eq',$_GET['articleId']);
+				$Article->where($condition)->setDec('collectnum',1);
+				$this->redirect('Collect/index');
+			}
+		}
 	}
 }
