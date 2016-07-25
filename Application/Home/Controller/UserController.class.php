@@ -48,7 +48,7 @@ class UserController extends LayoutController {
 		$articleTotalReadnum = 0;
 		for ($index=0; $index<$articleCount; $index++) {
 			$articleCoverImage[$index] = C('__ROOT__') . 'Public/resource/minimalimage/' . $articleData[$index]['coverimage'];
-			switch ($articleData[$index]['type1'])
+			switch ($articleData[$index]['categoryid'])
 			{
 			case 1:
 				$articleClassification[$index] = '技术开发';

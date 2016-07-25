@@ -79,25 +79,25 @@
 
 		</div>
 		
-		<?php $__FOR_START_7264__=0;$__FOR_END_7264__=8;for($articleIndex=$__FOR_START_7264__;$articleIndex < $__FOR_END_7264__;$articleIndex+=1){ if($articleCoverImage[$articleIndex] != NULL): ?><div class="left-article">
+		<?php $__FOR_START_1130__=0;$__FOR_END_1130__=8;for($articleIndex=$__FOR_START_1130__;$articleIndex < $__FOR_END_1130__;$articleIndex+=1){ if($articleCoverImage[$articleIndex] != NULL): ?><div class="left-article">
 					<table>
 						<tr>
-							<td rowspan="4"><img class="article-coverimage" src="<?php echo ($articleCoverImage[$articleIndex]); ?>"/></td>
-							<td class="article-firstline"><div class="article-classify1"><?php echo ($articleClassification[$articleIndex]); ?></div><a class="article-classify2"></a></td>
+							<td rowspan="4"><img class="coverimage" src="<?php echo ($articleCoverImage[$articleIndex]); ?>"/></td>
+							<td class="line1"><div class="classify1"><?php echo ($articleClassification[$articleIndex]); ?></div><a class="classify2"></a></td>
 						</tr>
 						<tr>
-							<td class="article-secondline"><a class="article-title" href="<?php echo ($articleHref[$articleIndex]); ?>" target="_blank" ><nobr><?php echo ($articleMaintitle[$articleIndex]); ?></nobr></a></td>
+							<td class="line2"><a class="title" href="<?php echo ($articleHref[$articleIndex]); ?>" target="_blank" ><nobr><?php echo ($articleMaintitle[$articleIndex]); ?></nobr></a></td>
 						</tr>
 						<tr>
-							<td class="article-thirdline"><div class="article-introduction"><?php echo ($articleIntroduction[$articleIndex]); ?></div></td>
+							<td class="clearfix line3"><div class="introduction"><?php echo ($articleIntroduction[$articleIndex]); ?></div></td>
 						</tr>
 						<tr>
-							<td class="article-forthline"><a class="article-readnum">阅读：<?php echo ($articleReadnum[$articleIndex]); ?></a><a class="article-author">作者：<?php echo ($articleAuthor[$articleIndex]); ?></a></td>
+							<td class="line4"><a class="readnum">阅读：<?php echo ($articleReadnum[$articleIndex]); ?></a><a class="author">作者：<?php echo ($articleAuthor[$articleIndex]); ?></a></td>
 						</tr>
 					</table>
 				</div><?php endif; } ?>
 
-		<div id="page">
+		<div class="page">
 			<?php echo ($pageShow); ?>
 		</div>
 	</div>

@@ -42,24 +42,24 @@
 				<div class="left-article">
 					<table>
 						<tr>
-							<td rowspan="4"><img class="article-coverimage" src="{$articleCoverImage[$articleIndex]}"/></td>
-							<td class="article-firstline"><div class="article-classify1">{$articleClassification[$articleIndex]}</div><a class="article-classify2"></a></td>
+							<td rowspan="4"><img class="coverimage" src="{$articleCoverImage[$articleIndex]}"/></td>
+							<td class="line1"><div class="classify1">{$articleClassification[$articleIndex]}</div><a class="classify2"></a></td>
 						</tr>
 						<tr>
-							<td class="article-secondline"><a class="article-title" href="{$articleHref[$articleIndex]}" target="_blank" ><nobr>{$articleMaintitle[$articleIndex]}</nobr></a></td>
+							<td class="line2"><a class="title" href="{$articleHref[$articleIndex]}" target="_blank" ><nobr>{$articleMaintitle[$articleIndex]}</nobr></a></td>
 						</tr>
 						<tr>
-							<td class="article-thirdline"><div class="article-introduction">{$articleIntroduction[$articleIndex]}</div></td>
+							<td class="clearfix line3"><div class="introduction">{$articleIntroduction[$articleIndex]}</div></td>
 						</tr>
 						<tr>
-							<td class="article-forthline"><a class="article-readnum">阅读：{$articleReadnum[$articleIndex]}</a><a class="article-author">作者：{$articleAuthor[$articleIndex]}</a></td>
+							<td class="line4"><a class="readnum">阅读：{$articleReadnum[$articleIndex]}</a><a class="author">作者：{$articleAuthor[$articleIndex]}</a></td>
 						</tr>
 					</table>
 				</div>
 			</if>
 		</for>
 
-		<div id="page">
+		<div class="page">
 			{$pageShow}
 		</div>
 	</div>

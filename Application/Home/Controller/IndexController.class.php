@@ -60,7 +60,7 @@ class IndexController extends LayoutController {
 	private function initArticle() {
 		$artCategory = $this->getCategory();
 		if ($artCategory != 0) {
-			$condition['type1'] = array('eq',$artCategory);
+			$condition['categoryid'] = array('eq',$artCategory);
 		}
 		$Article = D('ArticleView');
 		$pageNum = $this->getPageNum();
@@ -68,7 +68,7 @@ class IndexController extends LayoutController {
 		$articleCount = count($articleData);
 		for ($index=0; $index<$articleCount; $index++) {
 			$articleCoverImage[$index] = C('__ROOT__') . 'Public/resource/minimalimage/' . $articleData[$index]['coverimage'];
-			switch ($articleData[$index]['type1'])
+			switch ($articleData[$index]['categoryid'])
 			{
 			case 1:
 				$articleClassification[$index] = '技术开发';
@@ -120,7 +120,7 @@ class IndexController extends LayoutController {
 		$Article = D('ArticleView');
 		$artCategory = $this->getCategory();
 		if ($artCategory != 0) {
-			$condition['type1'] = array('eq',$artCategory);
+			$condition['categoryid'] = array('eq',$artCategory);
 		}
 		$articleCount = $Article->where($condition)->count();
 		$Page = new \Think\Page($articleCount,10);

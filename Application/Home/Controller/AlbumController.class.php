@@ -46,7 +46,7 @@ class AlbumController extends LayoutController {
 		$articleTotalReadnum = 0;
 		for ($index=0; $index<$articleCount; $index++) {
 			$articleCoverImage[$index] = C('__ROOT__') . 'Public/resource/minimalimage/' . $articleData[$index]['article_coverimage'];
-			switch ($articleData[$index]['article_type1'])
+			switch ($articleData[$index]['article_categoryid'])
 			{
 			case 1:
 				$articleClassification[$index] = '技术开发';
