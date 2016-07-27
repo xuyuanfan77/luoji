@@ -18,30 +18,23 @@
 			<div class="logo">
 				<img src="__PUBLIC__/picture/logo-white.png"/>
 			</div>
-			<div class="menu">
-				<ul>
-					<li><a href="{:U('Index/index','category=0')}" class="{$navigation[0]}">首页</a></li>
-					<li><a href="{:U('Index/index','category=1')}" class="{$navigation[1]}">技术</a></li>
-					<li><a href="{:U('Index/index','category=2')}" class="{$navigation[2]}">产品</a></li>
-					<li><a href="{:U('Index/index','category=3')}" class="{$navigation[3]}">经济</a></li>
-					<li><a href="{:U('Index/index','category=4')}" class="{$navigation[4]}">其他</a></li>
-				</ul>
+			<div class="menu1">
+				{$mainMenu}
 			</div>
 			<div class="login" id="login-image" onmouseover="showLoginMenu();" onmouseout="hideLoginMenu();">
 				<img src="{$headimage}"/>
-				<div class="login-menu" id="login-menu">	
-					<ul>
-						<foreach name="accountMenuText" item="item" key="index" >
-							<li><a href="{$accountMenuUrl[$index]}">{$accountMenuText[$index]}</a></li>
-						</foreach>
-					</ul>
-				</div>
 			</div>
 		</div>
+		<div class="login-menu" id="login-menu" onmouseover="showLoginMenu();" onmouseout="hideLoginMenu();">	
+			<ul>
+				<foreach name="accountMenuText" item="item" key="index" >
+					<li><a href="{$accountMenuUrl[$index]}">{$accountMenuText[$index]}</a></li>
+				</foreach>
+			</ul>
+		</div>
+		{$subMenu}
 	</div>
 	<div class="page-body">
-		<!--div class="test">
-		</div-->
 		{__CONTENT__}
 	</div>
 	<div class="page-footer">

@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50617
 File Encoding         : 65001
 
-Date: 2016-07-25 15:04:22
+Date: 2016-07-27 18:12:27
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -27,7 +27,7 @@ CREATE TABLE `article` (
   `subhead` varchar(255) NOT NULL COMMENT '副标题',
   `introduction` text NOT NULL COMMENT '简介',
   `author` int(11) unsigned NOT NULL COMMENT '作者',
-  `categoryid` tinyint(4) unsigned NOT NULL COMMENT '类型1',
+  `categoryid` tinyint(4) unsigned NOT NULL COMMENT '所属分类',
   `collectnum` mediumint(9) unsigned NOT NULL COMMENT '收藏量',
   `readnum` mediumint(9) unsigned NOT NULL COMMENT '阅读量',
   `createtime` datetime NOT NULL COMMENT '创建时间',
@@ -37,7 +37,7 @@ CREATE TABLE `article` (
 -- ----------------------------
 -- Records of article
 -- ----------------------------
-INSERT INTO `article` VALUES ('23', '23.jpg', '23.jpg', '数据表之间的关系', '一对一关系、一对多关系、多对多关系', '<ul><li><span style=\"line-height: 1.8;\">一对多关系：这是最普通的一种关系。在这种关系中，A表中的一行可以匹配B表中的多行，但是B表中的一行只能匹配A表中的一行。只有当一个相关列是一个主键或具有唯一约束时，才能创建一对多关系。</span></li><li><span style=\"line-height: 1.8;\">多对多关系：A表中的一行可以匹配B表中的多行，反之亦然。要创建这种关系，需要定义第三个表，称为结合表，它的主键由A表和B表的外部键组成。</span></li><li><span style=\"line-height: 1.8;\">一对一关系：A表中的一行最多只能匹配于B表中的一行，反之亦然。如果相关列都是主键或都具有唯一约束，则可以创建一对一关系。这种关系并不常见，因为一般来说，按照这种方式相关的信息可以都在一个表中。</span></li></ul>', '12', '1', '3', '21', '2016-07-14 19:52:57');
+INSERT INTO `article` VALUES ('23', '23.jpg', '23.jpg', '数据表之间的关系', '一对一关系、一对多关系、多对多关系', '<ul><li><span style=\"line-height: 1.8;\">一对多关系：这是最普通的一种关系。在这种关系中，A表中的一行可以匹配B表中的多行，但是B表中的一行只能匹配A表中的一行。只有当一个相关列是一个主键或具有唯一约束时，才能创建一对多关系。</span></li><li><span style=\"line-height: 1.8;\">多对多关系：A表中的一行可以匹配B表中的多行，反之亦然。要创建这种关系，需要定义第三个表，称为结合表，它的主键由A表和B表的外部键组成。</span></li><li><span style=\"line-height: 1.8;\">一对一关系：A表中的一行最多只能匹配于B表中的一行，反之亦然。如果相关列都是主键或都具有唯一约束，则可以创建一对一关系。这种关系并不常见，因为一般来说，按照这种方式相关的信息可以都在一个表中。</span></li></ul>', '12', '1', '3', '23', '2016-07-14 19:52:57');
 INSERT INTO `article` VALUES ('24', '24.png', '24.jpg', '深入理解sql的五种连接', '内连接、左外连接、右外连接、全连接、交叉连接', '<ol><li>内连接：只有两个表相匹配的行才能在结果集中出现</li><li>外连接：包括&nbsp;（1）左连接(左边的表不加限制)&nbsp;（2）右连接(右边的表不加限制)&nbsp;（3）全连接(左右两表都不加限制)</li><li>交叉连接：也叫做笛卡尔积</li></ol>', '12', '1', '3', '36', '2016-07-15 16:47:45');
 INSERT INTO `article` VALUES ('25', '25.png', '25.jpg', 'Mysql常用数据类型', '整数型、小数型、字符串型、时间日期型', '<p>SQL中将数据类型分了四大类：整数型、小数型、字符串型和时间日期型。</p><p><br></p>', '12', '1', '1', '17', '2016-07-15 16:49:42');
 
@@ -74,11 +74,28 @@ CREATE TABLE `category` (
   `level` tinyint(3) unsigned NOT NULL COMMENT '级别',
   `parent` tinyint(3) unsigned NOT NULL COMMENT '父类别',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of category
 -- ----------------------------
+INSERT INTO `category` VALUES ('1', '基础', '2', '1', '0');
+INSERT INTO `category` VALUES ('2', '应用', '3', '1', '0');
+INSERT INTO `category` VALUES ('3', '业务', '4', '1', '0');
+INSERT INTO `category` VALUES ('4', '动态', '5', '1', '0');
+INSERT INTO `category` VALUES ('5', '首页', '1', '1', '0');
+INSERT INTO `category` VALUES ('6', '数据结构', '1', '2', '1');
+INSERT INTO `category` VALUES ('7', '设计模式', '2', '2', '1');
+INSERT INTO `category` VALUES ('8', '算法', '3', '2', '1');
+INSERT INTO `category` VALUES ('9', '数据库', '4', '2', '1');
+INSERT INTO `category` VALUES ('10', '操作系统', '5', '2', '1');
+INSERT INTO `category` VALUES ('11', 'WEB开发', '1', '2', '2');
+INSERT INTO `category` VALUES ('12', '游戏开发', '2', '2', '2');
+INSERT INTO `category` VALUES ('13', 'APP开发', '3', '2', '2');
+INSERT INTO `category` VALUES ('14', '软件开发', '4', '2', '2');
+INSERT INTO `category` VALUES ('15', '产品', '1', '2', '3');
+INSERT INTO `category` VALUES ('16', '运营', '2', '2', '3');
+INSERT INTO `category` VALUES ('17', '管理', '3', '2', '3');
 
 -- ----------------------------
 -- Table structure for collect
@@ -138,7 +155,7 @@ CREATE TABLE `manuscript` (
   `subhead` varchar(255) NOT NULL COMMENT '副标题',
   `introduction` text NOT NULL COMMENT '简介',
   `author` int(11) unsigned NOT NULL COMMENT '作者',
-  `categoryid` tinyint(4) unsigned NOT NULL COMMENT '类型1',
+  `categoryid` tinyint(4) unsigned NOT NULL COMMENT '所属分类',
   `status` tinyint(4) NOT NULL COMMENT '审核状态',
   `createtime` datetime NOT NULL COMMENT '创建时间',
   PRIMARY KEY (`id`)
@@ -160,7 +177,7 @@ CREATE TABLE `special` (
   `introduction` text NOT NULL COMMENT '简介',
   `coverimage` varchar(225) NOT NULL COMMENT '封面图片',
   `readnum` mediumint(9) NOT NULL COMMENT '阅读量',
-  `categoryid` tinyint(4) unsigned NOT NULL COMMENT '类型1',
+  `categoryid` tinyint(4) unsigned NOT NULL COMMENT '所属分类',
   `createtime` datetime NOT NULL COMMENT '创建时间',
   PRIMARY KEY (`id`),
   KEY `username` (`maintitle`)

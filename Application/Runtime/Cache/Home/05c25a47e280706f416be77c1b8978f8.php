@@ -18,28 +18,21 @@
 			<div class="logo">
 				<img src="/luoji/Public/picture/logo-white.png"/>
 			</div>
-			<div class="menu">
-				<ul>
-					<li><a href="<?php echo U('Index/index','category=0');?>" class="<?php echo ($navigation[0]); ?>">首页</a></li>
-					<li><a href="<?php echo U('Index/index','category=1');?>" class="<?php echo ($navigation[1]); ?>">技术</a></li>
-					<li><a href="<?php echo U('Index/index','category=2');?>" class="<?php echo ($navigation[2]); ?>">产品</a></li>
-					<li><a href="<?php echo U('Index/index','category=3');?>" class="<?php echo ($navigation[3]); ?>">经济</a></li>
-					<li><a href="<?php echo U('Index/index','category=4');?>" class="<?php echo ($navigation[4]); ?>">其他</a></li>
-				</ul>
+			<div class="menu1">
+				<?php echo ($mainMenu); ?>
 			</div>
 			<div class="login" id="login-image" onmouseover="showLoginMenu();" onmouseout="hideLoginMenu();">
 				<img src="<?php echo ($headimage); ?>"/>
-				<div class="login-menu" id="login-menu">	
-					<ul>
-						<?php if(is_array($accountMenuText)): foreach($accountMenuText as $index=>$item): ?><li><a href="<?php echo ($accountMenuUrl[$index]); ?>"><?php echo ($accountMenuText[$index]); ?></a></li><?php endforeach; endif; ?>
-					</ul>
-				</div>
 			</div>
 		</div>
+		<div class="login-menu" id="login-menu" onmouseover="showLoginMenu();" onmouseout="hideLoginMenu();">	
+			<ul>
+				<?php if(is_array($accountMenuText)): foreach($accountMenuText as $index=>$item): ?><li><a href="<?php echo ($accountMenuUrl[$index]); ?>"><?php echo ($accountMenuText[$index]); ?></a></li><?php endforeach; endif; ?>
+			</ul>
+		</div>
+		<?php echo ($subMenu); ?>
 	</div>
 	<div class="page-body">
-		<!--div class="test">
-		</div-->
 		<link type="text/css" href="/luoji/Public/css/article.css" rel="stylesheet"/>
 <script type="text/javascript" src="/luoji/Public/javascript/article.js"></script>
 
