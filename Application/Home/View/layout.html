@@ -11,7 +11,6 @@
 	<script type="text/javascript" src="__PUBLIC__/javascript/jquery-1.12.4.js"></script>
 </head>
 
-
 <body>
 	<div class="page-header">
 		<div class="header">
@@ -19,7 +18,11 @@
 				<img src="__PUBLIC__/picture/logo-white.png"/>
 			</div>
 			<div class="menu1">
-				{$mainMenu}
+				<ul>
+					<foreach name="mainCategory" item="item" key="index" >
+						<li><a href="{$item['href']}" class="menu-default" onmouseover="showSubMenu(this)" onmouseout="hideSubMenu(this)">{$item['name']}</a></li>
+					</foreach>
+				</ul>
 			</div>
 			<div class="login" id="login-image" onmouseover="showLoginMenu();" onmouseout="hideLoginMenu();">
 				<img src="{$headimage}"/>
@@ -32,7 +35,16 @@
 				</foreach>
 			</ul>
 		</div>
-		{$subMenu}
+		
+		<foreach name="mainCategory" item="item">
+			<if condition="$item['sub']|count neq 0">
+				<div class="menu2" id="{$item['name']}" onmouseover="showSubMenuSelf(this)" onmouseout="hideSubMenuSelf(this)">
+					<foreach name="item['sub']" item="subItem">
+						<ul><li><a href="{$subCategory[$subItem]['href']}">{$subCategory[$subItem]['name']}</a></li></ul>
+					</foreach>
+				</div>
+			</if>
+		</foreach>
 	</div>
 	<div class="page-body">
 		{__CONTENT__}

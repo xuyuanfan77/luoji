@@ -11,7 +11,6 @@
 	<script type="text/javascript" src="/luoji/Public/javascript/jquery-1.12.4.js"></script>
 </head>
 
-
 <body>
 	<div class="page-header">
 		<div class="header">
@@ -19,7 +18,9 @@
 				<img src="/luoji/Public/picture/logo-white.png"/>
 			</div>
 			<div class="menu1">
-				<?php echo ($mainMenu); ?>
+				<ul>
+					<?php if(is_array($mainCategory)): foreach($mainCategory as $index=>$item): ?><li><a href="<?php echo ($item['href']); ?>" class="menu-default" onmouseover="showSubMenu(this)" onmouseout="hideSubMenu(this)"><?php echo ($item['name']); ?></a></li><?php endforeach; endif; ?>
+				</ul>
 			</div>
 			<div class="login" id="login-image" onmouseover="showLoginMenu();" onmouseout="hideLoginMenu();">
 				<img src="<?php echo ($headimage); ?>"/>
@@ -30,7 +31,10 @@
 				<?php if(is_array($accountMenuText)): foreach($accountMenuText as $index=>$item): ?><li><a href="<?php echo ($accountMenuUrl[$index]); ?>"><?php echo ($accountMenuText[$index]); ?></a></li><?php endforeach; endif; ?>
 			</ul>
 		</div>
-		<?php echo ($subMenu); ?>
+		
+		<?php if(is_array($mainCategory)): foreach($mainCategory as $key=>$item): if($item['sub']|count != 0): ?><div class="menu2" id="<?php echo ($item['name']); ?>" onmouseover="showSubMenuSelf(this)" onmouseout="hideSubMenuSelf(this)">
+					<?php if(is_array($item['sub'])): foreach($item['sub'] as $key=>$subItem): ?><ul><li><a href="<?php echo ($subCategory[$subItem]['href']); ?>"><?php echo ($subCategory[$subItem]['name']); ?></a></li></ul><?php endforeach; endif; ?>
+				</div><?php endif; endforeach; endif; ?>
 	</div>
 	<div class="page-body">
 		<link type="text/css" href="/luoji/Public/css/index.css" rel="stylesheet"/>
@@ -65,12 +69,12 @@
 	</div>
 	<div class="pr" id="banner">
 		<div id="banner-pic">
-			<?php $__FOR_START_31928__=0;$__FOR_END_31928__=8;for($carouselIndex=$__FOR_START_31928__;$carouselIndex < $__FOR_END_31928__;$carouselIndex+=1){ if($carouselImages[$carouselIndex] != NULL): ?><a href="<?php echo ($carouselHrefs[$carouselIndex]); ?>"><img src="<?php echo ($carouselImages[$carouselIndex]); ?>" title="<?php echo ($carouselTitles[$carouselIndex]); ?>"/></a><?php endif; } ?>
+			<?php $__FOR_START_16532__=0;$__FOR_END_16532__=8;for($carouselIndex=$__FOR_START_16532__;$carouselIndex < $__FOR_END_16532__;$carouselIndex+=1){ if($carouselImages[$carouselIndex] != NULL): ?><a href="<?php echo ($carouselHrefs[$carouselIndex]); ?>"><img src="<?php echo ($carouselImages[$carouselIndex]); ?>" title="<?php echo ($carouselTitles[$carouselIndex]); ?>"/></a><?php endif; } ?>
 		</div>
 		<a id="banner-tit"></a>
 		<table id="banner-but"><tr><td>
 			<ul>
-				<?php $__FOR_START_23185__=0;$__FOR_END_23185__=8;for($carouselIndex=$__FOR_START_23185__;$carouselIndex < $__FOR_END_23185__;$carouselIndex+=1){ if($carouselImages[$carouselIndex] != NULL): if($carouselIndex == 0): ?><li alt="<?php echo ($carouselIndexs[$carouselIndex]); ?>" class="on"></li>
+				<?php $__FOR_START_18237__=0;$__FOR_END_18237__=8;for($carouselIndex=$__FOR_START_18237__;$carouselIndex < $__FOR_END_18237__;$carouselIndex+=1){ if($carouselImages[$carouselIndex] != NULL): if($carouselIndex == 0): ?><li alt="<?php echo ($carouselIndexs[$carouselIndex]); ?>" class="on"></li>
 							<?php else: ?>
 							<li alt="<?php echo ($carouselIndexs[$carouselIndex]); ?>"></li><?php endif; endif; } ?>
 			</ul>
@@ -84,7 +88,7 @@
 		<tr><td><a id="special-more">换<br/>一<br/>批</a></td></tr>
 	</table>
 	<ul id="specials">
-		<?php $__FOR_START_28150__=0;$__FOR_END_28150__=5;for($specialIndex=$__FOR_START_28150__;$specialIndex < $__FOR_END_28150__;$specialIndex+=1){ if($specialImages[$specialIndex] != NULL): ?><li>
+		<?php $__FOR_START_6962__=0;$__FOR_END_6962__=5;for($specialIndex=$__FOR_START_6962__;$specialIndex < $__FOR_END_6962__;$specialIndex+=1){ if($specialImages[$specialIndex] != NULL): ?><li>
 					<img src="<?php echo ($specialImages[$specialIndex]); ?>"/>
 					<div class="pa special-title">
 						<a class="pa main-title" href="<?php echo ($specialHrefs[$specialIndex]); ?>" target="_blank"><nobr><?php echo ($specialMaintitles[$specialIndex]); ?></nobr></a>
@@ -108,7 +112,7 @@
 	<!-- 文章栏 -->
 	<div class="pr articles">
 		<ul>
-			<?php $__FOR_START_30199__=0;$__FOR_END_30199__=10;for($articleIndex=$__FOR_START_30199__;$articleIndex < $__FOR_END_30199__;$articleIndex+=1){ if($articleCoverImage[$articleIndex] != NULL): ?><li class="article">
+			<?php $__FOR_START_131__=0;$__FOR_END_131__=10;for($articleIndex=$__FOR_START_131__;$articleIndex < $__FOR_END_131__;$articleIndex+=1){ if($articleCoverImage[$articleIndex] != NULL): ?><li class="article">
 						<img src="<?php echo ($articleCoverImage[$articleIndex]); ?>"/>
 						<ul>
 							<li class="article-l1">

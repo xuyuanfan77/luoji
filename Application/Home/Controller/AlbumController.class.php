@@ -46,21 +46,11 @@ class AlbumController extends LayoutController {
 		$articleTotalReadnum = 0;
 		for ($index=0; $index<$articleCount; $index++) {
 			$articleCoverImage[$index] = C('__ROOT__') . 'Public/resource/minimalimage/' . $articleData[$index]['article_coverimage'];
-			switch ($articleData[$index]['article_categoryid'])
-			{
-			case 1:
-				$articleClassification[$index] = '技术开发';
-				break;
-			case 2:
-				$articleClassification[$index] = '产品设计';
-				break;
-			case 3:
-				$articleClassification[$index] = '金融经济';
-				break;
-			default:
-				$articleClassification[$index] = '其他';
-				break;
-			}
+			$Category = M("Category");
+			$condition['id'] = array('eq',$articleData[$index]['article_categoryid']);
+			$categoryData = $Category->where($condition)->find();
+			$articleClassification[$index] = $categoryData['name'];
+			
 			$articleHref[$index] = U('Content/index', array('type'=>'article','articleId'=>$articleData[$index]['article_id']));
 			$articleMaintitle[$index] = $articleData[$index]['article_maintitle'];
 			$articleIntroduction[$index] = $articleData[$index]['article_introduction'];

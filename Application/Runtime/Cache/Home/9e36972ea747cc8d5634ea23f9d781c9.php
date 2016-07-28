@@ -11,35 +11,32 @@
 	<script type="text/javascript" src="/luoji/Public/javascript/jquery-1.12.4.js"></script>
 </head>
 
-
 <body>
 	<div class="page-header">
 		<div class="header">
 			<div class="logo">
 				<img src="/luoji/Public/picture/logo-white.png"/>
 			</div>
-			<div class="menu">
+			<div class="menu1">
 				<ul>
-					<li><a href="<?php echo U('Index/index','category=0');?>" class="<?php echo ($navigation[0]); ?>">首页</a></li>
-					<li><a href="<?php echo U('Index/index','category=1');?>" class="<?php echo ($navigation[1]); ?>">技术</a></li>
-					<li><a href="<?php echo U('Index/index','category=2');?>" class="<?php echo ($navigation[2]); ?>">产品</a></li>
-					<li><a href="<?php echo U('Index/index','category=3');?>" class="<?php echo ($navigation[3]); ?>">经济</a></li>
-					<li><a href="<?php echo U('Index/index','category=4');?>" class="<?php echo ($navigation[4]); ?>">其他</a></li>
+					<?php if(is_array($mainCategory)): foreach($mainCategory as $index=>$item): ?><li><a href="<?php echo ($item['href']); ?>" class="menu-default" onmouseover="showSubMenu(this)" onmouseout="hideSubMenu(this)"><?php echo ($item['name']); ?></a></li><?php endforeach; endif; ?>
 				</ul>
 			</div>
 			<div class="login" id="login-image" onmouseover="showLoginMenu();" onmouseout="hideLoginMenu();">
 				<img src="<?php echo ($headimage); ?>"/>
-				<div class="login-menu" id="login-menu">	
-					<ul>
-						<?php if(is_array($accountMenuText)): foreach($accountMenuText as $index=>$item): ?><li><a href="<?php echo ($accountMenuUrl[$index]); ?>"><?php echo ($accountMenuText[$index]); ?></a></li><?php endforeach; endif; ?>
-					</ul>
-				</div>
 			</div>
 		</div>
+		<div class="login-menu" id="login-menu" onmouseover="showLoginMenu();" onmouseout="hideLoginMenu();">	
+			<ul>
+				<?php if(is_array($accountMenuText)): foreach($accountMenuText as $index=>$item): ?><li><a href="<?php echo ($accountMenuUrl[$index]); ?>"><?php echo ($accountMenuText[$index]); ?></a></li><?php endforeach; endif; ?>
+			</ul>
+		</div>
+		
+		<?php if(is_array($mainCategory)): foreach($mainCategory as $key=>$item): if($item['sub']|count != 0): ?><div class="menu2" id="<?php echo ($item['name']); ?>" onmouseover="showSubMenuSelf(this)" onmouseout="hideSubMenuSelf(this)">
+					<?php if(is_array($item['sub'])): foreach($item['sub'] as $key=>$subItem): ?><ul><li><a href="<?php echo ($subCategory[$subItem]['href']); ?>"><?php echo ($subCategory[$subItem]['name']); ?></a></li></ul><?php endforeach; endif; ?>
+				</div><?php endif; endforeach; endif; ?>
 	</div>
 	<div class="page-body">
-		<!--div class="test">
-		</div-->
 		<link type="text/css" href="/luoji/Public/css/collect.css" rel="stylesheet"/>
 <script type="text/javascript" src="/luoji/Public/javascript/collect.js"></script>
 
@@ -50,7 +47,7 @@
 		</div>
 		<div class="right-content">
 			<table class="content-table"> 
-				<?php $__FOR_START_15968__=0;$__FOR_END_15968__=8;for($articleIndex=$__FOR_START_15968__;$articleIndex < $__FOR_END_15968__;$articleIndex+=1){ if($articleMaintitle[$articleIndex] != NULL): ?><tr>
+				<?php $__FOR_START_31975__=0;$__FOR_END_31975__=8;for($articleIndex=$__FOR_START_31975__;$articleIndex < $__FOR_END_31975__;$articleIndex+=1){ if($articleMaintitle[$articleIndex] != NULL): ?><tr>
 							<td>
 								<table> 
 									<tr>

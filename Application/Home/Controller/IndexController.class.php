@@ -59,30 +59,38 @@ class IndexController extends LayoutController {
 	//初始化文章列表
 	private function initArticle() {
 		$artCategory = $this->getCategory();
-		if ($artCategory != 0) {
+
+		//设置查询分类
+		$Category = M("Category");
+		$subCategoryData = $Category->where('level=2')->order(array('parent','index'))->select();
+		for ($index=0; $index<count($subCategoryData); $index++) {
+			$categoryId = $subCategoryData[$index]['id'];
+			$parentCategoryId = $subCategoryData[$index]['parent'];
+			$mainCategory[$parentCategoryId][$index] = $categoryId;
+		}
+
+		if($artCategory == 0){
+			
+		}elseif($mainCategory[$artCategory]){
+			$inCondition = $artCategory. ',';
+			foreach ($mainCategory[$artCategory] as $value) {
+				$inCondition = $inCondition. $value. ',';
+			}
+			$condition['categoryid'] = array('in',$inCondition);
+		}else{
 			$condition['categoryid'] = array('eq',$artCategory);
 		}
+
 		$Article = D('ArticleView');
 		$pageNum = $this->getPageNum();
 		$articleData = $Article->where($condition)->page($pageNum .',10')->select();
 		$articleCount = count($articleData);
 		for ($index=0; $index<$articleCount; $index++) {
 			$articleCoverImage[$index] = C('__ROOT__') . 'Public/resource/minimalimage/' . $articleData[$index]['coverimage'];
-			switch ($articleData[$index]['categoryid'])
-			{
-			case 1:
-				$articleClassification[$index] = '技术开发';
-				break;
-			case 2:
-				$articleClassification[$index] = '产品设计';
-				break;
-			case 3:
-				$articleClassification[$index] = '金融经济';
-				break;
-			default:
-				$articleClassification[$index] = '其他';
-				break;
-			}
+			$Category = M("Category");
+			$condition['id'] = array('eq',$articleData[$index]['categoryid']);
+			$categoryData = $Category->where($condition)->find();
+			$articleClassification[$index] = $categoryData['name'];
 			
 			$Collect = M("Collect");
 			$condition['user_id'] = array('eq',session('userId'));
@@ -133,7 +141,6 @@ class IndexController extends LayoutController {
 	
     public function index(){
 		$artCategory = $this->getCategory();
-		$this->setArtCategory($artCategory);
 		$this->initLayout();
 		$this->initNotification();
 		$this->initSpecial();

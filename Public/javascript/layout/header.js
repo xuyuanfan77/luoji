@@ -8,10 +8,18 @@ function hideLoginMenu(){
 	document.getElementById("login-image").style.backgroundColor=""; 
 }
 
-function showMenu2(){
-	document.getElementById("menu2").style.display="block";
+function showSubMenu(obj){
+	document.getElementById(obj.text).style.display="block";
 }
 
-function hideMenu2(){
-	document.getElementById("menu2").style.display="none";
+function hideSubMenu(obj){
+	document.getElementById(obj.text).style.display="none";
+}
+
+function showSubMenuSelf(obj){
+	obj.style.display="block";
+}
+
+function hideSubMenuSelf(obj){
+	obj.style.display="none";
 }
