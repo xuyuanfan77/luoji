@@ -7,39 +7,58 @@
 	<link type="text/css" href="/luoji/Public/css/layout/frame.css" rel="stylesheet"/>
 	<link type="text/css" href="/luoji/Public/css/layout/header.css" rel="stylesheet"/>
 	<link type="text/css" href="/luoji/Public/css/layout/footer.css" rel="stylesheet"/>
-	<script type="text/javascript" src="/luoji/Public/javascript/layout/header.js"></script>
 	<script type="text/javascript" src="/luoji/Public/javascript/jquery-1.12.4.js"></script>
 </head>
 
-
 <body>
 	<div class="page-header">
-		<div class="header">
-			<div class="logo">
-				<img src="/luoji/Public/picture/logo-white.png"/>
-			</div>
-			<div class="menu">
+		<div class="pr header">
+			<a class="pr logo"><img src="/luoji/Public/picture/logo-white.png"/></a>
+			<div class="nav">
 				<ul>
-					<li><a href="<?php echo U('Index/index','category=0');?>" class="<?php echo ($navigation[0]); ?>">首页</a></li>
-					<li><a href="<?php echo U('Index/index','category=1');?>" class="<?php echo ($navigation[1]); ?>">技术</a></li>
-					<li><a href="<?php echo U('Index/index','category=2');?>" class="<?php echo ($navigation[2]); ?>">产品</a></li>
-					<li><a href="<?php echo U('Index/index','category=3');?>" class="<?php echo ($navigation[3]); ?>">经济</a></li>
-					<li><a href="<?php echo U('Index/index','category=4');?>" class="<?php echo ($navigation[4]); ?>">其他</a></li>
+					<!--li><a href="#">栏一</a>
+						<ul>
+							<li><a href="#">二级栏目</a></li>
+							<li><a href="#">二级栏目</a></li>
+							<li><a href="#">二级栏目</a></li>
+							<li><a href="#">二级栏目</a></li>
+						</ul>
+					</li>
+					<li><a href="#">栏二</a>
+						<ul>
+							<li><a href="#">二级栏目</a></li>
+							<li><a href="#">二级栏目</a></li>
+							<li><a href="#">二级栏目</a></li>
+							<li><a href="#">二级栏目</a></li>
+						</ul>
+					</li>
+					<li><a href="#">栏三</a>
+						<ul>
+							<li><a href="#">二级栏目</a></li>
+							<li><a href="#">二级栏目</a></li>
+							<li><a href="#">二级栏目</a></li>
+							<li><a href="#">二级栏目</a></li>
+							<li><a href="#">二级栏目</a></li>
+						</ul>
+					</li>
+					<li><a href="#">栏四</a></li>
+					<li><a href="#">栏五</a></li-->
+					<?php if(is_array($mainCategory)): foreach($mainCategory as $key=>$item): ?><li><a href="<?php echo ($item['href']); ?>"><?php echo ($item['name']); ?></a>
+							<?php if($item['sub']|count != 0): ?><ul>
+									<?php if(is_array($item['sub'])): foreach($item['sub'] as $key=>$subItem): ?><li><a href="<?php echo ($subCategory[$subItem]['href']); ?>"><?php echo ($subCategory[$subItem]['name']); ?></a></li><?php endforeach; endif; ?>
+								</ul><?php endif; ?>
+						</li><?php endforeach; endif; ?>
 				</ul>
 			</div>
-			<div class="login" id="login-image" onmouseover="showLoginMenu();" onmouseout="hideLoginMenu();">
+			<div class="login">
 				<img src="<?php echo ($headimage); ?>"/>
-				<div class="login-menu" id="login-menu">	
-					<ul>
-						<?php if(is_array($accountMenuText)): foreach($accountMenuText as $index=>$item): ?><li><a href="<?php echo ($accountMenuUrl[$index]); ?>"><?php echo ($accountMenuText[$index]); ?></a></li><?php endforeach; endif; ?>
-					</ul>
-				</div>
+				<ul>
+					<?php if(is_array($accountMenuText)): foreach($accountMenuText as $index=>$item): ?><li><a href="<?php echo ($accountMenuUrl[$index]); ?>"><?php echo ($accountMenuText[$index]); ?></a></li><?php endforeach; endif; ?>
+				</ul>
 			</div>
 		</div>
 	</div>
 	<div class="page-body">
-		<!--div class="test">
-		</div-->
 		<link type="text/css" href="/luoji/Public/css/contribute.css" rel="stylesheet"/>
 <link type="text/css" href="/luoji/Public/css/wangEditor.css" rel="stylesheet">
 <script type="text/javascript" src="/luoji/Public/javascript/contribute.js"></script>

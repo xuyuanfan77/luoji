@@ -7,34 +7,56 @@
 	<link type="text/css" href="/luoji/Public/css/layout/frame.css" rel="stylesheet"/>
 	<link type="text/css" href="/luoji/Public/css/layout/header.css" rel="stylesheet"/>
 	<link type="text/css" href="/luoji/Public/css/layout/footer.css" rel="stylesheet"/>
-	<script type="text/javascript" src="/luoji/Public/javascript/layout/header.js"></script>
 	<script type="text/javascript" src="/luoji/Public/javascript/jquery-1.12.4.js"></script>
 </head>
 
 <body>
 	<div class="page-header">
-		<div class="header">
-			<div class="logo">
-				<img src="/luoji/Public/picture/logo-white.png"/>
-			</div>
-			<div class="menu1">
+		<div class="pr header">
+			<a class="pr logo"><img src="/luoji/Public/picture/logo-white.png"/></a>
+			<div class="nav">
 				<ul>
-					<?php if(is_array($mainCategory)): foreach($mainCategory as $index=>$item): ?><li><a href="<?php echo ($item['href']); ?>" class="menu-default" onmouseover="showSubMenu(this)" onmouseout="hideSubMenu(this)"><?php echo ($item['name']); ?></a></li><?php endforeach; endif; ?>
+					<!--li><a href="#">栏一</a>
+						<ul>
+							<li><a href="#">二级栏目</a></li>
+							<li><a href="#">二级栏目</a></li>
+							<li><a href="#">二级栏目</a></li>
+							<li><a href="#">二级栏目</a></li>
+						</ul>
+					</li>
+					<li><a href="#">栏二</a>
+						<ul>
+							<li><a href="#">二级栏目</a></li>
+							<li><a href="#">二级栏目</a></li>
+							<li><a href="#">二级栏目</a></li>
+							<li><a href="#">二级栏目</a></li>
+						</ul>
+					</li>
+					<li><a href="#">栏三</a>
+						<ul>
+							<li><a href="#">二级栏目</a></li>
+							<li><a href="#">二级栏目</a></li>
+							<li><a href="#">二级栏目</a></li>
+							<li><a href="#">二级栏目</a></li>
+							<li><a href="#">二级栏目</a></li>
+						</ul>
+					</li>
+					<li><a href="#">栏四</a></li>
+					<li><a href="#">栏五</a></li-->
+					<?php if(is_array($mainCategory)): foreach($mainCategory as $key=>$item): ?><li><a href="<?php echo ($item['href']); ?>"><?php echo ($item['name']); ?></a>
+							<?php if($item['sub']|count != 0): ?><ul>
+									<?php if(is_array($item['sub'])): foreach($item['sub'] as $key=>$subItem): ?><li><a href="<?php echo ($subCategory[$subItem]['href']); ?>"><?php echo ($subCategory[$subItem]['name']); ?></a></li><?php endforeach; endif; ?>
+								</ul><?php endif; ?>
+						</li><?php endforeach; endif; ?>
 				</ul>
 			</div>
-			<div class="login" id="login-image" onmouseover="showLoginMenu();" onmouseout="hideLoginMenu();">
+			<div class="login">
 				<img src="<?php echo ($headimage); ?>"/>
+				<ul>
+					<?php if(is_array($accountMenuText)): foreach($accountMenuText as $index=>$item): ?><li><a href="<?php echo ($accountMenuUrl[$index]); ?>"><?php echo ($accountMenuText[$index]); ?></a></li><?php endforeach; endif; ?>
+				</ul>
 			</div>
 		</div>
-		<div class="login-menu" id="login-menu" onmouseover="showLoginMenu();" onmouseout="hideLoginMenu();">	
-			<ul>
-				<?php if(is_array($accountMenuText)): foreach($accountMenuText as $index=>$item): ?><li><a href="<?php echo ($accountMenuUrl[$index]); ?>"><?php echo ($accountMenuText[$index]); ?></a></li><?php endforeach; endif; ?>
-			</ul>
-		</div>
-		
-		<?php if(is_array($mainCategory)): foreach($mainCategory as $key=>$item): if($item['sub']|count != 0): ?><div class="menu2" id="<?php echo ($item['name']); ?>" onmouseover="showSubMenuSelf(this)" onmouseout="hideSubMenuSelf(this)">
-					<?php if(is_array($item['sub'])): foreach($item['sub'] as $key=>$subItem): ?><ul><li><a href="<?php echo ($subCategory[$subItem]['href']); ?>"><?php echo ($subCategory[$subItem]['name']); ?></a></li></ul><?php endforeach; endif; ?>
-				</div><?php endif; endforeach; endif; ?>
 	</div>
 	<div class="page-body">
 		<link type="text/css" href="/luoji/Public/css/manuscript.css" rel="stylesheet"/>
@@ -46,7 +68,7 @@
 		</div>
 		<div class="right-content">
 			<table class="content-table">
-				<?php $__FOR_START_31398__=0;$__FOR_END_31398__=8;for($manuscriptIndex=$__FOR_START_31398__;$manuscriptIndex < $__FOR_END_31398__;$manuscriptIndex+=1){ if($manuscriptMaintitle[$manuscriptIndex] != NULL): ?><tr>
+				<?php $__FOR_START_31966__=0;$__FOR_END_31966__=8;for($manuscriptIndex=$__FOR_START_31966__;$manuscriptIndex < $__FOR_END_31966__;$manuscriptIndex+=1){ if($manuscriptMaintitle[$manuscriptIndex] != NULL): ?><tr>
 							<td>
 								<table> 
 									<tr>
