@@ -1,24 +1,25 @@
-window.onload = function() {
-    var oDiv = document.getElementById("account-tab");
-    var oLi = oDiv.getElementsByTagName("div")[0].getElementsByTagName("li");
-    var aCon = oDiv.getElementsByTagName("div")[1].getElementsByTagName("div");
-    var timer = null;
-    for (var i = 0; i < oLi.length; i++) {
-        oLi[i].index = i;
-        oLi[i].onclick = function() {
+$(function() {
+    var lis = document.getElementById("tabList").getElementsByTagName("li");
+    var con = document.getElementById("tabCon").getElementsByTagName("div");
+    for (var i = 0; i < lis.length; i++) {
+        lis[i].index = i;
+        lis[i].onclick = function() {
             show(this.index);
         }
     }
     function show(a) {
-        index = a;
-        for (var j = 0; j < oLi.length; j++) {
-            oLi[j].className = "tabList-other";
-            aCon[j].className = "tabCon-other";
+        for (var j = 0; j < lis.length; j++) {
+            lis[j].className = "tabList-other";
+            con[j].className = "tabCon-other";
         }
-        oLi[index].className = "tabList-cur";
-		aCon[index].className = "tabCon-cur";
+        lis[a].className = "tabList-cur";
+		con[a].className = "tabCon-cur";
     }
-}
+});
+
+$(function() {
+	$('input, textarea').placeholder();
+});
 
 function refreshVerifyImg(obj) { 
 	if( obj.src.indexOf('?')>0){  
@@ -110,15 +111,14 @@ function registerSubmitForm() {
 		var rpassword = document.getElementById("rpassword").value;
 		var rrepassword = document.getElementById("rrepassword").value;
 		var rverify = document.getElementById("rverify").value;
-		
-		var rurl = document.getElementById("rurl").value;
+
 		var rdata = 'username='+rusername+'&nickname='+rnickname+'&password='+rpassword+'&repassword='+rrepassword+'&verify='+rverify;
 		
 		$.ajax({  
 			type:'post',
 			dataType:'json',
 			data:rdata,  
-			url:rurl,
+			url:'/luoji/index.php/Home/Account/register',
 			success : function(data) {
 				if(data == '注册成功！') {
 					location.href=document.referrer;
@@ -185,15 +185,13 @@ function loginSubmitForm() {
 		var lusername = document.getElementById("lusername").value;
 		var lpassword = document.getElementById("lpassword").value;
 		var lverify = document.getElementById("lverify").value;
-		
-		var lurl = document.getElementById("lurl").value;
 		var ldata = 'username='+lusername+'&password='+lpassword+'&verify='+lverify;
 		
 		$.ajax({  
 			type:'post',
 			dataType:'json',
 			data:ldata,  
-			url:lurl,
+			url:'/luoji/index.php/Home/Account/login',
 			success : function(data) {
 				if(data == '登录成功！') {
 					location.href=document.referrer;
