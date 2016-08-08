@@ -64,8 +64,8 @@
 				<li>
 					<img src="{$specialImages[$specialIndex]}"/>
 					<div class="pa special-title">
-						<a class="pa main-title" href="{$specialHrefs[$specialIndex]}" target="_blank"><nobr>{$specialMaintitles[$specialIndex]}</nobr></a>
-						<a class="pa minor-title" href="{$specialHrefs[$specialIndex]}" target="_blank"><nobr>{$specialSubheads[$specialIndex]}</nobr></a>
+						<h2><a class="pa main-title" href="{$specialHrefs[$specialIndex]}" target="_blank"><nobr>{$specialMaintitles[$specialIndex]}</nobr></a></h2>
+						<h3><a class="pa minor-title" href="{$specialHrefs[$specialIndex]}" target="_blank"><nobr>{$specialSubheads[$specialIndex]}</nobr></a></h3>
 					</div>
 				</li>
 			</if>
@@ -98,8 +98,8 @@
 								<div class="fr {$articleCollect[$articleIndex]}" id="{$articleId[$articleIndex]}" onclick="collect(this)"></div>
 							</li>
 							<li class="article-l2">
-								<a href="{$articleHref[$articleIndex]}" target="_blank" class="pr title"><nobr>{$articleMaintitle[$articleIndex]}</nobr></a>
-								<a href="{$articleHref[$articleIndex]}" target="_blank" class="pr overview">&nbsp;&nbsp;{$articleIntroduction[$articleIndex]}</a>
+								<h2><a href="{$articleHref[$articleIndex]}" target="_blank" class="pr title"><nobr>{$articleMaintitle[$articleIndex]}</nobr></a></h2>
+								<h3><a href="{$articleHref[$articleIndex]}" target="_blank" class="pr overview">&nbsp;&nbsp;{$articleIntroduction[$articleIndex]}</a></h3>
 							</li>
 							<li class="article-l3">
 								<a>阅读：{$articleReadnum[$articleIndex]}</a>
