@@ -140,7 +140,6 @@ class IndexController extends LayoutController {
 	}
 	
     public function index(){
-		$artCategory = $this->getCategory();
 		$this->initLayout();
 		$this->initNotification();
 		$this->initSpecial();

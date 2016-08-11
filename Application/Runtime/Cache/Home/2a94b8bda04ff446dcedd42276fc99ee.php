@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>逻辑</title>
+	<title><?php echo ($title); ?> | 逻辑</title>
 
 	<link type="text/css" href="/luoji/Public/css/layout/frame.css" rel="stylesheet"/>
 	<link type="text/css" href="/luoji/Public/css/layout/header.css" rel="stylesheet"/>
@@ -64,12 +64,12 @@
 	</div>
 	<div class="pr" id="banner">
 		<div id="banner-pic">
-			<?php $__FOR_START_5563__=0;$__FOR_END_5563__=8;for($carouselIndex=$__FOR_START_5563__;$carouselIndex < $__FOR_END_5563__;$carouselIndex+=1){ if($carouselImages[$carouselIndex] != NULL): ?><a href="<?php echo ($carouselHrefs[$carouselIndex]); ?>"><img src="<?php echo ($carouselImages[$carouselIndex]); ?>" title="<?php echo ($carouselTitles[$carouselIndex]); ?>"/></a><?php endif; } ?>
+			<?php $__FOR_START_14527__=0;$__FOR_END_14527__=8;for($carouselIndex=$__FOR_START_14527__;$carouselIndex < $__FOR_END_14527__;$carouselIndex+=1){ if($carouselImages[$carouselIndex] != NULL): ?><a href="<?php echo ($carouselHrefs[$carouselIndex]); ?>"><img src="<?php echo ($carouselImages[$carouselIndex]); ?>" title="<?php echo ($carouselTitles[$carouselIndex]); ?>"/></a><?php endif; } ?>
 		</div>
 		<a id="banner-tit"></a>
 		<table id="banner-but"><tr><td>
 			<ul>
-				<?php $__FOR_START_27352__=0;$__FOR_END_27352__=8;for($carouselIndex=$__FOR_START_27352__;$carouselIndex < $__FOR_END_27352__;$carouselIndex+=1){ if($carouselImages[$carouselIndex] != NULL): if($carouselIndex == 0): ?><li alt="<?php echo ($carouselIndexs[$carouselIndex]); ?>" class="on"></li>
+				<?php $__FOR_START_2956__=0;$__FOR_END_2956__=8;for($carouselIndex=$__FOR_START_2956__;$carouselIndex < $__FOR_END_2956__;$carouselIndex+=1){ if($carouselImages[$carouselIndex] != NULL): if($carouselIndex == 0): ?><li alt="<?php echo ($carouselIndexs[$carouselIndex]); ?>" class="on"></li>
 							<?php else: ?>
 							<li alt="<?php echo ($carouselIndexs[$carouselIndex]); ?>"></li><?php endif; endif; } ?>
 			</ul>
@@ -83,7 +83,7 @@
 		<tr><td><a id="special-more">换<br/>一<br/>批</a></td></tr>
 	</table>
 	<ul id="specials">
-		<?php $__FOR_START_32305__=0;$__FOR_END_32305__=5;for($specialIndex=$__FOR_START_32305__;$specialIndex < $__FOR_END_32305__;$specialIndex+=1){ if($specialImages[$specialIndex] != NULL): ?><li>
+		<?php $__FOR_START_17109__=0;$__FOR_END_17109__=5;for($specialIndex=$__FOR_START_17109__;$specialIndex < $__FOR_END_17109__;$specialIndex+=1){ if($specialImages[$specialIndex] != NULL): ?><li>
 					<img src="<?php echo ($specialImages[$specialIndex]); ?>"/>
 					<div class="pa special-title">
 						<h2><a class="pa main-title" href="<?php echo ($specialHrefs[$specialIndex]); ?>" target="_blank"><nobr><?php echo ($specialMaintitles[$specialIndex]); ?></nobr></a></h2>
@@ -107,7 +107,7 @@
 	<!-- 文章栏 -->
 	<div class="pr articles">
 		<ul>
-			<?php $__FOR_START_22806__=0;$__FOR_END_22806__=10;for($articleIndex=$__FOR_START_22806__;$articleIndex < $__FOR_END_22806__;$articleIndex+=1){ if($articleCoverImage[$articleIndex] != NULL): ?><li class="article">
+			<?php $__FOR_START_2794__=0;$__FOR_END_2794__=10;for($articleIndex=$__FOR_START_2794__;$articleIndex < $__FOR_END_2794__;$articleIndex+=1){ if($articleCoverImage[$articleIndex] != NULL): ?><li class="article">
 						<img src="<?php echo ($articleCoverImage[$articleIndex]); ?>"/>
 						<ul>
 							<li class="article-l1">

@@ -2,6 +2,7 @@
 namespace Home\Controller;
 header("Content-Type: text/html;charset=utf-8");
 class AlbumController extends LayoutController {
+	private $title;
 	//获取页数
 	private function getPageNum() {
 		if($_GET['p']) {
@@ -32,6 +33,7 @@ class AlbumController extends LayoutController {
 		$special['maintitle'] = $specialData['maintitle'];
 		$special['subhead'] = $specialData['subhead'];
 		$special['introduction'] = $specialData['introduction'];
+		$this->title = $special['maintitle'];
 		$this->assign('special',$special);
 	}
 	
@@ -88,10 +90,10 @@ class AlbumController extends LayoutController {
 	}
 	
     public function index(){
-		$this->initLayout();
 		$this->initSpecial();
 		$this->initArticle();
 		$this->initPage();
+		$this->initLayout($this->title);
         $this->display();
 	}
 }

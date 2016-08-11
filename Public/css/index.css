@@ -45,7 +45,7 @@ a{text-decoration:none;}
 .collect2 {border-top:22px solid #F2F2F2;border-left:12px solid #F2F2F2;border-right:12px solid #F2F2F2;}
 .title,.overview{display:block;width:530px;text-overflow:ellipsis;overflow:hidden;}
 .title {top:10px;line-height:22px;font-weight:700;font-size:20px;color:#000;}
-.overview {height:92px;top:15px;line-height:22px;font-size:14px;color:#999;}
+.overview {height:92px;top:15px;line-height:22px;font-weight:400;font-size:14px;color:#999;}
 .article-l3 a {float:right;line-height:24px;font-size:12px;margin-right:10px;color:#999;}
 
 .pages {position:relative;width:700px;padding:18px 70px 18px 70px;background-color:#FFF;}

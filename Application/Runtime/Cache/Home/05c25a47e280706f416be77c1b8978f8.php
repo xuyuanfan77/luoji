@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>逻辑</title>
+	<title><?php echo ($title); ?> | 逻辑</title>
 
 	<link type="text/css" href="/luoji/Public/css/layout/frame.css" rel="stylesheet"/>
 	<link type="text/css" href="/luoji/Public/css/layout/header.css" rel="stylesheet"/>
@@ -85,7 +85,7 @@
 		
 		<!-- 图片栏 -->
 		<div class="article-image">
-			<?php if($articleImage != NULL): ?><img src="<?php echo ($articleImage); ?>"/><?php endif; ?>
+			<?php if($articleImage != NULL): ?><img src="<?php echo ($articleImage); ?>" alt="<?php echo ($articleImageAlt); ?>"/><?php endif; ?>
 		</div>
 		
 		<!-- 分享栏 -->

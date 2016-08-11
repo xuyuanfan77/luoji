@@ -25,16 +25,15 @@
 			<table>
 				<tr>
 					<td rowspan="3"><img id="special-coverimage" src="{$special['coverimage']}"/></td>
-					<td><a id="special-maintitle">{$special['maintitle']}</a></td>
+					<td><h1 id="special-maintitle">{$special['maintitle']}</h1></td>
 				</tr>
 				<tr>
-					<td><a id="special-subhead">{$special['subhead']}</a></td>
+					<td><h2 id="special-subhead">{$special['subhead']}</h2></td>
 				</tr>
 				<tr>
-					<td><a id="special-introduction">{$special['introduction']}</a></td>
+					<td><h3 id="special-introduction">{$special['introduction']}</h3></td>
 				</tr>
 			</table>
-
 		</div>
 		
 		<for start="0" end="8" name="articleIndex">
@@ -46,10 +45,10 @@
 							<td class="line1"><div class="classify1">{$articleClassification[$articleIndex]}</div><a class="classify2"></a></td>
 						</tr>
 						<tr>
-							<td class="line2"><a class="title" href="{$articleHref[$articleIndex]}" target="_blank" ><nobr>{$articleMaintitle[$articleIndex]}</nobr></a></td>
+							<td class="line2"><h2 class="title" href="{$articleHref[$articleIndex]}" target="_blank" ><nobr>{$articleMaintitle[$articleIndex]}</nobr></h2></td>
 						</tr>
 						<tr>
-							<td class="clearfix line3"><div class="introduction">{$articleIntroduction[$articleIndex]}</div></td>
+							<td class="clearfix line3"><h3><div class="introduction">{$articleIntroduction[$articleIndex]}</div></h3></td>
 						</tr>
 						<tr>
 							<td class="line4"><a class="readnum">阅读：{$articleReadnum[$articleIndex]}</a><a class="author">作者：{$articleAuthor[$articleIndex]}</a></td>

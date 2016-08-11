@@ -32,7 +32,7 @@
 		</div>
 	</div>
 	<div class="page-body">
-		<link type="text/css" href="/luoji/Public/css/special.css" rel="stylesheet"/>
+		<link type="text/css" href="/luoji/Public/css/user.css" rel="stylesheet"/>
 
 <div id="total-frame" class="clearfix">
 	<div id="right-frame">
@@ -41,12 +41,13 @@
 		<?php echo W('Article/index');?>
 		<div class="segmentation"></div>
 		<?php echo W('Experts/index');?>
+		<div class="segmentation"></div>
 	</div>
 	<div id="left-frame">
 		<div id="left-title">
 			<table id="achievement">
 				<tr>
-					<td><a class="achievement-text">收录数</a></td>
+					<td><a class="achievement-text">作品</a></td>
 					<td rowspan="2"> <div id="achievement-segmentation"></div></td>
 					<td><a class="achievement-text">阅读量</a></td>
 				</tr>
@@ -58,19 +59,20 @@
 			
 			<table>
 				<tr>
-					<td rowspan="3"><img id="special-coverimage" src="<?php echo ($special['coverimage']); ?>"/></td>
-					<td><h1 id="special-maintitle"><?php echo ($special['maintitle']); ?></h1></td>
+					<td rowspan="3"><img id="experts-headimage" src="<?php echo ($user['headimage']); ?>"/></td>
+					<td><h1 id="experts-nickname"><?php echo ($user['nickname']); ?></h1><a id="experts-jobs"><?php echo ($user['jobs']); ?></a><!--a id="experts-rank">少尉</a--></td>
 				</tr>
 				<tr>
-					<td><h2 id="special-subhead"><?php echo ($special['subhead']); ?></h2></td>
+					<td><a id="experts-company"><?php echo ($user['company']); ?></a></td>
 				</tr>
 				<tr>
-					<td><h3 id="special-introduction"><?php echo ($special['introduction']); ?></h3></td>
+					<td><a id="experts-introduction"><?php echo ($user['introduction']); ?></a></td>
 				</tr>
 			</table>
+
 		</div>
 		
-		<?php $__FOR_START_15684__=0;$__FOR_END_15684__=8;for($articleIndex=$__FOR_START_15684__;$articleIndex < $__FOR_END_15684__;$articleIndex+=1){ if($articleCoverImage[$articleIndex] != NULL): ?><div class="left-article">
+		<?php $__FOR_START_20824__=0;$__FOR_END_20824__=8;for($articleIndex=$__FOR_START_20824__;$articleIndex < $__FOR_END_20824__;$articleIndex+=1){ if($articleCoverImage[$articleIndex] != NULL): ?><div class="left-article">
 					<table>
 						<tr>
 							<td rowspan="4"><img class="coverimage" src="<?php echo ($articleCoverImage[$articleIndex]); ?>"/></td>
@@ -80,10 +82,10 @@
 							<td class="line2"><h2 class="title" href="<?php echo ($articleHref[$articleIndex]); ?>" target="_blank" ><nobr><?php echo ($articleMaintitle[$articleIndex]); ?></nobr></h2></td>
 						</tr>
 						<tr>
-							<td class="clearfix line3"><h3><div class="introduction"><?php echo ($articleIntroduction[$articleIndex]); ?></div></h3></td>
+							<td class="line3"><h3><div class="introduction"><?php echo ($articleIntroduction[$articleIndex]); ?></div></h3></td>
 						</tr>
 						<tr>
-							<td class="line4"><a class="readnum">阅读：<?php echo ($articleReadnum[$articleIndex]); ?></a><a class="author">作者：<?php echo ($articleAuthor[$articleIndex]); ?></a></td>
+							<td class="line4"><a class="readnum">阅读：<?php echo ($articleReadnum[$articleIndex]); ?></a><a class="author">作者：<?php echo ($user['nickname']); ?></a></td>
 						</tr>
 					</table>
 				</div><?php endif; } ?>

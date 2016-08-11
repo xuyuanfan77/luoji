@@ -2,6 +2,7 @@
 namespace Home\Controller;
 header("Content-Type: text/html;charset=utf-8");
 class UserController extends LayoutController {
+	private $title;
 	//获取页数
 	private function getPageNum() {
 		if($_GET['p']) {
@@ -34,6 +35,7 @@ class UserController extends LayoutController {
 		$user['jobs'] = $userData['jobs'];
 		$user['company'] = $userData['company'];
 		$user['introduction'] = $userData['introduction'];
+		$this->title = $user['nickname'];
 		$this->assign('user',$user);
 	}
 	
@@ -83,10 +85,10 @@ class UserController extends LayoutController {
 	}
 	
     public function index(){
-		$this->initLayout();
 		$this->initAuthor();
 		$this->initArticle();
 		$this->initPage();
+		$this->initLayout($this->title);
         $this->display();
 	}
 }

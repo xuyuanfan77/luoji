@@ -3,10 +3,13 @@ namespace Home\Controller;
 use Think\Controller;
 header("Content-Type: text/html;charset=utf-8");
 class LayoutController extends Controller {
-	
-	private $artCategory;
-	
-    protected function initLayout(){
+    protected function initLayout($title){
+		//设置标题
+		if($title){
+			$this->assign('title',$title);
+		} else {
+			$this->assign('title','辑图片博客平台');
+		}
 		//导航菜单
 		$Category = M("Category");
 		$mainCategoryData = $Category->where('level=1')->order(array('index'))->select();

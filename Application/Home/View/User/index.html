@@ -26,7 +26,7 @@
 			<table>
 				<tr>
 					<td rowspan="3"><img id="experts-headimage" src="{$user['headimage']}"/></td>
-					<td><a id="experts-nickname">{$user['nickname']}</a><a id="experts-jobs">{$user['jobs']}</a><!--a id="experts-rank">少尉</a--></td>
+					<td><h1 id="experts-nickname">{$user['nickname']}</h1><a id="experts-jobs">{$user['jobs']}</a><!--a id="experts-rank">少尉</a--></td>
 				</tr>
 				<tr>
 					<td><a id="experts-company">{$user['company']}</a></td>
@@ -47,10 +47,10 @@
 							<td class="line1"><div class="classify1">{$articleClassification[$articleIndex]}</div><a class="classify2"></a></td>
 						</tr>
 						<tr>
-							<td class="line2"><a class="title" href="{$articleHref[$articleIndex]}" target="_blank" ><nobr>{$articleMaintitle[$articleIndex]}</nobr></a></td>
+							<td class="line2"><h2 class="title" href="{$articleHref[$articleIndex]}" target="_blank" ><nobr>{$articleMaintitle[$articleIndex]}</nobr></h2></td>
 						</tr>
 						<tr>
-							<td class="line3"><div class="introduction">{$articleIntroduction[$articleIndex]}</div></td>
+							<td class="line3"><h3><div class="introduction">{$articleIntroduction[$articleIndex]}</div></h3></td>
 						</tr>
 						<tr>
 							<td class="line4"><a class="readnum">阅读：{$articleReadnum[$articleIndex]}</a><a class="author">作者：{$user['nickname']}</a></td>

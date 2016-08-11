@@ -2,6 +2,7 @@
 namespace Home\Controller;
 header("Content-Type: text/html;charset=utf-8");
 class ContentController extends LayoutController {
+	private $title;
 
 	//获取文章ID
 	private function getArticleId() {
@@ -28,6 +29,7 @@ class ContentController extends LayoutController {
 			$articleSubhead = $articleData['subhead'];
 			$articleIntroduction = $articleData['article_introduction'];
 			$articleImage = C('__ROOT__') . 'Public/resource/largerimage/' . $articleData['mainimage'];
+			$articleImageAlt = $articleData['mainimagealt'];
 			$expertImage = C('__ROOT__') . 'Public/resource/headportrait/' . $articleData['headimage'];
 			$expertNickname = $articleData['nickname'];
 			$expertJobs = $articleData['jobs'];
@@ -44,6 +46,7 @@ class ContentController extends LayoutController {
 			$articleSubhead = $articleData['subhead'];
 			$articleIntroduction = $articleData['manuscript_introduction'];
 			$articleImage = C('__ROOT__') . 'Public/resource/manuscriptimage/' . $articleData['mainimage'];
+			$articleImageAlt = $articleData['mainimagealt'];
 			$expertImage = C('__ROOT__') . 'Public/resource/headportrait/' . $articleData['headimage'];
 			$expertNickname = $articleData['nickname'];
 			$expertJobs = $articleData['jobs'];
@@ -51,10 +54,12 @@ class ContentController extends LayoutController {
 			$expertIntroduction = $articleData['user_introduction'];
 			$expertHref = U('User/index', array('authorId'=>$articleData['user_id']));
 		}
+		$this->title = $articleMaintitle;
 		$this->assign('articleMaintitle',$articleMaintitle);
 		$this->assign('articleSubhead',$articleSubhead);
 		$this->assign('articleIntroduction',$articleIntroduction);
 		$this->assign('articleImage',$articleImage);
+		$this->assign('articleImageAlt',$articleImageAlt);
 		$this->assign('expertImage',$expertImage);
 		$this->assign('expertNickname',$expertNickname);
 		$this->assign('expertJobs',$expertJobs);
@@ -72,8 +77,8 @@ class ContentController extends LayoutController {
 	}
 	
     public function index(){
-		$this->initLayout();
 		$this->initArticleExpert();
+		$this->initLayout($this->title);
 		$this->display();
 		$this->updateReadnum();
 	}

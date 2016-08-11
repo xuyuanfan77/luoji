@@ -6,6 +6,7 @@ class ArticleViewModel extends ViewModel {
 		'Article'=>array(
 			'id'=>'article_id',
 			'mainimage',
+			'mainimagealt',
 			'coverimage',
 			'maintitle',
 			'subhead',

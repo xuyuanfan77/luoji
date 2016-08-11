@@ -6,13 +6,13 @@ td,ol,ul,p{padding:0px;margin:0px;}
 #right-frame {float:right;width:245px;}
 
 #left-title{position:relative;width:820px;padding:10px;background-color:#FFF;margin-bottom:15px;}
-#achievement{position:absolute;top:20px;left:690px;text-align:center;}
+#achievement{position:absolute;top:20px;left:680px;text-align:center;}
 .achievement-text{font-size:20px;line-height:30px;color:#999;}
 #achievement-segmentation {margin:0px 5px;width:1px;	height:50px;background-color:#999;}
 #special-coverimage{height:150px;width:150px;margin:0px 30px 0px 0px;}
 #special-maintitle{font-size:25px;font-weight:700;}
-#special-subhead{font-size:14px;}
-#special-introduction{line-height:23px;font-size:14px;color:#999;}
+#special-subhead{font-size:14px;font-weight:400;}
+#special-introduction{line-height:23px;font-size:14px;font-weight:400;color:#999;}
 
 .left-article {position:relative;width:820px;padding:10px;background-color:#FFF;margin-bottom:2px;}
 .left-article > table {table-layout:fixed;width:820px;height:180px;}
@@ -23,7 +23,7 @@ td,ol,ul,p{padding:0px;margin:0px;}
 .classify1 {float:left;width:100px;line-height:30px;text-align:center;font-size:15px;color:#FFF;background-color:#3F7BED;}
 .classify2 {float:left;width:0px;height:0px;border-top: 15px solid #FFF;border-left: 15px solid #3F7BED;border-bottom: 15px solid #FFF;}
 .title{line-height:25px;font-weight:700;font-size:20px;color:#000;text-decoration:none;}
-.introduction{height:100px;line-height:25px;font-size:14px;color:#999;}
+.introduction{height:100px;line-height:25px;font-weight:400;font-size:14px;color:#999;}
 .readnum,.author{float:right;line-height:25px;font-size:12px;color:#999;}
 .readnum {margin-left:10px;}
 

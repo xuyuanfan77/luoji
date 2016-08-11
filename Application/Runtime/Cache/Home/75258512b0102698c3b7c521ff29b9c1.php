@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>逻辑</title>
+	<title><?php echo ($title); ?> | 逻辑</title>
 
 	<link type="text/css" href="/luoji/Public/css/layout/frame.css" rel="stylesheet"/>
 	<link type="text/css" href="/luoji/Public/css/layout/header.css" rel="stylesheet"/>
