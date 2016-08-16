@@ -64,12 +64,12 @@
 	</div>
 	<div class="pr" id="banner">
 		<div id="banner-pic">
-			<?php $__FOR_START_14527__=0;$__FOR_END_14527__=8;for($carouselIndex=$__FOR_START_14527__;$carouselIndex < $__FOR_END_14527__;$carouselIndex+=1){ if($carouselImages[$carouselIndex] != NULL): ?><a href="<?php echo ($carouselHrefs[$carouselIndex]); ?>"><img src="<?php echo ($carouselImages[$carouselIndex]); ?>" title="<?php echo ($carouselTitles[$carouselIndex]); ?>"/></a><?php endif; } ?>
+			<?php $__FOR_START_22211__=0;$__FOR_END_22211__=8;for($carouselIndex=$__FOR_START_22211__;$carouselIndex < $__FOR_END_22211__;$carouselIndex+=1){ if($carouselImages[$carouselIndex] != NULL): ?><a href="<?php echo ($carouselHrefs[$carouselIndex]); ?>"><img src="<?php echo ($carouselImages[$carouselIndex]); ?>" title="<?php echo ($carouselTitles[$carouselIndex]); ?>"/></a><?php endif; } ?>
 		</div>
 		<a id="banner-tit"></a>
 		<table id="banner-but"><tr><td>
 			<ul>
-				<?php $__FOR_START_2956__=0;$__FOR_END_2956__=8;for($carouselIndex=$__FOR_START_2956__;$carouselIndex < $__FOR_END_2956__;$carouselIndex+=1){ if($carouselImages[$carouselIndex] != NULL): if($carouselIndex == 0): ?><li alt="<?php echo ($carouselIndexs[$carouselIndex]); ?>" class="on"></li>
+				<?php $__FOR_START_2880__=0;$__FOR_END_2880__=8;for($carouselIndex=$__FOR_START_2880__;$carouselIndex < $__FOR_END_2880__;$carouselIndex+=1){ if($carouselImages[$carouselIndex] != NULL): if($carouselIndex == 0): ?><li alt="<?php echo ($carouselIndexs[$carouselIndex]); ?>" class="on"></li>
 							<?php else: ?>
 							<li alt="<?php echo ($carouselIndexs[$carouselIndex]); ?>"></li><?php endif; endif; } ?>
 			</ul>
@@ -83,7 +83,7 @@
 		<tr><td><a id="special-more">换<br/>一<br/>批</a></td></tr>
 	</table>
 	<ul id="specials">
-		<?php $__FOR_START_17109__=0;$__FOR_END_17109__=5;for($specialIndex=$__FOR_START_17109__;$specialIndex < $__FOR_END_17109__;$specialIndex+=1){ if($specialImages[$specialIndex] != NULL): ?><li>
+		<?php $__FOR_START_31353__=0;$__FOR_END_31353__=5;for($specialIndex=$__FOR_START_31353__;$specialIndex < $__FOR_END_31353__;$specialIndex+=1){ if($specialImages[$specialIndex] != NULL): ?><li>
 					<img src="<?php echo ($specialImages[$specialIndex]); ?>"/>
 					<div class="pa special-title">
 						<h2><a class="pa main-title" href="<?php echo ($specialHrefs[$specialIndex]); ?>" target="_blank"><nobr><?php echo ($specialMaintitles[$specialIndex]); ?></nobr></a></h2>
@@ -107,7 +107,7 @@
 	<!-- 文章栏 -->
 	<div class="pr articles">
 		<ul>
-			<?php $__FOR_START_2794__=0;$__FOR_END_2794__=10;for($articleIndex=$__FOR_START_2794__;$articleIndex < $__FOR_END_2794__;$articleIndex+=1){ if($articleCoverImage[$articleIndex] != NULL): ?><li class="article">
+			<?php $__FOR_START_13246__=0;$__FOR_END_13246__=10;for($articleIndex=$__FOR_START_13246__;$articleIndex < $__FOR_END_13246__;$articleIndex+=1){ if($articleCoverImage[$articleIndex] != NULL): ?><li class="article">
 						<img src="<?php echo ($articleCoverImage[$articleIndex]); ?>"/>
 						<ul>
 							<li class="article-l1">
@@ -134,6 +134,25 @@
 
 	</div>
 	<div class="page-footer">
+		<table class="footer">
+			<tr>
+				<td class="td1"><img src="/luoji/Public/picture/logo-color.png"/></td>
+				<td class="td2">
+					<p class="p1">没有什么逻辑是一张图看不懂的，如果有，那就两张</p>
+					<br/>
+					<p class="p2">逻辑（www.luoji.com）是中国最大、最活跃的，以互联网界为范围，以逻辑为核心，以图片为载体的学习平台。在互联网业内得到了广泛关注和高度好评。平台目前拥有300万忠实粉丝。只要有清晰的逻辑图，就没有学不懂的逻辑。</p>
+				</td>
+				<td class="td3"><div class="vertical-line"></div></td>
+				<td class="td4">
+					<p>商务合作：</p>
+					<p>电话：13539917795</p>
+					<p>QQ：752952009</p>
+					<p>E-mail：xuyuanfan77@outlook.com</p>
+					<br/>
+					<p>版权所有Copyright 2016 by 远航科技</p>
+				</td>
+			</tr>
+		</table>
 	</div>
 </body>
 </html>
