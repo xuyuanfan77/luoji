@@ -15,9 +15,10 @@
 		<div class="navbar-header">
 			<a class="navbar-brand">逻辑运营管理后台</a>
 		</div>
+		<a class="navbar-text" style="float:right">退出</a>
 	</nav>
 	<div class="row" style="margin:0px">
-		<div class="col-md-2" style="display:none">
+		<div class="col-md-2">
 			<div class="panel panel-default" style="margin:15px 0px">
 					<ul class="nav nav-pills nav-stacked" role="tablist" style="text-align:center;">
 					<li role="presentation"><a href="#">轮播图管理</a></li>
@@ -29,24 +30,66 @@
 				</ul>
 			</div>
 		</div>
-		<div class="col-xs-4">
-</div>
-<div class="col-xs-4" style="top:200px">
-	<div class="jumbotron" style="padding:30px 45px">
-		<form class="form-horizontal" role="form">
-			<div class="form-group">
-				<label for="exampleInputEmail1">账号：</label>
-				<input type="text" placeholder="Username" class="form-control">
-			</div>
-			<div class="form-group">
-				<label for="exampleInputEmail1">密码：</label>
-				<input type="password" placeholder="Password" class="form-control">
-			</div>
-			<button type="submit" class="btn btn-primary btn-block" style="margin-top:30px">登陆</button>
-		</form>
-	</div>
-</div>
-<div class="col-xs-4">
+		<div class="col-md-10">
+	<button type="button" class="btn btn-default" style="float:right;margin:15px 0px">新增</button>
+	<table class="table table-hover" style="margin:0px">
+		<tr>
+			<th>ID号</th>
+			<th>图片</th>
+			<th>标题</th>
+			<th>序号</th>
+			<th>URL</th>
+			<th>是否禁用</th>
+			<th>操作</th>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>xuyuanfan.jpg</td>
+			<td>这是一张图片</td>
+			<td>第1张</td>
+			<td>www.baidu.com</td>
+			<td>是</td>
+			<td>修改 删除</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>xuyuanfan.jpg</td>
+			<td>这是一张图片</td>
+			<td>第2张</td>
+			<td>www.baidu.com</td>
+			<td>是</td>
+			<td>修改 删除</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>xuyuanfan.jpg</td>
+			<td>这是一张图片</td>
+			<td>第3张</td>
+			<td>www.baidu.com</td>
+			<td>是</td>
+			<td>修改 删除</td>
+		</tr>
+		<tr>
+			<td>4</td>
+			<td>xuyuanfan.jpg</td>
+			<td>这是一张图片</td>
+			<td>第4张</td>
+			<td>www.baidu.com</td>
+			<td>是</td>
+			<td>修改 删除</td>
+		</tr>
+	</table>
+	<nav>
+		<ul class="pagination">
+			<li><a href="#">&laquo;</a></li>
+			<li><a href="#">1</a></li>
+			<li><a href="#">2</a></li>
+			<li><a href="#">3</a></li>
+			<li><a href="#">4</a></li>
+			<li><a href="#">5</a></li>
+			<li><a href="#">&raquo;</a></li>
+		</ul>
+	</nav>
 </div>
 	</div>
 	<nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">
