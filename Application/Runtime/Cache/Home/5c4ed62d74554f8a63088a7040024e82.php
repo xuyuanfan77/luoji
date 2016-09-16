@@ -143,6 +143,25 @@
 </div>
 	</div>
 	<div class="page-footer">
+		<table class="footer">
+			<tr>
+				<td class="td1"><img src="/luoji/Public/picture/logo-color.png"/></td>
+				<td class="td2">
+					<p class="p1">没有什么逻辑是一张图看不懂的，如果有，那就两张</p>
+					<br/>
+					<p class="p2">逻辑（www.luoji.com）是中国最大、最活跃的，以互联网界为范围，以逻辑为核心，以图片为载体的学习平台。在互联网业内得到了广泛关注和高度好评。平台目前拥有300万忠实粉丝。只要有清晰的逻辑图，就没有学不懂的逻辑。</p>
+				</td>
+				<td class="td3"><div class="vertical-line"></div></td>
+				<td class="td4">
+					<p>商务合作：</p>
+					<p>电话：13539917795</p>
+					<p>QQ：752952009</p>
+					<p>E-mail：xuyuanfan77@outlook.com</p>
+					<br/>
+					<p>版权所有Copyright 2016 by 远航科技</p>
+				</td>
+			</tr>
+		</table>
 	</div>
 </body>
 </html>

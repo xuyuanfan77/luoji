@@ -15,18 +15,18 @@
 		<div class="navbar-header">
 			<a class="navbar-brand">逻辑运营管理后台</a>
 		</div>
-		<a class="navbar-text" style="float:right">退出</a>
+		<a class="navbar-text" style="float:right;display:{$logoutDispaly}" href="{:U('Account/logout')}">退出</a>
 	</nav>
 	<div class="row" style="margin:0px">
-		<div class="col-md-2">
+		<div class="col-md-2" style="display:{$navbarDispaly}">
 			<div class="panel panel-default" style="margin:15px 0px">
-					<ul class="nav nav-pills nav-stacked" role="tablist" style="text-align:center;">
-					<li role="presentation"><a href="#">轮播图管理</a></li>
-					<li role="presentation"><a href="#">分类管理</a></li>
-					<li role="presentation" style="background:#eee"><a href="#">稿件管理</a></li>
-					<li role="presentation"><a href="#">文章管理</a></li>
-					<li role="presentation"><a href="#">专辑管理</a></li>
-					<li role="presentation"><a href="#">用户管理</a></li>
+				<ul class="nav nav-pills nav-stacked" role="tablist" style="text-align:center;">
+					<li role="presentation" style="background:{$navbarColor[0]}"><a href="{:U('Carousel/index')}">轮播图管理</a></li>
+					<li role="presentation" style="background:{$navbarColor[1]}"><a href="{:U('Category/index')}">分类管理</a></li>
+					<li role="presentation" style="background:{$navbarColor[2]}"><a href="#">稿件管理</a></li>
+					<li role="presentation" style="background:{$navbarColor[3]}"><a href="#">文章管理</a></li>
+					<li role="presentation" style="background:{$navbarColor[4]}"><a href="#">专辑管理</a></li>
+					<li role="presentation" style="background:{$navbarColor[5]}"><a href="#">用户管理</a></li>
 				</ul>
 			</div>
 		</div>

@@ -1,5 +1,13 @@
+<style type="text/css">
+.pages {position:relative;width:700px;padding:10px 0px;background-color:#FFF;}
+.num,.prev,.next,.current{width:60px;line-height:30px;display:inline-block;margin:0px 2px 0px 2px;text-align:center;}
+.num,.prev,.next{color:#000;background-color:#eee;}
+.current {color:#FFF;background-color:#008cba;}
+.num:hover,.prev:hover,.next:hover{background-color:#008cba;color:#FFF;}
+</style>
+
 <div class="col-md-10">
-	<button type="button" class="btn btn-default" style="float:right;margin:15px 0px">新增</button>
+	<a type="button" class="btn btn-default" href="{:U('Carouselform/index')}" style="float:right;margin:15px 0px">新增</a>
 	<table class="table table-hover" style="margin:0px">
 		<tr>
 			<th>ID号</th>
@@ -10,52 +18,23 @@
 			<th>是否禁用</th>
 			<th>操作</th>
 		</tr>
-		<tr>
-			<td>1</td>
-			<td>xuyuanfan.jpg</td>
-			<td>这是一张图片</td>
-			<td>第1张</td>
-			<td>www.baidu.com</td>
-			<td>是</td>
-			<td>修改 删除</td>
-		</tr>
-		<tr>
-			<td>2</td>
-			<td>xuyuanfan.jpg</td>
-			<td>这是一张图片</td>
-			<td>第2张</td>
-			<td>www.baidu.com</td>
-			<td>是</td>
-			<td>修改 删除</td>
-		</tr>
-		<tr>
-			<td>3</td>
-			<td>xuyuanfan.jpg</td>
-			<td>这是一张图片</td>
-			<td>第3张</td>
-			<td>www.baidu.com</td>
-			<td>是</td>
-			<td>修改 删除</td>
-		</tr>
-		<tr>
-			<td>4</td>
-			<td>xuyuanfan.jpg</td>
-			<td>这是一张图片</td>
-			<td>第4张</td>
-			<td>www.baidu.com</td>
-			<td>是</td>
-			<td>修改 删除</td>
-		</tr>
+		<volist name="carouselData" id="carousel" key="k">
+				<tr>
+					<td>{$carousel.id}</td>
+					<td><img src="/luoji/Public/resource/carouselfigure/{$carousel.image}" style="width:100px"></td>
+					<td>{$carousel.title}</td>
+					<td>第{$carousel.ordernum}张</td>
+					<td>{$carousel.url}</td>
+					<if condition="($carousel.show eq 'yes')">
+						<td>是</td>
+					<else />
+						<td>否</td>
+					</if>
+					<td><a href="{:U('Carouselform/index', array('id'=>$carousel['id']))}">修改</a> <a href="{:U('Carousel/del', array('id'=>$carousel['id']))}">删除</a></td>
+				</tr>
+		</volist>
 	</table>
-	<nav>
-		<ul class="pagination">
-			<li><a href="#">&laquo;</a></li>
-			<li><a href="#">1</a></li>
-			<li><a href="#">2</a></li>
-			<li><a href="#">3</a></li>
-			<li><a href="#">4</a></li>
-			<li><a href="#">5</a></li>
-			<li><a href="#">&raquo;</a></li>
-		</ul>
-	</nav>
+	<div class="pages">
+		{$pageShow}
+	</div>
 </div>

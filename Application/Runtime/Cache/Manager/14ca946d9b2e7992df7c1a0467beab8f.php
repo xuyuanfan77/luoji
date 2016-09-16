@@ -30,24 +30,46 @@
 				</ul>
 			</div>
 		</div>
-		<div class="col-xs-4">
-</div>
-<div class="col-xs-4" style="top:150px">
-	<div class="jumbotron" style="padding:30px 45px">
-		<form class="form-horizontal" role="form" action="<?php echo U('Account/login');?>" method="post">
-			<div class="form-group">
-				<label>账号：</label>
-				<input name="username" type="text" placeholder="Username" class="form-control">
-			</div>
-			<div class="form-group">
-				<label>密码：</label>
-				<input name="password" type="password" placeholder="Password" class="form-control">
-			</div>
-			<button type="submit" class="btn btn-primary btn-block" style="margin-top:30px">登陆</button>
-		</form>
+		<script>
+function submitForm() {
+	var information = document.getElementById("information");
+	information.submit()
+}
+</script>
+
+<div class="col-md-10">
+	<button type="button" class="btn btn-default" onclick="submitForm()" style="float:right;margin:15px 0px">保存</button>
+	<div class="panel panel-default" style="margin:60px 0px">
+		<div class="panel-body">
+			<form id="information" action="<?php echo U('Categoryform/save');?>" method="post" role="form">
+				<div class="form-group">
+					<label>ID号：</label>
+					<input type="text" class="form-control" name="id" value="<?php echo ($categoryData['id']); ?>" placeholder="ID号" readonly>
+				</div>
+				<div class="form-group">
+					<label>名称：</label>
+					<input type="text" class="form-control" name="name" value="<?php echo ($categoryData['name']); ?>" placeholder="标题">
+				</div>
+				<div class="form-group">
+					<label>序号：</label>
+					<input type="text" class="form-control" name="index" value="<?php echo ($categoryData['index']); ?>" placeholder="序号">
+				</div>
+				<div class="form-group">
+					<label>级别：</label>
+					<input type="text" class="form-control" name="level" value="<?php echo ($categoryData['level']); ?>" placeholder="URL">
+				</div>
+				<div class="form-group">
+					<label>父菜单：</label>
+					<select class="form-control" name="parent">
+						<option value="0">无</option>
+						<?php if(is_array($categoryAllData)): $k = 0; $__LIST__ = $categoryAllData;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$categoryEach): $mod = ($k % 2 );++$k; if(($categoryData['parent'] == $categoryEach['id'])): ?><option value="<?php echo ($categoryEach["id"]); ?>" selected="selected"><?php echo ($categoryEach["name"]); ?></option>
+							<?php else: ?>
+								<option value="<?php echo ($categoryEach["id"]); ?>"><?php echo ($categoryEach["name"]); ?></option><?php endif; endforeach; endif; else: echo "" ;endif; ?>
+					</select>
+				</div>
+			</form>
+		</div>
 	</div>
-</div>
-<div class="col-xs-4">
 </div>
 	</div>
 	<nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">

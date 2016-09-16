@@ -15,23 +15,31 @@
 		<div class="navbar-header">
 			<a class="navbar-brand">逻辑运营管理后台</a>
 		</div>
-		<a class="navbar-text" style="float:right">退出</a>
+		<a class="navbar-text" style="float:right;display:<?php echo ($logoutDispaly); ?>" href="<?php echo U('Account/logout');?>">退出</a>
 	</nav>
 	<div class="row" style="margin:0px">
-		<div class="col-md-2">
+		<div class="col-md-2" style="display:<?php echo ($navbarDispaly); ?>">
 			<div class="panel panel-default" style="margin:15px 0px">
-					<ul class="nav nav-pills nav-stacked" role="tablist" style="text-align:center;">
-					<li role="presentation"><a href="#">轮播图管理</a></li>
-					<li role="presentation"><a href="#">分类管理</a></li>
-					<li role="presentation" style="background:#eee"><a href="#">稿件管理</a></li>
-					<li role="presentation"><a href="#">文章管理</a></li>
-					<li role="presentation"><a href="#">专辑管理</a></li>
-					<li role="presentation"><a href="#">用户管理</a></li>
+				<ul class="nav nav-pills nav-stacked" role="tablist" style="text-align:center;">
+					<li role="presentation" style="background:<?php echo ($navbarColor[0]); ?>"><a href="<?php echo U('Carousel/index');?>">轮播图管理</a></li>
+					<li role="presentation" style="background:<?php echo ($navbarColor[1]); ?>"><a href="<?php echo U('Category/index');?>">分类管理</a></li>
+					<li role="presentation" style="background:<?php echo ($navbarColor[2]); ?>"><a href="#">稿件管理</a></li>
+					<li role="presentation" style="background:<?php echo ($navbarColor[3]); ?>"><a href="#">文章管理</a></li>
+					<li role="presentation" style="background:<?php echo ($navbarColor[4]); ?>"><a href="#">专辑管理</a></li>
+					<li role="presentation" style="background:<?php echo ($navbarColor[5]); ?>"><a href="#">用户管理</a></li>
 				</ul>
 			</div>
 		</div>
-		<div class="col-md-10">
-	<button type="button" class="btn btn-default" style="float:right;margin:15px 0px">新增</button>
+		<style type="text/css">
+.pages {position:relative;width:700px;padding:10px 0px;background-color:#FFF;}
+.num,.prev,.next,.current{width:60px;line-height:30px;display:inline-block;margin:0px 2px 0px 2px;text-align:center;}
+.num,.prev,.next{color:#000;background-color:#eee;}
+.current {color:#FFF;background-color:#008cba;}
+.num:hover,.prev:hover,.next:hover{background-color:#008cba;color:#FFF;}
+</style>
+
+<div class="col-md-10">
+	<a type="button" class="btn btn-default" href="<?php echo U('Carouselform/index');?>" style="float:right;margin:15px 0px">新增</a>
 	<table class="table table-hover" style="margin:0px">
 		<tr>
 			<th>ID号</th>
@@ -42,54 +50,21 @@
 			<th>是否禁用</th>
 			<th>操作</th>
 		</tr>
-		<tr>
-			<td>1</td>
-			<td>xuyuanfan.jpg</td>
-			<td>这是一张图片</td>
-			<td>第1张</td>
-			<td>www.baidu.com</td>
-			<td>是</td>
-			<td>修改 删除</td>
-		</tr>
-		<tr>
-			<td>2</td>
-			<td>xuyuanfan.jpg</td>
-			<td>这是一张图片</td>
-			<td>第2张</td>
-			<td>www.baidu.com</td>
-			<td>是</td>
-			<td>修改 删除</td>
-		</tr>
-		<tr>
-			<td>3</td>
-			<td>xuyuanfan.jpg</td>
-			<td>这是一张图片</td>
-			<td>第3张</td>
-			<td>www.baidu.com</td>
-			<td>是</td>
-			<td>修改 删除</td>
-		</tr>
-		<tr>
-			<td>4</td>
-			<td>xuyuanfan.jpg</td>
-			<td>这是一张图片</td>
-			<td>第4张</td>
-			<td>www.baidu.com</td>
-			<td>是</td>
-			<td>修改 删除</td>
-		</tr>
+		<?php if(is_array($carouselData)): $k = 0; $__LIST__ = $carouselData;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$carousel): $mod = ($k % 2 );++$k;?><tr>
+					<td><?php echo ($carousel["id"]); ?></td>
+					<td><img src="/luoji/Public/resource/carouselfigure/<?php echo ($carousel["image"]); ?>" style="width:100px"></td>
+					<td><?php echo ($carousel["title"]); ?></td>
+					<td>第<?php echo ($carousel["ordernum"]); ?>张</td>
+					<td><?php echo ($carousel["url"]); ?></td>
+					<?php if(($carousel["show"] == 'yes')): ?><td>是</td>
+					<?php else: ?>
+						<td>否</td><?php endif; ?>
+					<td><a href="<?php echo U('Carouselform/index', array('id'=>$carousel['id']));?>">修改</a> <a href="<?php echo U('Carousel/del', array('id'=>$carousel['id']));?>">删除</a></td>
+				</tr><?php endforeach; endif; else: echo "" ;endif; ?>
 	</table>
-	<nav>
-		<ul class="pagination">
-			<li><a href="#">&laquo;</a></li>
-			<li><a href="#">1</a></li>
-			<li><a href="#">2</a></li>
-			<li><a href="#">3</a></li>
-			<li><a href="#">4</a></li>
-			<li><a href="#">5</a></li>
-			<li><a href="#">&raquo;</a></li>
-		</ul>
-	</nav>
+	<div class="pages">
+		<?php echo ($pageShow); ?>
+	</div>
 </div>
 	</div>
 	<nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">

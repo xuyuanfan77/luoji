@@ -30,24 +30,37 @@
 				</ul>
 			</div>
 		</div>
-		<div class="col-xs-4">
-</div>
-<div class="col-xs-4" style="top:150px">
-	<div class="jumbotron" style="padding:30px 45px">
-		<form class="form-horizontal" role="form" action="<?php echo U('Account/login');?>" method="post">
-			<div class="form-group">
-				<label>账号：</label>
-				<input name="username" type="text" placeholder="Username" class="form-control">
-			</div>
-			<div class="form-group">
-				<label>密码：</label>
-				<input name="password" type="password" placeholder="Password" class="form-control">
-			</div>
-			<button type="submit" class="btn btn-primary btn-block" style="margin-top:30px">登陆</button>
-		</form>
+		<style type="text/css">
+.pages {position:relative;width:700px;padding:10px 0px;background-color:#FFF;}
+.num,.prev,.next,.current{width:60px;line-height:30px;display:inline-block;margin:0px 2px 0px 2px;text-align:center;}
+.num,.prev,.next{color:#000;background-color:#eee;}
+.current {color:#FFF;background-color:#008cba;}
+.num:hover,.prev:hover,.next:hover{background-color:#008cba;color:#FFF;}
+</style>
+
+<div class="col-md-10">
+	<a type="button" class="btn btn-default" href="<?php echo U('Categoryform/index');?>" style="float:right;margin:15px 0px">新增</a>
+	<table class="table table-hover" style="margin:0px">
+		<tr>
+			<th>ID号</th>
+			<th>名称</th>
+			<th>序号</th>
+			<th>级别</th>
+			<th>父菜单</th>
+			<th>操作</th>
+		</tr>
+		<?php if(is_array($categoryData)): $k = 0; $__LIST__ = $categoryData;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$category): $mod = ($k % 2 );++$k;?><tr>
+					<td><?php echo ($category["id"]); ?></td>
+					<td><?php echo ($category["name"]); ?></td>
+					<td>第<?php echo ($category["index"]); ?>个</td>
+					<td>第<?php echo ($category["level"]); ?>级</td>
+					<td><?php echo ($category["parent"]); ?></td>
+					<td><a href="<?php echo U('Categoryform/index', array('id'=>$category['id']));?>">修改</a> <a href="<?php echo U('Category/del', array('id'=>$category['id']));?>">删除</a></td>
+				</tr><?php endforeach; endif; else: echo "" ;endif; ?>
+	</table>
+	<div class="pages">
+		<?php echo ($pageShow); ?>
 	</div>
-</div>
-<div class="col-xs-4">
 </div>
 	</div>
 	<nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">
